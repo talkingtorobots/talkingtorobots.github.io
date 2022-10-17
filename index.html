@@ -1,3 +1,229 @@
-<html>
-blank
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      (function($){
+        $.fn.flip = function(options){
+        var options = $.extend({
+          targetClass: '.m-flip_item'
+        }, options);
+    
+            return this.each(function(){
+              console.log(this);
+          var $this = $(this),
+            $target = $this.find(options.targetClass);
+    
+          $this
+            .on({
+              'init.flip': function(){
+                var targetFirst_height = $target.eq(0).height();
+    
+                $this
+                  .data('height', targetFirst_height)
+                  .css({ height: targetFirst_height });
+              },
+              'mouseenter.flip': function(){
+                $target.css({ top: -$this.data('height') + 'px' });
+              },
+              'mouseleave.flip': function(){
+                $target.css({ top: 0 + 'px' });
+              }
+            })
+            .trigger('init.flip');
+        });
+        };
+    }(jQuery));
+    
+    $(function(){
+      $('.js-flip').flip();
+    });
+
+    // https://www.geeksforgeeks.org/image-transition-with-fading-effect-using-javascript/
+    startImageTransition();
+
+      function startImageTransition() {
+          var images = document.getElementsByClassName("teaser");
+          for (var i = 0; i < images.length; ++i) {
+              images[i].style.opacity = 1;
+          }
+          var top = 1;
+          var vis  = 3; //images.length - 1; load issue
+          setInterval(changeImage, 5000);
+          async function changeImage() {
+              var nextImage = (1 + vis) % images.length;
+              images[vis].style.zIndex = top + 1;
+              images[nextImage].style.zIndex = top;
+              await transition();
+              images[vis].style.zIndex = top;
+              images[nextImage].style.zIndex = top + 1;
+              top = top + 1;
+              images[vis].style.opacity = 1;
+              vis = nextImage;
+          }
+
+        function transition() {
+            return new Promise(function(resolve, reject) {
+                var del = 0.01;
+                var id = setInterval(changeOpacity, 10);
+                function changeOpacity() {
+                    images[vis].style.opacity -= del;
+                    if (images[vis].style.opacity <= 0) {
+                        clearInterval(id);
+                        resolve();
+                    }
+                }
+            })
+        }
+    }
+
+    </script>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBC1D21RJT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CBC1D21RJT');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content:"Yonatan Bisk">
+    <link rel="canonical" href="https://yonatanbisk.com">
+    <title>Yonatan Bisk</title>
+    <meta name="title" content="Yonatan Bisk">
+    <meta name="description" content="Yonatan Bisk, Assistant Professor of Computer Science at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YonatanBisk.com">
+    <meta property="og:title" content:"Yonatan Bisk">
+    <meta property="og:image" content="https://yonatanbisk.com/images/YonatanBisk_400.jpg">
+    <meta property="og:description" content="Yonatan Bisk, Assistant Professor of Computer Science at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://YonatanBisk.com">
+    <meta property="twitter:title" content:"Yonatan Bisk">
+    <meta property="twitter:image" content="https://yonatanbisk.com/images/YonatanBisk_400.jpg">
+    <meta property="twitter:description" content="Yonatan Bisk, Assistant Professor of Computer Science at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="http://www.YonatanBisk.com/images/icon.png">
+  </head>
+  <body>
+    <div class="wrapper" ></div>
+
+    <nav class="navbar navbar-expand-md navbar-default navbar-dark " style="background-color:#333">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbars">
+        <div class="navbar-nav nav-fill w-100">
+          <a class="nav-item nav-link" href="publications.html" style="font-size:1.5em">Publications</a>
+          <a class="nav-item nav-link" href="CLAW/index.html" style="font-size:1.5em">Group</a>
+          <a class="nav-item nav-link" href="#"><img height=40px src="images/CLAW.png" style="padding: 2px;"><span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="teaching.html" style="font-size:1.5em">Teaching</a>
+          <a class="nav-item nav-link" href="resources.html" style="font-size:1.5em">Resources</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="table">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="scroll-image">
+              <img class="teaser" src="images/slide_simulated.jpg" style="width:350px;position:absolute;"/>
+              <img class="teaser" src="images/slide_webqa.jpg"  style="width:350px;position:absolute;"/>
+              <img class="teaser" src="images/slide_film.jpg"  style="width:350px;position:absolute;"/>
+              <img class="teaser" src="images/slide_TTP.jpg"  style="width:350px;position:absolute;"/>
+            </div> <!--img-->
+
+          </div> <!-- col -->
+          <div class="col-sm-7">
+            <br>
+            <div class="table">
+              <div class="row">
+                <div class="col-sm-4">
+                  <center><img src="CLAW/images/WSs/WS3_small.png" height=80 style="display:inline;margin-bottom:0px;margin-top:0px;border:0px;" alt="small robot watching TV"></center>
+                </div>
+                <div class="col-sm-4">
+                  <center><img src="CLAW/images/WSs/WS4_small.png" height=80 style="display:inline;margin-bottom:0px;margin-top:0px;border:0px;" alt="small robot building a rocket"></center>
+                </div>
+                <div class="col-sm-4">
+                  <center><img src="CLAW/images/WSs/WS5_small.png" height=80 style="display:inline;margin-bottom:0px;margin-top:0px;border:0px;" alt="small robot giving a gift to another robot"></center>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4" ><center><b>Grounding</b></center></div>
+                <div class="col-sm-4" ><center><b>Action taking</b></center></div>
+                <div class="col-sm-4"><center><b>Theory-of-mind</b></center></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <br>Our work assumes the importance of perception and/or world building as crucial to constructing semantic representations for and with language. The categories above correspond roughly to WS3, WS4, and WS5 in <a href="https://arxiv.org/abs/2004.10151">Experience Grounds Language</a>.</div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- col-->
+        </div> <!-- row -->
+
+      </div> <!-- table -->
+
+      <hr width="33%" size=2 noshade>
+      <font style="font-weight:200; margin-top: 0em; margin-bottom:0em;font-size:1.25em;">News:</font>
+
+      <font size=3>
+        <ul class="list-unstyled" style="width:90%;margin-left:30pt">
+          <li class="media">
+            <img class="mr-3" src="CLAW/images/students/tiffanymin.jpg" width=64pt alt="Generic placeholder image">
+            <img class="mr-3" src="CLAW/images/students/haozhu.jpg" width=64pt alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">EMNLP 2022</h5>
+              <a href="https://arxiv.org/abs/2210.04443">Why You Shouldn't Copy the Teacher: Investigating Data and Models in Embodied Dialogue</a>  
+            </div>
+          </li>
+          <li class="media">
+            <img class="align-self-start mr-3" src="CLAW/images/students/vidhijain.jpg" width=64pt alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">CoRL 2022</h5>
+              <a href="https://arxiv.org/abs/2207.02442">Transformers Are Adaptable Task Plannerse</a>  
+            </div>
+          </li>
+          <li class="media">
+            <img class="align-self-start mr-3" src="CLAW/images/students/haozhu.jpg" width=64pt alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">CogSci 2022</h5>
+              <a href="https://escholarship.org/uc/item/7p65n371">Simulated Language Learning from Communicative Goals and Linguistic Input</a>  
+            </div>
+          </li>
+          <li class="media">
+            <img class="align-self-start mr-3" src="CLAW/images/students/tiffanymin.jpg" width=64pt alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">ICLR 2022</h5>
+              <a href="https://soyeonm.github.io/FILM_webpage/">FILM: Following Instructions in Language with Modular Methods</a>  
+            </div>
+          </li>
+          <li class="media">
+            <img class="align-self-start mr-3" src="CLAW/images/students/yingshanchang.jpg" width=64pt alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">CVPR 2022</h5>
+              <a href="https://arxiv.org/abs/2109.00590">WebQA: Multihop and Multimodal QA</a>  
+            </div>
+          </li>
+        </ul>
+      </font>
+    </div>
+  </body>
 </html>
+
