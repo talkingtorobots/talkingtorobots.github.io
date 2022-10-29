@@ -31,11 +31,28 @@ html {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #222;
     top: -0px;
     right: 0px;
     left: 0px;
 }
+
+.nav-link{
+  font-size:1.25em
+}
+
+a.nav-link {
+  color: rgba(255,255,255,1); !important
+}
+
+a.nav-link:hover {
+   text-decoration: underline; 
+}
+
+a.nav-link:visited {
+  color: rgba(255,255,255,1); !important
+}
+
 
 .navbar-nav {
     float: none;
