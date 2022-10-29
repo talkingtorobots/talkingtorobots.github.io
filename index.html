@@ -43,44 +43,6 @@
       $('.js-flip').flip();
     });
 
-    // https://www.geeksforgeeks.org/image-transition-with-fading-effect-using-javascript/
-    startImageTransition();
-
-      function startImageTransition() {
-          var images = document.getElementsByClassName("teaser");
-          for (var i = 0; i < images.length; ++i) {
-              images[i].style.opacity = 1;
-          }
-          var top = 1;
-          var vis  = 3; //images.length - 1; load issue
-          setInterval(changeImage, 5000);
-          async function changeImage() {
-              var nextImage = (1 + vis) % images.length;
-              images[vis].style.zIndex = top + 1;
-              images[nextImage].style.zIndex = top;
-              await transition();
-              images[vis].style.zIndex = top;
-              images[nextImage].style.zIndex = top + 1;
-              top = top + 1;
-              images[vis].style.opacity = 1;
-              vis = nextImage;
-          }
-
-        function transition() {
-            return new Promise(function(resolve, reject) {
-                var del = 0.01;
-                var id = setInterval(changeOpacity, 10);
-                function changeOpacity() {
-                    images[vis].style.opacity -= del;
-                    if (images[vis].style.opacity <= 0) {
-                        clearInterval(id);
-                        resolve();
-                    }
-                }
-            })
-        }
-    }
-
     </script>
     <meta name=viewport content="width=device-width, initial-scale=1">
 
@@ -119,7 +81,6 @@
     <link rel="icon" type="image/png" href="https://talkingtorobots.com/images/cmu-icon.png">
   </head>
   <body>
-    <div class="wrapper" ></div>
 
     <nav class="navbar navbar-expand-md navbar-default navbar-dark " style="background-color:#333">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,54 +98,80 @@
       </div>
     </nav>
 
+    <div class="wrapper" >
+      <div class="content">
+        <center><h3><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</h3></center>
+      </div>
+    </div>
+
     <div class="container">
       <div class="table">
         <div class="row">
-          <div class="col-sm-5">
-            <div class="scroll-image">
-              <img class="teaser" alt="Figure 1 from Hao's ICML paper on language coordination"
-                                  src="images/slide_simulated.jpg" style="width:350px;position:absolute;"/>
-              <img class="teaser" alt="Figure 1 from Yingshan's CVPR paper on QA"
-                                  src="images/slide_webqa.jpg"  style="width:350px;position:absolute;"/>
-              <img class="teaser" alt="Model trace for Tiffany's ICLR paper on instruction following" 
-                                  src="images/slide_film.jpg"  style="width:350px;position:absolute;"/>
-              <img class="teaser" alt="Model architecture and dishwasher layout for Vidhi's CoRL paper"
-                                  src="images/slide_TTP.jpg"  style="width:350px;position:absolute;"/>
-            </div> <!--img-->
-
-          </div> <!-- col -->
-          <div class="col-sm-7">
+          <div class="col-sm-12">
             <br>
-            <div class="table">
-              <div class="row">
-                <div class="col-sm-4">
-                  <center><img src="CLAW/images/WSs/WS3_small.png" height=80 style="display:inline;margin-bottom:0px;margin-top:0px;border:0px;" alt="small robot watching TV"></center>
-                </div>
-                <div class="col-sm-4">
-                  <center><img src="CLAW/images/WSs/WS4_small.png" height=80 style="display:inline;margin-bottom:0px;margin-top:0px;border:0px;" alt="small robot building a rocket"></center>
-                </div>
-                <div class="col-sm-4">
-                  <center><img src="CLAW/images/WSs/WS5_small.png" height=80 style="display:inline;margin-bottom:0px;margin-top:0px;border:0px;" alt="small robot giving a gift to another robot"></center>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4" ><center><b>Grounding</b></center></div>
-                <div class="col-sm-4" ><center><b>Action taking</b></center></div>
-                <div class="col-sm-4"><center><b>Theory-of-mind</b></center></div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12">
-                  <br>Our work assumes the importance of perception and/or world building as crucial to constructing semantic representations for and with language. The categories above correspond roughly to WS3, WS4, and WS5 in <a href="https://arxiv.org/abs/2004.10151">Experience Grounds Language</a>.</div>
-                </div>
-              </div>
-            </div>
+            <center>
+              <h1>About CLAW @ CMU</h1>
+              <hr style="width:200pt;border:none;height:2pt;background-color:#333;">
+              <h4 style="font-weight: 300;">
+                <i>Our work assumes that perception, embodiment, and language
+                cannot exist without one another: 
+                <a href="https://arxiv.org/abs/2004.10151">Experience Grounds Language</a>.</h4></i>
+            </center>
+          </div>
+        </div>
+        <div class="row" style="margin:10pt;">
+          <div class="card-group" style="margin: 0 auto; float:none;">
 
-          </div> <!-- col-->
-        </div> <!-- row -->
+            <!-- Grounding -->
+            <div class="card wscard" style="max-width: 250pt; min-width:150pt;">
+                <img src=CLAW/images/WSs/WS3_small.png style="height: 75pt; max-width:100%;object-fit: contain;" class="card-img-top" alt="Robot watching TV">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <center>Perceiving</center>
+                </h4>
+                <p class="card-text" align="left"> 
+                <br>
+                Language is how we share what we've seen, but also defines 
+                meaning patterns or differences in the world. What's worth naming? 
+                </p>
+              </div> <!-- card-body -->
+            </div> <!-- card -->
 
-      </div> <!-- table -->
+            <!-- Grounding -->
+            <div class="card wscard" style="max-width: 250pt; min-width:150pt;">
+                <img src=CLAW/images/WSs/WS4_small.png style="height: 75pt; max-width:100%;object-fit: contain;" class="card-img-top" alt="Robot building a rocket">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <center>Acting</center>
+                </h4>
+                <p class="card-text"> 
+                <br>
+                We learn by doing, probing the boundaries of our knowledge.
+                How do we consolidate actions into abstract goals? 
+                </p>
+              </div> <!-- card-body -->
+            </div> <!-- card -->
 
-      <hr width="33%" size=2 noshade>
+
+            <!-- Grounding -->
+            <div class="card wscard" style="max-width: 250pt; min-width:150pt;">
+                <img src=CLAW/images/WSs/WS5_small.png style="max-height: 75pt; max-width:100%;object-fit: contain;" class="card-img-top" alt="Robot gives a gift ">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <center>Collaborating</center>
+                </h4>
+                <p class="card-text"> 
+                <br>
+                There's a hidden world in everyone's minds.  Collaboration and 
+                teaching require discovering where our understanding differs.
+                </p>
+              </div> <!-- card-body -->
+            </div> <!-- card -->
+          </div>
+        </div>
+
+        </div>
+       <hr width="33%" size=2 noshade>
       <font style="font-weight:200; margin-top: 0em; margin-bottom:0em;font-size:1.25em;">News:</font>
 
       <font size=3>
