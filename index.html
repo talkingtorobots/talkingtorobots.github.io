@@ -6,44 +6,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-      (function($){
-        $.fn.flip = function(options){
-        var options = $.extend({
-          targetClass: '.m-flip_item'
-        }, options);
-    
-            return this.each(function(){
-              console.log(this);
-          var $this = $(this),
-            $target = $this.find(options.targetClass);
-    
-          $this
-            .on({
-              'init.flip': function(){
-                var targetFirst_height = $target.eq(0).height();
-    
-                $this
-                  .data('height', targetFirst_height)
-                  .css({ height: targetFirst_height });
-              },
-              'mouseenter.flip': function(){
-                $target.css({ top: -$this.data('height') + 'px' });
-              },
-              'mouseleave.flip': function(){
-                $target.css({ top: 0 + 'px' });
-              }
-            })
-            .trigger('init.flip');
-        });
-        };
-    }(jQuery));
-    
-    $(function(){
-      $('.js-flip').flip();
-    });
-
-    </script>
     <meta name=viewport content="width=device-width, initial-scale=1">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -58,23 +20,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content:"Yonatan Bisk">
-    <link rel="canonical" href="https://yonatanbisk.com">
+    <link rel="canonical" href="https://talkingtorobots.com">
     <title>Yonatan Bisk</title>
     <meta name="title" content="Yonatan Bisk">
     <meta name="description" content="Yonatan Bisk, Assistant Professor of Computer Science at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://YonatanBisk.com">
+    <meta property="og:url" content="https://talkingtorobots.com">
     <meta property="og:title" content:"Yonatan Bisk">
-    <meta property="og:image" content="https://yonatanbisk.com/images/YonatanBisk_400.jpg">
+    <meta property="og:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
     <meta property="og:description" content="Yonatan Bisk, Assistant Professor of Computer Science at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://YonatanBisk.com">
+    <meta property="twitter:url" content="https://talkingtorobots.com">
     <meta property="twitter:title" content:"Yonatan Bisk">
-    <meta property="twitter:image" content="https://yonatanbisk.com/images/YonatanBisk_400.jpg">
+    <meta property="twitter:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
     <meta property="twitter:description" content="Yonatan Bisk, Assistant Professor of Computer Science at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
 
     <link rel="stylesheet" href="main.css">
