@@ -41,6 +41,10 @@ html {
   font-size:1.25em
 }
 
+.navbar-toggler-icon {
+  background-image: url(./images/CLAW-just.svg); !important
+}
+
 a.nav-link {
   color: rgba(255,255,255,1); !important
 }
