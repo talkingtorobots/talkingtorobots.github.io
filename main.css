@@ -5,11 +5,11 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 .wrapper {
-  background-image: url(./images/header.jpg);
+  background-image: url(./images/header.webp);
   background-repeat: no-repeat;
   background-position: center center;
   #background-size: 100% ;
-  height: 230px;
+  height: 170pt;
   margin: 0 auto;
   position: relative;
 }
