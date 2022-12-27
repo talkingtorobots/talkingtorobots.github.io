@@ -181,10 +181,15 @@ pre {
 img {
     background: transparent;
     border: 0px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
     display: block;
     margin: .3em auto;
     max-width: 95%;
+}
+
+.card-img-top {
+    #border-radius:20%;
+    border-top-left-radius:20% !important;
+    border-bottom-right-radius:20% !important;
 }
 
 .name {
@@ -275,10 +280,10 @@ img {
 
 .logo {
   position: absolute;
-  top: 5px;
+  top: 2px;
   right: 10px;
   border: 0px solid #000000;
-  background-color: #FFFFFF;
+  #background-color: #FFFFFF;
   z-index: 1;
 }
 .m-flip{
