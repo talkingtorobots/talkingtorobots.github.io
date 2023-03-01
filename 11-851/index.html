@@ -89,7 +89,7 @@
                 <b>Questions</b><br>
                 <ul>
                   <li>How do you define or evaluate Dialogue?</li>
-                  <li>Limitations of offline and unimodal pertaining </li>
+                  <li>Limitations of offline and unimodal pretraining </li>
                   <li>How does embodiment shape meaning? </li>
                   <li>Is space semantic, dynamic, and/or euclidean? </li>
                   <li>Discrete vs continuous spaces and representations. </li>
@@ -346,6 +346,7 @@
                         <li> <a href="https://aclanthology.org/P10-1083/">Learning to Follow Navigational Directions</a> ACL 2010 </li> 
                         <li> <a href="https://jacobkrantz.github.io/vlnce/">Vision and Language Navigation in Continuous Environments</a> ECCV 2020</li>
                         <li> <a href="https://arxiv.org/abs/1811.04179">Mapping Navigation Instructions to Continuous Control Actions with Position-Visitation Prediction</a> CoRL 2018</li>
+                       <li> <a href="https://mahis.life/clip-fields/">CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory</a></li>
                       </ul></h6>
                     </td>
                   </tr>
@@ -358,6 +359,8 @@
                       <li> <a href="https://openreview.net/forum?id=r1GAsjC5Fm">Self-Monitoring Navigation Agent via Auxiliary Progress Estimation</a> ICLR 2019</li>
                       <li> <a href="https://arxiv.org/abs/1903.02547">Tactical Rewind: Self-Correction via Backtracking in Vision-and-Language Navigation</a> CVPR 2019</li>
                       <li> <a href="https://wijmans.xyz/publication/eom/">Emergence of Maps in the Memories of Blind Navigation Agents</a> ICLR 2023</li>
+                      <li><a href="https://jacobkrantz.github.io/ivln">Iterative Vision-and-Language Navigation
+</a>CVPR 2023</li>
                       </ul></h6>
                     </td>
                     <td class="col-md-6">
@@ -374,16 +377,18 @@
       
                   <tr class="d-flex">
                     <td class="col-md-6">
-                      Oct 3: <b>Dynamic Environments</b>
+                      Oct 3: <b>State Tracking and Task Planning</b>
                       <h6><ul>
                        <li> <a href="https://askforalfred.com/">ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks</a>CVPR 2020 </li>
-                       <li> <a href="https://vimalabs.github.io/">VIMA: General Robot Manipulation with Multimodal Prompts</a> NeurIPS FMDM Workshop 2022</li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">Oct 5: <b>State Tracking and Task Planning</b> 
-                      <h6><ul>
                        <li> <a href="https://arxiv.org/abs/2107.05612">A Persistent Spatial Semantic Representation for High-level Natural Language Instruction Execution</a> CoRL 2021</li>
                        <li> <a href="https://soyeonm.github.io/FILM_webpage/">FILM: Following Instructions in Language with Modular Methods </a> ICLR 2022 </li>
+                      </ul></h6>
+                    </td>
+                    <td class="col-md-6">Oct 5: <b>Language Models as Planners</b> 
+                      <h6><ul>
+                      <li> <a href="https://wenlong.page/language-planner/">Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents</a> 2022</li>
+                      <li> <a href="https://progprompt.github.io/">ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a> 2023 </li>
+                      <li> <a href="https://arxiv.org/abs/2211.03267">Prompter: Utilizing Large Language Model Prompting for a Data Efficient Embodied Instruction Following</a>2023</li>
                       </ul></h6>
                     </td>
                   </tr>
@@ -407,14 +412,7 @@
                     <td class="col-md-12"  style="background-color:#FFFFFF"><font style="font-family:cursive"><h3><center>Manipulation</center></h3></font>
                   </tr>
                   <tr class="d-flex">
-                    <td class="col-md-6">Oct 24: <b>Language Models as Planners</b>
-                      <h6><ul>
-                      <li> <a href="https://wenlong.page/language-planner/">Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents</a> 2022</li>
-                      <li> <a href="https://progprompt.github.io/">ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a> 2023 </li>
-                      <li> <a href="https://arxiv.org/abs/2211.03267">Prompter: Utilizing Large Language Model Prompting for a Data Efficient Embodied Instruction Following</a>2023</li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">Oct 26: <b>Large Language Models (cont).</b>
+                    <td class="col-md-6">Oct 24: <b>Large Language Models (cont)</b>
                       <h6><ul>
                       <li> <a href="https://say-can.github.io/">Do As I Can, Not As I Say: Grounding Language in Robotic Affordances</a>, 2022</li>
                       <li> <a href="https://code-as-policies.github.io/">Code as Policies: Language Model Programs for Embodied Control</a></li>
@@ -422,21 +420,32 @@
                       <li> <a href="http://hulc2.cs.uni-freiburg.de/">Grounding Language with Visual Affordances over Unstructured Data</a>, 2023 </li>
                       </ul></h6>
                     </td>
-                  </tr>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-6">Oct 31: <b>Manipulators & Representing Space</b>
+                    <td class="col-md-6">Oct 26: <b>Manipulators & Representing Space</b>
                       <h6><ul>
                        <li> <a href="https://transporternets.github.io/">Transporter Networks: Rearranging the Visual World for Robotic Manipulation </a>, 2020</li>
                        <li> <a href="https://cliport.github.io/">CLIPort: What and Where Pathways for Robotic Manipulation</a>, 2021 </li>
                        <li> <a href="https://peract.github.io/">Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation</a>, 2022 </li>
+                       <li> <a href="https://vimalabs.github.io/">VIMA: General Robot Manipulation with Multimodal Prompts</a> NeurIPS FMDM Workshop 2022</li>
                       </ul></h6>
                     </td>
-                    <td class="col-md-6">Nov 2: <b>Scaling Manipulation</b>
+                  </tr>
+      
+                  <tr class="d-flex">
+                    <td class="col-md-6">Oct 31: <b>Scaling Manipulation</b>
                       <h6><ul>
                        <li> <a href="https://language-play.github.io/">Language Conditioned Imitation Learning over Unstructured Data</a>, 2021 </li>
-                       <li> <a href="https://mahis.life/clip-fields/">CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory</a></li>
                        <li> <a href="https://sites.google.com/ucsc.edu/vlmbench/home">VLMbench: A Compositional Benchmark for Vision-and-Language Manipulation</a>NeurIPS 2022 (Datasets and Benchmarks)</li>
+                      </ul></h6>
+                    </td>
+                    <td class="col-md-6">Nov 2: <b>Imagination</b>
+                      <h6><ul>
+                       <li> <a href="https://arxiv.org/abs/1907.02022">Chasing Ghosts: Instruction Following as Bayesian State Tracking</a> NeurIPS 2019</li>
+                       <li> <a href="https://arxiv.org/abs/1903.08309">Prospection: Interpretable Plans From Language By Predicting the Future</a> ICRA 2019</li>
+                       <li> <a href="https://universal-policy.github.io/unipi/">Learning Universal Policies via Text-Guided Video Generation</a> 2023</li>
+                       <li> <a href="https://arxiv.org/abs/2301.06015">Diffusion-based Generation, Optimization, and Planning in 3D Scenes</a> 2023</li>
+                       <li> <a href="https://arxiv.org/abs/2301.04104">Mastering Diverse Domains through World Models</a> 2023</li>
+                       <li> <a href="https://www.robot-learning.uk/dall-e-bot">DALL-E-Bot: Introducing Web-Scale Diffusion Models to Robotics</a> 2023</li>
+                       <li> <a href="https://diffusion-rosie.github.io/">Scaling Robot Learning with Semantically Imagined Experience</a> 2023</li>
                       </ul></h6>
                     </td>
                   </tr>
@@ -499,16 +508,10 @@
                        <li> <a href="https://arxiv.org/abs/2210.04443">Don't Copy the Teacher: Data and Model Challenges in Embodied Dialogue</a> EMNLP 2022</li>
                       </ul></h6>
                     </td>
-                    <td class="col-md-6">Nov 30: <b>Imagination</b>
-                      <h6><ul>
-                       <li> <a href="https://arxiv.org/abs/1907.02022">Chasing Ghosts: Instruction Following as Bayesian State Tracking</a> NeurIPS 2019</li>
-                       <li> <a href="https://arxiv.org/abs/1903.08309">Prospection: Interpretable Plans From Language By Predicting the Future</a> ICRA 2019</li>
-                       <li> <a href="https://universal-policy.github.io/unipi/">Learning Universal Policies via Text-Guided Video Generation</a> 2023</li>
-                       <li> <a href="https://arxiv.org/abs/2301.06015">Diffusion-based Generation, Optimization, and Planning in 3D Scenes</a> 2023</li>
-                       <li> <a href="https://arxiv.org/abs/2301.04104">Mastering Diverse Domains through World Models</a> 2023</li>
-                       <li> <a href="https://www.robot-learning.uk/dall-e-bot">DALL-E-Bot: Introducing Web-Scale Diffusion Models to Robotics</a> 2023</li>
-                       <li> <a href="https://diffusion-rosie.github.io/">Scaling Robot Learning with Semantically Imagined Experience</a> 2023</li>
-                      </ul></h6>
+                    <td class="col-md-6">Nov 30: <b>Bleeding Edge Publications</b>
+                      <h6>
+                        We gotta wait and see what people publish!
+                      </h6>
                     </td>
                   </tr>
       
