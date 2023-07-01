@@ -109,155 +109,16 @@
         </div> <!-- container -->
         <div class="accordion" id="accordion">
           <div class="accordion-item">
-            <div class="accordion-header" id="course-structure">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                 aria-expanded="true" aria-controls="structure" data-bs-target="#structure">
-                Course Structure and Grading
-              </button>
-            </div>
-            <div id="structure" class="accordion-collapse collapse show" aria-labelledby="course-structure">
-              <div class="accordion-body">
-
-                This course is available as both a seminar (6 credits) and project based (12 credits) course.
-                <table class="table table-condensed">
-                  <thead>
-                    <tr class="d-flex">
-                      <th class="col-md-4"> </th>
-                      <th class="col-md-4">6 Credit Seminar</th>
-                      <th class="col-md-4">12 Credit Project</th>
-                    </tr>
-                  </thead>
-                  <tr class="d-flex">
-                    <td class="col-md-4">Paper Summaries  </td>
-                    <td class="col-md-4">5pts * 11 papers </td>
-                    <td class="col-md-4">3pts * 10 papers </td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-4">Project          </td>
-                    <td class="col-md-4">                 </td>
-                    <td class="col-md-4">                 </td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-4">- Proposal           </td>
-                    <td class="col-md-4">15 pts (theoretical) </td>
-                    <td class="col-md-4">15 pts (practical)   </td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-4">- Midsemester Presentation</td>
-                    <td class="col-md-4">                          </td>
-                    <td class="col-md-4">15 pts                    </td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-4">- Final Presentation </td>
-                    <td class="col-md-4">                     </td>
-                    <td class="col-md-4">10 pts               </td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-4">Final Report         </td>
-                    <td class="col-md-4">30pts                </td>
-                    <td class="col-md-4">30 pts               </td>
-                  </tr>
-                </table>
-
-                <b>Proposal:</b> Both seminar and project based students will write a proposal.
-                While project students will go on to work on implementation, the seminar students
-                should also go through the mental exercise of planning out what a system needs, 
-                what dependencies components have, where gradients might flow, etc.  They will then 
-                get to revise their understanding in their final report.
-                <br>
-                <br>
-                <b>Groups:</b> Both seminar and project based assignments will be done in groups.  
-                Groups will likely be capped at five people.
-                <br>
-                <br>
-                <b>Equal Participation:</b> All reports must include a breakdown of each teammate's contributions.
-                <br>
-                <br>
-
-                <h6><b>Paper Summary (5/3pts)</b></h6>
-                <ul>
-                  <li>What is the key insight of this paper and problem they are addressing?</li>
-                  <li>What assumptions or simplifications do they make about the world or information flow?</li>
-                  <li>What changes might enable better generalization to more realistic settings?</li>
-                </ul>
-                <h6><b>Project Proposal (15pts)</b></h6>
-                <ul>
-                  <li>Task, Environment, and Skills Definitions</li>
-                  <li>Minimal language covered and stretch goals</li>
-                  <li>Failure recovery and replanning/feedback strategy</li>
-                </ul>
-                <h6><b>Midsemester Presentation (15pts)</b></h6>
-                <ul>
-                  <li>Interactive demo of basic skills</li>
-                  <li>Example of successful composition</li>
-                  <li>Demonstration and analysis of failures</li>
-                  <li>Proposal of changes for final demo (including rescoping)</li>
-                </ul>
-                <h6><b>Final Presentation (10pts)</b></h6>
-                <ul>
-                  <li>Interactive demo of compositional instructions</li>
-                  <li>Example of successful corrections/feedback</li>
-                  <li>Demonstration and analysis of failures</li>
-                </ul>
-                <h6><b>Final Report (30pts)</b></h6>
-                <ul>
-                  <li>12 Credit: Technical write-up and specification of system (including code)</li>
-                  <li>12 Credit: Technical write-up of model design (including code)</li>
-                  <li>All: Literature Review of state of the field</li>
-                  <li>All: Discussion of key limitations to progress in this space</li>
-                </ul>
-              </div> <!-- body -->
-          </div> <!-- collapse -->
-        </div> <!-- card -->
-          <div class="accordion-item">
-            <div class="accordion-header" id="course-projects">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#projects" aria-expanded="false" aria-controls="#projects">
-                Projects, Hardware, and Resources
-              </button>
-            </div>
-            <div id="projects" class="accordion-collapse collapse" aria-labelledby="course-projects">
-              <div class="accordion-body">
-                The course will be primarily centered on a few robot platforms or simulators based on the size of the course enrollment and the prior experience of students taking the class for 12 credits. <br><br>There are a couple other simulators/platforms I also like, which we can discuss as options.<br><br>
-           <center>
-                <table class="table table-condensed table-striped" style="max-width:800px">
-                  <thead>
-                    <tr class="d-flex">
-                      <th class="col-md-3">Platform</th>
-                      <th class="col-md-3">Type</th>
-                      <th class="col-md-6">Notes</th>
-                    </tr>
-                  </thead>
-                  <tr class="d-flex">
-                    <td class="col-md-3"><a href="https://jacobkrantz.github.io/vlnce/">VLN-CE</a></td>
-                    <td class="col-md-3">Simulated Navigation<br><img src="images/Habitat.jpg"></td>
-                    <td class="col-md-6">Minimal hardware experience<br><b>Proj:</b> Language to Angle/Distance<br><b>Teams:</b>No limit on teams</td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-3"><a href="https://rotrics.com/products/dexarm">DexArm</a></td>
-                    <td class="col-md-3">Simple gripper<br><img src="images/DexArm.jpg"></td>
-                    <td class="col-md-6">Basic manipulation platform<br><b>Proj:</b> Language to 3D Space<br><b>Teams:</b> Two teams of ~4</td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-3"><a href="https://hello-robot.com/product">Hello Robot Stretch</a></td>
-                    <td class="col-md-3">Mobile Manipulator<br><img src="images/Stretch.jpg"></td>
-                    <td class="col-md-6">Requires skill specifications<br><b>Proj:</b> Language to ... let's decide<br><b>Teams</b> (Probably) one team -- Let's see<br><b>Control Code</b>: <a href="https://github.com/facebookresearch/home-robot">Meta Home-Robot</a><br><b>Collaborator</b>: <a href="https://cpaxton.github.io/about/">Chris Paxton</a></td>
-                  </tr>
-                </table>
-                </center>
-              </div> <!-- body -->
-          </div> <!-- collapse -->
-          </div>
-          <div class="accordion-item">
             <div class="accordion-header" id="course-schedule">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+              <button class="accordion-button show" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#schedule" aria-expanded="false" aria-controls="#schedule">
                 Course Schedule
               </button>
             </div>
-            <div id="schedule" class="accordion-collapse collapse " aria-labelledby="course-schedule">
+            <div id="schedule" class="accordion-collapse " aria-labelledby="course-schedule">
               <div class="accordion-body">
-                A basic course schedule is presented below.
+                A basic course schedule is presented below, additional readings here: 
+                <a href="papers/" style="font-size:1em">Additional Readings<a><br>
                 <table class="table table-striped">
                   <thead>
                     <tr class="d-flex">
@@ -520,6 +381,146 @@
               </div> <!-- body -->
           </div> <!-- collapse -->
         </div> <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-header" id="course-structure">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                 aria-expanded="true" aria-controls="structure" data-bs-target="#structure">
+                Course Structure and Grading
+              </button>
+            </div>
+            <div id="structure" class="accordion-collapse collapse" aria-labelledby="course-structure">
+              <div class="accordion-body">
+
+                This course is available as both a seminar (6 credits) and project based (12 credits) course.
+                <table class="table table-condensed">
+                  <thead>
+                    <tr class="d-flex">
+                      <th class="col-md-4"> </th>
+                      <th class="col-md-4">6 Credit Seminar</th>
+                      <th class="col-md-4">12 Credit Project</th>
+                    </tr>
+                  </thead>
+                  <tr class="d-flex">
+                    <td class="col-md-4">Paper Summaries  </td>
+                    <td class="col-md-4">5pts * 11 papers </td>
+                    <td class="col-md-4">3pts * 10 papers </td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-4">Project          </td>
+                    <td class="col-md-4">                 </td>
+                    <td class="col-md-4">                 </td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-4">- Proposal           </td>
+                    <td class="col-md-4">15 pts (theoretical) </td>
+                    <td class="col-md-4">15 pts (practical)   </td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-4">- Midsemester Presentation</td>
+                    <td class="col-md-4">                          </td>
+                    <td class="col-md-4">15 pts                    </td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-4">- Final Presentation </td>
+                    <td class="col-md-4">                     </td>
+                    <td class="col-md-4">10 pts               </td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-4">Final Report         </td>
+                    <td class="col-md-4">30pts                </td>
+                    <td class="col-md-4">30 pts               </td>
+                  </tr>
+                </table>
+
+                <b>Proposal:</b> Both seminar and project based students will write a proposal.
+                While project students will go on to work on implementation, the seminar students
+                should also go through the mental exercise of planning out what a system needs, 
+                what dependencies components have, where gradients might flow, etc.  They will then 
+                get to revise their understanding in their final report.
+                <br>
+                <br>
+                <b>Groups:</b> Both seminar and project based assignments will be done in groups.  
+                Groups will likely be capped at five people.
+                <br>
+                <br>
+                <b>Equal Participation:</b> All reports must include a breakdown of each teammate's contributions.
+                <br>
+                <br>
+
+                <h6><b>Paper Summary (5/3pts)</b></h6>
+                <ul>
+                  <li>What is the key insight of this paper and problem they are addressing?</li>
+                  <li>What assumptions or simplifications do they make about the world or information flow?</li>
+                  <li>What changes might enable better generalization to more realistic settings?</li>
+                </ul>
+                <h6><b>Project Proposal (15pts)</b></h6>
+                <ul>
+                  <li>Task, Environment, and Skills Definitions</li>
+                  <li>Minimal language covered and stretch goals</li>
+                  <li>Failure recovery and replanning/feedback strategy</li>
+                </ul>
+                <h6><b>Midsemester Presentation (15pts)</b></h6>
+                <ul>
+                  <li>Interactive demo of basic skills</li>
+                  <li>Example of successful composition</li>
+                  <li>Demonstration and analysis of failures</li>
+                  <li>Proposal of changes for final demo (including rescoping)</li>
+                </ul>
+                <h6><b>Final Presentation (10pts)</b></h6>
+                <ul>
+                  <li>Interactive demo of compositional instructions</li>
+                  <li>Example of successful corrections/feedback</li>
+                  <li>Demonstration and analysis of failures</li>
+                </ul>
+                <h6><b>Final Report (30pts)</b></h6>
+                <ul>
+                  <li>12 Credit: Technical write-up and specification of system (including code)</li>
+                  <li>12 Credit: Technical write-up of model design (including code)</li>
+                  <li>All: Literature Review of state of the field</li>
+                  <li>All: Discussion of key limitations to progress in this space</li>
+                </ul>
+              </div> <!-- body -->
+          </div> <!-- collapse -->
+        </div> <!-- card -->
+          <div class="accordion-item">
+            <div class="accordion-header" id="course-projects">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#projects" aria-expanded="false" aria-controls="#projects">
+                Projects, Hardware, and Resources
+              </button>
+            </div>
+            <div id="projects" class="accordion-collapse collapse" aria-labelledby="course-projects">
+              <div class="accordion-body">
+                The course will be primarily centered on a few robot platforms or simulators based on the size of the course enrollment and the prior experience of students taking the class for 12 credits. <br><br>There are a couple other simulators/platforms I also like, which we can discuss as options.<br><br>
+           <center>
+                <table class="table table-condensed table-striped" style="max-width:800px">
+                  <thead>
+                    <tr class="d-flex">
+                      <th class="col-md-3">Platform</th>
+                      <th class="col-md-3">Type</th>
+                      <th class="col-md-6">Notes</th>
+                    </tr>
+                  </thead>
+                  <tr class="d-flex">
+                    <td class="col-md-3"><a href="https://jacobkrantz.github.io/vlnce/">VLN-CE</a></td>
+                    <td class="col-md-3">Simulated Navigation<br><img src="images/Habitat.jpg"></td>
+                    <td class="col-md-6">Minimal hardware experience<br><b>Proj:</b> Language to Angle/Distance<br><b>Teams:</b>No limit on teams</td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-3"><a href="https://rotrics.com/products/dexarm">DexArm</a></td>
+                    <td class="col-md-3">Simple gripper<br><img src="images/DexArm.jpg"></td>
+                    <td class="col-md-6">Basic manipulation platform<br><b>Proj:</b> Language to 3D Space<br><b>Teams:</b> Two teams of ~4</td>
+                  </tr>
+                  <tr class="d-flex">
+                    <td class="col-md-3"><a href="https://hello-robot.com/product">Hello Robot Stretch</a></td>
+                    <td class="col-md-3">Mobile Manipulator<br><img src="images/Stretch.jpg"></td>
+                    <td class="col-md-6">Requires skill specifications<br><b>Proj:</b> Language to ... let's decide<br><b>Teams</b> (Probably) one team -- Let's see<br><b>Control Code</b>: <a href="https://github.com/facebookresearch/home-robot">Meta Home-Robot</a><br><b>Collaborator</b>: <a href="https://cpaxton.github.io/about/">Chris Paxton</a></td>
+                  </tr>
+                </table>
+                </center>
+              </div> <!-- body -->
+          </div> <!-- collapse -->
+          </div>
          <div class="accordion-item">
             <div class="accordion-header" id="related-courses">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
