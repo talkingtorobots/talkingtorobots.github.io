@@ -12,11 +12,13 @@ Navigation
 - [ViNT: A Foundation Model for Visual Navigation](https://visualnav-transformer.github.io/)
 - [SACSoN: Scalable Autonomous Data Collection for Social Navigation](https://sites.google.com/view/sacson-review/home)
 - [A System for Generalized 3D Multi-Object Search](https://arxiv.org/abs/2303.03178)
+- [CoWs on Pasture: Baselines and Benchmarks for Language-Driven Zero-Shot Object Navigation](https://arxiv.org/abs/2203.10421)
 
 Manipulation
 ----
 - [RVT: Robotic View Transformer for 3D Object Manipulation](https://robotic-view-transformer.github.io/)
 - [Physically Grounded Vision-Language Models for Robotic Manipulation](https://sites.google.com/view/physically-grounded-vlms)
+- [LATTE: LAnguage Trajectory TransformEr](https://arxiv.org/abs/2208.02918)
 - [LIV: Language-Image Representations and Rewards for Robotic Control](https://penn-pal-lab.github.io/LIV/)
 - [Gesture-Informed Robot Assistance via Foundation Models](https://sites.google.com/view/giraf23/home)
 - [SPRINT: Semantic Policy Pre-training via Language Instruction Relabeling](https://clvrai.github.io/sprint/)
@@ -31,6 +33,7 @@ Mobile Manipulation
 - [HomeRobot: Open-Vocabulary Mobile Manipulation](https://arxiv.org/abs/2306.11565)
 - [LSC: Language-guided Skill Coordination for Open-Vocabulary Mobile Pick-and-Place](https://languageguidedskillcoordination.github.io/)
 - [Spatial-Language Attention Policies](https://robotslap.github.io/)
+- [TidyBot: Personalized Robot Assistance with Large Language Models](https://tidybot.cs.princeton.edu/)
 
 Language to Motion
 ----
@@ -40,7 +43,7 @@ Language to Motion
 
 Dialogue and QA
 ----
-- [SEAGULL: An Embodied Agent for Instruction Following through Situated Dialog | SLED Research Lab @ UMich](https://sled.eecs.umich.edu/publication/zhang-2023-simbot/)
+- [SEAGULL: An Embodied Agent for Instruction Following through Situated Dialog](https://sled.eecs.umich.edu/publication/zhang-2023-simbot/)
 - [SQA3D: Situated Question Answering in 3D Scenes](https://sqa3d.github.io/)
 
 Other
