@@ -4,6 +4,7 @@ Planning
 ----
 - [LLM Powered Autonomous Agents (blog)](https://lilianweng.github.io/posts/2023-06-23-agent/)
 - [LaMPP: Language Models as Probabilistic Priors for Perception and Action](https://arxiv.org/abs/2302.02801)
+- [LLM+P: Empowering Large Language Models with Optimal Planning Proficiency](https://arxiv.org/abs/2304.11477)
 - [Do Embodied Agents Dream of Pixelated Sheep?: Embodied Decision Making using Language Guided World Modelling](https://arxiv.org/abs/2301.12050)
 - [Grounding Classical Task Planners via Vision-Language Models](https://arxiv.org/abs/2304.08587)
 
