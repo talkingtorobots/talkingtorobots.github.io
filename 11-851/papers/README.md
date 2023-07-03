@@ -14,6 +14,7 @@ Navigation
 - [SACSoN: Scalable Autonomous Data Collection for Social Navigation](https://sites.google.com/view/sacson-review/home)
 - [A System for Generalized 3D Multi-Object Search](https://arxiv.org/abs/2303.03178)
 - [CoWs on Pasture: Baselines and Benchmarks for Language-Driven Zero-Shot Object Navigation](https://arxiv.org/abs/2203.10421)
+- [Principles and Guidelines for Evaluating Social Robot Navigation Algorithms](https://arxiv.org/abs/2306.16740)
 
 Manipulation
 ----
@@ -41,6 +42,10 @@ Language to Motion
 - [Language to Reward for Robot Skill Synthesis](https://language-to-reward.github.io/)
 - [Text2Motion: From Natural Language Instructions to Feasible Plans](https://sites.google.com/stanford.edu/text2motion)
 - [SayTap: Language to Quadrupedal Locomotion](https://saytap.github.io/)
+
+Multi-Platform
+----
+- [ChatGPT for Robotics: Design Principles and Model Abilities](https://arxiv.org/abs/2306.17582)
 
 Dialogue and QA
 ----
