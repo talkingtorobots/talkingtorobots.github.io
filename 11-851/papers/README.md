@@ -60,3 +60,4 @@ Other
 - [Behavior Transformers: Cloning k modes with one stone](https://mahis.life/bet/)
 - [From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data](https://play-to-policy.github.io/)
 - [Affordance Diffusion: Synthesizing Hand-Object Interactions](https://judyye.github.io/affordiffusion-www/)
+- [Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment](ut-austin-rpl.github.io/sirius)
