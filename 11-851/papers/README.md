@@ -14,6 +14,7 @@ Navigation
 - [SACSoN: Scalable Autonomous Data Collection for Social Navigation](https://sites.google.com/view/sacson-review/home)
 - [A System for Generalized 3D Multi-Object Search](https://arxiv.org/abs/2303.03178)
 - [CoWs on Pasture: Baselines and Benchmarks for Language-Driven Zero-Shot Object Navigation](https://arxiv.org/abs/2203.10421)
+- [Principles and Guidelines for Evaluating Social Robot Navigation Algorithms](https://arxiv.org/abs/2306.16740)
 
 Manipulation
 ----
@@ -42,6 +43,10 @@ Language to Motion
 - [Text2Motion: From Natural Language Instructions to Feasible Plans](https://sites.google.com/stanford.edu/text2motion)
 - [SayTap: Language to Quadrupedal Locomotion](https://saytap.github.io/)
 
+Multi-Platform
+----
+- [ChatGPT for Robotics: Design Principles and Model Abilities](https://arxiv.org/abs/2306.17582)
+
 Dialogue and QA
 ----
 - [SEAGULL: An Embodied Agent for Instruction Following through Situated Dialog](https://sled.eecs.umich.edu/publication/zhang-2023-simbot/)
@@ -60,3 +65,4 @@ Other
 - [Behavior Transformers: Cloning k modes with one stone](https://mahis.life/bet/)
 - [From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data](https://play-to-policy.github.io/)
 - [Affordance Diffusion: Synthesizing Hand-Object Interactions](https://judyye.github.io/affordiffusion-www/)
+- [Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment](ut-austin-rpl.github.io/sirius)
