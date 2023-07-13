@@ -37,6 +37,7 @@ Mobile Manipulation
 - [LSC: Language-guided Skill Coordination for Open-Vocabulary Mobile Pick-and-Place](https://languageguidedskillcoordination.github.io/)
 - [Spatial-Language Attention Policies](https://robotslap.github.io/)
 - [TidyBot: Personalized Robot Assistance with Large Language Models](https://tidybot.cs.princeton.edu/)
+- [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Task Planning](https://sayplan.github.io/)
 
 Language to Motion
 ----
