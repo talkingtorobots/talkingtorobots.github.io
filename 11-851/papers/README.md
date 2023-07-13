@@ -26,6 +26,7 @@ Manipulation
 - [SPRINT: Semantic Policy Pre-training via Language Instruction Relabeling](https://clvrai.github.io/sprint/)
 - [Language-Driven Representation Learning for Robotics](https://arxiv.org/abs/2302.12766)
 - [EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](https://embodiedgpt.github.io/)
+- [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](https://voxposer.github.io/)
 
 Mobile Manipulation
 ----
@@ -51,9 +52,12 @@ Dialogue and QA
 ----
 - [SEAGULL: An Embodied Agent for Instruction Following through Situated Dialog](https://sled.eecs.umich.edu/publication/zhang-2023-simbot/)
 - [SQA3D: Situated Question Answering in 3D Scenes](https://sqa3d.github.io/)
+- [Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners ](https://robot-help.github.io/)
 
 Other
 ----
+- [Large Language Models as General Pattern Machines](https://general-pattern-machines.github.io/)
+- [Language to Rewards for Robotic Skill Synthesis](https://language-to-reward.github.io/)
 - [Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?](https://eai-vc.github.io/)
 - [MotionGPT](https://motion-gpt.github.io/)
 - [Modeling Dynamic Environments with Scene Graph Memory](https://arxiv.org/abs/2305.17537)
