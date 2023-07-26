@@ -27,6 +27,7 @@ Manipulation
 - [Language-Driven Representation Learning for Robotics](https://arxiv.org/abs/2302.12766)
 - [EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](https://embodiedgpt.github.io/)
 - [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](https://voxposer.github.io/)
+- [VIMA: General Robot Manipulation with Multimodal Prompts](https://arxiv.org/abs/2210.03094)
 
 Mobile Manipulation
 ----
