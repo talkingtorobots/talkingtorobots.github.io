@@ -28,7 +28,7 @@
   URL: "https://arxiv.org/abs/2312.08782"
   YEAR: '2023'
 - FIELD: WS5
-  TYPE: preprint
+  TYPE: conference
   TITLE: "SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents"
   AUTHORS:
     - Xuhui Zhou 
@@ -42,8 +42,8 @@
     - Daniel Fried 
     - Graham Neubig 
     - Maarten Sap
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "The Twelfth International Conference on Learning Representations"
+  VENUE-ACR: "ICLR (Spotlight)"
   URL: "http://arxiv.org/abs/2310.11667"
   YEAR: '2023'
 - FIELD: WS4
@@ -255,7 +255,7 @@
   URL: "https://arxiv.org/abs/2309.08508"
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
   AUTHORS:
     - Shuyan Zhou
@@ -269,8 +269,8 @@
     - Daniel Fried
     - Uri Alon
     - Graham Neubig
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "The Twelfth International Conference on Learning Representations"
+  VENUE-ACR: "ICLR"
   URL: "https://arxiv.org/abs/2307.13854"
   YEAR: '2023'
 - FIELD: WS4
