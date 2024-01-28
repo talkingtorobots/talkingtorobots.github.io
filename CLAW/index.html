@@ -40,7 +40,7 @@
                   .css({ height: targetFirst_height });
               },
               'mouseenter.flip': function(){
-                $target.css({ top: -$this.data('height') + 'px' });
+                $target.css({ top: -$this.data('height') - 1 + 'px' });
               },
               'mouseleave.flip': function(){
                 $target.css({ top: 0 + 'px' });
@@ -371,11 +371,15 @@
         </div>
 
         <div class="card student" style="max-width: 400px;">
-          <img src=images/students/comingsoon.jpg class="card-img-top" alt="Blank Image">
+          <img src=images/students/mariayampolsky.jpg class="card-img-top" alt="Maria Yampolsky">
           <div class="card-body">
-            <h6 class="card-title"><a href=""><b></b></a>
-              <font class="pronoun"></font>
-              <br><br><br>
+            <h6 class="card-title">
+                <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
+                  <span class="m-flip_item"><a href="https://www.linkedin.com/in/maria-yampolsky-1163b418a/"><b>Maria Yampolsky</b></a></span>
+                  <span class="m-flip_item"><a href="https://www.linkedin.com/in/maria-yampolsky-1163b418a/"><b>Мария Ямпольская</b></a></span>
+                </p>
+              <font class="pronoun">she/her</font>
+              <br>CS Undergrad<br>Embodied Speech<br>
             </h6>
           </div> <!-- card-body -->
         </div>
