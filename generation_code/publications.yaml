@@ -242,7 +242,7 @@
   URL: "https://arxiv.org/abs/2309.10103"
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: conference
   TITLE: "MOSAIC: Learning Unified Multi-Sensory Object Property Representations for Robot Perception"
   AUTHORS:
     - Gyan Tatiya
@@ -250,8 +250,8 @@
     - Ho-Hsiang Wu
     - Yonatan Bisk
     - Jivko Sinapov
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "IEEE International Conference on Robotics and Automation" 
+  VENUE-ACR: "ICRA"
   URL: "https://arxiv.org/abs/2309.08508"
   YEAR: '2023'
 - FIELD: WS4
