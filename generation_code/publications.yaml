@@ -1,5 +1,37 @@
 ---
 - FIELD: WS4
+  TYPE: conference
+  TITLE: "OpenEQA: Embodied Question Answering in the Era of Foundation Models"
+  AUTHORS:
+    -  Arjun Majumdar
+    -  Anurag Ajay
+    -  Xiaohan Zhang
+    -  Pranav Putta
+    -  Sriram Yenamandra
+    -  Mikael Henaff
+    -  Sneha Silwal
+    -  Paul Mcvay
+    -  Oleksandr Maksymets
+    -  Sergio Arnaud
+    -  Karmesh Yadav
+    -  Qiyang Li
+    -  Ben Newman
+    -  Mohit Sharma
+    -  Vincent Berges
+    -  Shiqi Zhang
+    -  Pulkit Agrawal
+    -  Yonatan Bisk
+    -  Dhruv Batra
+    -  Mrinal Kalakrishnan
+    -  Franziska Meier
+    -  Chris Paxton
+    -  Sasha Sax
+    -  Aravind Rajeswaran 
+  VENUE: "Conference on Computer Vision and Pattern Recognition"
+  VENUE-ACR: "CVPR"
+  URL: "https://open-eqa.github.io/"
+  YEAR: '2024'
+- FIELD: WS4
   TYPE: preprint 
   TITLE: "Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis"
   AUTHORS:
@@ -43,7 +75,8 @@
     - Graham Neubig 
     - Maarten Sap
   VENUE: "The Twelfth International Conference on Learning Representations"
-  VENUE-ACR: "ICLR (Spotlight)"
+  VENUE-ACR: "ICLR"
+  PRES: Spotlight
   URL: "http://arxiv.org/abs/2310.11667"
   YEAR: '2023'
 - FIELD: WS4
@@ -224,8 +257,8 @@
     - Yutaka Matsuo 
     - Zhuo Xu 
     - Zichen Jeff Cui
-  VENUE: "https://robotics-transformer-x.github.io"
-  VENUE-ACR: ""
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
   YEAR: '2023'
   URL: https://robotics-transformer-x.github.io
 - FIELD: WS4
@@ -433,6 +466,7 @@
     - Emma Strubell
   VENUE: "The 2023 Conference on Empirical Methods in Natural Language Processing "
   VENUE-ACR: "EMNLP"
+  PRES: Oral
   URL: 'https://arxiv.org/abs/2302.06117'
 - FIELD: WS5
   TYPE: conference
@@ -646,7 +680,8 @@
   - Yonatan Bisk
   - Graham Neubig
   VENUE: 'Annual Meeting of the Cognitive Science Society'
-  VENUE-ACR: 'CogSci (Oral)'
+  PRES: Oral
+  VENUE-ACR: 'CogSci'
 - FIELD: WS3
   TYPE: conference
   TITLE: 'HEAR 2021: Holistic Evaluation of Audio Representations'
@@ -691,7 +726,8 @@
   - Yonatan Bisk
   - Jianfeng Gao
   VENUE: 'Annual Conference of the North American Chapter of the Association for Computational Linguistics'
-  VENUE-ACR: NAACL (Oral)
+  VENUE-ACR: NAACL 
+  PRES: Oral
   EXTRAS:
     Code: https://github.com/guilk/KAT
 - FIELD: WS4
@@ -722,8 +758,9 @@
   - Guihong Cao
   - Jianfeng Gao
   - Yonatan Bisk
-  VENUE: Conference on Computer Vision and Pattern Recognition
-  VENUE-ACR: CVPR (Oral)
+  VENUE: Conference on Computer Vision and Pattern Recognition 
+  VENUE-ACR: CVPR 
+  PRES: Oral
   EXTRAS:
     Project: https://webqna.github.io/
     Leaderboard: https://eval.ai/challenge/1255/overview
@@ -830,7 +867,8 @@
   - Andrea Vanzo
   - Oliver Lemon
   VENUE: 'The 2021 Conference of the European Chapter of the Association for Computational Linguistics'
-  VENUE-ACR: EACL (Oral)
+  VENUE-ACR: EACL 
+  PRES: Oral
 - FIELD: WS2
   TYPE: conference
   TITLE: 'Knowledge-driven Data Construction for Zero-shot Evaluation in Commonsense Question Answering'
@@ -877,8 +915,9 @@
   - Emanuele Bastianelli
   - Andrea Vanzo
   - Oliver Lemon
-  VENUE: The 28th International Conference on Computational Linguistics
-  VENUE-ACR: Coling (Oral)
+  VENUE: The 28th International Conference on Computational Linguistics 
+  VENUE-ACR: Coling 
+  PRES: Oral
 - FIELD: WS2
   TYPE: journal
   TITLE: 'The Return of Lexical Dependencies: Neural Lexicalized PCFGs'
@@ -910,9 +949,9 @@
   - Aleksandr Nisnevich
   - Nicolas Pinto
   - Joseph Turian
-  VENUE: Conference on Empirical Methods in Natural Language
-    Processing (EMNLP)
-  VENUE-ACR: EMNLP (Oral)
+  VENUE: Conference on Empirical Methods in Natural Language Processing 
+  VENUE-ACR: EMNLP 
+  PRES: Oral
   EXTRAS:
     Video: https://youtu.be/cQasYLUC_00
     Slides: https://yonatanbisk.com/papers/2020-EMNLP.pdf
@@ -993,8 +1032,9 @@
   - Ronan Le Bras
   - Jianfeng Gao
   - Yejin Choi
-  VENUE: Thirty-Fourth AAAI Conference on Artificial Intelligence
-  VENUE-ACR: AAAI (Oral)
+  VENUE: Thirty-Fourth AAAI Conference on Artificial Intelligence 
+  VENUE-ACR: AAAI 
+  PRES: Oral
   EXTRAS:
     Slides: papers/2020-AAAI-PIQA-Slides.pdf
 - FIELD: WS4
@@ -1100,8 +1140,9 @@
   - Yonatan Bisk
   - Ali Farhadi
   - Yejin Choi
-  VENUE: The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
-  VENUE-ACR: CVPR (Oral)
+  VENUE: The IEEE Conference on Computer Vision and Pattern Recognition 
+  VENUE-ACR: CVPR 
+  PRES: Oral
 - FIELD: WS4
   TYPE: conference
   TITLE: 'Tactical Rewind: Self-Correction via Backtracking in Vision-and-Language
@@ -1118,8 +1159,9 @@
   - Jianfeng Gao
   - Yejin Choi
   - Siddhartha Srinivasa
-  VENUE: The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
-  VENUE-ACR: CVPR (Oral)
+  VENUE: The IEEE Conference on Computer Vision and Pattern Recognition 
+  VENUE-ACR: CVPR 
+  PRES: Oral
   EXTRAS:
     Video: https://youtu.be/AD9TNohXoPA
 - FIELD: WS4
@@ -1159,8 +1201,9 @@
   - Karl Pichotta
   - Yejin Choi
   VENUE: Annual Conference of the North American Chapter of the
-    Association for Computational Linguistics
-  VENUE-ACR: NAACL Short (Oral)
+    Association for Computational Linguistics 
+  VENUE-ACR: NAACL Short 
+  PRES: Oral
   EXTRAS:
     Code: https://github.com/janmbuys/ScriptTransduction/
 - FIELD: O
@@ -1174,8 +1217,9 @@
   - Frank Keller
   - Yonatan Bisk
   - Yonatan Belinkov
-  VENUE: The 41st Annual Meeting of the Cognitive Science Society
-  VENUE-ACR: CogSci (Oral)
+  VENUE: The 41st Annual Meeting of the Cognitive Science Society 
+  VENUE-ACR: CogSci 
+  PRES: Oral
 - FIELD: WS2
   TYPE: conference
   TITLE: 'SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference'
@@ -1186,9 +1230,9 @@
   - Yonatan Bisk
   - Roy Schwartz
   - Yejin Choi
-  VENUE: Conference on Empirical Methods in Natural Language
-    Processing (EMNLP)
-  VENUE-ACR: EMNLP (Oral)
+  VENUE: Conference on Empirical Methods in Natural Language Processing 
+  VENUE-ACR: EMNLP 
+  PRES: Oral
   EXTRAS:
     Talk: https://vimeo.com/305195438
 - FIELD: WS1
@@ -1221,8 +1265,9 @@
   AUTHORS:
   - Yonatan Belinkov
   - Yonatan Bisk
-  VENUE: 6th International Conference on Learning Representations
-  VENUE-ACR: ICLR (Oral)
+  VENUE: 6th International Conference on Learning Representations 
+  VENUE-ACR: ICLR 
+  PRES: Oral
 - FIELD: WS4
   TYPE: preprint
   TITLE: 'CHALET: Cornell House Agent Learning Environment '
@@ -1263,9 +1308,9 @@
   - Alice Lai
   - Yonatan Bisk
   - Julia Hockenmaier
-  VENUE: Eighth International Joint Conference on Natural Language
-    Processing
-  VENUE-ACR: IJCNLP (Oral)
+  VENUE: Eighth International Joint Conference on Natural Language Processing 
+  VENUE-ACR: IJCNLP 
+  PRES: Oral
 - FIELD: WS4
   TYPE: conference
   TITLE: 'Natural Language Communication with Robots '
@@ -1276,8 +1321,9 @@
   - Deniz Yuret
   - Daniel Marcu
   VENUE: 15th Annual Conference of the North American Chapter of
-    the Association for Computational Linguistics
-  VENUE-ACR: NAACL (Oral)
+    the Association for Computational Linguistics 
+  VENUE-ACR: NAACL 
+  PRES: Oral
   EXTRAS:
     Data: https://groundedlanguage.github.io/
     Slides: "http://yonatanbisk.com/papers/2016-NAACL-Slides.pdf"
@@ -1292,8 +1338,9 @@
   - Kenji Sagae
   - Ryan Musa
   VENUE: 15th Annual Conference of the North American Chapter of
-    the Association for Computational Linguistics (Short Papers)
-  VENUE-ACR: NAACL Short (Oral)
+    the Association for Computational Linguistics (Short Papers) 
+  VENUE-ACR: NAACL Short 
+  PRES: Oral
 - FIELD: WS4
   TYPE: workshop
   TITLE: 'Towards a Dataset for Human Computer Communication via Grounded Language
@@ -1317,8 +1364,9 @@
   - Ashish Vaswani
   - Daniel Marcu
   - Kevin Knight
-  VENUE: Workshop on Structured Prediction for NLP
-  VENUE-ACR: Structure Pred Wksp (Oral)
+  VENUE: Workshop on Structured Prediction for NLP 
+  VENUE-ACR: Structure Pred Wksp 
+  PRES: Oral
   EXTRAS:
     Slides: "http://yonatanbisk.com/papers/2016-EMNLP-StrcPred-Slides.pdf"
 - FIELD: WS1
@@ -1355,8 +1403,9 @@
   - Julia Hockenmaier
   VENUE: '53rd Annual Meeting of the Association for Computational
     Linguistics and the 7th International Joint Conference on Natural Language Processing
-    (Volume 1: Long Papers)'
-  VENUE-ACR: ACL (Oral)
+    (Volume 1: Long Papers) '
+  VENUE-ACR: ACL 
+  PRES: Oral
 - FIELD: WS1
   TYPE: conference
   TITLE: 'Labeled Grammar Induction with Minimal Supervision  '

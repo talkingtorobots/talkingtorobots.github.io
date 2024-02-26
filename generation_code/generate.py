@@ -62,7 +62,7 @@ def create_html_entry(entry, idx):
 
   values = {
             "#TITLE#":     entry["TITLE"],
-            "#YEAR#":      entry["YEAR"],
+            "#YEAR#":      str(entry["YEAR"]),
             "#YEAR-btn#":  entry["YEAR"],
             "#VENUE#":     entry["VENUE"],
             "#VENUE-ACR#": entry["VENUE-ACR"],
@@ -70,7 +70,7 @@ def create_html_entry(entry, idx):
             "#BOOK#":      types[entry["TYPE"]][1],
             "#FIELD#":     colors[entry["FIELD"]], 
             "#FIELDS#":    entry["FIELD"],
-            "#CITEKEY#":   entry["AUTHORS"][0].split()[-1] + entry["YEAR"],
+            "#CITEKEY#":   entry["VENUE-ACR"].replace(' ','-') + ":" + entry["AUTHORS"][0].split()[-1] + str(entry["YEAR"]),
             "#AUTH-BIB#":  " and ".join(entry["AUTHORS"]),
             "#AUTHORS#":   authors,
             "#URL#":       entry["URL"] if "URL" in entry else '',
@@ -118,7 +118,7 @@ def create_latex_entry(entry):
   if "NOTE" in entry:
     entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
   tex = tex.replace("#VENUE#", entry["VENUE"])
-  tex = tex.replace("#PRESENTATION#", "(Oral)" if "Oral" in entry["VENUE-ACR"] else "")
+  tex = tex.replace("#PRESENTATION#", f'({entry["PRES"]})' if "PRES" in entry else "")
   authors = ", ".join(entry["AUTHORS"])
   authors = authors.replace("Yonatan Bisk","\\YB{}")
   tex = tex.replace("#AUTHORS#", authors)
