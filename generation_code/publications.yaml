@@ -1,4 +1,25 @@
 ---
+- FIELD: WS4
+  TYPE: preprint
+  TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
+  AUTHORS:
+    - Vidhi Jain
+    - Maria Attarian
+    - Nikhil J Joshi
+    - Ayzaan Wahid
+    - Danny Driess
+    - Quan Vuong
+    - Pannag R Sanketi
+    - Pierre Sermanet
+    - Stefan Welker
+    - Christine Chan
+    - Igor Gilitschenski
+    - Yonatan Bisk
+    - Debidatta Dwibedi
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://vid2robot.github.io/"
 - FIELD: WS5
   TYPE: preprint
   TITLE: "SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents"
