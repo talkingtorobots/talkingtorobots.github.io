@@ -991,7 +991,7 @@
   PRES: Oral
   EXTRAS:
     Video: https://youtu.be/cQasYLUC_00
-    Slides: https://yonatanbisk.com/papers/2020-EMNLP.pdf
+    Slides: https://talkingtorobots.com/papers/2020-EMNLP.pdf
 - FIELD: WS5
   TYPE: conference
   TITLE: 'RMM: A Recursive Mental Model for Dialog Navigation'
@@ -1062,7 +1062,7 @@
   TYPE: conference
   TITLE: 'PIQA: Reasoning about Physical Commonsense in Natural Language'
   YEAR: '2020'
-  URL: https://yonatanbisk.com/piqa
+  URL: https://arxiv.org/abs/1911.11641
   AUTHORS:
   - Yonatan Bisk
   - Rowan Zellers
@@ -1074,6 +1074,7 @@
   PRES: Oral
   EXTRAS:
     Slides: papers/2020-AAAI-PIQA-Slides.pdf
+    Leaderboard: https://leaderboard.allenai.org/physicaliqa/submissions/public
 - FIELD: WS4
   TYPE: conference
   TITLE: Robust Navigation with Language Pretraining and Stochastic Sampling
@@ -1335,7 +1336,7 @@
   VENUE-ACR: AAAI
   EXTRAS:
     Data: https://groundedlanguage.github.io/
-    Poster: "http://yonatanbisk.com/papers/2018-AAAI-Poster.pdf"
+    Poster: "http://talkingtorobots.com/papers/2018-AAAI-Poster.pdf"
 - FIELD: WS2
   TYPE: conference
   TITLE: Natural Language Inference from Multiple Premises
@@ -1363,7 +1364,7 @@
   PRES: Oral
   EXTRAS:
     Data: https://groundedlanguage.github.io/
-    Slides: "http://yonatanbisk.com/papers/2016-NAACL-Slides.pdf"
+    Slides: "http://talkingtorobots.com/papers/2016-NAACL-Slides.pdf"
 - FIELD: WS1
   TYPE: conference
   TITLE: Supertagging with LSTMs
@@ -1383,7 +1384,7 @@
   TITLE: 'Towards a Dataset for Human Computer Communication via Grounded Language
     Acquisition'
   YEAR: '2016'
-  URL: "http://yonatanbisk.com/papers/2016-AAAI-Wksp.pdf"
+  URL: "http://talkingtorobots.com/papers/2016-AAAI-Wksp.pdf"
   AUTHORS:
   - Yonatan Bisk
   - Daniel Marcu
@@ -1405,7 +1406,7 @@
   VENUE-ACR: Structure Pred Wksp 
   PRES: Oral
   EXTRAS:
-    Slides: "http://yonatanbisk.com/papers/2016-EMNLP-StrcPred-Slides.pdf"
+    Slides: "http://talkingtorobots.com/papers/2016-EMNLP-StrcPred-Slides.pdf"
 - FIELD: WS1
   TYPE: conference
   TITLE: 'Evaluating Induced CCG Parsers on Grounded Semantic Parsing '
@@ -1424,7 +1425,7 @@
   TYPE: phdthesis
   TITLE: Unsupervised Grammar Induction with Combinatory Categorial Grammars
   YEAR: '2015'
-  URL: "http://yonatanbisk.com/papers/Thesis.pdf"
+  URL: "http://talkingtorobots.com/papers/Thesis.pdf"
   AUTHORS:
   - Yonatan Bisk
   VENUE: University of Illinois at Urbana-Champaign
@@ -1447,7 +1448,7 @@
   TYPE: conference
   TITLE: 'Labeled Grammar Induction with Minimal Supervision  '
   YEAR: '2015'
-  URL: "http://yonatanbisk.com/papers/2015-ACLShort-Fixed.pdf"
+  URL: "http://talkingtorobots.com/papers/2015-ACLShort-Fixed.pdf"
   AUTHORS:
   - Yonatan Bisk
   - Christos Christodoulopoulos
@@ -1457,7 +1458,7 @@
     (Volume 2: Short Papers)'
   VENUE-ACR: ACL Short
   EXTRAS:
-    Poster: "http://yonatanbisk.com/papers/2015_ACLShort_Poster.pdf"
+    Poster: "http://talkingtorobots.com/papers/2015_ACLShort_Poster.pdf"
 - FIELD: WS1
   TYPE: journal
   TITLE: An HDP Model for Inducing Combinatory Categorial Grammars
@@ -1469,7 +1470,7 @@
   VENUE: Transactions of the Association for Computational Linguistics
   VENUE-ACR: TACL Vol 1.
   EXTRAS:
-    Slides: "http://yonatanbisk.com/papers/2013-TACL-Slides.pdf"
+    Slides: "http://talkingtorobots.com/papers/2013-TACL-Slides.pdf"
 - FIELD: WS1
   TYPE: conference
   TITLE: 'Simple Robust Grammar Induction with Combinatory Categorial Grammar '
@@ -1484,7 +1485,7 @@
   TYPE: conference
   TITLE: 'Document-Topic Hierarchies from Document Graphs '
   YEAR: '2012'
-  URL: "http://yonatanbisk.com/papers/2012-CIKM.pdf"
+  URL: "https://dl.acm.org/doi/10.1145/2396761.2396843"
   AUTHORS:
   - Tim Weninger
   - Yonatan Bisk
@@ -1496,7 +1497,7 @@
   TYPE: workshop
   TITLE: 'Induction of Linguistic Structure with Combinatory Categorial Grammars '
   YEAR: '2012'
-  URL: "http://yonatanbisk.com/papers/2012-NAACL-WILS.pdf"
+  URL: "http://talkingtorobots.com/papers/2012-NAACL-WILS.pdf"
   AUTHORS:
   - Yonatan Bisk
   - Julia Hockenmaier
