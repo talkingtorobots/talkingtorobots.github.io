@@ -1,4 +1,18 @@
 ---
+- FIELD: WS3
+  TYPE: preprint
+  TITLE: "Skews in the Phenomenon Space Hinder Generalization in Text-to-Image Generation"
+  AUTHORS:
+    - Yingshan Chang
+    - Yasi Zhang
+    - Zhiyuan Fang
+    - Yingnian Wu
+    - Yonatan Bisk
+    - Feng Gao
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2403.16394"
 - FIELD: WS4
   TYPE: preprint
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
