@@ -129,7 +129,7 @@
   VENUE-ACR: "ICLR"
   PRES: Spotlight
   URL: "http://arxiv.org/abs/2310.11667"
-  YEAR: '2023'
+  YEAR: '2024'
 - FIELD: WS4
   TYPE: preprint
   TITLE: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
@@ -337,7 +337,7 @@
   VENUE: "IEEE International Conference on Robotics and Automation" 
   VENUE-ACR: "ICRA"
   URL: "https://arxiv.org/abs/2309.08508"
-  YEAR: '2023'
+  YEAR: '2024'
 - FIELD: WS4
   TYPE: conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
@@ -356,7 +356,7 @@
   VENUE: "The Twelfth International Conference on Learning Representations"
   VENUE-ACR: "ICLR"
   URL: "https://arxiv.org/abs/2307.13854"
-  YEAR: '2023'
+  YEAR: '2024'
 - FIELD: WS4
   TYPE: conference
   TITLE: "Spatial-Language Attention Policies for Efficient Robot Learning"
