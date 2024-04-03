@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ7BV93KNM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GZ7BV93KNM');
+    </script>
+
+
+    <!-- https://codemyui.com/text-flip-on-hover/ -->
+    <script>
+      (function($){
+        $.fn.flip = function(options){
+        var options = $.extend({
+          targetClass: '.m-flip_item'
+        }, options);
+    
+            return this.each(function(){
+              console.log(this);
+          var $this = $(this),
+            $target = $this.find(options.targetClass);
+    
+          $this
+            .on({
+              'init.flip': function(){
+                var targetFirst_height = $target.eq(0).height();
+    
+                $this
+                  .data('height', targetFirst_height)
+                  .css({ height: targetFirst_height });
+              },
+              'mouseenter.flip': function(){
+                $target.css({ top: -$this.data('height')  + 'px' });
+              },
+              'mouseleave.flip': function(){
+                $target.css({ top: 0 + 'px' });
+              }
+            })
+            .trigger('init.flip');
+        });
+        };
+    }(jQuery));
+    
+    $(function(){
+      $('.js-flip').flip();
+    });
+
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content:"Yonatan Bisk">
+    <link rel="canonical" href="https://talkingtorobots.com">
+    <title>CLAW Lab</title>
+    <meta name="title" content="CLAW Lab">
+    <meta name="description" content="Connecting Language to Actions and the World Lab - at CMU">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://talkingtorobots.com/CLAW">
+    <meta property="og:title" content:"CLAW Lab">
+    <meta property="og:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
+    <meta property="og:description" content="Connecting Language to Actions and the World Lab - at CMU">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://talkingtorobots.com/CLAW">
+    <meta property="twitter:title" content:"CLAW Lab">
+    <meta property="twitter:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
+    <meta property="twitter:description" content="Connecting Language to Actions and the World Lab - at CMU">
+
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/png" href="https://talkingtorobots.com/images/cmu-icon.png">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbars">
+        <div class="navbar-nav nav-fill w-100">
+          <a class="nav-item nav-link" href="../publications.html" >Publications</a>
+          <a class="nav-item nav-link active" href="#" ><span class="sr-only">(current)</span>Group</a>
+          <a class="nav-item nav-link" href="../index.html">
+            <img alt="image of a robot claw" height=40px 
+                 src="../images/CLAW.svg" 
+                 onmouseover="this.src='../images/CLAW-animated.svg';"
+                 onmouseout="this.src='../images/CLAW.svg';"
+                style="padding: 2px;filter: invert(1);">
+          </a>
+          <a class="nav-item nav-link" href="../teaching.html" >Teaching</a>
+          <a class="nav-item nav-link" href="../resources.html" >Resources</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper" style="background-image: url(images/group.jpg);">
+      <div class="content">
+        <center><h3><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</h3></center>
+      </div>
+    </div>
+
+    <br>
+    <div class="table">
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-6">
+        <br><br>The lab is run by <a href="https://yonatanbisk.com">Yonatan Bisk</a> and is housed primarily in the <a href="lti.cs.cmu.edu/">Language Technologies Institute</a>, but includes members from both the <a href="https://www.ml.cmu.edu/">Machine Learning Department</a> and the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>. 
+      </div>
+      <div class="col-sm-4">
+        <div class="row" style="justify-content: center;">
+          <a href="https://yonatanbisk.com"><img src="images/YonatanBisk_400.jpg" alt="Yonatan Bisk (white male wearing a black t-shirt in front of a window)" style="width:200px;height:200px;display:inline;float:right;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px;border-radius:20%;"></a>
+        </div>
+      </div> <!-- col-->
+    </div> <!-- row -->
+
+
+
+    <h3>PhD Students</h3>
+    <center>
+      #PHD#
+    </center>
+
+    <br><br>
+    <h3>Masters, Independent Studies, and Visitors</h3>
+
+    <br>
+    <center>
+      <div class="card-group">
+        <div class="card student" style="max-width: 400px;">
+          <a href="https://minyoung1005.github.io/">
+            <img src=images/students/minyounghwang.jpg class="card-img-top" alt="Minyoung Hwang">
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">
+              <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
+                  <span class="m-flip_item"><a href="https://minyoung1005.github.io/"><b>Minyoung Hwang</b></a></span>
+                  <span class="m-flip_item"><a href="https://minyoung1005.github.io/"><b>황민영</b></a></span>
+              </p>
+              <br><font class="pronoun">she/her</font>
+              <br><br> Robotics RLHF 
+            </h6>
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+
+        <div class="card student" style="max-width: 400px;">
+          <img src=images/students/clairejin.jpg class="card-img-top" alt="Claire Jin">
+          <div class="card-body">
+            <h6 class="card-title"><a href="https://www.linkedin.com/in/claire-jin-a1474420a/"><p style="font-weight:400; font-size: 15px;"><b>Claire Jin</b></p></a><br>
+              <font class="pronoun">she/her</font>
+              <br>CS Undergrad<br>Embodied Dialogue<br>
+            </h6>
+          </div> <!-- card-body -->
+        </div>
+
+        <div class="card student" style="max-width: 400px;">
+          <img src=images/students/mariayampolsky.jpg class="card-img-top" alt="Maria Yampolsky">
+          <div class="card-body">
+            <h6 class="card-title">
+                <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
+                  <span class="m-flip_item"><a href="https://www.linkedin.com/in/maria-yampolsky-1163b418a/"><b>Maria Yampolsky</b></a></span>
+                  <span class="m-flip_item"><a href="https://www.linkedin.com/in/maria-yampolsky-1163b418a/"><b>Мария Ямпольская</b></a></span>
+                </p>
+              <font class="pronoun">she/her</font>
+              <br>CS Undergrad<br>Embodied Speech<br>
+            </h6>
+          </div> <!-- card-body -->
+        </div>
+
+        <div class="card student" style="max-width: 400px;">
+          <a href="">
+            <img src=images/students/comingsoon.jpg class="card-img-top" alt="">
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">
+              <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
+                <span class="m-flip_item"><a href=""><b></b></a></span>
+                <span class="m-flip_item"><a href=""><b></b></a></span>
+              </p>
+              <br><font class="pronoun"></font>
+              <br><br> 
+            </h6>
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+
+
+        <div class="card student" style="max-width: 400px;">
+          <a href="">
+            <img src=images/students/comingsoon.jpg class="card-img-top" alt="">
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">
+              <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
+                <span class="m-flip_item"><a href=""><b></b></a></span>
+                <span class="m-flip_item"><a href=""><b></b></a></span>
+              </p>
+              <br><font class="pronoun"></font>
+              <br><br>
+            </h6>
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+
+
+
+      </div> <!-- row -->
+    </center>
+
+      <br><br>
+      <h3>Alumni, Undergraduates, and Visitors</h3>
+
+      <center>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <td scope="row">2022</td>
+              <td><a href="https://xiangfan.io/">Xiang Fan</a></td>
+              <td>Undergraduate</td>
+              <td>→ PhD @ UWashington</td>
+              <td><img width=30 src="images/WSs/WS2_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;"  alt="small robot reading a computer screen"></td>
+            </tr>
+
+            <tr>
+              <td scope="row">2022</td>
+              <td><a href="https://scholar.google.com/citations?hl=en&user=wYcxIOsAAAAJ">Andy Liu</a></td>
+              <td>Intern</td>
+              <td>→ PhD @ CMU</td>
+              <td><img width=30 src="images/WSs/WS5_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;"  alt="small robot giving a gift to another robot"></td>
+            </tr>
+
+            <tr>
+              <td scope="row">2022</td>
+              <td>Deogratias Amani</td>
+              <td>Grounding</td>
+              <td></td>
+              <td><img width=30 src="images/WSs/WS4_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
+            </tr>
+
+            <tr>
+              <td scope="row">2022</td>
+              <td><a href="https://jzhanson.com/">Josh Zhanson</a></td>
+              <td>MLT</td>
+              <td>→ Data Scientist @ MSFT </td>
+              <td><img width=30 src="images/WSs/WS4_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
+            </tr>
+            <tr>
+              <td scope="row">2022</td>
+              <td><a href="https://erinzhang1998.github.io/">Xiaoyu (Erin) Zhang</a></td>
+              <td>5th year MS</td>
+              <td>→ PhD @ UIUC</td>
+              <td><img width=30 src="images/WSs/WS4_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
+            </tr>
+            <tr>
+              <td scope="row">2021</td>
+              <td><a href="https://zfy0314.github.io/">Feiyu (Gavin) Zhu</a></td>
+              <td>Undergrad</td>
+              <td></td>
+              <td><img width=30 src="images/WSs/WS3_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><a href="https://blessingitorobassey.github.io/">Blessing Bassey</a></td>
+              <td>Intern</td>
+              <td></td>
+              <td><img width=30 src="images/WSs/WS3_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><a href="https://msclar.github.io/">Melanie Sclar</a></td>
+              <td>Intern</td>
+              <td>→ PhD @ UWashington</td>
+              <td><img width=30 src="images/WSs/WS5_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;"  alt="small robot giving a gift to another robot"></td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+
+  </body>
+      <script>
+        <!-- https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+
+</html>
+

@@ -1,0 +1,82 @@
+---
+- NAME: Hao Zhu
+  NATIVE: 朱昊
+  WEB: http://www.zhuhao.me/
+  PIC: haozhu.webp
+  X: _Hao_Zhu
+  PRON: he/him/他
+  WS: 5
+  DEPT: LTI
+  CO: Graham Neubig
+  CO-WEB: http://phontron.com/
+- NAME: So Yeon Min
+  NATIVE: 민소연
+  WEB: http://soyeonm.github.io/
+  PIC: soyeonmin.webp
+  X: SoYeonTiffMin
+  PRON: she/her
+  WS: 4
+  DEPT: MLD
+  CO: Rus Salakhutdinov
+  CO-WEB: https://www.cs.cmu.edu/~rsalakhu/
+- NAME: Vidhi Jain
+  NATIVE: विधि जैन
+  WEB: https://vidhijain.github.io/
+  PIC: vidhijain.webp
+  X: viddivj
+  PRON: she/her
+  WS: 4
+  DEPT: RI
+- NAME: Yingshan Chang
+  NATIVE: 常影杉
+  WEB: https://zdxdsw.github.io/
+  PIC: yingshanchang.jpg
+  X: _Yingshan
+  PRON: she/her
+  WS: 3
+  DEPT: LTI
+- NAME: Jared Fernandez
+  WEB: https://www.jaredfern.com/
+  PIC: jaredfernandez.webp
+  X: FernJared
+  PRON: he/him
+  WS: 3
+  DEPT: LTI
+  CO: Emma Strubell
+  CO-WEB: http://strubell.github.io/
+- NAME: Abitha Thankaraj
+  NATIVE: അബിത തങ്കരാജ്
+  WEB: https://abitha-thankaraj.github.io/
+  PIC: abithathankaraj.jpg
+  X: abitha___
+  PRON: she/her
+  WS: 4
+  DEPT: RI
+  CO: Aviral Kumar
+  CO-WEB: https://aviralkumar2907.github.io/
+- NAME: Jimin Sun
+  NATIVE: 선지민
+  WEB: https://jiminsun.github.io/
+  PIC: jiminsun.jpg
+  X: jimin__sun
+  PRON: she/her
+  WS: 2
+  DEPT: LTI
+- NAME: Rosa Vitiello
+  NATIVE: Technically Rosanna
+  WEB: https://rosavitiello.github.io/
+  PIC: rosavitiello.jpg
+  X: rosie_vitiello
+  PRON: she/her
+  WS: 5
+  DEPT: LTI
+  CO: Carolyn Rose
+  CO-WEB: https://www.cs.cmu.edu/~cprose/
+- NAME: Quanting Xie
+  NATIVE: 谢泉廷
+  WEB: http://quantingxie.github.io/
+  PIC: quantingxie.jpg
+  X: DanielXieee
+  PRON: he/him
+  WS: 4
+  DEPT: RI
