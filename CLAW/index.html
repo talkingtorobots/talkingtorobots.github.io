@@ -132,7 +132,7 @@
 
     <h3>PhD Students</h3>
     <center>
-      <div class="container"><div class="row row-cols-1 row-cols-3 g-0">
+      <div class="container" id="students"><div class="row row-cols-1 row-cols-3 g-0">
       <!-- Hao Zhu -->
 
       <div class="col card student" style="max-width: 270px; min-width:200px;">
@@ -665,7 +665,20 @@
           });
         }
         </script>
-
+        <script>
+          document.addEventListener('DOMContentLoaded', (event) => {
+            const container = document.querySelector('#students .row');
+            let columns = Array.from(container.children);
+            
+            for (let i = columns.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [columns[i], columns[j]] = [columns[j], columns[i]]; // Swap elements
+            }
+            
+            // Append columns back in their new order
+            columns.forEach(column => container.appendChild(column));
+          });
+          </script>
 
 </html>
 

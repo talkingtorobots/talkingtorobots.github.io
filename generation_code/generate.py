@@ -250,7 +250,7 @@ os.system("mv CV.pdf ../")
 
 ## Generate group page
 website = "".join([line for line in open("group_template.html")])
-block = '<div class="container"><div class="row row-cols-1 row-cols-3 g-0">'
+block = '<div class="container" id="students"><div class="row row-cols-1 row-cols-3 g-0">'
 students = [create_student_card(stud) for stud in student_yaml]
 for student in students:
   block += student + "\n\n"
