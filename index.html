@@ -2,10 +2,10 @@
 <html lang="en">
 
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta name=viewport content="width=device-width, initial-scale=1">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -59,7 +59,7 @@
                  onmouseover="this.src='images/CLAW-animated.svg';"
                  onmouseout="this.src='images/CLAW.svg';"
                 style="padding: 2px;filter: invert(1);">
-                <span class="sr-only">(current)</span></a>
+                <span class="visually-hidden">(current)</span></a>
           <a class="nav-item nav-link" href="teaching.html">Teaching</a>
           <a class="nav-item nav-link" href="resources.html">Resources</a>
         </div>
@@ -140,12 +140,18 @@
 
         </div>
        <hr width="33%" size=2 noshade>
-      <font style="font-weight:200; margin-top: 0em; margin-bottom:0em;font-size:1.25em;">News:</font>
+      <font style="font-weight:200; margin-top: 0em; margin-bottom:0em;font-size:1.25em;">Videos:</font>
 
       <font size=3>
         <ul class="list-unstyled" style="width:90%;margin-left:30pt">
           <li class="media">
-            <img class="mr-3" src="images/HomeRobot.png" height=64pt width=64pt alt="Home Robot">
+            <div class="media-body">
+              <h5 class="mt-0">Preprint</h5>
+              <a href="https://vid2robot.github.io">Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers</b></a>
+              <iframe width="560" height="315" src="https://vid2robot.github.io/static/videos/teaser.mp4" title="Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="media">
             <div class="media-body">
               <h5 class="mt-0">NeurIPS 2023</h5>
               <a href="https://aihabitat.org/challenge/2023_homerobot_ovmm/">HomeRobot: Open Vocabulary Mobile Manipulation (OVMM) <b>Challenge!</b></a>
@@ -153,7 +159,6 @@
             </div>
           </li>
           <li class="media">
-            <img class="mr-3" src="CLAW/images/students/soyeonmin.webp" height=64pt width=64pt alt="Tiffany Min">
             <div class="media-body">
               <h5 class="mt-0">IROS 2023</h5>
               <a href="https://arxiv.org/abs/2212.05923">Self-Supervised Object Goal Navigation with In-Situ Finetuning</a>  
@@ -161,7 +166,6 @@
             </div>
           </li>
           <li class="media">
-            <img class="mr-3" src="CLAW/images/students/haozhu.webp" height=64pt width=64pt alt="Hao Zhu">
             <div class="media-body">
               <h5 class="mt-0">CVPR 2023</h5>
               <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_EXCALIBUR_Encouraging_and_Evaluating_Embodied_Exploration_CVPR_2023_paper.html">EXCALIBUR: Encouraging and Evaluating Embodied Exploration</a>  
@@ -169,20 +173,13 @@
             </div>
           </li>
           <li class="media">
-            <img class="mr-3" src="CLAW/images/students/soyeonmin.webp" height=64pt width=64pt alt="Tiffany Min">
-            <img class="mr-3" src="CLAW/images/students/haozhu.webp" height=64pt width=64pt alt="Hao Zhu">
             <div class="media-body">
               <h5 class="mt-0">EMNLP 2022</h5>
               <a href="https://arxiv.org/abs/2210.04443">Don't Copy the Teacher: Investigating Data and Models in Embodied Dialogue</a>  
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qGPC65BDJw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </li>
           <li class="media">
-            <div class="media-body">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/qGPC65BDJw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-          </li>
-          <li class="media">
-            <img class="align-self-start mr-3" src="CLAW/images/students/vidhijain.webp" height=64pt width=64pt alt="Vidhi Jain">
             <div class="media-body">
               <h5 class="mt-0">CoRL 2022</h5>
               <a href="https://arxiv.org/abs/2207.02442">Transformers Are Adaptable Task Planners</a>  
@@ -190,25 +187,10 @@
             </div>
           </li>
           <li class="media">
-            <img class="align-self-start mr-3" src="CLAW/images/students/haozhu.webp" height=64pt width=64pt alt="Hao Zhu">
-            <div class="media-body">
-              <h5 class="mt-0">CogSci 2022</h5>
-              <a href="https://escholarship.org/uc/item/7p65n371">Simulated Language Learning from Communicative Goals and Linguistic Input</a>  
-            </div>
-          </li>
-          <li class="media">
-            <img class="align-self-start mr-3" src="CLAW/images/students/soyeonmin.webp" height=64pt width=64pt alt="Tiffany Min">
             <div class="media-body">
               <h5 class="mt-0">ICLR 2022</h5>
               <a href="https://soyeonm.github.io/FILM_webpage/">FILM: Following Instructions in Language with Modular Methods</a>  
               <iframe width="560" height="315" src="https://www.youtube.com/embed/Ufh1Os51FY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-          </li>
-          <li class="media">
-            <img class="align-self-start mr-3" src="CLAW/images/students/yingshanchang.jpg" height=64pt width=64pt alt="Yingshan Chang">
-            <div class="media-body">
-              <h5 class="mt-0">CVPR 2022</h5>
-              <a href="https://arxiv.org/abs/2109.00590">WebQA: Multihop and Multimodal QA</a>  
             </div>
           </li>
         </ul>

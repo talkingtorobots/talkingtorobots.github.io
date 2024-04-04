@@ -68,6 +68,10 @@ a.nav-link:visited {
   margin: 0 auto;
 }
 
+.media {
+  padding-bottom: 20px;
+}
+
 .column {
   float: left;
   width: 50%;
@@ -81,6 +85,7 @@ a.nav-link:visited {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+    margin: 20px;
   }
 }
 
@@ -251,7 +256,7 @@ img {
 }
 
 .card-title {
-  font-size: 14px;
+  font-size: 22px;
 }
 
 .card-body{
