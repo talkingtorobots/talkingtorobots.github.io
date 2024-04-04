@@ -8,9 +8,8 @@ pubs = yaml.load(open("publications.yaml"), Loader=yaml.CLoader)
 webs = yaml.load(open("websites.yaml"), Loader=yaml.CLoader)
 
 # Students
-students = set(["Hao Zhu", "So Yeon Min", "Yingshan Chang", \
-                "Vidhi Jain", "Jared Fernandez", "Quanting Xie"])
 student_yaml = yaml.load(open("students.yaml"), Loader=yaml.CLoader)
+student_names = set([s["NAME"] for s in student_yaml])
 
 
 # Load template
@@ -58,7 +57,7 @@ def create_html_entry(entry, idx):
   # Add links to all co-authors
   for v in webs:
     authors = authors.replace(v, "<a href={}>{}</a>".format(webs[v], v))
-  for p in students:
+  for p in student_names:
     authors = authors.replace(p, f"<div class=\"name\">{p}</div>")
   authors = authors.replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
 
@@ -85,7 +84,7 @@ def create_html_entry(entry, idx):
 
   # if current student, add photo
   for author in entry["AUTHORS"]:
-    if author in students:
+    if author in student_names:
       name = author.replace(" ","")
       photo = f"<img class=\"align-self-start mr-3\" \
                 src=\"CLAW/images/students/{name.lower()}.webp\" \
@@ -127,7 +126,36 @@ def create_latex_entry(entry):
   return tex
 
 def create_student_card(S):
-    template = "".join([line for line in open("student.html")])
+    template = """
+      <!-- #NAME# -->\n
+      <div class="col card student" style="max-width: 270px; min-width:200px;">
+        <a href="#WEB#">
+          <img src=images/students/#PIC# class="card-img-top" alt="#NAME#">
+        </a>
+        <img src="images/#DEPT#.png" height=40px class="logo" alt="#DEPT# logo">
+        <div class="card-body">
+          <h5 class="card-title">
+              <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
+                <span class="m-flip_item"><a href="#WEB#"><b>#NAME#</b></a></span>
+                <span class="m-flip_item"><a href="#WEB#"><b>#NATIVE#</b></a></span>
+              </p>
+            <h6><a href="https://twitter.com/#X#">@#X#</a>
+                <font class="pronoun">#PRON#</font></h6>
+            <img width=50 src="images/WSs/WS#WS#_small.webp" 
+                 style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" 
+                 alt="small robot">
+          </h5>
+          <p class="card-text">
+          <br>
+          <h6>#COADVISOR# </h6>
+          </p>
+          <hr>
+          <h6>
+            #RESEARCH#
+          </h6>
+        </div> <!-- card-body -->
+      </div> <!-- card --> 
+    """
     for key in S:
         template = template.replace(f"#{key}#", str(S[key]))
     if "CO" in S:
@@ -140,7 +168,7 @@ def create_student_card(S):
     papers = ""
     for pub in pubs:
         if S["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop" :
-            papers += f"<a href=\"{pub['URL']}\">{pub['TITLE']}</a><br><br>"
+            papers += f"<a href=\"{pub['URL']}\">{pub['TITLE']}</a><br><br>\n\n"
 
     collapse = ""
     if len(papers) > 0:
@@ -222,14 +250,11 @@ os.system("mv CV.pdf ../")
 
 ## Generate group page
 website = "".join([line for line in open("group_template.html")])
-block = ""
+block = '<div class="container"><div class="row row-cols-1 row-cols-3 g-0">'
 students = [create_student_card(stud) for stud in student_yaml]
-for i in range(0,len(students),3):
-    block += '<div class="card-group">'
-    block += students[i] + "\n\n"
-    block += students[i+1] + "\n\n"
-    block += students[i+2] + "\n\n"
-    block += '</div> <!-- group -->'
+for student in students:
+  block += student + "\n\n"
+block += '</div></div>' 
 
 website = website.replace("#PHD#", block)
 
