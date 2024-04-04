@@ -10,6 +10,8 @@ webs = yaml.load(open("websites.yaml"), Loader=yaml.CLoader)
 # Students
 students = set(["Hao Zhu", "So Yeon Min", "Yingshan Chang", \
                 "Vidhi Jain", "Jared Fernandez", "Quanting Xie"])
+student_yaml = yaml.load(open("students.yaml"), Loader=yaml.CLoader)
+
 
 # Load template
 types = {
@@ -124,26 +126,47 @@ def create_latex_entry(entry):
   tex = tex.replace("#AUTHORS#", authors)
   return tex
 
+def create_student_card(S):
+    template = "".join([line for line in open("student.html")])
+    for key in S:
+        template = template.replace(f"#{key}#", str(S[key]))
+    if "CO" in S:
+        coadvisor = f"<h6>(co- <a href=\"{S['CO-WEB']}\">{S['CO']}</a>)</h6>"
+    else:
+        coadvisor = "<h6>&nbsp;</h6>"
+    template = template.replace("#COADVISOR#",coadvisor)
 
-## Generate Website ##
+    # This is inefficient but whatevs
+    papers = ""
+    for pub in pubs:
+        if S["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop" :
+            papers += f"<a href=\"{pub['URL']}\">{pub['TITLE']}</a><br><br>"
+
+    collapse = ""
+    if len(papers) > 0:
+        collapse = f"<button class=\"collapsible\">Research</button>\n"
+        collapse += "<div class=\"content\">\n"
+        collapse += "<p style='margin-top:1rem;margin-bottom:0;'>" + papers + "</p>"
+        collapse += "</div>"
+    papers = collapse
+    template = template.replace("#RESEARCH#", papers)
+    return template
+
+
+## Generate Publications Website ##
 website = "".join([line for line in open("pub_template.html")])
 idx = len(pubs)
 peer_reviewed = ""
 workshop_tech = ""
 for entry in pubs:
-  #print(entry) -- debugging
   generated_html = create_html_entry(entry, idx)
-  #if entry["TYPE"] in ["journal", "conference"]:
   peer_reviewed += generated_html
-  # else:
-  #   workshop_tech += generated_html
   idx -= 1
 
 ## Generate Plot ##
 data = {"WS1":0, "WS2":0, "WS3":0, "WS4":0, "WS5":0, "O":0}
 for entry in pubs:
     u = 1.0
-    #for f in entry["FIELD"]:
     data[entry["FIELD"]] += u
 
 table = f"['Text',      {data['WS1'] + data['WS2']},'#007EF6'],\n"\
@@ -195,3 +218,21 @@ out.close()
 os.system("pdflatex CV.tex")
 os.system("rm CV.tex CV.log CV.aux CV.out")
 os.system("mv CV.pdf ../")
+
+
+## Generate group page
+website = "".join([line for line in open("group_template.html")])
+block = ""
+students = [create_student_card(stud) for stud in student_yaml]
+for i in range(0,len(students),3):
+    block += '<div class="card-group">'
+    block += students[i] + "\n\n"
+    block += students[i+1] + "\n\n"
+    block += students[i+2] + "\n\n"
+    block += '</div> <!-- group -->'
+
+website = website.replace("#PHD#", block)
+
+out = open("../CLAW/index.html",'wt')
+out.write(website)
+out.close()
