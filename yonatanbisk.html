@@ -148,11 +148,11 @@
     <div class="accordion" id="accordion">
       <div class="accordion-item">
         <div class="accordion-header" id="bio">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBio" aria-expanded="false" >
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-controls="collapseBio" data-bs-target="#collapseBio" aria-expanded="false" >
             Need my Bio for something
           </button>
         </div>
-        <div id="collapseBio" class="collapse" data-parent="#accordion"  >
+        <div id="collapseBio" class="accordion-collapse collapse" data-parent="#accordion"  >
           <div class="accordion-body">
             <b>Bio:</b><br>
             Yonatan Bisk is an assistant professor of computer science in Carnegie Mellon's Language Technologies Institute. His group works on grounded and embodied natural language processing, placing perception and interaction as central to how language is learned and understood. Previously, he received his PhD from the University of Illinois at Urbana-Champaign working on unsupervised Bayesian models of syntax, before spending time at USC's ISI (working on grounding), the University of Washington (for commonsense research), and Microsoft Research (for vision+language).
@@ -172,7 +172,7 @@
             Should I apply to LTI, RI, or MLD?
           </button>
         </div>
-        <div id="collapseDept" class="collapse" data-parent="#accordion"  >
+        <div id="collapseDept" class="accordion-collapse collapse" data-parent="#accordion"  >
           <div class="accordion-body">
             <b>Applying to LTI vs RI vs MLD: </b> The short answer is you should apply to the department whose curriculum aligns most closely with your educational and research goals.  The department does not restrict who can serve as your advisor, <b>but</b> it does change <i>when</i> we get access to the applicant pool a little to add comments and whether my name is in the default drop down for visit days.  You can select me during visit days regardless.
           </div>
@@ -185,7 +185,7 @@
             Information about Emailing Professors
           </button>
         </div>
-        <div id="collapseOuterOne" class="collapse" data-parent="#accordion"  >
+        <div id="collapseOuterOne" class="accordion-collapse collapse" data-parent="#accordion"  >
           <div class="accordion-body">
 
 
@@ -245,7 +245,7 @@
                       Why is your email being ignored?
                     </button>
                   </div>
-                  <div id="collapseTwo" data-parent="#accordionEmail" class="collapse" >
+                  <div id="collapseTwo" data-parent="#accordionEmail" class="accordion-collapse collapse" >
                     <div class="accordion-body">
                       Professors get lots of emails, that’s why you’re reading this.  Many of them are
                       generic and have nothing to do with their specific research.  Let’s say a professor
@@ -314,11 +314,11 @@
                 <div class="accordion">
                   <div class="accordion-header" id="headingThree">
 
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
                       Will emailing help me get into grad school?
                     </button>
                   </div>
-                  <div id="collapseThree" data-parent="#accordionEmail"  class="collapse">
+                  <div id="collapseThree" data-parent="#accordionEmail"  class="accordion-collapse collapse">
                     <div class="accordion-body">
                       No, maybe, it's complicated.  I think we need to talk a little about how admissions
                       works (YMMV at other institutions).<br><br>
@@ -355,11 +355,11 @@
 
                 <div class="accordion">
                   <div class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                    <button class="accordion-button type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-controls="collapseFive">
                       When is the most effective time to email? And who should I email?
                     </button>
                   </div>
-                  <div id="collapseFive" data-parent="#accordionEmail"  class="collapse">
+                  <div id="collapseFive" data-parent="#accordionEmail"  class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <b>When?</b> After applications have been submitted.  Because, again, the <i>main</i>
                       thing you're accomplishing is getting a second look at your application. For more
@@ -379,11 +379,11 @@
                 <div class="accordion">
                   <div class="accordion-header" id="headingSix">
 
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-controls="collapseSix">
                       Should I ask for a meeting? What about at a conference?
                     </button>
                   </div>
-                  <div id="collapseSix" data-parent="#accordionEmail"  class="collapse">
+                  <div id="collapseSix" data-parent="#accordionEmail"  class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <b>Ask for a meeting?</b> It doesn't hurt to ask, but meetings take even longer
                       than emails so -- see time issues above<br><br>
@@ -396,11 +396,11 @@
                 <div class="accordion">
                   <div class="accordion-header" id="headingSeven">
 
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-controls="collapseSeven">
                       I’m an outsider, I’m not sure I even know how to write a “tailored” email
                     </button>
                   </div>
-                  <div id="collapseSeven"  data-parent="#accordionEmail" class="collapse">
+                  <div id="collapseSeven"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       That’s 100% fine, and you should say that.  You can indicate where you have tried
                       looking to learn more, and details about your interests.  I take no offense to
@@ -415,7 +415,7 @@
                       How do I know if a professor is taking students? Postdocs?
                     </button>
                   </div>
-                  <div id="collapseEight"  data-parent="#accordionEmail" class="collapse">
+                  <div id="collapseEight"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       You don’t and that sucks, I’m sorry.  Normally you can assume they will try and take
                       one or two per year but funding changes as do other commitments.  A professor
@@ -430,7 +430,7 @@
                       This is the <b>one and only</b> best advisor for me
                     </button>
                   </div>
-                  <div id="collapseNine"  data-parent="#accordionEmail" class="collapse">
+                  <div id="collapseNine"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       While flattering, that’s probably not true.  Related to my own multimodal research
                       area I can quickly name a bunch of really awesome other people.  Here are a few in
@@ -461,7 +461,7 @@
                       I have a geographic constraint (e.g. two-body problem)
                     </button>
                   </div>
-                  <div id="collapseTen"  data-parent="#accordionEmail" class="collapse">
+                  <div id="collapseTen"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       That’s legit, and please let me know.  It doesn’t mean I can solve it, but with more
                       information, I can at least try and be helpful.
@@ -475,7 +475,7 @@
                       My question/issue isn’t on this list
                     </button>
                   </div>
-                  <div id="collapseOne3"  data-parent="#accordionEmail" class="collapse">
+                  <div id="collapseOne3"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       Email me, let’s see what’s up. :)
                     </div>
@@ -493,7 +493,7 @@
               Understanding Graduate Admissions
             </button>
           </div>
-          <div id="collapseOuterTwo" class="collapse" data-parent="#accordion"  >
+          <div id="collapseOuterTwo" class="accordion-collapse collapse" data-parent="#accordion"  >
             <div class="accordion-body">
               If you have additional questions, feel free to email me. Thanks!
               <div class="container">
@@ -501,11 +501,11 @@
 
                   <div class="accordion">
                     <div class="accordion-header" id="headingSixteen">
-                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSixteen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-controls="collapseSixteen">
                         When should I start preparing my apps?
                       </button>
                     </div>
-                    <div id="collapseSixteen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseSixteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Regardless of when you're reading this, you already have started your application.
                         A common mistake is to think that you can just sorta "pull things together" in
@@ -530,11 +530,11 @@
 
                   <div class="accordion">
                     <div class="accordion-header" id="headingEighteen">
-                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEighteen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen">
                         Should I do a 5th year MS? A professional MS? etc.
                       </button>
                     </div>
-                    <div id="collapseEighteen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseEighteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         It depends, but there are two factors that are potentially balancing each other out.
                         1. More time means ability to get better letters but 2. We compare BS to BS, and
@@ -552,11 +552,11 @@
 
                   <div class="accordion">
                     <div class="accordion-header" id="headingFour">
-                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
                         When do you actually read applications?
                       </button>
                     </div>
-                    <div id="collapseFour"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseFour"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         We probably need to discuss how "rounds" work at LTI/RI.  There is an admissions
                         committee that is your first hurdle. They will go through a couple rounds of
@@ -629,7 +629,7 @@
                         Feedback on my application?
                       </button>
                     </div>
-                    <div id="collapseTwelve"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseTwelve"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Hopefully this helps:
                         <a href="https://www.cs.cmu.edu/gasp">Graduate Application Support Program</a>
@@ -656,7 +656,7 @@
                         People say I should just apply, but I don’t have the money for that
                       </button>
                     </div>
-                    <div id="collapseEleven"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseEleven"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Hopefully this helps: <a href="https://www.cs.cmu.edu/academics/fee-waiver">https://www.cs.cmu.edu/academics/fee-waiver</a>
                       </div>
@@ -669,7 +669,7 @@
                         Who should write my recommendations?
                       </button>
                     </div>
-                    <div id="collapseThirteen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseThirteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         TL;DR -- Professors with whom you have done research.<br><br>
                         <b>The Impossibly Strong Packet</b><br>The strongest letter is one that speaks to your
@@ -746,7 +746,7 @@
                         What to expect from an interview
                       </button>
                     </div>
-                    <div id="collapseFourteen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseFourteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         If you have been asked to interview, congrats! This is big, regardless of the result.
                         This is not a "technical" interview in the way that tech companies will have you
@@ -777,7 +777,7 @@
                         Do I need publications to get into PhDs programs?
                       </button>
                     </div>
-                    <div id="collapseFifteen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseFifteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         It's complicated.  In this space, we are looking for two things:
                         <ol>
@@ -822,7 +822,7 @@
                         Do I need a website?  Do I need to submit a video to LTI?
                       </button>
                     </div>
-                    <div id="collapseSeventeen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseSeventeen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Both of these contribute to your general professionalism. I don't recommend
                         spending a lot of time editing and improving, but part of research is
@@ -859,7 +859,7 @@
                         I've heard that offers were already sent out, am I rejected?
                       </button>
                     </div>
-                    <div id="collapseNineteen"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseNineteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Two important things here:
                         <ol>
@@ -888,7 +888,7 @@
                         English Scores?
                       </button>
                     </div>
-                    <div id="collapseTwenty"  data-parent="#accordion_admissions" class="collapse">
+                    <div id="collapseTwenty"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         This is above my pay grade -- university level policies, etc etc but
                         <ol>
@@ -920,7 +920,7 @@
               Emails about Internships, Visiting Researchers, and Collaborations.
             </button>
           </div>
-          <div id="collapseOuterThree" class="collapse" data-parent="#accordion"  >
+          <div id="collapseOuterThree" class="accordion-collapse collapse" data-parent="#accordion"  >
             <div class="accordion-body">
               <b>Internships and Visiting Researchers</b><br>
               TL;DR -- I probably won't reply.  We get a lot of "let me visit" emails.
