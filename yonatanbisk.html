@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar navbar-expand-md">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -146,14 +146,14 @@
   <b>Hi! Here are a few common reasons people come to this website</b>
   <div class="container">
     <div class="accordion" id="accordion">
-      <div class="card">
-        <div class="card-header" id="bio">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBio">
+      <div class="accordion-item">
+        <div class="accordion-header" id="bio">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBio" aria-expanded="false" >
             Need my Bio for something
           </button>
         </div>
         <div id="collapseBio" class="collapse" data-parent="#accordion"  >
-          <div class="card-body">
+          <div class="accordion-body">
             <b>Bio:</b><br>
             Yonatan Bisk is an assistant professor of computer science in Carnegie Mellon's Language Technologies Institute. His group works on grounded and embodied natural language processing, placing perception and interaction as central to how language is learned and understood. Previously, he received his PhD from the University of Illinois at Urbana-Champaign working on unsupervised Bayesian models of syntax, before spending time at USC's ISI (working on grounding), the University of Washington (for commonsense research), and Microsoft Research (for vision+language).
             <br><br>
@@ -166,27 +166,27 @@
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header" id="department">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseDept">
+      <div class="accordion-item">
+        <div class="accordion-header" id="department">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDept">
             Should I apply to LTI, RI, or MLD?
           </button>
         </div>
         <div id="collapseDept" class="collapse" data-parent="#accordion"  >
-          <div class="card-body">
+          <div class="accordion-body">
             <b>Applying to LTI vs RI vs MLD: </b> The short answer is you should apply to the department whose curriculum aligns most closely with your educational and research goals.  The department does not restrict who can serve as your advisor, <b>but</b> it does change <i>when</i> we get access to the applicant pool a little to add comments and whether my name is in the default drop down for visit days.  You can select me during visit days regardless.
           </div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header" id="emailing">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOuterOne">
+      <div class="accordion-item">
+        <div class="accordion-header" id="emailing">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterOne">
             Information about Emailing Professors
           </button>
         </div>
         <div id="collapseOuterOne" class="collapse" data-parent="#accordion"  >
-          <div class="card-body">
+          <div class="accordion-body">
 
 
             The following is a quick note about (cold) emailing professors. You have undoubtedly seen that
@@ -212,14 +212,14 @@
             Information about emailing professions (including some discussion on when and how)
             <div class="container">
               <div class="accordion" id="accordionEmail">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                <div class="accordion">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                       Why you <b>should</b> email professors
-                    </button>
+                    </h2>
                   </div>
                   <div id="collapseOne" class="show" data-parent="#accordionEmail"  >
-                    <div class="card-body">
+                    <div class="accordion-body">
                       Success in academia, like many aspects of society, is often a function of who you
                       know and networking.  Students of famous professors don’t need to email because
                       they know their applications will get read carefully. Further, they may have had
@@ -239,14 +239,14 @@
                   </div>
                 </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-controls="collapseTwo" >
+                <div class="accordion">
+                  <div class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" >
                       Why is your email being ignored?
                     </button>
                   </div>
                   <div id="collapseTwo" data-parent="#accordionEmail" class="collapse" >
-                    <div class="card-body">
+                    <div class="accordion-body">
                       Professors get lots of emails, that’s why you’re reading this.  Many of them are
                       generic and have nothing to do with their specific research.  Let’s say a professor
                       works 40hrs a week and works with 10 students/collaborators.
@@ -311,15 +311,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingThree">
 
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">
                       Will emailing help me get into grad school?
                     </button>
                   </div>
                   <div id="collapseThree" data-parent="#accordionEmail"  class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       No, maybe, it's complicated.  I think we need to talk a little about how admissions
                       works (YMMV at other institutions).<br><br>
                       Every school has an admissions committees that does the initial ranking and sorting of
@@ -353,14 +353,14 @@
                 </div>
 
 
-                <div class="card">
-                  <div class="card-header" id="headingFive">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive">
                       When is the most effective time to email? And who should I email?
                     </button>
                   </div>
                   <div id="collapseFive" data-parent="#accordionEmail"  class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       <b>When?</b> After applications have been submitted.  Because, again, the <i>main</i>
                       thing you're accomplishing is getting a second look at your application. For more
                       information, please read <a href="#admissions">Admissions FAQ</a><br><br>
@@ -376,15 +376,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingSix">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingSix">
 
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix">
                       Should I ask for a meeting? What about at a conference?
                     </button>
                   </div>
                   <div id="collapseSix" data-parent="#accordionEmail"  class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       <b>Ask for a meeting?</b> It doesn't hurt to ask, but meetings take even longer
                       than emails so -- see time issues above<br><br>
                       <b>Meeting at a conference?</b> Great idea! At a conference our schedule is
@@ -393,30 +393,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingSeven">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingSeven">
 
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
                       I’m an outsider, I’m not sure I even know how to write a “tailored” email
                     </button>
                   </div>
                   <div id="collapseSeven"  data-parent="#accordionEmail" class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       That’s 100% fine, and you should say that.  You can indicate where you have tried
                       looking to learn more, and details about your interests.  I take no offense to
                       receiving an email, it’s when there’s a request attached to it that things get tricky.
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingEight">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingEight">
 
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
                       How do I know if a professor is taking students? Postdocs?
                     </button>
                   </div>
                   <div id="collapseEight"  data-parent="#accordionEmail" class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       You don’t and that sucks, I’m sorry.  Normally you can assume they will try and take
                       one or two per year but funding changes as do other commitments.  A professor
                       deciding to have a child, work with a start-up, create a new conference, or any number
@@ -424,14 +424,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingNine">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNine">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingNine">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
                       This is the <b>one and only</b> best advisor for me
                     </button>
                   </div>
                   <div id="collapseNine"  data-parent="#accordionEmail" class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       While flattering, that’s probably not true.  Related to my own multimodal research
                       area I can quickly name a bunch of really awesome other people.  Here are a few in
                       no particular order that I wish I had more time to work with:<br>
@@ -455,28 +455,28 @@
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingTen">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTen">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingTen">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
                       I have a geographic constraint (e.g. two-body problem)
                     </button>
                   </div>
                   <div id="collapseTen"  data-parent="#accordionEmail" class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       That’s legit, and please let me know.  It doesn’t mean I can solve it, but with more
                       information, I can at least try and be helpful.
                     </div>
                   </div>
                 </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingThirteen">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne3">
+                <div class="accordion">
+                  <div class="accordion-header" id="headingThirteen">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3">
                       My question/issue isn’t on this list
                     </button>
                   </div>
                   <div id="collapseOne3"  data-parent="#accordionEmail" class="collapse">
-                    <div class="card-body">
+                    <div class="accordion-body">
                       Email me, let’s see what’s up. :)
                     </div>
                   </div>
@@ -487,26 +487,26 @@
         </div>
       </div>
 
-      <div class="card">
-          <div class="card-header" id="admissions">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOuterTwo">
+      <div class="accordion">
+          <div class="accordion-header" id="admissions">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterTwo">
               Understanding Graduate Admissions
             </button>
           </div>
           <div id="collapseOuterTwo" class="collapse" data-parent="#accordion"  >
-            <div class="card-body">
+            <div class="accordion-body">
               If you have additional questions, feel free to email me. Thanks!
               <div class="container">
                 <div class="accordion" id="accordion_admissions">
 
-                  <div class="card">
-                    <div class="card-header" id="headingSixteen">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSixteen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingSixteen">
+                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSixteen">
                         When should I start preparing my apps?
                       </button>
                     </div>
                     <div id="collapseSixteen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         Regardless of when you're reading this, you already have started your application.
                         A common mistake is to think that you can just sorta "pull things together" in
                         your senior year.  Hopefully after you read the sections below, it'll become clear
@@ -528,14 +528,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingEighteen">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEighteen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingEighteen">
+                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEighteen">
                         Should I do a 5th year MS? A professional MS? etc.
                       </button>
                     </div>
                     <div id="collapseEighteen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         It depends, but there are two factors that are potentially balancing each other out.
                         1. More time means ability to get better letters but 2. We compare BS to BS, and
                         MS to MS.  So is that MS really going to help or put you even further behind?
@@ -550,14 +550,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingFour">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">
                         When do you actually read applications?
                       </button>
                     </div>
                     <div id="collapseFour"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         We probably need to discuss how "rounds" work at LTI/RI.  There is an admissions
                         committee that is your first hurdle. They will go through a couple rounds of
                         filtering <b><i>before </i></b> the rest of the faculty ever gets a chance to see
@@ -623,14 +623,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingTwelve">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwelve">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingTwelve">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
                         Feedback on my application?
                       </button>
                     </div>
                     <div id="collapseTwelve"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         Hopefully this helps:
                         <a href="https://www.cs.cmu.edu/gasp">Graduate Application Support Program</a>
                         for personalized feedback.  There are many similar programs advertised every
@@ -650,27 +650,27 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingEleven">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEleven">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingEleven">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
                         People say I should just apply, but I don’t have the money for that
                       </button>
                     </div>
                     <div id="collapseEleven"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         Hopefully this helps: <a href="https://www.cs.cmu.edu/academics/fee-waiver">https://www.cs.cmu.edu/academics/fee-waiver</a>
                       </div>
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingThirteen">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThirteen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingThirteen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen">
                         Who should write my recommendations?
                       </button>
                     </div>
                     <div id="collapseThirteen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         TL;DR -- Professors with whom you have done research.<br><br>
                         <b>The Impossibly Strong Packet</b><br>The strongest letter is one that speaks to your
                         ability to do the job you're applying for.  In this case, that job is research in
@@ -740,14 +740,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingFourteen">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFourteen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingFourteen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen">
                         What to expect from an interview
                       </button>
                     </div>
                     <div id="collapseFourteen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         If you have been asked to interview, congrats! This is big, regardless of the result.
                         This is not a "technical" interview in the way that tech companies will have you
                         go to a whiteboard, etc.  This interview serves a few purposes:
@@ -771,14 +771,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingFifteen">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFifteen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingFifteen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen">
                         Do I need publications to get into PhDs programs?
                       </button>
                     </div>
                     <div id="collapseFifteen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         It's complicated.  In this space, we are looking for two things:
                         <ol>
                           <li>Research experience/knowledge</li>
@@ -816,14 +816,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingSeventeen">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeventeen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingSeventeen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen">
                         Do I need a website?  Do I need to submit a video to LTI?
                       </button>
                     </div>
                     <div id="collapseSeventeen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         Both of these contribute to your general professionalism. I don't recommend
                         spending a lot of time editing and improving, but part of research is
                         science communication.
@@ -853,14 +853,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingNineteen">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNineteen">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingNineteen">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen">
                         I've heard that offers were already sent out, am I rejected?
                       </button>
                     </div>
                     <div id="collapseNineteen"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         Two important things here:
                         <ol>
                           <li><b>Different Departments</b><br>All departments make their decisions independently and
@@ -882,14 +882,14 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header" id="headingTwenty">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty">
+                  <div class="accordion">
+                    <div class="accordion-header" id="headingTwenty">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty">
                         English Scores?
                       </button>
                     </div>
                     <div id="collapseTwenty"  data-parent="#accordion_admissions" class="collapse">
-                      <div class="card-body">
+                      <div class="accordion-body">
                         This is above my pay grade -- university level policies, etc etc but
                         <ol>
                           <li><b>SCS Language Policies</b><br>
@@ -914,14 +914,14 @@
           </div>
       </div>
 
-      <div class="card">
-          <div class="card-header" id="internships">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOuterThree">
+      <div class="accordion">
+          <div class="accordion-header" id="internships">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterThree">
               Emails about Internships, Visiting Researchers, and Collaborations.
             </button>
           </div>
           <div id="collapseOuterThree" class="collapse" data-parent="#accordion"  >
-            <div class="card-body">
+            <div class="accordion-body">
               <b>Internships and Visiting Researchers</b><br>
               TL;DR -- I probably won't reply.  We get a lot of "let me visit" emails.
               <br><br>
