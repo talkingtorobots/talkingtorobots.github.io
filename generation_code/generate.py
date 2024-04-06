@@ -43,7 +43,7 @@ def pretty_author_names(s):
     s = s[1:-1]
   return s
 
-def create_html(entry):
+def publication_html(entry):
     return f"<div class=\"card {entry['FIELD']}\">\n"\
           f"    <div class=\"card-body\" "\
           f"         style=\"background-color: {'#FFFFFF;' if entry['TYPE'] in ['journal', 'conference'] else '#EBEBEB;'}\">\n"\
@@ -87,7 +87,6 @@ def create_html(entry):
           f"      </div>\n"\
           f"  </div> <!-- body -->\n"\
           f"</div> <!-- card -->\n"
-
 
 def create_publication_entry(entry):
   # Create a Paper button
@@ -133,26 +132,22 @@ def create_publication_entry(entry):
       link = entry["EXTRAS"][key]
       entry["EXTRA"] += " {} href=\"{}\">{}</a>".format(btn, link, key)
 
-  return create_html(entry)
+  return publication_html(entry)
 
 def create_latex_entry(entry):
-  tex = "{\\begin{minipage}[t]{5.2in}\\href{#URL#}{#TITLE#}\end{minipage}\\hfill \\textnormal{#YEAR#}}\n" \
-        "   \t{\\begin{tabular}{@{}p{5.2in}}" \
-        "       #AUTHORS#" \
-        "     \\end{tabular}}\n" \
-        "   \t{\\begin{tabular}{@{}p{5in}}#VENUE# #PRESENTATION#\\end{tabular} }" \
-        "      { }{}\n"
-  tex = tex.replace("#YEAR#", entry["YEAR"])
-  tex = tex.replace("#URL#", entry["URL"] if "URL" in entry else "")
-  tex = tex.replace("#TITLE#", entry["TITLE"].replace("&","\\&"))
-  if "NOTE" in entry:
-    entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
-  tex = tex.replace("#VENUE#", entry["VENUE"])
-  tex = tex.replace("#PRESENTATION#", f'({entry["PRES"]})' if "PRES" in entry else "")
   authors = ", ".join(entry["AUTHORS"])
   authors = authors.replace("Yonatan Bisk","\\YB{}")
-  tex = tex.replace("#AUTHORS#", authors)
-  return tex
+  if "NOTE" in entry:
+    entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
+  return f"{{\\begin{{minipage}}[t]{{5.2in}}"\
+         f" \\href{{{entry['URL'] if 'URL' in entry else ''}}}{{{entry['TITLE'].replace('&','\\&')}}}"\
+         f"  \end{{minipage}}\\hfill \\textnormal{{{entry['YEAR']}}}}}\n" \
+          "   \t{\\begin{tabular}{@{}p{5.2in}}" \
+         f"       {authors}" \
+          "     \\end{tabular}}\n" \
+          "   \t{\\begin{tabular}{@{}p{5in}}"\
+         f"       {entry['VENUE']} {entry['PRES'] if 'PRES' in entry else ''}"\
+          "     \\end{tabular} }{ }{}\n"
 
 def student_card_html(entry):
     return f"<!-- {entry['NAME']} -->\n"\
