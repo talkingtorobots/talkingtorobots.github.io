@@ -30,13 +30,12 @@ colors = {
           "A": "secondary"
         }
 
-# TODO: Redundant with library
 accents = {"{\\'e}": "é", "{\\`e}": "è", "{\\'a}": "á", "{\\'o}": "ó", 
            "{\\'u}": "ú", "{\\'c}": "ć", "{\\'\\\\i}":"í",
            "{\\\"a}": "ä", "{\\o}": "ø", "{\\aa}": "å", "{\\l}": "ł", "{\\'y}": "ý",
            "{\\\"o}": "ö","{\\\"u}": "ü", "{\\'s}": "ś", "{\\^o}": "ô",
            "\\v{c}": "č", "\\v{s}": "š", "\\v{r}": "ř"}
-def pretty(s):
+def pretty_author_names(s):
   for k in accents:
     s = s.replace(k, accents[k])
     s = s.replace(k.upper(), accents[k].upper())
@@ -44,67 +43,97 @@ def pretty(s):
     s = s[1:-1]
   return s
 
-def create_html_entry(entry, idx):
-  # Read entry template
+def create_html(entry):
+    return f"<div class=\"card {entry['FIELD']}\">\n"\
+          f"    <div class=\"card-body\" "\
+          f"         style=\"background-color: {'#FFFFFF;' if entry['TYPE'] in ['journal', 'conference'] else '#EBEBEB;'}\">\n"\
+          f"      <div class=\"row\">\n"\
+          f"        <div class=\"col-md-1\">\n"\
+          f"          <button type=\"button\" disabled "\
+          f"                  class=\"btn ybtn btn-outline-{colors[entry['FIELD']]}\">{entry['YEAR']}</button>\n"\
+          f"            {entry['STUDENTPHOTO']}\n"\
+          f"        </div>\n"\
+          f"        <div class=\"col-md-11\">\n"\
+          f"          <b style=\"font-weight: 500; font-size:15pt\" >\n"\
+          f"              {entry['TITLE']}\n"\
+          f"          </b><br>\n"\
+          f"          <div class=\"card-text\">\n"\
+          f"            <i style=\"font-weight: 300; font-size:11pt\">\n"\
+          f"              {entry['VENUE']} ({entry['VENUE-ACR']})\n"\
+          f"            </i><br>\n"\
+          f"            <font style=\"font-weight: 300; font-size:11pt\">\n"\
+          f"              {entry['AUTHORS']}\n"\
+          f"            </font><br>\n"\
+          f"            {entry['PAPER-BUTTON']}\n"\
+          f"            <a class=\"sbtn\" title\n"\
+          f"                data-original-title=\"Copy BibTex\" id=\"buttonidx{entry['IDX']}\"\n"\
+          f"                href=\"javascript:void(0)\" onclick=\"show(\'idx{entry['IDX']}\')\">\n"\
+          f"                BibTeX\n"\
+          f"              </a>\n"\
+          f"              {entry['EXTRA']}\n"\
+          f"              <div id=\"idx{entry['IDX']}\"  class=\"dynamic_link\">\n"\
+          f"                <pre>\n"\
+          f"@{types[entry['TYPE']][0]}{{{entry['CITEKEY']},\n"\
+          f"    author    = {{{entry['AUTH-BIB']}}},\n"\
+          f"    title     = {{{{{entry['TITLE']}}}}},\n"\
+          f"    {types[entry['TYPE']][1]} = {{{entry['VENUE']}}},\n"\
+          f"    year      = {{{entry['YEAR']}}},\n"\
+          f"    url       = {{{entry['URL']}}},\n"\
+          f"}}\n"\
+          f"              </pre>\n"\
+          f"              </div>\n"\
+          f"          </div> <!-- text -->\n"\
+          f"        </div>\n"\
+          f"      </div>\n"\
+          f"  </div> <!-- body -->\n"\
+          f"</div> <!-- card -->\n"
+
+
+def create_publication_entry(entry):
+  # Create a Paper button
   if "URL" in entry and len(entry["URL"].strip()) > 0:
-    html = "".join([line for line in open("entry.html")])
+    entry["PAPER-BUTTON"] = f"<a class=\"sbtn\" href={entry['URL']}>Paper</a>"
   else:
-    html = "".join([line for line in open("entry_nourl.html")])
-  html = html.replace("#IDX#", str(idx))
+    entry["PAPER-BUTTON"] = ""
 
-  # Authors
-  authors = pretty(", ".join(entry["AUTHORS"]))
-  # Add links to all co-authors
-  for v in webs:
-    authors = authors.replace(v, "<a href={}>{}</a>".format(webs[v], v))
-  for p in student_names:
-    authors = authors.replace(p, f"<div class=\"name\">{p}</div>")
-  authors = authors.replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
+  # LaTeX compatible 
+  entry["AUTH-BIB"] = ' and '.join(entry['AUTHORS'])
 
-  values = {
-            "#TITLE#":     entry["TITLE"],
-            "#YEAR#":      str(entry["YEAR"]),
-            "#YEAR-btn#":  entry["YEAR"],
-            "#VENUE#":     entry["VENUE"],
-            "#VENUE-ACR#": entry["VENUE-ACR"],
-            "#BIBREC#":    types[entry["TYPE"]][0],
-            "#BOOK#":      types[entry["TYPE"]][1],
-            "#FIELD#":     colors[entry["FIELD"]], 
-            "#FIELDS#":    entry["FIELD"],
-            "#CITEKEY#":   entry["VENUE-ACR"].replace(' ','-') + ":" + entry["AUTHORS"][0].split()[-1] + str(entry["YEAR"]),
-            "#AUTH-BIB#":  " and ".join(entry["AUTHORS"]),
-            "#AUTHORS#":   authors,
-            "#URL#":       entry["URL"] if "URL" in entry else '',
-            "#COLOR#":     '#FFFFFF;' if entry["TYPE"] in ["journal", "conference"] else '#EBEBEB;'
-          }
-
-  # Replace values
-  for key in values:
-    html = html.replace(key, values[key])
-
-  # if current student, add photo
+  # Before doing pretification
+  entry["CITEKEY"] = entry["VENUE-ACR"].replace(' ','-') + ":" + entry["AUTHORS"][0].split()[-1] + str(entry["YEAR"])
+# if current student, add photo
   for author in entry["AUTHORS"]:
     if author in student_names:
       name = author.replace(" ","")
-      photo = f"<img class=\"align-self-start mr-3\" \
-                src=\"CLAW/images/students/{name.lower()}.webp\" \
-                height=44pt width=44pt alt=\"{entry['AUTHORS'][0]}\">"
+      entry["STUDENTPHOTO"] = f"<img class=\"align-self-start mr-3\" \
+                               src=\"CLAW/images/students/{name.lower()}.webp\" \
+                               height=44pt width=44pt alt=\"{entry['AUTHORS'][0]}\">"
       print(f'Photo for {entry["AUTHORS"][0]} on {entry["TITLE"]}')
       break
     else:
-        photo = ""
-  html = html.replace("#STUDENTPHOTO#",photo)
+      entry["STUDENTPHOTO"] = ""
 
-  # Include extra links
-  additional = ""
+
+  # Authors
+  entry["AUTHORS"] = pretty_author_names(", ".join(entry["AUTHORS"]))
+
+  # Add links to all co-authors
+  for v in webs:
+    entry["AUTHORS"] = entry["AUTHORS"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
+  for p in student_names:
+    entry["AUTHORS"] = entry["AUTHORS"].replace(p, f"<div class=\"name\">{p}</div>")
+  entry["AUTHORS"] = entry["AUTHORS"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
+
+
+    # Include extra links
+  entry["EXTRA"] = ""
   btn = "&nbsp; <a class=\"sbtn\" "
   if "EXTRAS" in entry:
     for key in entry["EXTRAS"]:
       link = entry["EXTRAS"][key]
-      additional += " {} href=\"{}\">{}</a>".format(btn, link, key)
-  html = html.replace("#EXTRA#", additional)
+      entry["EXTRA"] += " {} href=\"{}\">{}</a>".format(btn, link, key)
 
-  return html
+  return create_html(entry)
 
 def create_latex_entry(entry):
   tex = "{\\begin{minipage}[t]{5.2in}\\href{#URL#}{#TITLE#}\end{minipage}\\hfill \\textnormal{#YEAR#}}\n" \
@@ -125,45 +154,44 @@ def create_latex_entry(entry):
   tex = tex.replace("#AUTHORS#", authors)
   return tex
 
-def create_student_card(S):
-    template = """
-      <!-- #NAME# -->\n
-      <div class="col card student" style="max-width: 270px; min-width:200px;">
-        <a href="#WEB#">
-          <img src=images/students/#PIC# class="card-img-top" alt="#NAME#">
-        </a>
-        <img src="images/#DEPT#.png" height=40px class="logo" alt="#DEPT# logo">
-        <div class="card-body">
-          <h5 class="card-title">
-              <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                <span class="m-flip_item"><a href="#WEB#"><b>#NAME#</b></a></span>
-                <span class="m-flip_item"><a href="#WEB#"><b>#NATIVE#</b></a></span>
-              </p>
-            <h6><a href="https://twitter.com/#X#">@#X#</a>
-                <font class="pronoun">#PRON#</font></h6>
-            <img width=50 src="images/WSs/WS#WS#_small.webp" 
-                 style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" 
-                 alt="small robot">
-          </h5>
-          <p class="card-text">
-          <br>
-          <h6>#COADVISOR# </h6>
-          </p>
-          <hr>
-          <h6>
-            #RESEARCH#
-          </h6>
-        </div> <!-- card-body -->
-      </div> <!-- card --> 
-    """
-    for key in S:
-        template = template.replace(f"#{key}#", str(S[key]))
-    if "CO" in S:
-        coadvisor = f"<h6>(co- <a href=\"{S['CO-WEB']}\">{S['CO']}</a>)</h6>"
-    else:
-        coadvisor = "<h6>&nbsp;</h6>"
-    template = template.replace("#COADVISOR#",coadvisor)
+def student_card_html(entry):
+    return f"<!-- {entry['NAME']} -->\n"\
+          f"    <div class=\"col card student\" style=\"max-width: 270px; min-width:200px;\">\n"\
+          f"      <a href=\"{entry['WEB']}\">\n"\
+          f"        <img src=images/students/{entry['PIC']} class=\"card-img-top\" alt=\"{entry['NAME']}\">\n"\
+          f"      </a>\n"\
+          f"      <img src=\"images/{entry['DEPT']}.png\" height=40px class=\"logo\" alt=\"{entry['DEPT']} logo\">\n"\
+          f"      <div class=\"card-body\">\n"\
+          f"        <h5 class=\"card-title\">\n"\
+          f"            <p class=\"m-flip js-flip\" style=\"font-weight:200; font-size: 20px;\">\n"\
+          f"              <span class=\"m-flip_item\"><a href=\"{entry['WEB']}\"><b>{entry['NAME']}</b></a></span>\n"\
+          f"              <span class=\"m-flip_item\"><a href=\"{entry['WEB']}\"><b>{entry['NATIVE']}</b></a></span>\n"\
+          f"            </p>\n"\
+          f"          <h6><a href=\"https://twitter.com/{entry['X']}\">@{entry['X']}</a>\n"\
+          f"              <font class=\"pronoun\">{entry['PRON']}</font></h6>\n"\
+          f"          <img width=50 src=\"images/WSs/WS{entry['WS']}_small.webp\" \n"\
+          f"               style=\"margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;\" \n"\
+          f"               alt=\"small robot\">\n"\
+          f"        </h5>\n"\
+          f"        <p class=\"card-text\">\n"\
+          f"        <br>\n"\
+          f"        <h6>{entry['COADVISOR']} </h6>\n"\
+          f"        </p>\n"\
+          f"        <hr>\n"\
+          f"        <h6>\n"\
+          f"          {entry['RESEARCH']}\n"\
+          f"        </h6>\n"\
+          f"      </div> <!-- card-body -->\n"\
+          f"    </div> <!-- card --> \n"
 
+def create_student_card(S):
+    if "CO" in S:
+        S["COADVISOR"] = f"<h6>(co- <a href=\"{S['CO-WEB']}\">{S['CO']}</a>)</h6>"
+    else:
+        S["COADVISOR"] = "<h6>&nbsp;</h6>"
+
+    if "NATIVE" not in S: 
+       S["NATIVE"] = S["NAME"]
     # This is inefficient but whatevs
     papers = ""
     for pub in pubs:
@@ -177,8 +205,8 @@ def create_student_card(S):
         collapse += "<p style='margin-top:1rem;margin-bottom:0;'>" + papers + "</p>"
         collapse += "</div>"
     papers = collapse
-    template = template.replace("#RESEARCH#", papers)
-    return template
+    S["RESEARCH"] = papers
+    return student_card_html(S)
 
 
 ## Generate Publications Website ##
@@ -187,7 +215,8 @@ idx = len(pubs)
 peer_reviewed = ""
 workshop_tech = ""
 for entry in pubs:
-  generated_html = create_html_entry(entry, idx)
+  entry["IDX"] = idx
+  generated_html = create_publication_entry({v:entry[v] for v in entry})
   peer_reviewed += generated_html
   idx -= 1
 
