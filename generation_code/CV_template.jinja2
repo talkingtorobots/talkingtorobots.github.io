@@ -1,3 +1,4 @@
+{% raw %}
 %% start of file `template_en.tex'.
 %% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
 %
@@ -146,18 +147,20 @@
 \stud{Intern}{msclar.github.io/             }{Melanie Sclar    }{}{Symmetric Theory-of-Mind}{(co-\href{http://www.phontron.com/}{G Neubig})  }{}{2021}
 \stud{Intern}{blessingitorobassey.github.io/}{Blessing Bassey  }{}{TextVQA                 }{}{}{2021}
 
+{% endraw %}
 \section{Journal Publications}
-##JOUR##
+{{ JOUR }}
 
 \section{Conference Publications}
-##CONF##
+{{ CONF }}
 
 \section{Workshop Publications}
-##WORK##
+{{ WORK }}
 
 \section{Tech Reports}
-##TECH##
+{{ TECH }}
 
+{% raw %}
 \section{Thesis Committees}
 \cventry{--}{PhD}{\href{https://gabesarch.me/}{Gabe Sarch}}{\hfill Katerina Fragkiadaki and Mike Tarr}{CMU}{}
 \cventry{--}{PhD}{\href{https://scholar.google.com/citations?user=oM6Pj3MAAAAJ}{Liangke Gui}}{\hfill Alex Hauptmann}{CMU}{}
@@ -316,3 +319,4 @@
 \cventry{2013}{Colloquium Talk}{Toyota Tech. Inst. of Chicago's Midwest Speech \& Language Days}{}{}{}
 
 \end{document}
+{% endraw %}

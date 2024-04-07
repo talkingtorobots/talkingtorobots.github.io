@@ -1,3 +1,4 @@
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,8 +40,13 @@
 
           var data = google.visualization.arrayToDataTable([
               ['Community', 'Count', { role: 'style' }],
-              
-              ###PLOT###
+              {% endraw %}
+              ['Text',      {{ data['WS1'] + data['WS2'] }},'#007EF6'],
+              ['Perception',{{ data['WS3'] }},'#53A351'],
+              ['Action',    {{ data['WS4'] }},'#CB444A'],
+              ['Social',    {{ data['WS5'] }},'#f6c144'],
+              ['Other',     {{ data['O'] }},  '#49A0B5']
+              {% raw %}
           ]);
 
           var options = {
@@ -243,7 +249,9 @@
     <br>
 
       <h3>Publications (preprints and workshops in <font style="background-color: #EBEBEB;">grey</font>)</h3>
-        ###PEERREVIEW###
+        {% endraw %}
+        {{ PEERREVIEW }}
+        {% raw %}
 
         <script>
         $(document).ready(function(){
@@ -254,4 +262,4 @@
     </main>
   </body>
 </html>
-
+{% endraw %}

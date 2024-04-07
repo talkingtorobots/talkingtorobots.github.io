@@ -1,5 +1,6 @@
 import os
 import yaml
+from jinja2 import Template
 
 # Load Publications 
 pubs = yaml.load(open("publications.yaml"), Loader=yaml.CLoader)
@@ -44,49 +45,53 @@ def pretty_author_names(s):
   return s
 
 def publication_html(entry):
-    return f"<div class=\"card {entry['FIELD']}\">\n"\
-          f"    <div class=\"card-body\" "\
-          f"         style=\"background-color: {'#FFFFFF;' if entry['TYPE'] in ['journal', 'conference'] else '#EBEBEB;'}\">\n"\
-          f"      <div class=\"row\">\n"\
-          f"        <div class=\"col-md-1\">\n"\
-          f"          <button type=\"button\" disabled "\
-          f"                  class=\"btn ybtn btn-outline-{colors[entry['FIELD']]}\">{entry['YEAR']}</button>\n"\
-          f"            {entry['STUDENTPHOTO']}\n"\
-          f"        </div>\n"\
-          f"        <div class=\"col-md-11\">\n"\
-          f"          <b style=\"font-weight: 500; font-size:15pt\" >\n"\
-          f"              {entry['TITLE']}\n"\
-          f"          </b><br>\n"\
-          f"          <div class=\"card-text\">\n"\
-          f"            <i style=\"font-weight: 300; font-size:11pt\">\n"\
-          f"              {entry['VENUE']} ({entry['VENUE-ACR']})\n"\
-          f"            </i><br>\n"\
-          f"            <font style=\"font-weight: 300; font-size:11pt\">\n"\
-          f"              {entry['AUTHORS']}\n"\
-          f"            </font><br>\n"\
-          f"            {entry['PAPER-BUTTON']}\n"\
-          f"            <a class=\"sbtn\" title\n"\
-          f"                data-original-title=\"Copy BibTex\" id=\"buttonidx{entry['IDX']}\"\n"\
-          f"                href=\"javascript:void(0)\" onclick=\"show(\'idx{entry['IDX']}\')\">\n"\
-          f"                BibTeX\n"\
-          f"              </a>\n"\
-          f"              {entry['EXTRA']}\n"\
-          f"              <div id=\"idx{entry['IDX']}\"  class=\"dynamic_link\">\n"\
-          f"                <pre>\n"\
-          f"@{types[entry['TYPE']][0]}{{{entry['CITEKEY']},\n"\
-          f"    author    = {{{entry['AUTH-BIB']}}},\n"\
-          f"    title     = {{{{{entry['TITLE']}}}}},\n"\
-          f"    {types[entry['TYPE']][1]} = {{{entry['VENUE']}}},\n"\
-          f"    year      = {{{entry['YEAR']}}},\n"\
-          f"    url       = {{{entry['URL']}}},\n"\
-          f"}}\n"\
-          f"              </pre>\n"\
-          f"              </div>\n"\
-          f"          </div> <!-- text -->\n"\
-          f"        </div>\n"\
-          f"      </div>\n"\
-          f"  </div> <!-- body -->\n"\
-          f"</div> <!-- card -->\n"
+    template_string = """
+    <div class="card {{ entry['FIELD'] }}">
+      <div class="card-body" 
+          style="background-color: {{ '#FFFFFF' if entry['TYPE'] in ['journal', 'conference'] else '#EBEBEB' }};">
+        <div class="row">
+          <div class="col-md-1">
+            <button type="button" disabled 
+                    class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}">{{ entry['YEAR'] }}</button>
+              {{ entry['STUDENTPHOTO'] | safe }}
+          </div>
+          <div class="col-md-11">
+            <b style="font-weight: 500; font-size:15pt" >
+                {{ entry['TITLE'] }}
+            </b><br>
+            <div class="card-text">
+              <i style="font-weight: 300; font-size:11pt">
+                {{ entry['VENUE'] }} ({{ entry['VENUE-ACR'] }})
+              </i><br>
+              <font style="font-weight: 300; font-size:11pt">
+                {{ entry['AUTHORS'] }}
+              </font><br>
+              {{ entry['PAPER-BUTTON'] | safe }}
+              <a class="sbtn" title
+                  data-original-title="Copy BibTex" id="buttonidx{{ entry['IDX'] }}"
+                  href="javascript:void(0)" onclick="show('idx{{ entry['IDX'] }}')">
+                  BibTeX
+                </a>
+                {{ entry['EXTRA'] | safe }}
+                <div id="idx{{ entry['IDX'] }}" class="dynamic_link">
+                  <pre>
+@{{types[entry['TYPE']][0] }}{ {{- entry['CITEKEY'] }},
+    author    = { {{- entry['AUTH-BIB'] -}} },
+    title     = { {{- entry['TITLE'] -}} },
+    {{- types[entry['TYPE']][1] -}} = { {{- entry['VENUE'] -}} },
+    year      = { {{- entry['YEAR'] -}} },
+    url       = { {{- entry['URL'] -}} },
+}
+                  </pre>
+                </div>
+            </div> <!-- text -->
+          </div>
+        </div>
+      </div> <!-- body -->
+    </div> <!-- card -->
+    """
+    template = Template(template_string)
+    return template.render(entry=entry, colors=colors, types=types)
 
 def create_publication_entry(entry):
   # Create a Paper button
@@ -139,45 +144,50 @@ def create_latex_entry(entry):
   authors = authors.replace("Yonatan Bisk","\\YB{}")
   if "NOTE" in entry:
     entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
-  return f"{{\\begin{{minipage}}[t]{{5.2in}}"\
-         f" \\href{{{entry['URL'] if 'URL' in entry else ''}}}{{{entry['TITLE'].replace('&','\\&')}}}"\
-         f"  \end{{minipage}}\\hfill \\textnormal{{{entry['YEAR']}}}}}\n" \
-          "   \t{\\begin{tabular}{@{}p{5.2in}}" \
-         f"       {authors}" \
-          "     \\end{tabular}}\n" \
-          "   \t{\\begin{tabular}{@{}p{5in}}"\
-         f"       {entry['VENUE']} {entry['PRES'] if 'PRES' in entry else ''}"\
-          "     \\end{tabular} }{ }{}\n"
+  template_string = """
+    {\\begin{minipage}[t]{5.2in}
+    \\href{ {{ entry['URL'] if 'URL' in entry else '' }} }
+          { {{ entry['TITLE'].replace('&', '\\&') }}     }
+    \\end{minipage}\hfill \\textnormal{ {{ entry['YEAR'] }} } }
+    \t{\\begin{tabular}{ @{}p{5.2in} }
+        {{ authors }}
+    \\end{tabular} }
+    \t{\\begin{tabular}{@{}p{5in} }
+        {{ entry['VENUE'] }} {{ entry['PRES'] if 'PRES' in entry else '' }}
+    \\end{tabular} } { }{}
+  """
+  template = Template(template_string)
+  return template.render(entry=entry, authors=authors)
+  
 
 def student_card_html(entry):
-    return f"<!-- {entry['NAME']} -->\n"\
-          f"    <div class=\"col card student\" style=\"max-width: 270px; min-width:200px;\">\n"\
-          f"      <a href=\"{entry['WEB']}\">\n"\
-          f"        <img src=images/students/{entry['PIC']} class=\"card-img-top\" alt=\"{entry['NAME']}\">\n"\
-          f"      </a>\n"\
-          f"      <img src=\"images/{entry['DEPT']}.png\" height=40px class=\"logo\" alt=\"{entry['DEPT']} logo\">\n"\
-          f"      <div class=\"card-body\">\n"\
-          f"        <h5 class=\"card-title\">\n"\
-          f"            <p class=\"m-flip js-flip\" style=\"font-weight:200; font-size: 20px;\">\n"\
-          f"              <span class=\"m-flip_item\"><a href=\"{entry['WEB']}\"><b>{entry['NAME']}</b></a></span>\n"\
-          f"              <span class=\"m-flip_item\"><a href=\"{entry['WEB']}\"><b>{entry['NATIVE']}</b></a></span>\n"\
-          f"            </p>\n"\
-          f"          <h6><a href=\"https://twitter.com/{entry['X']}\">@{entry['X']}</a>\n"\
-          f"              <font class=\"pronoun\">{entry['PRON']}</font></h6>\n"\
-          f"          <img width=50 src=\"images/WSs/WS{entry['WS']}_small.webp\" \n"\
-          f"               style=\"margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;\" \n"\
-          f"               alt=\"small robot\">\n"\
-          f"        </h5>\n"\
-          f"        <p class=\"card-text\">\n"\
-          f"        <br>\n"\
-          f"        <h6>{entry['COADVISOR']} </h6>\n"\
-          f"        </p>\n"\
-          f"        <hr>\n"\
-          f"        <h6>\n"\
-          f"          {entry['RESEARCH']}\n"\
-          f"        </h6>\n"\
-          f"      </div> <!-- card-body -->\n"\
-          f"    </div> <!-- card --> \n"
+    template_string = """
+        <!-- {{ entry['NAME'] }} -->
+        <div class="col card student" style="max-width: 270px; min-width:200px;">
+          <a href="{{ entry['WEB'] }}">
+            <img src=images/students/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+          </a>
+          <img src="images/{{ entry['DEPT'] }}.png" height=40px class="logo" alt="{{ entry['DEPT'] }} logo">
+          <div class="card-body">
+            <h5 class="card-title">
+              <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
+                <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
+                <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NATIVE'] }}</b></a></span>
+              </p>
+              <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
+                  <font class="pronoun">{{ entry['PRON'] }}</font></h6>
+              <img width=50 src="images/WSs/WS{{ entry['WS'] }}_small.webp" 
+                  style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" 
+                  alt="small robot">
+            </h5>
+            <p class="card-text"><br><h6>{{ entry['COADVISOR'] }} </h6></p>
+            <hr>
+            <h6>{{ entry['RESEARCH'] }}</h6>
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+    """
+    template = Template(template_string)
+    return template.render(entry=entry)
 
 def create_student_card(S):
     if "CO" in S:
@@ -205,10 +215,11 @@ def create_student_card(S):
 
 
 ## Generate Publications Website ##
-website = "".join([line for line in open("pub_template.html")])
+with open("pub_template.jinja2", 'r') as file:
+  pub_template = Template(file.read())
+
 idx = len(pubs)
 peer_reviewed = ""
-workshop_tech = ""
 for entry in pubs:
   entry["IDX"] = idx
   generated_html = create_publication_entry({v:entry[v] for v in entry})
@@ -221,23 +232,14 @@ for entry in pubs:
     u = 1.0
     data[entry["FIELD"]] += u
 
-table = f"['Text',      {data['WS1'] + data['WS2']},'#007EF6'],\n"\
-      + f"['Perception',{data['WS3']},'#53A351'],\n"\
-      + f"['Action',    {data['WS4']},'#CB444A'],\n"\
-      + f"['Social',    {data['WS5']},'#f6c144'],\n"\
-      + f"['Other',     {data['O']},  '#49A0B5']\n"
-
-
-website = website.replace("###PEERREVIEW###", peer_reviewed)
-website = website.replace("###TECHREPORT###", workshop_tech)
-website = website.replace("###PLOT###", table)
-out = open("../publications.html",'wt')
-out.write(website)
-out.close()
+rendered = pub_template.render(PEERREVIEW=peer_reviewed, data=data)
+with open("../publications.html", 'wt') as output_file:
+    output_file.write(rendered)
 
 
 ## Generate CV ##
-latex = "".join([line for line in open("CV_template.tex")])
+with open("CV_template.jinja2", 'r') as file:
+  latex_template = Template(file.read())
 latex_papers = {"journal": [],
                 "conference": [],
                 "workshop": [],
@@ -256,32 +258,30 @@ def number_pub(vals):
   global pub_count
   comb = ""
   for v in vals:
-    comb += "\pub{" + str(pub_count) + ".}\n\t" + v
+    comb += "\pub{" + str(pub_count) + ".}" + v
     pub_count += 1
   return comb
 
-latex = latex.replace("##JOUR##", number_pub(latex_papers["journal"]))
-latex = latex.replace("##CONF##", number_pub(latex_papers["conference"]))
-latex = latex.replace("##WORK##", number_pub(latex_papers["workshop"]))
-latex = latex.replace("##TECH##", number_pub(latex_papers["preprint"] + latex_papers["phdthesis"]))
-out = open("CV.tex",'wt')
-out.write(latex)
-out.close()
+latex_render = latex_template.render(jour=number_pub(latex_papers["journal"]), 
+                                     conf=number_pub(latex_papers["conference"]),
+                                     work=number_pub(latex_papers["workshop"]),
+                                     tech=number_pub(latex_papers["preprint"] + latex_papers["phdthesis"]))
+with open("CV.tex", 'wt') as output_file:
+    output_file.write(latex_render)
 os.system("pdflatex CV.tex")
 os.system("rm CV.tex CV.log CV.aux CV.out")
 os.system("mv CV.pdf ../")
 
 
 ## Generate group page
-website = "".join([line for line in open("group_template.html")])
+with open("group_template.jinja2", 'r') as file:
+  group_template = Template(file.read())
 block = '<div class="container" id="students"><div class="row row-cols-1 row-cols-3 g-0">'
 students = [create_student_card(stud) for stud in student_yaml]
 for student in students:
   block += student + "\n\n"
 block += '</div></div>' 
 
-website = website.replace("#PHD#", block)
-
-out = open("../CLAW/index.html",'wt')
-out.write(website)
-out.close()
+group_render = group_template.render(PHD=block)
+with open("../CLAW/index.html", 'wt') as output_file:
+    output_file.write(group_render)
