@@ -250,7 +250,51 @@
 
       <h3>Publications (preprints and workshops in <font style="background-color: #EBEBEB;">grey</font>)</h3>
         {% endraw %}
-        {{ PEERREVIEW }}
+        {% for entry in publications %}
+        <div class="card {{ entry['FIELD'] }}">
+          <div class="card-body" 
+              style="background-color: {{ '#FFFFFF' if entry['TYPE'] in ['journal', 'conference'] else '#EBEBEB' }};">
+            <div class="row">
+              <div class="col-md-1">
+                <button type="button" disabled 
+                        class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}">{{ entry['YEAR'] }}</button>
+                  {{ entry['STUDENTPHOTO'] | safe }}
+              </div>
+              <div class="col-md-11">
+                <b style="font-weight: 500; font-size:15pt" >
+                    {{ entry['TITLE'] }}
+                </b><br>
+                <div class="card-text">
+                  <i style="font-weight: 300; font-size:11pt">
+                    {{ entry['VENUE'] }} ({{ entry['VENUE-ACR'] }})
+                  </i><br>
+                  <font style="font-weight: 300; font-size:11pt">
+                    {{ entry['AUTHORS'] }}
+                  </font><br>
+                  {{ entry['PAPER-BUTTON'] | safe }}
+                  <a class="sbtn" title
+                      data-original-title="Copy BibTex" id="buttonidx{{ entry['IDX'] }}"
+                      href="javascript:void(0)" onclick="show('idx{{ entry['IDX'] }}')">
+                      BibTeX
+                    </a>
+                    {{ entry['EXTRA'] | safe }}
+                    <div id="idx{{ entry['IDX'] }}" class="dynamic_link">
+                      <pre>
+    @{{types[entry['TYPE']][0] }}{ {{- entry['CITEKEY'] }},
+        author    = { {{- entry['AUTH-BIB'] -}} },
+        title     = { {{- entry['TITLE'] -}} },
+        {{ types[entry['TYPE']][1] }} = { {{- entry['VENUE'] -}} },
+        year      = { {{- entry['YEAR'] -}} },
+        url       = { {{- entry['URL'] -}} },
+    }
+                      </pre>
+                    </div>
+                </div> <!-- text -->
+              </div>
+            </div>
+          </div> <!-- body -->
+        </div> <!-- card -->
+        {% endfor %}
         {% raw %}
 
         <script>

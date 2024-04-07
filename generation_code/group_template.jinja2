@@ -129,14 +129,38 @@
       </div> <!-- col-->
     </div> <!-- row -->
 
-
-    {% endraw %}
     <h3>PhD Students</h3>
-    <center>
-      {{ PHD }}
-    </center>
-
-    {% raw %}
+    <div class="container" id="students">
+      <div class="row row-cols-1 row-cols-3 g-0">
+        {% endraw %}
+        {% for entry in students %}
+            <!-- {{ entry['NAME'] }} -->
+            <div class="col card student" style="max-width: 270px; min-width:200px;">
+              <a href="{{ entry['WEB'] }}">
+                <img src=images/students/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
+                    <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NATIVE'] }}</b></a></span>
+                  </p>
+                  <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
+                      <font class="pronoun">{{ entry['PRON'] }}</font></h6>
+                </h5>
+                <p class="card-text">
+                    <img src="images/{{ entry['DEPT'] }}.png" height=35px class="left-float-img" alt="{{ entry['DEPT'] }} logo">
+                    <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
+                    <h6>{{ entry['COADVISOR'] }} </h6>
+                </p>
+                <hr>
+                <h6>{{ entry['RESEARCH'] }}</h6>
+              </div> <!-- card-body -->
+            </div> <!-- card -->
+        {% endfor %}
+        {% raw %}
+      </div>
+    </div>
     <br><br>
     <h3>Masters, Independent Studies, and Visitors</h3>
 

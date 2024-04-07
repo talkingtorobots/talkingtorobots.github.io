@@ -348,3 +348,21 @@ img {
   float: right;
   margin-left: 5px;
 }
+
+.left-float-img {
+  float: left;
+  display: inline;
+  margin: 0 10px 0px 0px; /* Add some space around the image */
+  border: 0;
+}
+
+.right-float-img {
+  float: right;
+  display: inline;
+  margin: 0 0 0px 0px; /* Add some space around the image */
+  border: 0;
+}
+
+.coadvisor {
+  font-size: 0.9em;
+}
