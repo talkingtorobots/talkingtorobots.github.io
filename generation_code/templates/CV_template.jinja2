@@ -148,17 +148,21 @@
 \stud{Intern}{blessingitorobassey.github.io/}{Blessing Bassey  }{}{TextVQA                 }{}{}{2021}
 
 {% endraw %}
-\section{Journal Publications}
-{{ JOUR }}
-
-\section{Conference Publications}
-{{ CONF }}
-
-\section{Workshop Publications}
-{{ WORK }}
-
-\section{Tech Reports}
-{{ TECH }}
+{% for pub_type in pub_types %}
+\section{ {{- pub_type }} Publications}
+  {% for entry in publications[pub_type] %}
+  \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
+      \href{ {{ entry['URL'] if 'URL' in entry else '' }} }
+            { {{ entry['TITLE'].replace('&', '\\&') }}     }
+      \end{minipage}\hfill \textnormal{ {{ entry['YEAR'] }} } }
+      {\begin{tabular}{ @{}p{5.2in} }
+          {{ entry['AUTHORS'] }}
+      \end{tabular} }
+      {\begin{tabular}{@{}p{5in} }
+          {{ entry['VENUE'] }} {{ entry['PRES'] if 'PRES' in entry else '' }}
+      \end{tabular} } { }{}
+  {%- endfor -%}
+{%- endfor -%}
 
 {% raw %}
 \section{Thesis Committees}

@@ -1,6 +1,6 @@
 ---
 - FIELD: WS3
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "Skews in the Phenomenon Space Hinder Generalization in Text-to-Image Generation"
   AUTHORS:
     - Yingshan Chang
@@ -14,7 +14,7 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.16394"
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
   AUTHORS:
     - Vidhi Jain
@@ -35,7 +35,7 @@
   YEAR: '2024'
   URL: "https://vid2robot.github.io/"
 - FIELD: WS5
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents"
   AUTHORS:
     - Ruiyi Wang
@@ -51,7 +51,7 @@
   YEAR: '2024'
   URL: "https://www.sotopia.world/projects/sotopia-pi"
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "OpenEQA: Embodied Question Answering in the Era of Foundation Models"
   AUTHORS:
     -  Arjun Majumdar
@@ -83,7 +83,7 @@
   URL: "https://open-eqa.github.io/"
   YEAR: '2024'
 - FIELD: WS4
-  TYPE: preprint 
+  TYPE: Preprint 
   TITLE: "Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis"
   AUTHORS:
     - Yafei Hu
@@ -111,7 +111,7 @@
   URL: "https://arxiv.org/abs/2312.08782"
   YEAR: '2023'
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: "SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents"
   AUTHORS:
     - Xuhui Zhou 
@@ -131,7 +131,7 @@
   URL: "http://arxiv.org/abs/2310.11667"
   YEAR: '2024'
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
   AUTHORS:
     - Open X-Embodiment Collaboration 
@@ -313,7 +313,7 @@
   YEAR: '2023'
   URL: https://robotics-transformer-x.github.io
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "Reasoning about the Unseen for Efficient Outdoor Object Navigation"
   AUTHORS:
     - Quanting Xie
@@ -326,7 +326,7 @@
   URL: "https://arxiv.org/abs/2309.10103"
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "MOSAIC: Learning Unified Multi-Sensory Object Property Representations for Robot Perception"
   AUTHORS:
     - Gyan Tatiya
@@ -339,7 +339,7 @@
   URL: "https://arxiv.org/abs/2309.08508"
   YEAR: '2024'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
   AUTHORS:
     - Shuyan Zhou
@@ -358,7 +358,7 @@
   URL: "https://arxiv.org/abs/2307.13854"
   YEAR: '2024'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "Spatial-Language Attention Policies for Efficient Robot Learning"
   AUTHORS:
     - Priyam Parashar
@@ -375,7 +375,7 @@
   EXTRAS:
     Website: "https://robotslap.github.io/"
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: "SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs"
   AUTHORS:
     - Lijun Yu
@@ -396,7 +396,7 @@
   URL: "https://arxiv.org/abs/2306.17842"
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "HomeRobot: Open-Vocabulary Mobile Manipulation"
   AUTHORS:
     - Sriram Yenamandra
@@ -424,7 +424,7 @@
   EXTRAS:
     Video: https://www.youtube.com/watch?v=EA8HEzopkc0
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning"
   AUTHORS: 
     - Yue Wu
@@ -440,7 +440,7 @@
   URL: "https://arxiv.org/abs/2305.15486"
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "Plan, Eliminate, and Track -- Language Models are Good Teachers for Embodied Agents"
   AUTHORS: 
     - Yue Wu
@@ -456,7 +456,7 @@
   URL: "https://arxiv.org/abs/2305.02412"
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "HomeRobot Open Vocab Mobile Manipulation Challenge"
   AUTHORS: 
     - Sriram Yenamandra
@@ -485,7 +485,7 @@
   URL: https://aihabitat.org/challenge/2023_homerobot_ovmm/
   YEAR: '2023'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "EXCALIBUR: Encouraging and Evaluating Embodied Exploration"
   YEAR: '2023'
   AUTHORS: 
@@ -506,7 +506,7 @@
     Video: https://www.youtube.com/watch?v=SboNjVuIUJA
     Tasks: https://www.youtube.com/watch?v=X6Bdz4p1io8
 - FIELD: O
-  TYPE: conference
+  TYPE: Conference
   TITLE: "The Framework Tax: Disparities Between Inference Efficiency in Research and Deployment"
   YEAR: '2023'
   AUTHORS:
@@ -520,7 +520,7 @@
   PRES: Oral
   URL: 'https://arxiv.org/abs/2302.06117'
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: "Computational Language Acquisition with Theory of Mind"
   YEAR: '2023'
   AUTHORS:
@@ -535,7 +535,7 @@
     Code: https://github.com/neulab/ToM-Language-Acquisition
   URL: 'https://openreview.net/forum?id=C2ulri4duIs'
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: "Self-Supervised Object Goal Navigation with In-Situ Finetuning"
   YEAR: '2023'
   AUTHORS:
@@ -552,7 +552,7 @@
   EXTRAS:
     Video: https://www.youtube.com/watch?v=LXsZst5ZUpU
 - FIELD: WS4
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: "MAEA: Multimodal Attribution for Embodied AI"
   YEAR: '2022'
   AUTHORS:
@@ -564,7 +564,7 @@
   VENUE-ACR: TEA
   URL: 'https://openreview.net/pdf?id=OUs2us5Xhx'
 - FIELD: WS4
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: "Tackling AlfWorld with Action Attention and Common Sense from Language Models"
   YEAR: '2022'
   URL: 'https://openreview.net/forum?id=AqkPRUZ-YkO'
@@ -577,7 +577,7 @@
   VENUE: "Language and Reinforcement Learning Workshop at NeurIPS 2022"
   VENUE-ACR: LaReL
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: "Retrospectives on the Embodied AI Workshop"
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2210.06849'
@@ -624,7 +624,7 @@
   VENUE: ArXiv
   VENUE-ACR: ArXiv
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: "Don't Copy the Teacher: Data and Model Challenges in Embodied Dialogue"
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2210.04443'
@@ -638,7 +638,7 @@
   EXTRAS:
     Video: https://www.youtube.com/watch?v=qGPC65BDJw4
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: "EvEntS ReaLM: Event Reasoning of Entity States via Language Models"
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2211.05392'
@@ -650,7 +650,7 @@
   VENUE:  Conference on Empirical Methods in Natural Language Processing
   VENUE-ACR: EMNLP
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: "On Advances in Text Generation from Images Beyond Captioning: A Case Study in Self-Rationalization"
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2205.11686'
@@ -664,7 +664,7 @@
   VENUE:  Findings of the Conference on Empirical Methods in Natural Language Processing
   VENUE-ACR: Findings of EMNLP
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Transformers are Adaptable Task Planners'
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2207.02442'
@@ -679,7 +679,7 @@
   EXTRAS:
     Video: https://www.youtube.com/watch?v=ivLdlMQekME
 - FIELD: WS3
-  TYPE: journal
+  TYPE: Journal
   TITLE: 'Training Vision-Language Transformers from Captions'
   YEAR: '2023'
   URL: 'https://arxiv.org/abs/2205.09256'
@@ -696,7 +696,7 @@
   EXTRAS:
     Code: https://github.com/guilk/VLC
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Symmetric Machine Theory of Mind'
   YEAR: '2022'
   URL: 'https://proceedings.mlr.press/v162/sclar22a.html'
@@ -709,7 +709,7 @@
   EXTRAS:
     Talk: "https://slideslive.com/38983255"
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'A Framework for Learning to Request Rich and Contextually Useful Information from Humans'
   YEAR: '2022'
   URL: 'http://arxiv.org/abs/2110.08258'
@@ -722,7 +722,7 @@
   EXTRAS:
     Talk: "https://slideslive.com/38983532"
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Simulated Language Learning from Communicative Goals and Linguistic Input'
   YEAR: '2022'
   URL: 'https://escholarship.org/uc/item/7p65n371'
@@ -734,7 +734,7 @@
   PRES: Oral
   VENUE-ACR: 'CogSci'
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'HEAR 2021: Holistic Evaluation of Audio Representations'
   YEAR: '2022'
   URL: 'http://arxiv.org/abs/2203.03022'
@@ -765,7 +765,7 @@
   VENUE: 'Proceedings of Machine Learning Research (PMLR): NeurIPS 2021 Competition Track'
   VENUE-ACR: 'PMLR'
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'KAT: A Knowledge Augmented Transformer for Vision-and-Language'
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2112.08614'
@@ -782,7 +782,7 @@
   EXTRAS:
     Code: https://github.com/guilk/KAT
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'FILM: Following Instructions in Language with Modular Methods'
   YEAR: '2022'
   URL: 'https://soyeonm.github.io/FILM_webpage/'
@@ -798,7 +798,7 @@
     Code: https://github.com/soyeonm/FILM
     Video: https://www.youtube.com/watch?v=Ufh1Os51FY4
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'WebQA: Multihop and Multimodal QA'
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2109.00590'
@@ -817,7 +817,7 @@
     Leaderboard: https://eval.ai/challenge/1255/overview
     "Challenge Summary": https://proceedings.mlr.press/v176/chang22a
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Dependency Induction Through the Lens of Visual Perception'
   YEAR: '2021'
   URL: 'https://arxiv.org/abs/2109.09790'
@@ -832,7 +832,7 @@
   VENUE: The SIGNLL Conference on Computational Natural Language Learning
   VENUE-ACR: CoNLL
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Language Grounding with 3D Objects'
   YEAR: '2021'
   URL: 'https://arxiv.org/abs/2107.12514'
@@ -847,7 +847,7 @@
   EXTRAS:
     Data: https://github.com/snaredataset/snare
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: "TACo: Token-aware Cascade Contrastive Learning for Video-Text Alignment"
   YEAR: '2021'
   URL: 'https://arxiv.org/abs/2108.09980'
@@ -858,7 +858,7 @@
   VENUE: "International Conference on Computer Vision"
   VENUE-ACR: ICCV
 - FIELD: WS3
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: 'Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models'
   YEAR: '2022'
   URL: https://arxiv.org/abs/2104.08666
@@ -868,7 +868,7 @@
   VENUE: '4th Workshop on Gender Bias in Natural Language Processing'
   VENUE-ACR: GeBNLP
 - FIELD: WS3
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: "KB-VLP: Knowledge Based Vision and Language Pretraining"
   YEAR: '2021'
   URL: 'https://www.microsoft.com/en-us/research/publication/kb-vlp-knowledge-based-vision-and-language-pretraining-2/'
@@ -881,7 +881,7 @@
   VENUE: "ICML21 Workshop on Self-Supervised Learning"
   VENUE-ACR: "ICML-SSL"
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: "Few-shot Language Coordination by Modeling Theory of Mind"
   YEAR: '2021'
   URL: 'http://proceedings.mlr.press/v139/zhu21d.html'
@@ -894,7 +894,7 @@
   EXTRAS:
     Code: https://github.com/CLAW-Lab/ToM
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: "Grounding `Grounding' in NLP"
   YEAR: '2021'
   URL: https://arxiv.org/abs/2106.02192
@@ -905,7 +905,7 @@
   VENUE: 'Findings of The 2021 Conference of the Association for Computational Linguistics'
   VENUE-ACR: Findings of ACL 
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'An Empirical Study on the Generalization Power of Neural Representations Learned via Visual Guessing Games'
   YEAR: '2021'
   URL: https://arxiv.org/abs/2102.00424
@@ -921,7 +921,7 @@
   VENUE-ACR: EACL 
   PRES: Oral
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Knowledge-driven Data Construction for Zero-shot Evaluation in Commonsense Question Answering'
   YEAR: '2021'
   URL: https://arxiv.org/abs/2011.03863
@@ -937,7 +937,7 @@
   EXTRAS:
     Code: https://github.com/Mayer123/HyKAS-CSKG
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'ALFWorld: Aligning Text and Embodied Environments for Interactive Learning'
   YEAR: '2021'
   URL: https://alfworld.github.io/
@@ -953,7 +953,7 @@
   EXTRAS:
     Code: https://github.com/alfworld/alfworld
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: Imagining Grounded Conceptual Representations from Perceptual Information
     in Situated Guessing Games
   YEAR: '2020'
@@ -970,7 +970,7 @@
   VENUE-ACR: Coling 
   PRES: Oral
 - FIELD: WS2
-  TYPE: journal
+  TYPE: Journal
   TITLE: 'The Return of Lexical Dependencies: Neural Lexicalized PCFGs'
   YEAR: '2020'
   URL: http://arxiv.org/abs/2007.15135
@@ -983,7 +983,7 @@
   EXTRAS:
     Code: https://github.com/neulab/neural-lpcfg
 - FIELD: O
-  TYPE: conference
+  TYPE: Conference
   TITLE: Experience Grounds Language
   YEAR: '2020'
   URL: https://arxiv.org/abs/2004.10151
@@ -1007,7 +1007,7 @@
     Video: https://youtu.be/cQasYLUC_00
     Slides: https://talkingtorobots.com/papers/2020-EMNLP.pdf
 - FIELD: WS5
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'RMM: A Recursive Mental Model for Dialog Navigation'
   YEAR: '2020'
   URL: https://arxiv.org/abs/2005.00728
@@ -1023,7 +1023,7 @@
   EXTRAS:
     Code: https://github.com/HomeroRR/rmm
 - FIELD: WS3
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: A Benchmark for Structured Procedural Knowledge Extraction from Cooking Videos
   YEAR: '2020'
   URL: https://arxiv.org/abs/2005.00706
@@ -1040,7 +1040,7 @@
   EXTRAS:
     Code: https://github.com/frankxu2004/cooking-procedural-extraction
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: Multi-View Learning for Vision-and-Language Navigation
   YEAR: '2020'
   URL: https://arxiv.org/abs/2003.00857
@@ -1056,7 +1056,7 @@
   VENUE: ArXiv
   VENUE-ACR: ArXiv
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday
     Tasks'
   YEAR: '2020'
@@ -1073,7 +1073,7 @@
   VENUE: The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
   VENUE-ACR: CVPR
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'PIQA: Reasoning about Physical Commonsense in Natural Language'
   YEAR: '2020'
   URL: https://arxiv.org/abs/1911.11641
@@ -1090,7 +1090,7 @@
     Slides: papers/2020-AAAI-PIQA-Slides.pdf
     Leaderboard: https://leaderboard.allenai.org/physicaliqa/submissions/public
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: Robust Navigation with Language Pretraining and Stochastic Sampling
   YEAR: '2019'
   URL: https://arxiv.org/abs/1909.02244
@@ -1107,7 +1107,7 @@
     Joint Conference on Natural Language Processing
   VENUE-ACR: EMNLP-IJCNLP
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: Defending Against Neural Fake News
   YEAR: '2019'
   URL: https://arxiv.org/abs/1905.12616
@@ -1125,7 +1125,7 @@
     Demo: http://rowanzellers.com/grover/
     Models: https://docs.google.com/forms/d/e/1FAIpQLSfPMUXH1fdUxI3TchRS9RaEJ_W-W-adZhQ-_MymHnGkGOlBkA/viewform
 - FIELD: O
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: 'FIND: Identifying Functionally and Structurally Important Features in Protein
     Sequences with Deep Neural Networks'
   YEAR: '2019'
@@ -1138,7 +1138,7 @@
   VENUE: bioRxiv
   VENUE-ACR: bioRxiv
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: Improving Robot Success Detection using Static Object Data
   YEAR: '2019'
   URL: https://arxiv.org/abs/1904.01650
@@ -1153,7 +1153,7 @@
   EXTRAS:
     Video: https://www.youtube.com/watch?v=0uk_1yP9hqM
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: Early Fusion for Goal Directed Robotic Vision
   YEAR: '2019'
   URL: https://arxiv.org/abs/1811.08824
@@ -1170,7 +1170,7 @@
   VENUE-ACR: IROS
   NOTE: "RoboCup Best Paper Award finalist"
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'HellaSwag: Can a Machine Really Finish Your Sentence? '
   YEAR: '2019'
   URL: https://arxiv.org/abs/1905.07830
@@ -1183,7 +1183,7 @@
   VENUE: Association for Computational Linguistics
   VENUE-ACR: ACL
 - FIELD: WS3
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'From Recognition to Cognition: Visual Commonsense Reasoning'
   YEAR: '2019'
   URL: http://visualcommonsense.com/
@@ -1196,7 +1196,7 @@
   VENUE-ACR: CVPR 
   PRES: Oral
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Tactical Rewind: Self-Correction via Backtracking in Vision-and-Language
     Navigation'
   YEAR: '2019'
@@ -1217,7 +1217,7 @@
   EXTRAS:
     Video: https://youtu.be/AD9TNohXoPA
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Prospection: Interpretable Plans From Language By Predicting the Future'
   YEAR: '2019'
   URL: https://arxiv.org/abs/1903.08309
@@ -1230,7 +1230,7 @@
   VENUE: International Conference on Robotics and Automation (ICRA)
   VENUE-ACR: ICRA
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Shifting the Baseline: Single Modality Performance on Visual Navigation
     & QA'
   YEAR: '2019'
@@ -1243,7 +1243,7 @@
     Association for Computational Linguistics
   VENUE-ACR: NAACL Short
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: Benchmarking Hierarchical Script Knowledge
   YEAR: '2019'
   URL: https://www.aclweb.org/anthology/N19-1412
@@ -1259,7 +1259,7 @@
   EXTRAS:
     Code: https://github.com/janmbuys/ScriptTransduction/
 - FIELD: O
-  TYPE: conference
+  TYPE: Conference
   TITLE: Character-based Surprisal as a Model of Reading Difficulty in the Presence
     of Errors
   YEAR: '2019'
@@ -1273,7 +1273,7 @@
   VENUE-ACR: CogSci 
   PRES: Oral
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference'
   YEAR: '2018'
   URL: http://rowanzellers.com/swag/
@@ -1288,7 +1288,7 @@
   EXTRAS:
     Talk: https://vimeo.com/305195438
 - FIELD: WS1
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: Inducing Grammars with and for Neural Machine Translation
   YEAR: '2018'
   URL: https://arxiv.org/abs/1805.10850
@@ -1298,7 +1298,7 @@
   VENUE: 2nd Workshop on Neural Machine Translation
   VENUE-ACR: Wksp on NMT (best paper)
 - FIELD: O
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: Bridging HMMs and RNNs through Architectural Transformations
   YEAR: '2018'
   URL: https://openreview.net/pdf?id=rJxEso0osm
@@ -1310,7 +1310,7 @@
     workshop
   VENUE-ACR: IRASL wksp @ NeurIPS
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Synthetic and Natural Noise Both Break Neural Machine Translation '
   YEAR: '2018'
   URL: https://arxiv.org/abs/1711.02173
@@ -1321,7 +1321,7 @@
   VENUE-ACR: ICLR 
   PRES: Oral
 - FIELD: WS4
-  TYPE: preprint
+  TYPE: Preprint
   TITLE: 'CHALET: Cornell House Agent Learning Environment '
   YEAR: '2018'
   URL: https://arxiv.org/abs/1801.07357
@@ -1337,7 +1337,7 @@
   EXTRAS:
     Simulator: https://github.com/lil-lab/chalet
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: Learning Interpretable Spatial Operations in a Rich 3D Blocks World 
   YEAR: '2018'
   URL: https://arxiv.org/abs/1712.03463
@@ -1352,7 +1352,7 @@
     Data: https://groundedlanguage.github.io/
     Poster: "http://talkingtorobots.com/papers/2018-AAAI-Poster.pdf"
 - FIELD: WS2
-  TYPE: conference
+  TYPE: Conference
   TITLE: Natural Language Inference from Multiple Premises
   YEAR: '2017'
   URL: https://arxiv.org/abs/1710.02925
@@ -1364,7 +1364,7 @@
   VENUE-ACR: IJCNLP 
   PRES: Oral
 - FIELD: WS4
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Natural Language Communication with Robots '
   YEAR: '2016'
   URL: https://www.aclweb.org/anthology/N16-1089/
@@ -1380,7 +1380,7 @@
     Data: https://groundedlanguage.github.io/
     Slides: "http://talkingtorobots.com/papers/2016-NAACL-Slides.pdf"
 - FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: Supertagging with LSTMs
   YEAR: '2016'
   URL: https://www.aclweb.org/anthology/N16-1027/
@@ -1394,7 +1394,7 @@
   VENUE-ACR: NAACL Short 
   PRES: Oral
 - FIELD: WS4
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: 'Towards a Dataset for Human Computer Communication via Grounded Language
     Acquisition'
   YEAR: '2016'
@@ -1406,7 +1406,7 @@
   VENUE: AAAI 2016 Workshop on Symbiotic Cognitive Systems
   VENUE-ACR: Symbolic Cognitive Systems Wksp
 - FIELD: WS1
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: 'Unsupervised Neural Hidden Markov Models  '
   YEAR: '2016'
   URL: "https://www.aclweb.org/anthology/W16-5907/"
@@ -1422,7 +1422,7 @@
   EXTRAS:
     Slides: "http://talkingtorobots.com/papers/2016-EMNLP-StrcPred-Slides.pdf"
 - FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Evaluating Induced CCG Parsers on Grounded Semantic Parsing '
   YEAR: '2016'
   URL: http://sivareddy.in/papers/bisk2016evaluating.pdf
@@ -1436,16 +1436,7 @@
     Processing
   VENUE-ACR: EMNLP
 - FIELD: WS1
-  TYPE: phdthesis
-  TITLE: Unsupervised Grammar Induction with Combinatory Categorial Grammars
-  YEAR: '2015'
-  URL: "http://talkingtorobots.com/papers/Thesis.pdf"
-  AUTHORS:
-  - Yonatan Bisk
-  VENUE: University of Illinois at Urbana-Champaign
-  VENUE-ACR: PhD Thesis
-- FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: Probing the Linguistic Strengths and Limitations of Unsupervised Grammar
     Induction
   YEAR: '2015'
@@ -1459,7 +1450,7 @@
   VENUE-ACR: ACL 
   PRES: Oral
 - FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Labeled Grammar Induction with Minimal Supervision  '
   YEAR: '2015'
   URL: "http://talkingtorobots.com/papers/2015-ACLShort-Fixed.pdf"
@@ -1474,7 +1465,7 @@
   EXTRAS:
     Poster: "http://talkingtorobots.com/papers/2015_ACLShort_Poster.pdf"
 - FIELD: WS1
-  TYPE: journal
+  TYPE: Journal
   TITLE: An HDP Model for Inducing Combinatory Categorial Grammars
   YEAR: '2013'
   URL: "https://www.aclweb.org/anthology/Q13-1007/"
@@ -1486,7 +1477,7 @@
   EXTRAS:
     Slides: "http://talkingtorobots.com/papers/2013-TACL-Slides.pdf"
 - FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Simple Robust Grammar Induction with Combinatory Categorial Grammar '
   YEAR: '2012'
   URL: "https://www.aaai.org/ocs/index.php/AAAI/AAAI12/paper/view/5130"
@@ -1496,7 +1487,7 @@
   VENUE: Twenty-Sixth Conference on Artificial Intelligence (AAAI-12)
   VENUE-ACR: AAAI
 - FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: 'Document-Topic Hierarchies from Document Graphs '
   YEAR: '2012'
   URL: "https://dl.acm.org/doi/10.1145/2396761.2396843"
@@ -1508,7 +1499,7 @@
     management (CIKM 2012)
   VENUE-ACR: CIKM
 - FIELD: WS1
-  TYPE: workshop
+  TYPE: Workshop
   TITLE: 'Induction of Linguistic Structure with Combinatory Categorial Grammars '
   YEAR: '2012'
   URL: "http://talkingtorobots.com/papers/2012-NAACL-WILS.pdf"
@@ -1518,7 +1509,7 @@
   VENUE: NAACL HLT Workshop on Induction of Linguistic Structure
   VENUE-ACR: Inducing Ling Structure Wksp
 - FIELD: WS1
-  TYPE: conference
+  TYPE: Conference
   TITLE: Normal-form parsing for CCGs with generalized composition and type-raising
   YEAR: '2010'
   URL: "https://www.aclweb.org/anthology/C10-1053/"

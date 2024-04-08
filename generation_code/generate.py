@@ -3,23 +3,22 @@ import yaml
 from jinja2 import Template
 
 # Load Publications 
-pubs = yaml.load(open("publications.yaml"), Loader=yaml.CLoader)
+pubs = yaml.load(open("yaml/publications.yaml"), Loader=yaml.CLoader)
 
 # Load Author urls
-webs = yaml.load(open("websites.yaml"), Loader=yaml.CLoader)
+webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
 
 # Students
-student_yaml = yaml.load(open("students.yaml"), Loader=yaml.CLoader)
+student_yaml = yaml.load(open("yaml/students.yaml"), Loader=yaml.CLoader)
 student_names = set([s["NAME"] for s in student_yaml])
 
 
 # Load template
 types = {
-         "conference": ["inproceedings", "booktitle"],
-         "journal": ["article", "journal"],
-         "phdthesis": ["phdthesis", "school"],
-         "preprint": ["article", "journal"],
-         "workshop": ["inproceedings", "booktitle"],
+         "Conference": ["inproceedings", "booktitle"],
+         "Journal": ["article", "journal"],
+         "Preprint": ["article", "journal"],
+         "Workshop": ["inproceedings", "booktitle"],
         }
 colors = {
           "WS1":"primary", 
@@ -70,13 +69,14 @@ def update_pub_entry(entry):
 
   # Authors
   entry["AUTHORS"] = pretty_author_names(", ".join(entry["AUTHORS"]))
+  entry["AUTHORS-WEB"] = entry["AUTHORS"]
 
   # Add links to all co-authors
   for v in webs:
-    entry["AUTHORS"] = entry["AUTHORS"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
+    entry["AUTHORS-WEB"] = entry["AUTHORS-WEB"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
   for p in student_names:
-    entry["AUTHORS"] = entry["AUTHORS"].replace(p, f"<div class=\"name\">{p}</div>")
-  entry["AUTHORS"] = entry["AUTHORS"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
+    entry["AUTHORS-WEB"] = entry["AUTHORS-WEB"].replace(p, f"<div class=\"name\">{p}</div>")
+  entry["AUTHORS-WEB"] = entry["AUTHORS-WEB"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
 
   # Include extra links
   entry["EXTRA"] = ""
@@ -86,26 +86,6 @@ def update_pub_entry(entry):
       link = entry["EXTRAS"][key]
       entry["EXTRA"] += " {} href=\"{}\">{}</a>".format(btn, link, key)
 
-def create_latex_entry(entry):
-  authors = ", ".join(entry["AUTHORS"])
-  authors = authors.replace("Yonatan Bisk","\\YB{}")
-  if "NOTE" in entry:
-    entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
-  template_string = """
-    {\\begin{minipage}[t]{5.2in}
-    \\href{ {{ entry['URL'] if 'URL' in entry else '' }} }
-          { {{ entry['TITLE'].replace('&', '\\&') }}     }
-    \\end{minipage}\hfill \\textnormal{ {{ entry['YEAR'] }} } }
-    \t{\\begin{tabular}{ @{}p{5.2in} }
-        {{ authors }}
-    \\end{tabular} }
-    \t{\\begin{tabular}{@{}p{5in} }
-        {{ entry['VENUE'] }} {{ entry['PRES'] if 'PRES' in entry else '' }}
-    \\end{tabular} } { }{}
-  """
-  template = Template(template_string)
-  return template.render(entry=entry, authors=authors)
-  
 def update_student_card(S):
     if "CO" in S:
         S["COADVISOR"] = f"<div class='coadvisor'>(co- <a href=\"{S['CO-WEB']}\">{S['CO']}</a>)</div>"
@@ -130,7 +110,7 @@ def update_student_card(S):
     S["RESEARCH"] = papers
 
 ## Generate Publications Website ##
-with open("pub_template.jinja2", 'r') as file:
+with open("templates/pub_template.jinja2", 'r') as file:
   pub_template = Template(file.read())
 
 idx = len(pubs)
@@ -152,17 +132,19 @@ with open("../publications.html", 'wt') as output_file:
 
 
 ## Generate CV ##
-with open("CV_template.jinja2", 'r') as file:
+with open("templates/CV_template.jinja2", 'r') as file:
   latex_template = Template(file.read())
-latex_papers = {"journal": [],
-                "conference": [],
-                "workshop": [],
-                "preprint": [],
-                "phdthesis": [],
+latex_papers = {"Journal": [],
+                "Conference": [],
+                "Workshop": [],
+                "Preprint": [],
                 }
 previous = 10000
 for entry in pubs:
-  latex_papers[entry["TYPE"]].append(create_latex_entry(entry))
+  entry["AUTHORS"] = entry["AUTHORS"].replace("Yonatan Bisk","\\YB{}")
+  if "NOTE" in entry:
+    entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
+  latex_papers[entry["TYPE"]].append(entry)
 
 # Hi dear reader, why is Yonatan doing this ugly thing? 
 # This categorization and numbering is a required format for submitting 
@@ -170,16 +152,17 @@ for entry in pubs:
 pub_count = 1
 def number_pub(vals):     
   global pub_count
-  comb = ""
-  for v in vals:
-    comb += "\pub{" + str(pub_count) + ".}" + v
+  for val in vals:
+    val["idx"] = pub_count
     pub_count += 1
-  return comb
+number_pub(latex_papers["Journal"])
+number_pub(latex_papers["Conference"])
+number_pub(latex_papers["Workshop"])
+number_pub(latex_papers["Preprint"])
+#number_pub(latex_papers["phdthesis"])
 
-latex_render = latex_template.render(jour=number_pub(latex_papers["journal"]), 
-                                     conf=number_pub(latex_papers["conference"]),
-                                     work=number_pub(latex_papers["workshop"]),
-                                     tech=number_pub(latex_papers["preprint"] + latex_papers["phdthesis"]))
+latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
+                                     publications=latex_papers)
 with open("CV.tex", 'wt') as output_file:
     output_file.write(latex_render)
 os.system("pdflatex CV.tex")
@@ -187,10 +170,12 @@ os.system("rm CV.tex CV.log CV.aux CV.out")
 os.system("mv CV.pdf ../")
 
 ## Generate group page
-with open("group_template.jinja2", 'r') as file:
+with open("templates/group_template.jinja2", 'r') as file:
   group_template = Template(file.read())
 for stud in student_yaml:
     update_student_card(stud)
-group_render = group_template.render(students=student_yaml)
+masters = yaml.load(open("yaml/masters_interns.yaml"), Loader=yaml.CLoader)
+alumni = yaml.load(open("yaml/alumni.yaml"), Loader=yaml.CLoader)
+group_render = group_template.render(students=student_yaml, alumni=alumni, masters=masters)
 with open("../CLAW/index.html", 'wt') as output_file:
     output_file.write(group_render)

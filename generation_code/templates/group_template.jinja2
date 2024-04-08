@@ -167,82 +167,26 @@
     <br>
     <center>
       <div class="card-group">
-        <div class="card student" style="max-width: 400px;">
-          <a href="https://minyoung1005.github.io/">
-            <img src=images/students/minyounghwang.jpg class="card-img-top" alt="Minyoung Hwang">
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">
-              <p class="m-flip js-flip" style="font-weight:400; font-size: 14px;">
-                  <span class="m-flip_item"><a href="https://minyoung1005.github.io/"><b>Minyoung Hwang</b></a></span>
-                  <span class="m-flip_item"><a href="https://minyoung1005.github.io/"><b>황민영</b></a></span>
-              </p>
-              <h6><font class="pronoun">she/her</font>
-              <br>Preferences</h6>
-            </h6>
-          </div> <!-- card-body -->
-        </div> <!-- card -->
-
-        <div class="card student" style="max-width: 400px;">
-          <img src=images/students/clairejin.jpg class="card-img-top" alt="Claire Jin">
-          <div class="card-body">
-            <h6 class="card-title"><a href="https://www.linkedin.com/in/claire-jin-a1474420a/"><p style="font-weight:400; font-size: 15px;"><b>Claire Jin</b></p></a>
-              <h6><font class="pronoun">she/her</font>
-              <br>Embodied Dialogue</h6>
-            </h6>
-          </div> <!-- card-body -->
-        </div>
-
-        <div class="card student" style="max-width: 400px;">
-          <img src=images/students/mariayampolsky.jpg class="card-img-top" alt="Maria Yampolsky">
-          <div class="card-body">
-            <h6 class="card-title">
+        {% endraw %}
+        {% for entry in masters %}
+          <div class="card student" style="max-width: 200px;">
+            <a href="{{ entry['WEB'] }}">
+              <img src=images/students/{{ entry['PHOTO'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+            </a>
+            <div class="card-body">
+              <h6 class="card-title">
                 <p class="m-flip js-flip" style="font-weight:400; font-size: 14px;">
-                  <span class="m-flip_item"><a href="https://www.linkedin.com/in/maria-yampolsky-1163b418a/"><b>Maria Yampolsky</b></a></span>
-                  <span class="m-flip_item"><a href="https://www.linkedin.com/in/maria-yampolsky-1163b418a/"><b>Мария Ямпольская</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NATIVE'] }}</b></a></span>
                 </p>
-              <h6><font class="pronoun">she/her</font>
-              <br>Embodied Speech</h6>
-            </h6>
-          </div> <!-- card-body -->
-        </div>
-
-        <div class="card student" style="max-width: 400px;">
-          <a href="">
-            <img src=images/students/comingsoon.jpg class="card-img-top" alt="">
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">
-              <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
-                <span class="m-flip_item"><a href=""><b></b></a></span>
-                <span class="m-flip_item"><a href=""><b></b></a></span>
-              </p>
-              <br><font class="pronoun"></font>
-              <br><br> 
-            </h6>
-          </div> <!-- card-body -->
-        </div> <!-- card -->
-
-
-        <div class="card student" style="max-width: 400px;">
-          <a href="">
-            <img src=images/students/comingsoon.jpg class="card-img-top" alt="">
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">
-              <p class="m-flip js-flip" style="font-weight:400; font-size: 15px;">
-                <span class="m-flip_item"><a href=""><b></b></a></span>
-                <span class="m-flip_item"><a href=""><b></b></a></span>
-              </p>
-              <br><font class="pronoun"></font>
-              <br><br>
-            </h6>
-          </div> <!-- card-body -->
-        </div> <!-- card -->
-
-
-
-      </div> <!-- row -->
+                <h6><font class="pronoun">{{ entry['PRON'] }}</font>
+                    <br>{{ entry['CAPT'] }}</h6> 
+                </h6>
+            </div>
+          </div>
+        {% endfor %}
+        {% raw %}
+      </div> <!-- card-group -->
     </center>
 
       <br><br>
@@ -252,65 +196,17 @@
 
         <table class="table table-borderless">
           <tbody>
-            <tr>
-              <td scope="row">2022</td>
-              <td><a href="https://xiangfan.io/">Xiang Fan</a></td>
-              <td>Undergraduate</td>
-              <td>→ PhD @ UWashington</td>
-              <td><img width=30 src="images/WSs/WS2_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;"  alt="small robot reading a computer screen"></td>
-            </tr>
-
-            <tr>
-              <td scope="row">2022</td>
-              <td><a href="https://scholar.google.com/citations?hl=en&user=wYcxIOsAAAAJ">Andy Liu</a></td>
-              <td>Intern</td>
-              <td>→ PhD @ CMU</td>
-              <td><img width=30 src="images/WSs/WS5_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;"  alt="small robot giving a gift to another robot"></td>
-            </tr>
-
-            <tr>
-              <td scope="row">2022</td>
-              <td>Deogratias Amani</td>
-              <td>Grounding</td>
-              <td></td>
-              <td><img width=30 src="images/WSs/WS4_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
-            </tr>
-
-            <tr>
-              <td scope="row">2022</td>
-              <td><a href="https://jzhanson.com/">Josh Zhanson</a></td>
-              <td>MLT</td>
-              <td>→ Data Scientist @ MSFT </td>
-              <td><img width=30 src="images/WSs/WS4_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
-            </tr>
-            <tr>
-              <td scope="row">2022</td>
-              <td><a href="https://erinzhang1998.github.io/">Xiaoyu (Erin) Zhang</a></td>
-              <td>5th year MS</td>
-              <td>→ PhD @ UIUC</td>
-              <td><img width=30 src="images/WSs/WS4_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
-            </tr>
-            <tr>
-              <td scope="row">2021</td>
-              <td><a href="https://zfy0314.github.io/">Feiyu (Gavin) Zhu</a></td>
-              <td>Undergrad</td>
-              <td></td>
-              <td><img width=30 src="images/WSs/WS3_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
-            </tr>
-            <tr>
-              <td>2021</td>
-              <td><a href="https://blessingitorobassey.github.io/">Blessing Bassey</a></td>
-              <td>Intern</td>
-              <td></td>
-              <td><img width=30 src="images/WSs/WS3_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;" alt="small robot watching TV"></td>
-            </tr>
-            <tr>
-              <td>2021</td>
-              <td><a href="https://msclar.github.io/">Melanie Sclar</a></td>
-              <td>Intern</td>
-              <td>→ PhD @ UWashington</td>
-              <td><img width=30 src="images/WSs/WS5_small.webp" style="margin-bottom:0px;margin-top:0px;width:50;border:0px;display:inline;float:right;"  alt="small robot giving a gift to another robot"></td>
-            </tr>
+            {% endraw %}
+            {% for entry in alumni %}
+                <tr>
+                  <td scope="row">{{ entry['YEAR'] }}</td>
+                  <td><a href="{{ entry['URL'] }}">{{ entry['NAME'] }}</a></td>
+                  <td>{{ entry['ROLE'] }}</td>
+                  <td>→ {{ entry['POS'] }}</td>
+                  <td><img width=30 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="float-right-image" alt="small robot"></td>
+                </tr>
+            {% endfor %}
+            {% raw %}
           </tbody>
         </table>
       </center>
