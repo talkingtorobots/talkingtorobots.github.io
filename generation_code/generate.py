@@ -34,6 +34,7 @@ accents = {"{\\'e}": "é", "{\\`e}": "è", "{\\'a}": "á", "{\\'o}": "ó",
            "{\\\"a}": "ä", "{\\o}": "ø", "{\\aa}": "å", "{\\l}": "ł", "{\\'y}": "ý",
            "{\\\"o}": "ö","{\\\"u}": "ü", "{\\'s}": "ś", "{\\^o}": "ô",
            "\\v{c}": "č", "\\v{s}": "š", "\\v{r}": "ř"}
+
 def pretty_author_names(s):
   for k in accents:
     s = s.replace(k, accents[k])
@@ -73,12 +74,8 @@ def generate_publications_website():
     with open("templates/pub_template.jinja2", 'r') as file:
       pub_template = Template(file.read())
 
-    idx = len(pubs)
-    peer_reviewed = ""
     for entry in pubs:
-      entry["IDX"] = idx
       update_pub_entry(entry)
-      idx -= 1
 
     ## Generate Plot ##
     data = {"WS1":0, "WS2":0, "WS3":0, "WS4":0, "WS5":0, "O":0}

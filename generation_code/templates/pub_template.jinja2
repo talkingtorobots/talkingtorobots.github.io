@@ -275,8 +275,8 @@
                     <a class="sbtn" href={{- entry['URL'] -}}>Paper</a>
                   {% endif %}
                   <a class="sbtn" title
-                      data-original-title="Copy BibTex" id="buttonidx{{ entry['IDX'] }}"
-                      href="javascript:void(0)" onclick="show('idx{{ entry['IDX'] }}')">
+                      data-original-title="Copy BibTex" id="buttonidx{{- loop.revindex -}}"
+                      href="javascript:void(0)" onclick="show('idx{{- loop.revindex -}}')">
                       BibTeX
                     </a>
                     {% if 'EXTRAS' in entry %}
@@ -284,7 +284,7 @@
                         &nbsp; <a class="sbtn" href="{{- entry['EXTRAS'][key] -}}">{{- key -}}</a>
                       {% endfor %}
                     {% endif %}
-                    <div id="idx{{ entry['IDX'] }}" class="dynamic_link">
+                    <div id="idx{{- loop.revindex -}}" class="dynamic_link">
                       <pre>
     @{{types[entry['TYPE']][0] }}{ {{- entry["VENUE-ACR"]|replace(' ','-') -}}:{{- entry["AUTHORS"][0].split()[-1] -}} {{ entry["YEAR"] }},
         author    = { {{- entry['AUTHORS']|join(' and ') -}} },
