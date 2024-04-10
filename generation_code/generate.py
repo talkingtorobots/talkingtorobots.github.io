@@ -44,18 +44,6 @@ def pretty_author_names(s):
   return s
 
 def update_pub_entry(entry):
-  # if current student, add photo
-  for author in entry["AUTHORS"]:
-    if author in student_names:
-      name = author.replace(" ","")
-      entry["STUDENTPHOTO"] = f"<img class=\"align-self-start mr-3\" \
-                               src=\"CLAW/images/students/{name.lower()}.webp\" \
-                               height=44pt width=44pt alt=\"{entry['AUTHORS'][0]}\">"
-      print(f'Photo for {entry["AUTHORS"][0]} on {entry["TITLE"]}')
-      break
-    else:
-      entry["STUDENTPHOTO"] = ""
-
   # Authors and links to all co-authors
   entry["AUTHORS-PRETTY"] = pretty_author_names(", ".join(entry["AUTHORS"]))
   for v in webs:
@@ -64,12 +52,6 @@ def update_pub_entry(entry):
     entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace(p, f"<div class=\"name\">{p}</div>")
   entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
 
-def add_student_papers(S):
-    # This is inefficient but whatevs
-    S['RESEARCH'] = []
-    for pub in pubs:
-        S['RESEARCH'].append(pub) if S["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop" else None
-            
 def generate_publications_website():
     with open("templates/pub_template.jinja2", 'r') as file:
       pub_template = Template(file.read())
@@ -126,7 +108,10 @@ def generate_group_page():
     with open("templates/group_template.jinja2", 'r') as file:
       group_template = Template(file.read())
     for stud in student_yaml:
-        add_student_papers(stud)
+        stud["RESEARCH"] = []
+        for pub in pubs:
+            if stud["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop":
+                stud["RESEARCH"].append(pub)
     masters = yaml.load(open("yaml/masters_interns.yaml"), Loader=yaml.CLoader)
     alumni = yaml.load(open("yaml/alumni.yaml"), Loader=yaml.CLoader)
     group_render = group_template.render(students=student_yaml, alumni=alumni, masters=masters)

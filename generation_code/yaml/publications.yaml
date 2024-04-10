@@ -2,6 +2,7 @@
 - FIELD: WS3
   TYPE: Preprint
   TITLE: "Skews in the Phenomenon Space Hinder Generalization in Text-to-Image Generation"
+  STUDENT: Yingshan Chang
   AUTHORS:
     - Yingshan Chang
     - Yasi Zhang
@@ -16,6 +17,7 @@
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
+  STUDENT: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Maria Attarian
@@ -37,6 +39,7 @@
 - FIELD: WS5
   TYPE: Preprint
   TITLE: "SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents"
+  STUDENT: Hao Zhu
   AUTHORS:
     - Ruiyi Wang
     - Haofei Yu
@@ -85,6 +88,7 @@
 - FIELD: WS4
   TYPE: Preprint 
   TITLE: "Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis"
+  STUDENT: Quanting Xie
   AUTHORS:
     - Yafei Hu
     - Quanting Xie
@@ -113,6 +117,7 @@
 - FIELD: WS5
   TYPE: Conference
   TITLE: "SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents"
+  STUDENT: Hao Zhu
   AUTHORS:
     - Xuhui Zhou 
     - Hao Zhu 
@@ -133,6 +138,7 @@
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
+  STUDENT: Vidhi Jain
   AUTHORS:
     - Open X-Embodiment Collaboration 
     - Abhishek Padalkar 
@@ -315,6 +321,7 @@
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Reasoning about the Unseen for Efficient Outdoor Object Navigation"
+  STUDENT: Quanting Xie
   AUTHORS:
     - Quanting Xie
     - Tianyi Zhang
@@ -341,6 +348,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+  STUDENT: Hao Zhu
   AUTHORS:
     - Shuyan Zhou
     - Frank F. Xu
@@ -360,6 +368,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Spatial-Language Attention Policies for Efficient Robot Learning"
+  STUDENT: Vidhi Jain
   AUTHORS:
     - Priyam Parashar
     - Vidhi Jain
@@ -398,6 +407,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "HomeRobot: Open-Vocabulary Mobile Manipulation"
+  STUDENT: Vidhi Jain
   AUTHORS:
     - Sriram Yenamandra
     - Arun Ramachandran
@@ -426,6 +436,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning"
+  STUDENT: So Yeon Min
   AUTHORS: 
     - Yue Wu
     - Shrimai Prabhumoye
@@ -442,6 +453,7 @@
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Plan, Eliminate, and Track -- Language Models are Good Teachers for Embodied Agents"
+  STUDENT: So Yeon Min
   AUTHORS: 
     - Yue Wu
     - So Yeon Min 
@@ -458,6 +470,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "HomeRobot Open Vocab Mobile Manipulation Challenge"
+  STUDENT: Vidhi Jain
   AUTHORS: 
     - Sriram Yenamandra
     - Arun Ramachandran
@@ -488,6 +501,7 @@
   TYPE: Conference
   TITLE: "EXCALIBUR: Encouraging and Evaluating Embodied Exploration"
   YEAR: '2023'
+  STUDENT: Hao Zhu
   AUTHORS: 
     - Hao Zhu
     - Raghav Kapoor
@@ -509,6 +523,7 @@
   TYPE: Conference
   TITLE: "The Framework Tax: Disparities Between Inference Efficiency in Research and Deployment"
   YEAR: '2023'
+  STUDENT: Jared Fernandez
   AUTHORS:
     - Jared Fernandez
     - Jacob Kahn
@@ -523,6 +538,7 @@
   TYPE: Conference
   TITLE: "Computational Language Acquisition with Theory of Mind"
   YEAR: '2023'
+  STUDENT: Hao Zhu
   AUTHORS:
     - Andy Liu
     - Hao Zhu
@@ -538,6 +554,7 @@
   TYPE: Conference
   TITLE: "Self-Supervised Object Goal Navigation with In-Situ Finetuning"
   YEAR: '2023'
+  STUDENT: So Yeon Min
   AUTHORS:
     - So Yeon Min
     - Yao-Hung Hubert Tsai
@@ -555,6 +572,7 @@
   TYPE: Workshop
   TITLE: "MAEA: Multimodal Attribution for Embodied AI"
   YEAR: '2022'
+  STUDENT: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Jayant Sravan Tamarapalli
@@ -568,6 +586,7 @@
   TITLE: "Tackling AlfWorld with Action Attention and Common Sense from Language Models"
   YEAR: '2022'
   URL: 'https://openreview.net/forum?id=AqkPRUZ-YkO'
+  STUDENT: So Yeon Min
   AUTHORS:
     - Yue Wu
     - So Yeon Min
@@ -628,6 +647,7 @@
   TITLE: "Don't Copy the Teacher: Data and Model Challenges in Embodied Dialogue"
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2210.04443'
+  STUDENT: So Yeon Min
   AUTHORS:
     - So Yeon Min
     - Hao Zhu
@@ -668,6 +688,7 @@
   TITLE: 'Transformers are Adaptable Task Planners'
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2207.02442'
+  STUDENT: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Yixin Lin
@@ -683,6 +704,7 @@
   TITLE: 'Training Vision-Language Transformers from Captions'
   YEAR: '2023'
   URL: 'https://arxiv.org/abs/2205.09256'
+  STUDENT: Yingshan Chang
   AUTHORS:
     - Liangke Gui
     - Yingshan Chang
@@ -726,6 +748,7 @@
   TITLE: 'Simulated Language Learning from Communicative Goals and Linguistic Input'
   YEAR: '2022'
   URL: 'https://escholarship.org/uc/item/7p65n371'
+  STUDENT: Hao Zhu
   AUTHORS:
   - Hao Zhu
   - Yonatan Bisk
@@ -786,6 +809,7 @@
   TITLE: 'FILM: Following Instructions in Language with Modular Methods'
   YEAR: '2022'
   URL: 'https://soyeonm.github.io/FILM_webpage/'
+  STUDENT: So Yeon Min
   AUTHORS:
   - So Yeon Min
   - Devendra Singh Chaplot
@@ -802,6 +826,7 @@
   TITLE: 'WebQA: Multihop and Multimodal QA'
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2109.00590'
+  STUDENT: Yingshan Chang
   AUTHORS:
   - Yingshan Chang
   - Mridu Narang
@@ -821,6 +846,7 @@
   TITLE: 'Dependency Induction Through the Lens of Visual Perception'
   YEAR: '2021'
   URL: 'https://arxiv.org/abs/2109.09790'
+  STUDENT: Hao Zhu
   AUTHORS:
   - Ruisi Su
   - Shruti Rijhwani
@@ -885,6 +911,7 @@
   TITLE: "Few-shot Language Coordination by Modeling Theory of Mind"
   YEAR: '2021'
   URL: 'http://proceedings.mlr.press/v139/zhu21d.html'
+  STUDENT: Hao Zhu
   AUTHORS:
   - Hao Zhu
   - Graham Neubig
@@ -974,6 +1001,7 @@
   TITLE: 'The Return of Lexical Dependencies: Neural Lexicalized PCFGs'
   YEAR: '2020'
   URL: http://arxiv.org/abs/2007.15135
+  STUDENT: Hao Zhu
   AUTHORS:
   - Hao Zhu
   - Yonatan Bisk

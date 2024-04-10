@@ -258,7 +258,11 @@
               <div class="col-md-1">
                 <button type="button" disabled 
                         class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}">{{ entry['YEAR'] }}</button>
-                  {{ entry['STUDENTPHOTO'] | safe }}
+                  {% if 'STUDENT' in entry %}
+                      <img class="align-self-start mr-3" 
+                               src="CLAW/images/students/{{- entry['STUDENT']|replace(' ','')|lower -}}.webp" \
+                               height=44pt width=44pt alt="{{- entry['STUDENT'] -}}">
+                  {% endif %}
               </div>
               <div class="col-md-11">
                 <b style="font-weight: 500; font-size:15pt" >
