@@ -44,8 +44,6 @@ def pretty_author_names(s):
   return s
 
 def update_pub_entry(entry):
-  # Before doing pretification
-  entry["CITEKEY"] = entry["VENUE-ACR"].replace(' ','-') + ":" + entry["AUTHORS"][0].split()[-1] + str(entry["YEAR"])
   # if current student, add photo
   for author in entry["AUTHORS"]:
     if author in student_names:
@@ -58,10 +56,8 @@ def update_pub_entry(entry):
     else:
       entry["STUDENTPHOTO"] = ""
 
-  # Authors
+  # Authors and links to all co-authors
   entry["AUTHORS-PRETTY"] = pretty_author_names(", ".join(entry["AUTHORS"]))
-
-  # Add links to all co-authors
   for v in webs:
     entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
   for p in student_names:
@@ -72,8 +68,8 @@ def add_student_papers(S):
     # This is inefficient but whatevs
     S['RESEARCH'] = []
     for pub in pubs:
-        if S["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop" :
-            S['RESEARCH'].append(pub)
+        S['RESEARCH'].append(pub) if S["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop" else None
+            
 
 ## Generate Publications Website ##
 with open("templates/pub_template.jinja2", 'r') as file:
@@ -125,7 +121,6 @@ number_pub(latex_papers["Journal"])
 number_pub(latex_papers["Conference"])
 number_pub(latex_papers["Workshop"])
 number_pub(latex_papers["Preprint"])
-#number_pub(latex_papers["phdthesis"])
 
 latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
                                      publications=latex_papers)

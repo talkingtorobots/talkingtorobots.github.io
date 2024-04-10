@@ -286,7 +286,7 @@
                     {% endif %}
                     <div id="idx{{ entry['IDX'] }}" class="dynamic_link">
                       <pre>
-    @{{types[entry['TYPE']][0] }}{ {{- entry['CITEKEY'] }},
+    @{{types[entry['TYPE']][0] }}{ {{- entry["VENUE-ACR"]|replace(' ','-') -}}:{{- entry["AUTHORS"][0].split()[-1] -}} {{ entry["YEAR"] }},
         author    = { {{- entry['AUTHORS']|join(' and ') -}} },
         title     = { {{- entry['TITLE'] -}} },
         {{ types[entry['TYPE']][1] }} = { {{- entry['VENUE'] -}} },
