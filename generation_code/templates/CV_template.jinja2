@@ -156,10 +156,14 @@
             { {{ entry['TITLE'].replace('&', '\\&') }}     }
       \end{minipage}\hfill \textnormal{ {{ entry['YEAR'] }} } }
       {\begin{tabular}{ @{}p{5.2in} }
-          {{ entry['AUTHORS'] }}
+          {{ entry['AUTHORS']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
       \end{tabular} }
       {\begin{tabular}{@{}p{5in} }
-          {{ entry['VENUE'] }} {{ entry['PRES'] if 'PRES' in entry else '' }}
+          {{ entry['VENUE'] }} 
+          {%- if 'NOTE' in entry -%}
+          \\ -- \textbf{ {{- entry['NOTE'] -}} }
+          {% endif %}
+          {{- entry['PRES'] if 'PRES' in entry else '' -}}
       \end{tabular} } { }{}
   {%- endfor -%}
 {%- endfor -%}

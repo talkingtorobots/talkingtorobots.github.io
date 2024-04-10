@@ -12,7 +12,6 @@ webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
 student_yaml = yaml.load(open("yaml/students.yaml"), Loader=yaml.CLoader)
 student_names = set([s["NAME"] for s in student_yaml])
 
-
 # Load template
 types = {
          "Conference": ["inproceedings", "booktitle"],
@@ -70,73 +69,77 @@ def add_student_papers(S):
     for pub in pubs:
         S['RESEARCH'].append(pub) if S["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop" else None
             
+def generate_publications_website():
+    with open("templates/pub_template.jinja2", 'r') as file:
+      pub_template = Template(file.read())
 
-## Generate Publications Website ##
-with open("templates/pub_template.jinja2", 'r') as file:
-  pub_template = Template(file.read())
+    idx = len(pubs)
+    peer_reviewed = ""
+    for entry in pubs:
+      entry["IDX"] = idx
+      update_pub_entry(entry)
+      idx -= 1
 
-idx = len(pubs)
-peer_reviewed = ""
-for entry in pubs:
-  entry["IDX"] = idx
-  update_pub_entry(entry)
-  idx -= 1
+    ## Generate Plot ##
+    data = {"WS1":0, "WS2":0, "WS3":0, "WS4":0, "WS5":0, "O":0}
+    for entry in pubs:
+        u = 1.0
+        data[entry["FIELD"]] += u
 
-## Generate Plot ##
-data = {"WS1":0, "WS2":0, "WS3":0, "WS4":0, "WS5":0, "O":0}
-for entry in pubs:
-    u = 1.0
-    data[entry["FIELD"]] += u
+    rendered = pub_template.render(publications=pubs, data=data, colors=colors, types=types)
+    with open("../publications.html", 'wt') as output_file:
+        output_file.write(rendered)
 
-rendered = pub_template.render(publications=pubs, data=data, colors=colors, types=types)
-with open("../publications.html", 'wt') as output_file:
-    output_file.write(rendered)
+def number_pub(vals, pub_count=1):  
+    for val in vals:
+        val["idx"] = pub_count
+        pub_count += 1
+    return pub_count
+        
+def generate_CV():
+    ## Generate CV ##
+    with open("templates/CV_template.jinja2", 'r') as file:
+      latex_template = Template(file.read())
+    latex_papers = {"Journal": [],
+                    "Conference": [],
+                    "Workshop": [],
+                    "Preprint": [],
+                    }
+    for entry in pubs:
+      latex_papers[entry["TYPE"]].append(entry)
 
+    # Hi dear reader, why is Yonatan doing this ugly thing? 
+    # This categorization and numbering is a required format for submitting 
+    # promotion materials
+    pub_count = number_pub(latex_papers["Journal"])
+    pub_count = number_pub(latex_papers["Conference"], pub_count)
+    pub_count = number_pub(latex_papers["Workshop"], pub_count)
+    number_pub(latex_papers["Preprint"], pub_count)
 
-## Generate CV ##
-with open("templates/CV_template.jinja2", 'r') as file:
-  latex_template = Template(file.read())
-latex_papers = {"Journal": [],
-                "Conference": [],
-                "Workshop": [],
-                "Preprint": [],
-                }
-previous = 10000
-for entry in pubs:
-  entry["AUTHORS"] = ", ".join(entry["AUTHORS"]).replace("Yonatan Bisk","\\YB{}")
-  if "NOTE" in entry:
-    entry["VENUE"] += "\\\\ -- \\textbf{" + entry["NOTE"] + "}"
-  latex_papers[entry["TYPE"]].append(entry)
+    latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
+                                        publications=latex_papers)
+    with open("CV.tex", 'wt') as output_file:
+        output_file.write(latex_render)
+    os.system("pdflatex CV.tex")
+    os.system("rm CV.tex CV.log CV.aux CV.out")
+    os.system("mv CV.pdf ../")
 
-# Hi dear reader, why is Yonatan doing this ugly thing? 
-# This categorization and numbering is a required format for submitting 
-# promotion materials
-pub_count = 1
-def number_pub(vals):     
-  global pub_count
-  for val in vals:
-    val["idx"] = pub_count
-    pub_count += 1
-number_pub(latex_papers["Journal"])
-number_pub(latex_papers["Conference"])
-number_pub(latex_papers["Workshop"])
-number_pub(latex_papers["Preprint"])
+def generate_group_page():
+    ## Generate group page
+    with open("templates/group_template.jinja2", 'r') as file:
+      group_template = Template(file.read())
+    for stud in student_yaml:
+        add_student_papers(stud)
+    masters = yaml.load(open("yaml/masters_interns.yaml"), Loader=yaml.CLoader)
+    alumni = yaml.load(open("yaml/alumni.yaml"), Loader=yaml.CLoader)
+    group_render = group_template.render(students=student_yaml, alumni=alumni, masters=masters)
+    with open("../CLAW/index.html", 'wt') as output_file:
+        output_file.write(group_render)
 
-latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
-                                     publications=latex_papers)
-with open("CV.tex", 'wt') as output_file:
-    output_file.write(latex_render)
-os.system("pdflatex CV.tex")
-os.system("rm CV.tex CV.log CV.aux CV.out")
-os.system("mv CV.pdf ../")
+def main():
+    generate_publications_website()
+    generate_CV()
+    generate_group_page()
 
-## Generate group page
-with open("templates/group_template.jinja2", 'r') as file:
-  group_template = Template(file.read())
-for stud in student_yaml:
-    add_student_papers(stud)
-masters = yaml.load(open("yaml/masters_interns.yaml"), Loader=yaml.CLoader)
-alumni = yaml.load(open("yaml/alumni.yaml"), Loader=yaml.CLoader)
-group_render = group_template.render(students=student_yaml, alumni=alumni, masters=masters)
-with open("../CLAW/index.html", 'wt') as output_file:
-    output_file.write(group_render)
+if __name__ == "__main__":
+    main()
