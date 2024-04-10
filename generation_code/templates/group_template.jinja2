@@ -143,7 +143,7 @@
                 <h5 class="card-title">
                   <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
                     <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                    <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NATIVE'] }}</b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
                   </p>
                   <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
                       <font class="pronoun">{{ entry['PRON'] }}</font></h6>
@@ -151,10 +151,25 @@
                 <p class="card-text">
                     <img src="images/{{ entry['DEPT'] }}.png" height=35px class="left-float-img" alt="{{ entry['DEPT'] }} logo">
                     <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
-                    <h6>{{ entry['COADVISOR'] }} </h6>
+                    <h6><div class='coadvisor'>
+                    {% if 'CO' in entry %}
+                      (co- <a href="{{- entry['CO-WEB'] -}}"> {{- entry['CO'] -}}</a>)
+                    {% endif %}
+                    </div></h6>
                 </p>
                 <hr>
-                <h6>{{ entry['RESEARCH'] }}</h6>
+                <h6>
+                  {% if entry['RESEARCH']|length > 0 %}
+                    <button class="collapsible">Research</button>
+                    <div class="content">
+                      <p style='margin-top:1rem;margin-bottom:0;'>
+                        {% for paper in entry['RESEARCH'] %}
+                          <a href="{{ paper['URL'] }}">{{ paper['TITLE'] }}</a><br><br>
+                        {% endfor %}
+                      </p>
+                    </div>
+                  {% endif %}
+                </h6>
               </div> <!-- card-body -->
             </div> <!-- card -->
         {% endfor %}
@@ -177,7 +192,7 @@
               <h6 class="card-title">
                 <p class="m-flip js-flip" style="font-weight:400; font-size: 14px;">
                   <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                  <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NATIVE'] }}</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{ entry['NAME'] }} {% endif %}</b></a></span>
                 </p>
                 <h6><font class="pronoun">{{ entry['PRON'] }}</font>
                     <br>{{ entry['CAPT'] }}</h6> 

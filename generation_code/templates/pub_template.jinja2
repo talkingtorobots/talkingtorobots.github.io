@@ -269,19 +269,25 @@
                     {{ entry['VENUE'] }} ({{ entry['VENUE-ACR'] }})
                   </i><br>
                   <font style="font-weight: 300; font-size:11pt">
-                    {{ entry['AUTHORS'] }}
+                    {{ entry['AUTHORS-PRETTY'] }}
                   </font><br>
-                  {{ entry['PAPER-BUTTON'] | safe }}
+                  {% if 'URL' in entry and entry['URL']|length > 0 %}
+                    <a class="sbtn" href={{- entry['URL'] -}}>Paper</a>
+                  {% endif %}
                   <a class="sbtn" title
                       data-original-title="Copy BibTex" id="buttonidx{{ entry['IDX'] }}"
                       href="javascript:void(0)" onclick="show('idx{{ entry['IDX'] }}')">
                       BibTeX
                     </a>
-                    {{ entry['EXTRA'] | safe }}
+                    {% if 'EXTRAS' in entry %}
+                      {% for key in entry['EXTRAS'] %}
+                        &nbsp; <a class="sbtn" href="{{- entry['EXTRAS'][key] -}}">{{- key -}}</a>
+                      {% endfor %}
+                    {% endif %}
                     <div id="idx{{ entry['IDX'] }}" class="dynamic_link">
                       <pre>
     @{{types[entry['TYPE']][0] }}{ {{- entry['CITEKEY'] }},
-        author    = { {{- entry['AUTH-BIB'] -}} },
+        author    = { {{- entry['AUTHORS']|join(' and ') -}} },
         title     = { {{- entry['TITLE'] -}} },
         {{ types[entry['TYPE']][1] }} = { {{- entry['VENUE'] -}} },
         year      = { {{- entry['YEAR'] -}} },
