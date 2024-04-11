@@ -9,7 +9,7 @@ pubs = yaml.load(open("yaml/publications.yaml"), Loader=yaml.CLoader)
 webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
 
 # Students
-student_yaml = yaml.load(open("yaml/students.yaml"), Loader=yaml.CLoader)
+student_yaml = yaml.load(open("yaml/students/phd.yaml"), Loader=yaml.CLoader)
 student_names = set([s["NAME"] for s in student_yaml])
 
 # Load template
@@ -112,8 +112,8 @@ def generate_group_page():
         for pub in pubs:
             if stud["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop":
                 stud["RESEARCH"].append(pub)
-    masters = yaml.load(open("yaml/masters_interns.yaml"), Loader=yaml.CLoader)
-    alumni = yaml.load(open("yaml/alumni.yaml"), Loader=yaml.CLoader)
+    masters = yaml.load(open("yaml/students/ms_intern.yaml"), Loader=yaml.CLoader)
+    alumni = yaml.load(open("yaml/students/alumni.yaml"), Loader=yaml.CLoader)
     group_render = group_template.render(students=student_yaml, alumni=alumni, masters=masters)
     with open("../CLAW/index.html", 'wt') as output_file:
         output_file.write(group_render)

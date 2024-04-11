@@ -14,6 +14,25 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.16394"
+- FIELD: WS3
+  TYPE: Preprint
+  TITLE: "Direct Preference Optimization of Video Large Multimodal Models from Language Model Reward"
+  AUTHORS:
+   - Ruohong Zhang
+   -  Liangke Gui
+   -  Zhiqing Sun
+   -  Yihao Feng
+   -  Keyang Xu
+   -  Yuanhan Zhang
+   -  Di Fu
+   -  Chunyuan Li
+   -  Alexander Hauptmann
+   -  Yonatan Bisk
+   -  Yiming Yang
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2404.01258"
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
