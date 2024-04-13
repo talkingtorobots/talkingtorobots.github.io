@@ -103,6 +103,8 @@
   VENUE: "Conference on Computer Vision and Pattern Recognition"
   VENUE-ACR: "CVPR"
   URL: "https://open-eqa.github.io/"
+  EXTRAS: 
+    Blog: "https://ai.meta.com/blog/openeqa-embodied-question-answering-robotics-ar-glasses/"
   YEAR: '2024'
 - FIELD: WS4
   TYPE: Preprint 
