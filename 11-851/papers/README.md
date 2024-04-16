@@ -73,3 +73,4 @@ Other
 - [From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data](https://play-to-policy.github.io/)
 - [Affordance Diffusion: Synthesizing Hand-Object Interactions](https://judyye.github.io/affordiffusion-www/)
 - [Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment](ut-austin-rpl.github.io/sirius)
+- [https://sites.google.com/view/robot-r3m/](R3M: A Universal Visual Representation for Robot Manipulation)
