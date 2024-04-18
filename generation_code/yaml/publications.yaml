@@ -1,4 +1,21 @@
 ---
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: "AgentKit: Flow Engineering with Graphs, not Coding"
+  AUTHORS:
+    - Yue Wu
+    - Yewen Fan
+    - So Yeon Min
+    - Shrimai Prabhumoye
+    - Stephen McAleer
+    - Yonatan Bisk
+    - Ruslan Salakhutdinov
+    - Yuanzhi Li
+    - Tom Mitchell
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2404.11483"
 - FIELD: WS3
   TYPE: Preprint
   TITLE: "Skews in the Phenomenon Space Hinder Generalization in Text-to-Image Generation"
