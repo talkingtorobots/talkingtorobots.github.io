@@ -28,6 +28,7 @@ Manipulation
 - [EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](https://embodiedgpt.github.io/)
 - [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](https://voxposer.github.io/)
 - [VIMA: General Robot Manipulation with Multimodal Prompts](https://arxiv.org/abs/2210.03094)
+- [Using Both Demonstrations and Language Instructions to Efficiently Learn Robotic Tasks](https://deltaco-robot.github.io/)
 
 Mobile Manipulation
 ----
@@ -72,3 +73,4 @@ Other
 - [From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data](https://play-to-policy.github.io/)
 - [Affordance Diffusion: Synthesizing Hand-Object Interactions](https://judyye.github.io/affordiffusion-www/)
 - [Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment](ut-austin-rpl.github.io/sirius)
+- [https://sites.google.com/view/robot-r3m/](R3M: A Universal Visual Representation for Robot Manipulation)
