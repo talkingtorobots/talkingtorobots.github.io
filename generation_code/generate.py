@@ -118,10 +118,33 @@ def generate_group_page():
     with open("../CLAW/index.html", 'wt') as output_file:
         output_file.write(group_render)
 
+def generate_COA():
+    ## Create a list of collaborators from the last 48 months with affiliations (for NSF)
+    collaborators = {}
+    for pub in pubs:
+        if int(pub["YEAR"]) > 2024 - 4 and "Open X-" not in pub["TITLE"]:
+            for a in pub["AUTHORS"]:
+              if a != "Yonatan Bisk":
+                collaborators[a] = max(int(pub["YEAR"]), collaborators.get(a, 0))
+
+    aff_yaml = yaml.load(open("yaml/affiliations.yaml"), Loader=yaml.CLoader)
+    affiliations = {}
+    for entry in aff_yaml:
+        affiliations[entry["NAME"]] = entry["affiliation"]
+        
+    with open("COA.tsv", 'wt') as COA:
+      for author in collaborators:
+          if author in affiliations:
+              COA.write(f"{author}\t{affiliations[author]}\t\t{collaborators[author]}\n")
+          else:
+              COA.write(f"{author}\t\t\t{collaborators[author]}\n")
+            
+
 def main():
     generate_publications_website()
     generate_CV()
     generate_group_page()
+    generate_COA()
 
 if __name__ == "__main__":
     main()
