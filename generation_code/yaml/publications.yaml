@@ -1,4 +1,35 @@
 ---
+- FIELD: O
+  TYPE: Preprint
+  TITLE: "Dialogue with Robots: Proposals for Broadening Participation and Research in the SLIVAR Community"
+  AUTHORS:
+    - Casey Kennington
+    - Malihe Alikhani
+    - Heather Pon-Barry
+    - Katherine Atwell
+    - Yonatan Bisk
+    - Daniel Fried
+    - Felix Gervits
+    - Zhao Han
+    - Mert Inan
+    - Michael Johnston
+    - Raj Korpan
+    - Diane Litman
+    - Matthew Marge
+    - Cynthia Matuszek
+    - Ross Mead
+    - Shiwali Mohan
+    - Raymond Mooney
+    - Natalie Parde
+    - Jivko Sinapov
+    - Angela Stewart
+    - Matthew Stone
+    - Stefanie Tellex
+    - Tom Williams
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2404.01158"
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "AgentKit: Flow Engineering with Graphs, not Coding"
