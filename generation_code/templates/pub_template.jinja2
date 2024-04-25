@@ -29,6 +29,7 @@
                 $('[id="button' + idx + '"]').attr('data-original-title', "Copied!").tooltip('show')
                 window.getSelection().removeAllRanges();// to deselect
             }
+
         </script>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -250,7 +251,7 @@
     </div>
     <br>
 
-      <h3>Publications (preprints and workshops in <font style="background-color: #EBEBEB;">grey</font>)</h3>
+      <h3>Publications <font style="font-size:13pt">(preprints and workshops in <font style="background-color: #EBEBEB;">grey</font>)</font></h3>
         {% endraw %}
         {% for entry in publications %}
         <div class="card {{ entry['FIELD'] }}">
@@ -267,27 +268,32 @@
                   {% endif %}
               </div>
               <div class="col-md-11">
-                <b style="font-weight: 500; font-size:15pt" >
+                <b style="font-weight: 500; font-size:15pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['TITLE'] }}
                 </b><br>
                 <div class="card-text">
-                  <i style="font-weight: 300; font-size:11pt">
+                  <i style="font-weight: 300; font-size:11pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['VENUE'] }} ({{ entry['VENUE-ACR'] }})
                   </i><br>
-                  <font style="font-weight: 300; font-size:11pt">
+                  <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate" style="font-weight: 300; font-size:11pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['AUTHORS-PRETTY'] }}
-                  </font><br>
+                  </font>
+                      <br>
                   {% if 'URL' in entry and entry['URL']|length > 0 %}
-                    <a class="sbtn" href={{- entry['URL'] -}}>Paper</a>
+                    {% if 'arxiv' in entry['URL'] %}
+                       <a href={{- entry['URL'] -}}><img src="images/arxiv.svg" style="display:inline;" width=40pt></a>
+                    {% else %}
+                      <a href={{- entry['URL'] -}}><img src="images/pdf.svg" style="display:inline;" width=20pt><font style="font-size:11pt">PDF</font> </a>
+                    {% endif %}
                   {% endif %}
-                  <a class="sbtn" title
+                  <a  title
                       data-original-title="Copy BibTex" id="buttonidx{{- loop.revindex -}}"
                       href="javascript:void(0)" onclick="show('idx{{- loop.revindex -}}')">
-                      BibTeX
+                      <img src="images/tex.svg" width=30pt style="display:inline;">
                     </a>
                     {% if 'EXTRAS' in entry %}
                       {% for key in entry['EXTRAS'] %}
-                        &nbsp; <a class="sbtn" href="{{- entry['EXTRAS'][key] -}}">{{- key -}}</a>
+                          &nbsp; <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}">{{- key -}}</a></font>
                       {% endfor %}
                     {% endif %}
                     <div id="idx{{- loop.revindex -}}" class="dynamic_link">
@@ -313,6 +319,11 @@
         $(document).ready(function(){
           $('[data-toggle="tooltip"]').tooltip();
         });
+
+        function toggleEllipsis(x) {
+          var element = document.querySelector("#ellipsis-ex"+x);
+          element.classList.toggle("text-truncate");
+        }
         </script>
 
     </main>
