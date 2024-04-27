@@ -34,38 +34,53 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script>
-          google.charts.load('current', {packages: ['corechart', 'bar']});
-          google.charts.setOnLoadCallback(drawBasic);
+          google.charts.load('current', {packages: ['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
 
-          function drawBasic() {
+          function drawChart() {
 
           var data = google.visualization.arrayToDataTable([
-              ['Community', 'Count', { role: 'style' }],
+              ['Category', 'Text', { role: 'annotation' }, 'Perception', { role: 'annotation' }, 'Action', { role: 'annotation' }, 'Social', { role: 'annotation' }, 'Other', { role: 'annotation' }],
               {% endraw %}
-              ['Text',      {{ data['WS1'] + data['WS2'] }},'#007EF6'],
-              ['Perception',{{ data['WS3'] }},'#53A351'],
-              ['Action',    {{ data['WS4'] }},'#CB444A'],
-              ['Social',    {{ data['WS5'] }},'#f6c144'],
-              ['Other',     {{ data['O'] }},  '#49A0B5']
+              ['',      {{ data['WS1'] + data['WS2'] }}, Math.round({{ data['WS1'] + data['WS2'] }}).toString(), 
+                         {{ data['WS3'] }},  Math.round({{ data['WS3'] }}).toString(), 
+                         {{ data['WS4'] }}, Math.round({{ data['WS4'] }}).toString(), 
+                         {{ data['WS5'] }}, Math.round({{ data['WS5'] }}).toString(), 
+                         {{ data['O'] }},  Math.round({{ data['O'] }}).toString()]
               {% raw %}
           ]);
 
           var options = {
               title: '',
-              chartArea: {width: '50%'},
+              chartArea: {width: '100%', height:'30%'},
               legend: { position: "none" },
+              bar: {groupWidth: '100%', groupHeight: '50%'},
+              height: 100,
+              legend: { position: 'top', maxLines: 1 },
+              colors: ['#007EF6', '#53A351', '#CB444A', '#f6c144', '#49A0B5'],
+              isStacked: true,
               hAxis: {
-                title: 'World Scope Paper Counts (made up by Yonatan)',
-                minValue: 0,
-                format: 'long'
+                    title: 'World Scope Paper Counts (made up by Yonatan)',
+                    textPosition: 'none' // This will hide the x-axis labels
               },
-              vAxis: {
-                title: ''
-              }
             };
 
             var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
+            var dictionary = {
+                "Text": function() {area('WS1,WS2','WS3,WS4,WS5,O')},
+                "Perception": function() {area('WS3','WS1,WS2,WS4,WS5,O')},
+                "Action": function() {area('WS4','WS1,WS2,WS3,WS5,O')},
+                "Social": function() {area('WS5','WS1,WS2,WS3,WS4,O')},
+                "Other": function() {area('O','WS1,WS2,WS3,WS4,WS5')}
+            };
+            google.visualization.events.addListener(chart, 'select', function() {
+                var selectedItem = chart.getSelection()[0];
+                if (selectedItem) {
+                    var series = data.getColumnLabel(selectedItem.column);
+                    dictionary[series]();
+                }
+            });
             chart.draw(data, options);
           }
         </script>
@@ -208,59 +223,33 @@
             </div>
           </div> <!-- row -->
       </div>
-      <div id="chart_div"></div>
-      </center>
-      <br>
-
       <div class="row">
-        <div class="col-md-12">
-        <center>
-                    <button type="button" id="bAll"   
-                            class="btn btn-outline-secondary" 
-                            onclick="area('WS1,WS2,WS3,WS4,WS5,Other','');">
-                      <b>All</b></button>
-                    <button type="button" id="bWS12"  
-                            class="btn btn-outline-primary"   
-                            onclick="area('WS1,WS2','WS3,WS4,WS5,Other');">
-                      <b>Text</b></button>
-                    <button type="button" id="bWS3"   
-                            class="btn btn-outline-success"   
-                            onclick="area('WS3','WS1,WS2,WS4,WS5,O');">
-                      <b>Perception</b></button>
-                    <button type="button" id="bWS4"   
-                            class="btn btn-outline-danger"    
-                            onclick="area('WS4','WS1,WS2,WS3,WS5,O');">
-                      <b>Action</b></button>
-                    <button type="button" id="bWS5"   
-                            class="btn btn-outline-warning"   
-                            onclick="area('WS5','WS1,WS2,WS3,WS4,O');">
-                      <b>Social</b></button>
-                    <button type="button" id="bOther" 
-                            class="btn btn-outline-info"      
-                            onclick="area('O','WS1,WS2,WS3,WS4,WS5');">
-                      <b>Other</b></button>
-                or <label for="myInput" class="sr-only">
-                    Filter publications
+        <div class="col-md-3">
+          <br><br> Click a category 
+        </div>
+        <div class="col-md-6" id="chart_div"></div>
+        <div class="col-md-3">
+        <br>
+          <label for="myInput" class="sr-only">
+                   or search publications
                 </label> 
                 <input type="text" id="myInput" onkeyup="mySearch()" 
                        placeholder="Search ..." 
                        title="Filter publications" 
                        alt="search box for filtering publications">
-        </center>
       </div>
-    </div>
+      </center>
     <br>
 
-      <h3>Publications <font style="font-size:13pt">(preprints and workshops in <font style="background-color: #F4F4F4;">grey</font>)</font></h3>
+      <h3>Publications <font style="font-size:13pt">(click for preprints and workshops)</font></h3>
         {% endraw %}
         {% for entry in publications %}
         <div class="card {{ entry['FIELD'] }}">
-          <div class="card-body" 
-              style="background-color: {{ '#FFFFFF' if entry['TYPE'] in ['Journal', 'Conference'] else '#F4F4F4' }};">
+          <div class="card-body">
             <div class="row">
               <div class="col-md-1" style="text-align: center;">
                 <button type="button" disabled 
-                        class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}" style="font-size:12pt">{{ entry['YEAR'] }}</button>
+                        class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}" style="font-size:10pt">{{ entry['VENUE-ACR'] }}</button>
                   {% if 'STUDENT' in entry %}
                       <br>
                       <img class="align-self-center" 
@@ -269,35 +258,35 @@
                   {% endif %}
               </div>
               <div class="col-md-11">
-                <b style="font-weight: 550; font-size:14pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                <b style="font-weight: 550; font-size:13pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['TITLE'] }}
                 </b><br>
                 <div class="card-text">
-                  <i style="font-weight: 300; font-size:11pt" onclick="toggleEllipsis({{- loop.revindex -}});">
-                    {{ entry['VENUE'] }} ({{ entry['VENUE-ACR'] }})
+                  <i style="font-weight: 300; font-size:10pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                    {{ entry['VENUE'] }} ({{ entry['YEAR'] }})
                   </i><br>
-                  <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate" style="font-weight: 300; font-size:11pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                  <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate" style="font-weight: 300; font-size:10pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['AUTHORS-PRETTY'] }}
                   </font>
                       <br>
                   {% if 'URL' in entry and entry['URL']|length > 0 %}
                     {% if 'arxiv' in entry['URL'] %}
-                       <a href={{- entry['URL'] -}}><img src="images/arxiv.svg" style="display:inline;" width=40pt></a>
+                      <a href={{- entry['URL']}} style="display:inline-block;width:50px"><img src="images/arxiv.svg" style="display:inline;" height=18pt></a>
                     {% else %}
-                      <a href={{- entry['URL'] -}}><img src="images/pdf.svg" style="display:inline;" width=20pt><font style="font-size:11pt">PDF</font> </a>
+                      <a href={{- entry['URL']}} style="display:inline-block;width:50px;"><img src="images/pdf.svg" style="display:inline;" height=16pt class="filter-blue"><font style="font-size:11pt">PDF</font> </a>
                     {% endif %}
                   {% endif %}
-                  <a  title
+                  <a  title style="display:inline-block;width:50px;"
                       data-original-title="Copy BibTex" id="buttonidx{{- loop.revindex -}}"
                       href="javascript:void(0)" onclick="show('idx{{- loop.revindex -}}')">
-                      <img src="images/tex.svg" width=30pt style="display:inline;">
+                      <img src="images/tex.svg" width=30pt style="display:inline;" class="filter-blue">
                     </a>
                     {% if 'EXTRAS' in entry %}
                       {% for key in entry['EXTRAS'] %}
                         {% if 'GitHub' in key %}
-                          &nbsp; <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}"><img src="images/github.svg" style="display:inline;" width=20pt></a></font>
+                          <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}" style="display:inline-block;width:50px;"><img src="images/github.svg" style="display:inline;"  class="filter-blue" height=18pt></a></font>
                         {% else %}
-                          &nbsp; <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}">{{- key -}}</a></font>
+                          <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}" style="padding-right:20px;">{{- key -}}</a></font>
                         {% endif %}
                       {% endfor %}
                     {% endif %}

@@ -237,7 +237,6 @@ img {
     right: .1em;
     padding: .1em .1em;
     font-size:1.125em;
-    font-weight: bold;
     border-radius: .2em;
     opacity: 1;
     border: none;
@@ -256,6 +255,8 @@ img {
 
 .card{
   margin: 5px;
+  border: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .card-header {
@@ -372,4 +373,8 @@ img {
 
 .coadvisor {
   font-size: 0.9em;
+}
+
+.filter-blue{
+  filter: invert(32%) sepia(88%) saturate(1387%) hue-rotate(219deg) brightness(103%) contrast(99%);
 }

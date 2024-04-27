@@ -800,7 +800,7 @@
     - Ruslan Salakhutdinov
     - Shrimai Prabhumoye
   VENUE: "Language and Reinforcement Learning Workshop at NeurIPS 2022"
-  VENUE-ACR: LaReL
+  VENUE-ACR: LaReL Wksp
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Retrospectives on the Embodied AI Workshop"
@@ -888,7 +888,7 @@
     - Alan W Black
     - Ana Marasovic
   VENUE:  Findings of the Conference on Empirical Methods in Natural Language Processing
-  VENUE-ACR: Findings of EMNLP
+  VENUE-ACR: EMNLP Findings
 - FIELD: WS4
   TYPE: Conference
   TITLE: 'Transformers are Adaptable Task Planners'
@@ -1104,7 +1104,7 @@
   - Tejas Srinivasan
   - Yonatan Bisk
   VENUE: '4th Workshop on Gender Bias in Natural Language Processing'
-  VENUE-ACR: GeBNLP
+  VENUE-ACR: GeBNLP Wksp
 - FIELD: WS3
   TYPE: Workshop
   TITLE: "KB-VLP: Knowledge Based Vision and Language Pretraining"
@@ -1117,7 +1117,7 @@
   - Daniel McDuff
   - Jianfeng Gao
   VENUE: "ICML21 Workshop on Self-Supervised Learning"
-  VENUE-ACR: "ICML-SSL"
+  VENUE-ACR: "SSL Wksp"
 - FIELD: WS5
   TYPE: Conference
   TITLE: "Few-shot Language Coordination by Modeling Theory of Mind"
@@ -1142,7 +1142,7 @@
   - Yonatan Bisk
   - Alan W Black
   VENUE: 'Findings of The 2021 Conference of the Association for Computational Linguistics'
-  VENUE-ACR: Findings of ACL 
+  VENUE-ACR: ACL Findings 
 - FIELD: WS3
   TYPE: Conference
   TITLE: 'An Empirical Study on the Generalization Power of Neural Representations Learned via Visual Guessing Games'
@@ -1260,7 +1260,7 @@
   - Jianfeng Gao
   VENUE: "Conference on Empirical Methods in Natural Language 
     Processing: Findings"
-  VENUE-ACR: Findings of EMNLP
+  VENUE-ACR: EMNLP Findings
   EXTRAS:
     GitHub: https://github.com/HomeroRR/rmm
 - FIELD: WS3
@@ -1548,7 +1548,8 @@
   - Ke Tran
   - Yonatan Bisk
   VENUE: 2nd Workshop on Neural Machine Translation
-  VENUE-ACR: Wksp on NMT (best paper)
+  VENUE-ACR: NMT Wksp
+  PRES: Best Paper
 - FIELD: O
   TYPE: Workshop
   TITLE: Bridging HMMs and RNNs through Architectural Transformations
@@ -1560,7 +1561,7 @@
   - Yejin Choi
   VENUE: 32nd Conference on Neural Information Processing Systems (NIPS 2018), IRASL
     workshop
-  VENUE-ACR: IRASL wksp @ NeurIPS
+  VENUE-ACR: IRASL wksp 
 - FIELD: WS2
   TYPE: Conference
   TITLE: 'Synthetic and Natural Noise Both Break Neural Machine Translation '
@@ -1669,7 +1670,7 @@
   - Daniel Marcu
   - Kevin Knight
   VENUE: Workshop on Structured Prediction for NLP 
-  VENUE-ACR: Structure Pred Wksp 
+  VENUE-ACR: Struc. Pred Wksp 
   PRES: Oral
   EXTRAS:
     Slides: "http://talkingtorobots.com/papers/2016-EMNLP-StrcPred-Slides.pdf"
