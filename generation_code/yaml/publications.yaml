@@ -48,6 +48,8 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2404.11483"
+  EXTRAS:
+    GitHub: https://github.com/holmeswww/AgentKit
 - FIELD: WS3
   TYPE: Preprint
   TITLE: "Skews in the Phenomenon Space Hinder Generalization in Text-to-Image Generation"
@@ -82,6 +84,8 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2404.01258"
+  EXTRAS:
+    GitHub: https://github.com/RifleZhang/LLaVA-Hound-DPO
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
@@ -124,6 +128,7 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.08715"
   EXTRAS:
+    GitHub: "https://github.com/sotopia-lab/sotopia-pi"
     Website: "https://www.sotopia.world/projects/sotopia-pi"
 - FIELD: WS4
   TYPE: Conference
@@ -189,6 +194,9 @@
   VENUE-ACR: "ArXiv"
   URL: "https://arxiv.org/abs/2312.08782"
   YEAR: '2023'
+  EXTRAS:
+    GitHub: https://github.com/JeffreyYH/robotics-fm-survey
+    Website: https://robotics-fm-survey.github.io/
 - FIELD: WS5
   TYPE: Conference
   TITLE: "SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents"
@@ -516,6 +524,8 @@
   VENUE-ACR: "ArXiv"
   URL: "https://arxiv.org/abs/2309.10103"
   YEAR: '2023'
+  EXTRAS:
+    GitHub: https://github.com/quantingxie/ReasonedExplorer
 - FIELD: WS4
   TYPE: Conference
   TITLE: "MOSAIC: Learning Unified Multi-Sensory Object Property Representations for Robot Perception"
@@ -529,6 +539,8 @@
   VENUE-ACR: "ICRA"
   URL: "https://arxiv.org/abs/2309.08508"
   YEAR: '2024'
+  EXTRAS:
+    GitHub: https://github.com/gtatiya/MOSAIC
 - FIELD: WS4
   TYPE: Conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
@@ -550,6 +562,9 @@
   VENUE-ACR: "ICLR"
   URL: "https://arxiv.org/abs/2307.13854"
   YEAR: '2024'
+  EXTRAS:
+    GitHub: https://github.com/web-arena-x/webarena
+    Website: https://webarena.dev/
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Spatial-Language Attention Policies for Efficient Robot Learning"
@@ -567,6 +582,7 @@
   URL: "https://arxiv.org/abs/2304.11235"
   YEAR: '2023'
   EXTRAS:
+    GitHub: https://github.com/facebookresearch/home-robot/tree/main/projects/slap_manipulation
     Website: "https://robotslap.github.io/"
 - FIELD: WS3
   TYPE: Conference
@@ -617,6 +633,8 @@
   URL: "https://arxiv.org/abs/2306.11565"
   YEAR: '2023'
   EXTRAS:
+    GitHub: https://github.com/facebookresearch/home-robot
+    Website: https://ovmm.github.io/
     Video: https://www.youtube.com/watch?v=EA8HEzopkc0
 - FIELD: WS4
   TYPE: Conference
@@ -635,6 +653,8 @@
   VENUE-ACR: "NeurIPS"
   URL: "https://arxiv.org/abs/2305.15486"
   YEAR: '2023'
+  EXTRAS:
+    GitHub: https://github.com/Holmeswww/SPRING
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Plan, Eliminate, and Track -- Language Models are Good Teachers for Embodied Agents"
@@ -734,7 +754,7 @@
   VENUE: The Eleventh International Conference on Learning Representations
   VENUE-ACR: ICLR
   EXTRAS:
-    Code: https://github.com/neulab/ToM-Language-Acquisition
+    GitHub: https://github.com/neulab/ToM-Language-Acquisition
   URL: 'https://openreview.net/forum?id=C2ulri4duIs'
 - FIELD: WS4
   TYPE: Conference
@@ -902,7 +922,7 @@
   VENUE: Transactions on Machine Learning Research
   VENUE-ACR: TMLR
   EXTRAS:
-    Code: https://github.com/guilk/VLC
+    GitHub: https://github.com/guilk/VLC
 - FIELD: WS5
   TYPE: Conference
   TITLE: 'Symmetric Machine Theory of Mind'
@@ -915,6 +935,7 @@
   VENUE: 39th International Conference on Machine Learning
   VENUE-ACR: ICML
   EXTRAS:
+    GitHub: https://github.com/msclar/symmtom
     Video: "https://slideslive.com/38983255"
 - FIELD: WS5
   TYPE: Conference
@@ -973,6 +994,8 @@
   - Yonatan Bisk
   VENUE: 'Proceedings of Machine Learning Research (PMLR): NeurIPS 2021 Competition Track'
   VENUE-ACR: 'PMLR'
+  EXTRAS:
+    Website: https://hearbenchmark.com/
 - FIELD: WS3
   TYPE: Conference
   TITLE: 'KAT: A Knowledge Augmented Transformer for Vision-and-Language'
@@ -989,7 +1012,7 @@
   VENUE-ACR: NAACL 
   PRES: Oral
   EXTRAS:
-    Code: https://github.com/guilk/KAT
+    GitHub: https://github.com/guilk/KAT
 - FIELD: WS4
   TYPE: Conference
   TITLE: 'FILM: Following Instructions in Language with Modular Methods'
@@ -1005,8 +1028,8 @@
   VENUE: The Tenth International Conference on Learning Representations
   VENUE-ACR: ICLR
   EXTRAS:
-    URL: 'https://soyeonm.github.io/FILM_webpage/'
-    Code: https://github.com/soyeonm/FILM
+    GitHub: https://github.com/soyeonm/FILM
+    Website: 'https://soyeonm.github.io/FILM_webpage/'
     Video: https://www.youtube.com/watch?v=Ufh1Os51FY4
 - FIELD: WS3
   TYPE: Conference
@@ -1044,6 +1067,8 @@
   - Graham Neubig
   VENUE: The SIGNLL Conference on Computational Natural Language Learning
   VENUE-ACR: CoNLL
+  EXTRAS:
+    GitHub: https://github.com/ruisi-su/concrete_dep
 - FIELD: WS3
   TYPE: Conference
   TITLE: 'Language Grounding with 3D Objects'
@@ -1058,7 +1083,7 @@
   VENUE: Conference on Robot Learning 
   VENUE-ACR: CoRL
   EXTRAS:
-    Data: https://github.com/snaredataset/snare
+    GitHub: https://github.com/snaredataset/snare
 - FIELD: WS3
   TYPE: Conference
   TITLE: "TACo: Token-aware Cascade Contrastive Learning for Video-Text Alignment"
@@ -1106,7 +1131,7 @@
   VENUE: 'The Thirty-eighth International Conference on Machine Learning'
   VENUE-ACR: ICML
   EXTRAS:
-    Code: https://github.com/CLAW-Lab/ToM
+    GitHub: https://github.com/CLAW-Lab/ToM
 - FIELD: WS5
   TYPE: Conference
   TITLE: "Grounding `Grounding' in NLP"
@@ -1149,7 +1174,7 @@
   VENUE: 35th AAAI Conference on Artificial Intelligence
   VENUE-ACR: AAAI
   EXTRAS:
-    Code: https://github.com/Mayer123/HyKAS-CSKG
+    GitHub: https://github.com/Mayer123/HyKAS-CSKG
 - FIELD: WS4
   TYPE: Conference
   TITLE: 'ALFWorld: Aligning Text and Embodied Environments for Interactive Learning'
@@ -1165,8 +1190,8 @@
   VENUE: International Conference on Learning Representations
   VENUE-ACR: ICLR
   EXTRAS:
+    GitHub: https://github.com/alfworld/alfworld
     Website: https://alfworld.github.io/
-    Code: https://github.com/alfworld/alfworld
 - FIELD: WS3
   TYPE: Conference
   TITLE: Imagining Grounded Conceptual Representations from Perceptual Information
@@ -1197,7 +1222,7 @@
   VENUE: Transactions of the Association for Computational Linguistics
   VENUE-ACR: TACL
   EXTRAS:
-    Code: https://github.com/neulab/neural-lpcfg
+    GitHub: https://github.com/neulab/neural-lpcfg
 - FIELD: O
   TYPE: Conference
   TITLE: Experience Grounds Language
@@ -1237,7 +1262,7 @@
     Processing: Findings"
   VENUE-ACR: Findings of EMNLP
   EXTRAS:
-    Code: https://github.com/HomeroRR/rmm
+    GitHub: https://github.com/HomeroRR/rmm
 - FIELD: WS3
   TYPE: Workshop
   TITLE: A Benchmark for Structured Procedural Knowledge Extraction from Cooking Videos
@@ -1254,7 +1279,7 @@
   VENUE: Workshop on NLP Beyond Text
   VENUE-ACR: NLPBT
   EXTRAS:
-    Code: https://github.com/frankxu2004/cooking-procedural-extraction
+    GitHub: https://github.com/frankxu2004/cooking-procedural-extraction
 - FIELD: WS4
   TYPE: Preprint
   TITLE: Multi-View Learning for Vision-and-Language Navigation
@@ -1289,6 +1314,7 @@
   VENUE: The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
   VENUE-ACR: CVPR
   EXTRAS:
+    GitHub: https://github.com/askforalfred/alfred
     Website: https://askforalfred.com/
 - FIELD: WS2
   TYPE: Conference
@@ -1369,6 +1395,7 @@
     Robots and Systems
   VENUE-ACR: IROS
   EXTRAS:
+    GitHub: https://github.com/thomason-jesse/YCBLanguage
     Video: https://www.youtube.com/watch?v=0uk_1yP9hqM
 - FIELD: WS4
   TYPE: Conference
@@ -1400,6 +1427,8 @@
   - Yejin Choi
   VENUE: Association for Computational Linguistics
   VENUE-ACR: ACL
+  EXTRAS:
+    GitHub: https://github.com/rowanz/hellaswag
 - FIELD: WS3
   TYPE: Conference
   TITLE: 'From Recognition to Cognition: Visual Commonsense Reasoning'
@@ -1414,6 +1443,7 @@
   VENUE-ACR: CVPR 
   PRES: Oral
   EXTRAS:
+    GitHub: https://github.com/rowanz/r2c/
     URL: http://visualcommonsense.com/
 - FIELD: WS4
   TYPE: Conference
@@ -1435,6 +1465,7 @@
   VENUE-ACR: CVPR 
   PRES: Oral
   EXTRAS:
+    GitHub: https://github.com/Kelym/FAST
     Video: https://youtu.be/AD9TNohXoPA
 - FIELD: WS4
   TYPE: Conference
@@ -1477,7 +1508,7 @@
   VENUE-ACR: NAACL Short 
   PRES: Oral
   EXTRAS:
-    Code: https://github.com/janmbuys/ScriptTransduction/
+    GitHub: https://github.com/janmbuys/ScriptTransduction/
 - FIELD: O
   TYPE: Conference
   TITLE: Character-based Surprisal as a Model of Reading Difficulty in the Presence

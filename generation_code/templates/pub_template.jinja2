@@ -251,24 +251,25 @@
     </div>
     <br>
 
-      <h3>Publications <font style="font-size:13pt">(preprints and workshops in <font style="background-color: #EBEBEB;">grey</font>)</font></h3>
+      <h3>Publications <font style="font-size:13pt">(preprints and workshops in <font style="background-color: #F4F4F4;">grey</font>)</font></h3>
         {% endraw %}
         {% for entry in publications %}
         <div class="card {{ entry['FIELD'] }}">
           <div class="card-body" 
-              style="background-color: {{ '#FFFFFF' if entry['TYPE'] in ['Journal', 'Conference'] else '#EBEBEB' }};">
+              style="background-color: {{ '#FFFFFF' if entry['TYPE'] in ['Journal', 'Conference'] else '#F4F4F4' }};">
             <div class="row">
-              <div class="col-md-1">
+              <div class="col-md-1" style="text-align: center;">
                 <button type="button" disabled 
-                        class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}">{{ entry['YEAR'] }}</button>
+                        class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}" style="font-size:12pt">{{ entry['YEAR'] }}</button>
                   {% if 'STUDENT' in entry %}
-                      <img class="align-self-start mr-3" 
+                      <br>
+                      <img class="align-self-center" 
                                src="CLAW/images/students/{{- entry['STUDENT']|replace(' ','')|lower -}}.webp" \
                                height=44pt width=44pt alt="{{- entry['STUDENT'] -}}">
                   {% endif %}
               </div>
               <div class="col-md-11">
-                <b style="font-weight: 500; font-size:15pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                <b style="font-weight: 550; font-size:14pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['TITLE'] }}
                 </b><br>
                 <div class="card-text">
@@ -293,7 +294,11 @@
                     </a>
                     {% if 'EXTRAS' in entry %}
                       {% for key in entry['EXTRAS'] %}
+                        {% if 'GitHub' in key %}
+                          &nbsp; <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}"><img src="images/github.svg" style="display:inline;" width=20pt></a></font>
+                        {% else %}
                           &nbsp; <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}">{{- key -}}</a></font>
+                        {% endif %}
                       {% endfor %}
                     {% endif %}
                     <div id="idx{{- loop.revindex -}}" class="dynamic_link">

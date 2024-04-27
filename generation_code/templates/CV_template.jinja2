@@ -152,7 +152,7 @@
 \section{ {{- pub_type }} Publications}
   {% for entry in publications[pub_type] %}
   \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
-      \href{ {{ entry['URL'] if 'URL' in entry else '' }} }
+      \href{ {{- entry['URL'] if 'URL' in entry else '' -}} }
             { {{ entry['TITLE'].replace('&', '\\&') }}     }
       \end{minipage}\hfill \textnormal{ {{ entry['YEAR'] }} } }
       {\begin{tabular}{ @{}p{5.2in} }

@@ -109,7 +109,7 @@ body {
     max-width: 900px;
     font-size: 1.125em;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    line-height: 1.25;
+    line-height: 1.15;
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
@@ -194,7 +194,6 @@ img {
     background: transparent;
     border: 0px solid rgba(0, 0, 0, 0.12);
     display: block;
-    margin: .3em auto;
     max-width: 95%;
     object-fit: cover;
 }
