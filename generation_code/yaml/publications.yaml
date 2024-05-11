@@ -31,6 +31,19 @@
   YEAR: '2024'
   LINKS:
   URL: "https://arxiv.org/abs/2404.01158"
+- FIELD: WS3
+  TYPE: Preprint
+  TITLE: "VISREAS: Complex Visual Reasoning with Unanswerable Questions"
+  AUTHORS:
+    - Syeda Nahida Akter
+    - Sangwu Lee
+    - Yingshan Chang
+    - Yonatan Bisk
+    - Eric Nyberg
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2403.10534"
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "AgentKit: Flow Engineering with Graphs, not Coding"
