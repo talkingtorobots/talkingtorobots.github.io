@@ -100,7 +100,7 @@
   EXTRAS:
     GitHub: https://github.com/RifleZhang/LLaVA-Hound-DPO
 - FIELD: WS4
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
   STUDENT: Vidhi Jain
   AUTHORS:
@@ -117,8 +117,8 @@
     - Igor Gilitschenski
     - Yonatan Bisk
     - Debidatta Dwibedi
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "Robotics: Science and Systems"
+  VENUE-ACR: "RSS"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.12943"
   EXTRAS:
