@@ -32,7 +32,7 @@
   LINKS:
   URL: "https://arxiv.org/abs/2404.01158"
 - FIELD: WS3
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "VISREAS: Complex Visual Reasoning with Unanswerable Questions"
   AUTHORS:
     - Syeda Nahida Akter
@@ -40,8 +40,8 @@
     - Yingshan Chang
     - Yonatan Bisk
     - Eric Nyberg
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "Findings of the 62nd Annual Meeting of the Association for Computational Linguistics"
+  VENUE-ACR: "ACL Findings"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.10534"
 - FIELD: WS4
@@ -124,7 +124,7 @@
   EXTRAS:
     Website: "https://vid2robot.github.io/"
 - FIELD: WS5
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents"
   STUDENT: Hao Zhu
   AUTHORS:
@@ -136,8 +136,8 @@
     - Graham Neubig
     - Yonatan Bisk
     - Hao Zhu
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "The 62nd Annual Meeting of the Association for Computational Linguistics"
+  VENUE-ACR: "ACL"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.08715"
   EXTRAS:
