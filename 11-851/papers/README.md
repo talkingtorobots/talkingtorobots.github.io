@@ -83,3 +83,4 @@ Other
 - [R3M: A Universal Visual Representation for Robot Manipulation](https://sites.google.com/view/robot-r3m/)
 - [Keypoint Action Tokens Enable In-Context
 Imitation Learning in Robotics](https://www.robot-learning.uk/keypoint-action-tokens)
+- [LangSplat: 3D Language Gaussian Splatting](https://arxiv.org/abs/2312.16084)
