@@ -7,6 +7,7 @@ Planning
 - [LLM+P: Empowering Large Language Models with Optimal Planning Proficiency](https://arxiv.org/abs/2304.11477)
 - [Do Embodied Agents Dream of Pixelated Sheep?: Embodied Decision Making using Language Guided World Modelling](https://arxiv.org/abs/2301.12050)
 - [Grounding Classical Task Planners via Vision-Language Models](https://arxiv.org/abs/2304.08587)
+- [Language Models as Zero-Shot Trajectory Generators](https://www.robot-learning.uk/language-models-trajectory-generators)
 
 Navigation
 ----
@@ -47,15 +48,21 @@ Language to Motion
 - [Text2Motion: From Natural Language Instructions to Feasible Plans](https://sites.google.com/stanford.edu/text2motion)
 - [SayTap: Language to Quadrupedal Locomotion](https://saytap.github.io/)
 
+Sim-to-Real
+----
+- [Natural Language Can Help Bridge the Sim2Real Gap](https://arxiv.org/abs/2405.10020)
+
 Multi-Platform
 ----
 - [ChatGPT for Robotics: Design Principles and Model Abilities](https://arxiv.org/abs/2306.17582)
 
-Dialogue and QA
+Dialogue, QA, Corrections, Pragmatics, ... 
 ----
 - [SEAGULL: An Embodied Agent for Instruction Following through Situated Dialog](https://sled.eecs.umich.edu/publication/zhang-2023-simbot/)
 - [SQA3D: Situated Question Answering in 3D Scenes](https://sqa3d.github.io/)
 - [Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners ](https://robot-help.github.io/)
+- [Pragmatic Instruction Following and Goal Assistance via Cooperative Language-Guided Inverse Planning](https://arxiv.org/abs/2402.17930)
+- [DROC: Distilling and Retrieving Generalizable Knowledge for Robot Manipulation via Language Corrections](https://sites.google.com/stanford.edu/droc)
 
 Other
 ----
@@ -73,4 +80,7 @@ Other
 - [From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data](https://play-to-policy.github.io/)
 - [Affordance Diffusion: Synthesizing Hand-Object Interactions](https://judyye.github.io/affordiffusion-www/)
 - [Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment](ut-austin-rpl.github.io/sirius)
-- [https://sites.google.com/view/robot-r3m/](R3M: A Universal Visual Representation for Robot Manipulation)
+- [R3M: A Universal Visual Representation for Robot Manipulation](https://sites.google.com/view/robot-r3m/)
+- [Keypoint Action Tokens Enable In-Context
+Imitation Learning in Robotics](https://www.robot-learning.uk/keypoint-action-tokens)
+- [LangSplat: 3D Language Gaussian Splatting](https://arxiv.org/abs/2312.16084)
