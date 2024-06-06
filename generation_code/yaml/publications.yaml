@@ -1565,6 +1565,20 @@
   EXTRAS:
     Website: http://rowanzellers.com/swag/
     Video: https://vimeo.com/305195438
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: "Balancing Shared Autonomy with Human-Robot Communication"
+  YEAR: '2018'
+  URL: https://arxiv.org/abs/1805.07719
+  AUTHORS:
+    - Rosario Scalise
+    - Yonatan Bisk
+    - Maxwell Forbes
+    - Daqing Yi
+    - Yejin Choi
+    - Siddhartha Srinivasa
+  VENUE: ArXiv
+  VENUE-ACR: ArXiv
 - FIELD: WS1
   TYPE: Workshop
   TITLE: Inducing Grammars with and for Neural Machine Translation
