@@ -11,6 +11,22 @@
   YEAR: '2024'
   LINKS:
   URL: "https://arxiv.org/abs/2405.20131"
+- FIELD: WS3
+  TYPE: Preprint
+  TITLE: "DiffusionPID: Interpreting Diffusion via Partial Information Decomposition"
+  STUDENT: Yingshan Chang
+  AUTHORS:
+    - Shaurya Dewan
+    - Rushikesh Zawar
+    - Prakanshul Saxena
+    - Yingshan Chang 
+    - Andrew Luo
+    - Yonatan Bisk
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  LINKS:
+  URL: "https://arxiv.org/abs/2406.05191"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Dialogue with Robots: Proposals for Broadening Participation and Research in the SLIVAR Community"
