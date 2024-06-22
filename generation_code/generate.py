@@ -1,6 +1,13 @@
 import os
 import yaml
+import openpyxl
+from copy import copy
 from jinja2 import Template
+from openpyxl.styles import Border, Side
+from openpyxl.utils import range_boundaries, get_column_letter
+from openpyxl.worksheet.table import Table
+
+
 
 # Load Publications 
 pubs = yaml.load(open("yaml/publications.yaml"), Loader=yaml.CLoader)
@@ -119,26 +126,71 @@ def generate_group_page():
         output_file.write(group_render)
 
 def generate_COA():
+
     ## Create a list of collaborators from the last 48 months with affiliations (for NSF)
     collaborators = {}
     for pub in pubs:
         if int(pub["YEAR"]) > 2024 - 4 and "Open X-" not in pub["TITLE"]:
             for a in pub["AUTHORS"]:
-              if a != "Yonatan Bisk":
-                collaborators[a] = max(int(pub["YEAR"]), collaborators.get(a, 0))
+              if a != "Yonatan Bisk" and a not in student_names:
+                parts = a.rsplit(' ',1)
+                last_first = parts[1] + ", "+ parts[0]
+                collaborators[last_first] = max(int(pub["YEAR"]), collaborators.get(last_first, 0))
 
     aff_yaml = yaml.load(open("yaml/affiliations.yaml"), Loader=yaml.CLoader)
     affiliations = {}
     for entry in aff_yaml:
         affiliations[entry["NAME"]] = entry["affiliation"]
-        
-    with open("COA.tsv", 'wt') as COA:
-      for author in collaborators:
-          if author in affiliations:
-              COA.write(f"{author}\t{affiliations[author]}\t\t{collaborators[author]}\n")
-          else:
-              COA.write(f"{author}\t\t\t{collaborators[author]}\n")
-            
+    
+    new_entries = len(collaborators)
+
+    # Load the COA excel spreadsheet
+    # Heavily ChatGPT based code here
+    workbook = openpyxl.load_workbook('templates/COA.xlsx')
+    sheet = workbook.active
+    start_row = 52
+
+    # Create a black border style
+    border_style = Border(
+        left=Side(style='thin', color='000000'),
+        right=Side(style='thin', color='000000'),
+        top=Side(style='thin', color='000000'),
+        bottom=Side(style='thin', color='000000')
+    )
+
+    # Adjust merged cells ranges
+    for merge in list(sheet.merged_cells.ranges):
+        min_col, min_row, max_col, max_row = range_boundaries(str(merge))
+        if min_row >= start_row:
+            sheet.merged_cells.remove(merge)
+            new_merge = f"{openpyxl.utils.get_column_letter(min_col)}{min_row + new_entries}:{openpyxl.utils.get_column_letter(max_col)}{max_row + new_entries}"
+            sheet.merged_cells.add(new_merge)
+    
+    # Adjust the TableD5 position (this is the Editorial board)
+    table_d5 = None
+    for tbl in sheet.tables.values():
+        if tbl.name == 'TableD5':
+            table_d5 = tbl
+            break
+
+    if table_d5:
+        min_col, min_row, max_col, max_row = range_boundaries(table_d5.ref)
+        new_ref = f"{get_column_letter(min_col)}{min_row + new_entries}:{get_column_letter(max_col)}{max_row + new_entries}"
+        table_d5.ref = new_ref
+
+    sheet.insert_rows(start_row, amount=new_entries)
+
+    for i, author in enumerate(collaborators, start=start_row):
+        data = ['A:', 
+                author, 
+                affiliations[author] if author in affiliations else '',
+                '',
+                '1/1/' + str(collaborators[author])
+                ]
+        for col_num, value in enumerate(data, start=1):
+            cell = sheet.cell(row=i, column=col_num, value=value)
+            cell.border = border_style
+    workbook.save('current_COA.xlsx')
 
 def main():
     generate_publications_website()
