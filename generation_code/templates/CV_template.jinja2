@@ -166,7 +166,7 @@
           {%- if 'NOTE' in entry -%}
           \\ -- \textbf{ {{- entry['NOTE'] -}} }
           {% endif %}
-          {{- entry['PRES'] if 'PRES' in entry else '' -}}
+          {{- ' (' + entry['PRES'] + ') ' if 'PRES' in entry else '' -}}
       \end{tabular} } { }{}
   {%- endfor -%}
 {%- endfor -%}

@@ -1,4 +1,17 @@
 ---
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: "Tools Fail: Detecting Silent Errors in Faulty Tools"
+  STUDENT: Jimin Sun
+  AUTHORS:
+    - Jimin Sun
+    - So Yeon Min
+    - Yingshan Chang
+    - Yonatan Bisk
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2406.19228"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Language Models Need Inductive Biases to Count Inductively"
