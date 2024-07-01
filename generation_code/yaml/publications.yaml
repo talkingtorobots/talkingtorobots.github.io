@@ -1,5 +1,24 @@
 ---
 - FIELD: WS4
+  TYPE: Conference
+  TITLE: "Situated Instruction Following"
+  STUDENT: So Yeon Min
+  AUTHORS:
+    - So Yeon Min
+    - Xavi Puig
+    - Devendra Singh Chaplot
+    - Tsung-Yen Yang
+    - Akshara Rai
+    - Priyam Parashar
+    - Ruslan Salakhutdinov
+    - Yonatan Bisk
+    - Roozbeh Mottaghi
+  VENUE: "European Conference on Computer Vision"
+  VENUE-ACR: "ECCV"
+  YEAR: '2024'
+  EXTRAS:
+    Website: https://soyeonm.github.io/SIF_webpage/
+- FIELD: WS4
   TYPE: Preprint
   TITLE: "Tools Fail: Detecting Silent Errors in Faulty Tools"
   STUDENT: Jimin Sun
@@ -22,7 +41,6 @@
   VENUE: "ArXiv"
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
-  LINKS:
   URL: "https://arxiv.org/abs/2405.20131"
 - FIELD: WS3
   TYPE: Preprint
@@ -38,7 +56,6 @@
   VENUE: "ArXiv"
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
-  LINKS:
   URL: "https://arxiv.org/abs/2406.05191"
 - FIELD: O
   TYPE: Preprint
@@ -70,7 +87,6 @@
   VENUE: "ArXiv"
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
-  LINKS:
   URL: "https://arxiv.org/abs/2404.01158"
 - FIELD: WS3
   TYPE: Conference
@@ -106,7 +122,7 @@
   EXTRAS:
     GitHub: https://github.com/holmeswww/AgentKit
 - FIELD: WS3
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Skews in the Phenomenon Space Hinder Generalization in Text-to-Image Generation"
   STUDENT: Yingshan Chang
   AUTHORS:
@@ -116,8 +132,8 @@
     - Yingnian Wu
     - Yonatan Bisk
     - Feng Gao
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "European Conference on Computer Vision"
+  VENUE-ACR: "ECCV"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.16394"
 - FIELD: WS3
