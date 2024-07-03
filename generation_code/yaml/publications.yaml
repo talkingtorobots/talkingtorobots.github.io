@@ -18,6 +18,22 @@
   YEAR: '2024'
   EXTRAS:
     Website: https://soyeonm.github.io/SIF_webpage/
+- FIELD: WS3
+  TYPE: Preprint
+  TITLE: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
+  AUTHORS:
+    - Jaeyoung Lee
+    - Ximing Lu
+    - Jack Hessel
+    - Faeze Brahman
+    - Youngjae Yu
+    - Yonatan Bisk
+    - Yejin Choi
+    - Saadia Gabriel
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2407.00369"
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Tools Fail: Detecting Silent Errors in Faulty Tools"
