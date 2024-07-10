@@ -119,7 +119,7 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.10534"
 - FIELD: WS4
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "AgentKit: Flow Engineering with Graphs, not Coding"
   AUTHORS:
     - Yue Wu
@@ -131,8 +131,8 @@
     - Ruslan Salakhutdinov
     - Yuanzhi Li
     - Tom Mitchell
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "Conference on Language Modeling"
+  VENUE-ACR: "COLM"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2404.11483"
   EXTRAS:
