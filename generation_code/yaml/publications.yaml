@@ -16,8 +16,23 @@
   VENUE: "European Conference on Computer Vision"
   VENUE-ACR: "ECCV"
   YEAR: '2024'
+  URL: 'https://arxiv.org/abs/2407.12061'
   EXTRAS:
     Website: https://soyeonm.github.io/SIF_webpage/
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: "DegustaBot: Zero-Shot Visual Preference Estimation for Personalized Multi-Object Rearrangement"
+  AUTHORS:
+    - Benjamin A. Newman
+    - Pranay Gupta
+    - Kris Kitani
+    - Yonatan Bisk
+    - Henny Admoni
+    - Chris Paxton
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2407.08876"
 - FIELD: WS3
   TYPE: Preprint
   TITLE: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
@@ -761,21 +776,45 @@
   YEAR: '2023'
 - FIELD: WS4
   TYPE: Conference
-  TITLE: "HomeRobot Open Vocab Mobile Manipulation Challenge"
+  TITLE: "Towards Open-World Mobile Manipulation in Homes: Lessons from the Neurips 2023 HomeRobot Open Vocabulary Mobile Manipulation Challenge"
   STUDENT: Vidhi Jain
   AUTHORS: 
     - Sriram Yenamandra
     - Arun Ramachandran
     - Mukul Khanna
     - Karmesh Yadav
+    - Jay Vakil
+    - Andrew Melnik
+    - Michael Büttner
+    - Leon Harz
+    - Lyon Brown
+    - Gora Chand Nandi
+    - Arjun PS
+    - Gaurav Kumar Yadav
+    - Rahul Kala
+    - Robert Haschke
+    - Yang Luo
+    - Jinxin Zhu
+    - Yansen Han
+    - Bingyi Lu
+    - Xuan Gu
+    - Qinyuan Liu
+    - Yaping Zhao
+    - Qiting Ye
+    - Chenxiao Dou
+    - Yansong Chua
+    - Volodymyr Kuzma
+    - Vladyslav Humennyy
+    - Ruslan Partsey
+    - Jonathan Francis
     - Devendra Singh Chaplot
     - Gunjan Chhablani
     - Alexander Clegg
     - Theophile Gervet
     - Vidhi Jain
-    - Ruslan Partsey
     - Ram Ramrakhya
     - Andrew Szot
+    - Austin Wang
     - Tsung-Yen Yang
     - Aaron Edsinger
     - Charlie Kemp
@@ -788,7 +827,7 @@
   VENUE: "Thirty-seventh Conference on Neural Information Processing Systems: Competition Track"
   VENUE-ACR: NeurIPS Challenge
   EXTRAS:
-    Website: https://aihabitat.org/challenge/2023_homerobot_ovmm/
+    Website: https://arxiv.org/abs/2407.06939
   YEAR: '2023'
 - FIELD: WS4
   TYPE: Conference
