@@ -23,6 +23,7 @@
 \usepackage[none]{hyphenat}
 
 % These are to create pretty spacing of pseudocolumns
+\newcommand{\numS}[1]{\makebox[\widthof{\# Students: 999}][l]{\# Students: #1}}
 \newcommand{\AC}[1]{\makebox[\widthof{AI/ML}][l]{\hfill #1}}
 \newcommand{\NW}[1]{\makebox[\widthof{Xiaoyu (Erin) Zhang}][l]{#1}}
 \newcommand{\NA}[1]{\makebox[\widthof{Collabortive Robot Art plus }][l]{#1}}
@@ -199,14 +200,16 @@
 \cventry{2021}{Qual}{\href{https://mohitsharma0690.github.io/}{Mohit Sharma}}{\hfill Oliver Kroemer}{CMU}{}
 
 \section{Teaching}
-\cventry{2024}{11-777 MultiModal Machine Learning}{\hfill Co-Daniel Fried}{\# Students: 135}{SP}{}
-\cventry{2023}{11-851 Talking to Robots}{\hfill}{\# Students: 16}{FA}{}
-\cventry{    }{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\# Students: 69}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{\hfill Co-Daniel Fried}{\# Students: 107}{SP}{}
-\cventry{2022}{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\# Students: 42}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \# Students: 94}{SP}{}
-\cventry{2021}{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\# Students: 31}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \# Students: 42}{SP}{}
+\cventry{2024}{11-851 Talking to Robots}{\hfill}{ }{FA}{}
+\cventry{    }{11-777 MultiModal Machine Learning}{\hfill Co-Daniel Fried}{    }{FA}{}
+\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \numS{135}}{SP}{}
+\cventry{2023}{11-851 Talking to Robots (created)}{\hfill}{\numS{16}}{FA}{}
+\cventry{    }{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\numS{69}}{FA}{}
+\cventry{    }{11-777 MultiModal Machine Learning}{\hfill Co-Daniel Fried}{\numS{107}}{SP}{}
+\cventry{2022}{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\numS{42}}{FA}{}
+\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \numS{94}}{SP}{}
+\cventry{2021}{11-767 On-Device Machine Learning (co-created)}{\hfill Co-Emma Strubell}{\numS{31}}{FA}{}
+\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \numS{42}}{SP}{}
 
 \section{Diversity and Inclusion}
 \cventry{2022}{NAACL 2022 DEI Co-Chair}{}{}{}{}
@@ -298,6 +301,8 @@
 
 \section{Invitations and Talks}
 \cventry{2024}{Talking to Robots}{}{University Pennsylvania}{}{}{}
+\cventry{    }{Everything Fails, Everything is Ambiguous}{}{RSS Social Intelligence Workshop}{}{}{}
+\cventry{    }{Do It Like This, and Don't Wake the Baby}{}{RSS Task Specification Workshop}{}{}{}
 \cventry{    }{                 }{}{University of Maryland, College Park}{}{}{}
 \cventry{2023}{Are We Really Talking to Robots?}{}{``Dialogue with Robots'' workshop}{UPitt NSF Workshop}{}{}
 \cventry{}{Words $\neq$ language}{}{Articulate Robots: Utilizing Language for Robot Learning}{}{}{RSS Workshop}
