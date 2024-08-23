@@ -41,7 +41,7 @@
   X: abitha___
   PRON: she/her
   WS: 4
-  DEPT: RI
+  DEPT: CSD
   CO: Aviral Kumar
   CO-WEB: https://aviralkumar2907.github.io/
 - NAME: Jimin Sun
@@ -70,3 +70,12 @@
   PRON: he/him
   WS: 4
   DEPT: RI
+- NAME: Leena Mathur
+  WEB: https://l-mathur.github.io/
+  PIC: leenamathur.jpg
+  X: lmathur_
+  PRON: she/her
+  WS: 5
+  DEPT: LTI
+  CO: LP Morency
+  CO-WEB: https://www.cs.cmu.edu/~morency/
