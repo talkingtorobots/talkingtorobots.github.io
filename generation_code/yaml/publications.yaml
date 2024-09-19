@@ -10,7 +10,7 @@
   VENUE: "Conference on Robot Learning"
   VENUE-ACR: "CoRL"
   YEAR: '2024'
-  URL: ''
+  URL: 'https://openreview.net/forum?id=IsZb0wT3Kw'
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Situated Instruction Following"
@@ -46,7 +46,7 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2407.08876"
 - FIELD: WS3
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
   AUTHORS:
     - Jaeyoung Lee
@@ -57,12 +57,12 @@
     - Yonatan Bisk
     - Yejin Choi
     - Saadia Gabriel
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "Findings of the Conference on Empirical Methods in Natural Language Processing "
+  VENUE-ACR: "EMNLP Findings"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2407.00369"
 - FIELD: WS4
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Tools Fail: Detecting Silent Errors in Faulty Tools"
   STUDENT: Jimin Sun
   AUTHORS:
@@ -70,8 +70,8 @@
     - So Yeon Min
     - Yingshan Chang
     - Yonatan Bisk
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "Conference on Empirical Methods in Natural Language Processing "
+  VENUE-ACR: "EMNLP"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.19228"
 - FIELD: O
