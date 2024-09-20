@@ -31,20 +31,18 @@
   URL: 'https://arxiv.org/abs/2407.12061'
   EXTRAS:
     Website: https://soyeonm.github.io/SIF_webpage/
-- FIELD: WS4
-  TYPE: Preprint
-  TITLE: "DegustaBot: Zero-Shot Visual Preference Estimation for Personalized Multi-Object Rearrangement"
+- FIELD: O
+  TYPE: Conference
+  TITLE: "Gradient Localization Improves Lifelong Pretraining of Language Models"
+  STUDENT: Jared Fernandez
   AUTHORS:
-    - Benjamin A. Newman
-    - Pranay Gupta
-    - Kris Kitani
+    - Jared Fernandez
     - Yonatan Bisk
-    - Henny Admoni
-    - Chris Paxton
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+    - Emma Strubell
+  VENUE: "Findings of the Conference on Empirical Methods in Natural Language Processing"
+  VENUE-ACR: "EMNLP Findings"
   YEAR: '2024'
-  URL: "https://arxiv.org/abs/2407.08876"
+  URL: ""
 - FIELD: WS3
   TYPE: Conference
   TITLE: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
@@ -74,6 +72,20 @@
   VENUE-ACR: "EMNLP"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.19228"
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: "DegustaBot: Zero-Shot Visual Preference Estimation for Personalized Multi-Object Rearrangement"
+  AUTHORS:
+    - Benjamin A. Newman
+    - Pranay Gupta
+    - Kris Kitani
+    - Yonatan Bisk
+    - Henny Admoni
+    - Chris Paxton
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2407.08876"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Language Models Need Inductive Biases to Count Inductively"
