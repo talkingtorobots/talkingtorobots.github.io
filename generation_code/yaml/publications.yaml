@@ -1,5 +1,19 @@
 ---
 - FIELD: WS4
+  TYPE: Preprint
+  TITLE: "MotIF: Motion Instruction Fine-tuning"
+  AUTHORS:
+    - Minyoung Hwang
+    - Joey Hejna 
+    - Dorsa Sadigh 
+    - Yonatan Bisk
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2409.10683"
+  EXTRAS:
+    Website: https://motif-1k.github.io/
+- FIELD: WS4
   TYPE: Conference
   TITLE: "ANAVI: Audio Noise Awareness by Visual Interaction"
   STUDENT: Vidhi Jain
