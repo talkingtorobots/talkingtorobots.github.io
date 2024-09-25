@@ -112,7 +112,7 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2405.20131"
 - FIELD: WS3
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "DiffusionPID: Interpreting Diffusion via Partial Information Decomposition"
   STUDENT: Yingshan Chang
   AUTHORS:
@@ -122,8 +122,8 @@
     - Yingshan Chang 
     - Andrew Luo
     - Yonatan Bisk
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "Thirty-Eighth Annual Conference on Neural Information Processing Systems"
+  VENUE-ACR: "NeurIPS"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.05191"
 - FIELD: O
