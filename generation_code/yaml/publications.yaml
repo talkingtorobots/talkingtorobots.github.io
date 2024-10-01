@@ -1,6 +1,24 @@
 ---
 - FIELD: WS4
   TYPE: Preprint
+  TITLE: "Embodied-RAG: General non-parametric Embodied Memory for Retrieval and Generation"
+  STUDENT: Quanting Xie
+  AUTHORS:
+    - Quanting Xie
+    - So Yeon Min
+    - Tianyi Zhang
+    - Aarav Bajaj
+    - Ruslan Salakhutdinov
+    - Matthew Johnson-Roberson
+    - Yonatan Bisk
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://arxiv.org/abs/2409.18313"
+  EXTRAS:
+      Website: https://quanting-xie.github.io/Embodied-RAG-web/
+- FIELD: WS4
+  TYPE: Preprint
   TITLE: "MotIF: Motion Instruction Fine-tuning"
   AUTHORS:
     - Minyoung Hwang
