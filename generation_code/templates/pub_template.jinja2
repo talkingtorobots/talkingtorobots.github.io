@@ -250,11 +250,16 @@
               <div class="col-md-1" style="text-align: center;">
                 <button type="button" disabled 
                         class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}" style="font-size:12pt">{{ entry['VENUE-ACR'] }}</button>
-                  {% if 'STUDENT' in entry %}
+                  {% if 'STUDENT' in entry or 'ALUMN' in entry %}
                       <br>
                       <img class="align-self-center" 
+                               {% if 'STUDENT' in entry %}
                                src="CLAW/images/students/{{- entry['STUDENT']|replace(' ','')|lower -}}.webp" \
                                height=44pt width=44pt alt="{{- entry['STUDENT'] -}}">
+                               {% else %}
+                               src="CLAW/images/students/alumni/{{- entry['ALUMN']|replace(' ','')|lower -}}.jpg" \
+                               height=44pt width=44pt alt="{{- entry['ALUMN'] -}}">
+                               {% endif %}
                   {% endif %}
               </div>
               <div class="col-md-11">

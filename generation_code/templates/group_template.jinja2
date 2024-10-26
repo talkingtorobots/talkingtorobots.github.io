@@ -238,7 +238,12 @@
             {% for entry in alumni %}
                 <tr>
                   <td scope="row">{{ entry['YEAR'] }}</td>
-                  <td><a href="{{ entry['URL'] }}">{{ entry['NAME'] }}</a></td>
+                  <td>
+                      <a href="{{ entry['URL'] }}">{{ entry['NAME'] }}</a>
+                      {% if entry['ROLE'] == 'PhD' %}
+                      <img width=100pt src=images/students/alumni/{{ entry['PIC'] }} alt="{{ entry['NAME'] }}">
+                      {% endif %}
+                  </td>
                   <td>{{ entry['ROLE'] }}</td>
                   <td>→ {{ entry['POS'] }}</td>
                   <td><img width=30 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="float-right-image" alt="small robot"></td>
