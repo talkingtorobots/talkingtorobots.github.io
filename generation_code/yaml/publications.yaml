@@ -33,7 +33,7 @@
     Website: https://motif-1k.github.io/
 - FIELD: WS4
   TYPE: Conference
-  TITLE: "ANAVI: Audio Noise Awareness by Visual Interaction"
+  TITLE: "ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation"
   STUDENT: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
@@ -43,6 +43,8 @@
   VENUE-ACR: "CoRL"
   YEAR: '2024'
   URL: 'https://openreview.net/forum?id=IsZb0wT3Kw'
+  EXTRAS:
+    Website: https://anavi-corl24.github.io/
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Situated Instruction Following"
