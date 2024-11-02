@@ -139,7 +139,24 @@
               </div>
             </div>
           <div class="col-sm-5">
-              <img src="images/YonatanBisk_400.jpg" alt="Yonatan Bisk (white male wearing a black t-shirt in front of a window)" style="width:250px;height:250px;display:inline;float:right;object-fit: cover;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px" onmouseover="this.src='images/Yonatan-crazy.jpg'" onmouseout="this.src='images/YonatanBisk_400.jpg'">
+              <script>
+                // Array of image paths
+                const images = ["images/yonatan-crazy.jpg", 
+                                "images/yonatan-laptop.jpg", 
+                                "images/yonatan-rlc.jpeg", 
+                                "images/yonatan-mountains.jpg", 
+                                "images/yonatan-green.jpg"];
+                let currentImageIndex = 0;
+
+                function flipPhoto() {
+                    // Increment the index and reset if it exceeds the array length
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    
+                    // Change the image source to the next image in the array
+                    document.getElementById("photo").src = images[currentImageIndex];
+                }
+              </script>
+              <img id="photo" src="images/YonatanBisk_400.jpg" alt="Yonatan Bisk (white male wearing a black t-shirt in front of a window)" style="width:250px;height:250px;display:inline;float:right;object-fit: cover;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px" onmouseover="flipPhoto()" onmouseout="this.src='images/YonatanBisk_400.jpg'">
           </div> <!-- col-->
         </div> <!-- row -->
 
@@ -166,7 +183,7 @@ Fall 2025: Likely, but priority towards physical robots
   <br><br>
 
   <b>Travel:</b> Where is Yonatan? I have a yearly travel budget so I don't attend <i>that many</i> conferences, sorry.  I'll try and keep this sorta updated.<br><br>
-  <center><table style="display:block;max-height:200px;overflow-y:scroll;background-color:#eeffe6;max-width:850px;">
+  <center><table style="display:block;max-height:250px;overflow-y:scroll;background-color:#eeffe6;max-width:850px;">
     <tr>
       <td>🏠  <div style="display:inline-block;min-width:65px;">NeurIPS</div> 24
         <br>
