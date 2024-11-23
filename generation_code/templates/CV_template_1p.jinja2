@@ -1,0 +1,90 @@
+{% raw %}
+%% start of file `template_en.tex'.
+%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[10pt,letter]{moderncv}
+\setlength{\hintscolumnwidth}{30pt}
+\moderncvtheme[grey]{classic}                % idem
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{fdsymbol}
+\usepackage{newunicodechar} % To write the definition on the next line
+\newunicodechar{π}{\ensuremath{\pi}}
+% adjust the page margins
+\usepackage[left=0.95in,top=1.0in,bottom=1.0in,right=0.95in]{geometry}
+\usepackage{calc}
+\recomputelengths                             % required when changes are made to page layout lengths
+\usepackage{ragged2e}
+\RaggedRight
+\usepackage[none]{hyphenat}
+
+% These are to create pretty spacing of pseudocolumns
+\newcommand{\numS}[1]{\makebox[\widthof{\# Students: 999}][l]{\# Students: #1}}
+\newcommand{\AC}[1]{\makebox[\widthof{AI/ML}][l]{\hfill #1}}
+\newcommand{\NW}[1]{\makebox[\widthof{Xiaoyu (Erin) Zhang}][l]{#1}}
+\newcommand{\NA}[1]{\makebox[\widthof{Collabortive Robot Art plus }][l]{#1}}
+\newcommand{\DW}[1]{\hfill \makebox[\widthof{MechE}][l]{#1}}
+\newcommand{\pron}[1]{\makebox[\widthof{\footnotesize she/her}][l]{\textcolor{black}{\scriptsize \normalfont{#1}}}}
+% type, url, name, pronouns, area, extra, dept, year
+\newcommand{\stud}[8]{\cventry{#1}{\NW{\href{https://#2}{#3}} \pron{#4}}{\NA{#5} #6}{\DW{#7} #8}{}{}}
+\newcommand{\studnoL}[8]{\cventry{#1}{\NW{#3} \pron{#4}}{\NA{#5} #6}{\DW{#7} #8}{}{}}
+\newcommand{\SNW}[1]{\makebox[\widthof{Bharani Ujjaini Kempaiah \pron{she/her}}][l]{#1}}
+
+% personal data
+\firstname{Yonatan}
+\familyname{Bisk}
+\title{Assistant Professor of Computer Science} % optional, remove the line if not wanted
+\address{ }{GHC 6703}
+\email{ybisk@cs.cmu.edu}                        % optional, remove the line if not wanted
+\extrainfo{he/him}                        % optional, remove the line if not wanted
+
+\newcommand{\acro}[1]{\parbox{4em}{#1}}
+\newcommand{\YB}{\underline{Yonatan Bisk}}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Positions}
+\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy)}
+
+\section{Education}
+\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}  
+
+%\section{Publications} %\hfill \href{https://scholar.google.com/citations?user=bWoGh8UAAAAJ&hl=en}{Google Scholar} h-index:38}
+{% endraw %}
+{% for pub_type in pub_types %}
+\section{ Publications}
+  {% for entry in publications[pub_type] %}
+  \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
+      \href{ {{- entry['URL'] if 'URL' in entry else '' -}} }
+            { {{ entry['TITLE'].replace('&', '\\&') }}     }
+      \end{minipage}\hfill \textnormal{ {{ entry['YEAR'] }} } }
+      {\begin{tabular}{ @{}p{5.2in} }
+          {{ entry['AUTHORS']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
+      \end{tabular} }
+      {\begin{tabular}{@{}p{5in} }
+          {{ entry['VENUE'] }} 
+          {%- if 'NOTE' in entry -%}
+          \\ -- \textbf{ {{- entry['NOTE'] -}} }
+          {% endif %}
+          {{- ' (' + entry['PRES'] + ') ' if 'PRES' in entry else '' -}}
+      \end{tabular} } { }{}
+  {%- endfor -%}
+{%- endfor -%}
+
+{% raw %}
+\section{(Senior) Area Chair / Action Editor}
+\cventry{2024}{Conference on Robot Learning (CoRL)}{\hfill \AC{Robo}}{}{}{}
+\cventry{--}{Conference on Computer Vision and Pattern Recognition (CVPR)}{\hfill \AC{CV}}{}{}{}
+\cventry{--}{International Conference on Learning Representations (ICLR)}{\hfill \AC{AI/ML}}{}{}{}
+\cventry{--}{Senior AE: ACL Rolling Review (ARR)}{\hfill \AC{NLP}}{}{}{}
+\cventry{--}{AE: \href{https://jmlr.org/tmlr/}{Transactions on Machine Learning Research} (TMLR)}{\hfill \AC{AI/ML}}{}{}{}
+\end{document}
+{% endraw %}

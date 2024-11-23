@@ -1,16 +1,24 @@
 import os
 import yaml
 import openpyxl
+import argparse
 from copy import copy
 from jinja2 import Template
 from openpyxl.styles import Border, Side
 from openpyxl.utils import range_boundaries, get_column_letter
 from openpyxl.worksheet.table import Table
 
+parser = argparse.ArgumentParser(description='Generate Website, CV, COA')
+parser.add_argument('--onepager', action='store_true',
+                    help='One-pager vs full')
+args = parser.parse_args()
 
 
 # Load Publications 
-pubs = yaml.load(open("yaml/publications.yaml"), Loader=yaml.CLoader)
+if args.onepager:
+    pubs = yaml.load(open("yaml/publications_1p.yaml"), Loader=yaml.CLoader)
+else:
+    pubs = yaml.load(open("yaml/publications.yaml"), Loader=yaml.CLoader)
 
 # Load Author urls
 webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
@@ -84,7 +92,11 @@ def number_pub(vals, pub_count=1):
         
 def generate_CV():
     ## Generate CV ##
-    with open("templates/CV_template.jinja2", 'r') as file:
+    if args.onepager:
+        template = "templates/CV_template_1p.jinja2"
+    else:
+        template = "templates/CV_template.jinja2"
+    with open(template, 'r') as file:
       latex_template = Template(file.read())
     latex_papers = {"Journal": [],
                     "Conference": [],
@@ -102,8 +114,12 @@ def generate_CV():
     pub_count = number_pub(latex_papers["Workshop"], pub_count)
     number_pub(latex_papers["Preprint"], pub_count)
 
-    latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
-                                        publications=latex_papers)
+    if args.onepager:
+      latex_render = latex_template.render(pub_types=["Conference"], 
+                                          publications=latex_papers)
+    else:
+      latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
+                                          publications=latex_papers)
     with open("CV.tex", 'wt') as output_file:
         output_file.write(latex_render)
     os.system("pdflatex CV.tex")
@@ -193,10 +209,12 @@ def generate_COA():
     workbook.save('current_COA.xlsx')
 
 def main():
-    generate_publications_website()
+    if not args.onepager:
+        generate_publications_website()
     generate_CV()
-    generate_group_page()
-    generate_COA()
+    if not args.onepager:
+        generate_group_page()
+        generate_COA()
 
 if __name__ == "__main__":
     main()
