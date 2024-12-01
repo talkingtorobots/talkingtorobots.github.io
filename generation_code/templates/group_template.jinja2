@@ -121,7 +121,22 @@
       <div class="col-sm-1">
       </div>
       <div class="col-sm-6">
-        <br><br>The lab is run by <a href="https://yonatanbisk.com">Yonatan Bisk</a> and is housed primarily in the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI),</a> with members from the <a href="https://www.ml.cmu.edu/">Machine Learning Department (MLD),</a> <a href="https://www.ri.cmu.edu/">Robotics Institute(RI),</a> and <a href="https://csd.cmu.edu/">Computer Science Department (CSD).</a> 
+        <br>The lab is run by <a href="https://yonatanbisk.com">Yonatan Bisk</a> and is housed primarily in the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI),</a> with members from the <a href="https://www.ml.cmu.edu/">Machine Learning Department (MLD),</a> <a href="https://www.ri.cmu.edu/">Robotics Institute(RI),</a> and <a href="https://csd.cmu.edu/">Computer Science Department (CSD).</a> 
+
+          <br><br>
+          What're we up to? <br>
+          <ol>
+            <li><a href="publications.html">Publications obviously</a></li>
+            <li> Group Meeting Readings: 
+              <ul>
+                <li><a href="https://mitpress.mit.edu/9780262047005/the-evolution-of-agency/">The Evolution of Agency – Michael Tomasello</a></li>
+                <li><a href="https://bookshop.org/p/books/mind-in-motion-how-action-shapes-thought-barbara-tversky/11138346">Mind in Motion: How Action Shapes Thought – Barbara Tversky</a></li>
+              </ul>
+            </li>
+            <li>
+            🌶️ takes made up by Yonatan about everyone.<br>
+            </li>
+          </ol>
       </div>
       <div class="col-sm-4">
         <div class="row" style="justify-content: center;">
@@ -129,20 +144,6 @@
         </div>
       </div> <!-- col-->
     </div> <!-- row -->
-
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-11">
-          What're we up to? Mostly stuff on the publications page. <br>
-          Group Meeting: 
-            <ul>
-              <li><a href="https://mitpress.mit.edu/9780262047005/the-evolution-of-agency/">The Evolution of Agency - Michael Tomasello</a></li>
-              <li><a href="https://bookshop.org/p/books/mind-in-motion-how-action-shapes-thought-barbara-tversky/11138346">Mind in Motion: How Action Shapes Thought -- Barbara Tversky</a></li>
-            </ul
-           <br>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
 
     <h3>PhD Students</h3>
     <div class="container" id="students">
@@ -159,6 +160,7 @@
                     <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
                     <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
                   </p>
+                  <h6>🌶️ <i><b>{{entry['SPICY']}}</b></i></h6>
                   <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
                       <font class="pronoun">{{ entry['PRON'] }}</font></h6>
                 </h5>

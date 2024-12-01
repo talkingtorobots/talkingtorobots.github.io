@@ -9,6 +9,7 @@
   DEPT: MLD
   CO: Rus Salakhutdinov
   CO-WEB: https://www.cs.cmu.edu/~rsalakhu/
+  SPICY: "Models don't know what they don't know"
 - NAME: Vidhi Jain
   NATIVE: विधि जैन
   WEB: https://vidhijain.github.io/
@@ -17,6 +18,7 @@
   PRON: she/her
   WS: 4
   DEPT: RI
+  SPICY: "Life is multimodal, your robot instructions better be too"
 - NAME: Yingshan Chang
   NATIVE: 常影杉
   WEB: https://zdxdsw.github.io/
@@ -25,6 +27,7 @@
   PRON: she/her
   WS: 3
   DEPT: LTI
+  SPICY: "Data won't save you, understand your architecture"
 - NAME: Jared Fernandez
   WEB: https://www.jaredfern.com/
   PIC: jaredfernandez.webp
@@ -34,6 +37,7 @@
   DEPT: LTI
   CO: Emma Strubell
   CO-WEB: http://strubell.github.io/
+  SPICY: "You train models but don't know how computers work"
 - NAME: Abitha Thankaraj
   NATIVE: അബിത തങ്കരാജ്
   WEB: https://abitha-thankaraj.github.io/
@@ -42,6 +46,7 @@
   PRON: she/her
   WS: 4
   DEPT: CSD
+  SPICY: "Have you actually looked at your data?"
 - NAME: Jimin Sun
   NATIVE: 선지민
   WEB: https://jiminsun.github.io/
@@ -50,6 +55,7 @@
   PRON: she/her
   WS: 2
   DEPT: LTI
+  SPICY: "Don't trust your LLM or its tools"
 - NAME: Rosa Vitiello
   NATIVE: Technically Rosanna
   WEB: https://rosavitiello.github.io/
@@ -60,6 +66,7 @@
   DEPT: LTI
   CO: Carolyn Rose
   CO-WEB: https://www.cs.cmu.edu/~cprose/
+  SPICY: "If you're not trying to help people, what's the point?"
 - NAME: Quanting Xie
   NATIVE: 谢泉廷
   WEB: http://quantingxie.github.io/
@@ -68,6 +75,7 @@
   PRON: he/him
   WS: 4
   DEPT: RI
+  SPICY: "Dexterity is the future of robotics"
 - NAME: Leena Mathur
   WEB: https://l-mathur.github.io/
   PIC: leenamathur.jpg
@@ -77,3 +85,4 @@
   DEPT: LTI
   CO: LP Morency
   CO-WEB: https://www.cs.cmu.edu/~morency/
+  SPICY: "You do know robots need to exist around people right?"
