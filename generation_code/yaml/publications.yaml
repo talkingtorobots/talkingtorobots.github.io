@@ -1,4 +1,19 @@
 ---
+- FIELD: WS5
+  TYPE: Preprint
+  TITLE: "Explore Theory-of-Mind: Program-Guided Adversarial Data Generation for Theory of Mind Reasoning"
+  AUTHORS:
+    - Melanie Sclar
+    - Jane Yu
+    - Maryam Fazel-Zarandi
+    - Yulia Tsvetkov
+    - Yonatan Bisk
+    - Yejin Choi
+    - Asli Celikyilmaz
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2024'
+  URL: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training"
