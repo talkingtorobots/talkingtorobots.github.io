@@ -50,15 +50,15 @@
   EXTRAS:
       Website: https://quanting-xie.github.io/Embodied-RAG-web/
 - FIELD: WS4
-  TYPE: Preprint
+  TYPE: Journal
   TITLE: "MotIF: Motion Instruction Fine-tuning"
   AUTHORS:
     - Minyoung Hwang
     - Joey Hejna 
     - Dorsa Sadigh 
     - Yonatan Bisk
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "IEEE Robotics and Automation Letters"
+  VENUE-ACR: "RA-L"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2409.10683"
   EXTRAS:
