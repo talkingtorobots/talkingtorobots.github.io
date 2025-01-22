@@ -258,7 +258,7 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.16394"
 - FIELD: WS3
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Direct Preference Optimization of Video Large Multimodal Models from Language Model Reward"
   AUTHORS:
    - Ruohong Zhang
@@ -272,9 +272,9 @@
    -  Alexander Hauptmann
    -  Yonatan Bisk
    -  Yiming Yang
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
-  YEAR: '2024'
+  VENUE: "Annual Conference of the Nations of the Americas Chapter of the ACL"
+  VENUE-ACR: "NAACL"
+  YEAR: '2025'
   URL: "https://arxiv.org/abs/2404.01258"
   EXTRAS:
     GitHub: https://github.com/RifleZhang/LLaVA-Hound-DPO
