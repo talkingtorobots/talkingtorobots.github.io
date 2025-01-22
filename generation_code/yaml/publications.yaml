@@ -1,6 +1,6 @@
 ---
 - FIELD: WS5
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Explore Theory-of-Mind: Program-Guided Adversarial Data Generation for Theory of Mind Reasoning"
   AUTHORS:
     - Melanie Sclar
@@ -10,8 +10,8 @@
     - Yonatan Bisk
     - Yejin Choi
     - Asli Celikyilmaz
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "The Thirteenth International Conference on Learning Representations"
+  VENUE-ACR: "ICLR"
   YEAR: '2024'
   URL: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
 - FIELD: O
@@ -153,14 +153,14 @@
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2407.08876"
 - FIELD: O
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Language Models Need Inductive Biases to Count Inductively"
   STUDENT: Yingshan Chang
   AUTHORS:
     - Yingshan Chang
     - Yonatan Bisk
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "The Thirteenth International Conference on Learning Representations"
+  VENUE-ACR: "ICLR"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2405.20131"
 - FIELD: WS3
