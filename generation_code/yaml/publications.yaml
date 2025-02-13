@@ -10,6 +10,22 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2502.00197"
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: "Self-Regulation and Requesting Interventions"
+  STUDENT: So Yeon Min
+  AUTHORS:
+    - So Yeon Min
+    - Yue Wu
+    - Jimin Sun
+    - Max Kaufmann
+    - Fahim Tajwar
+    - Yonatan Bisk
+    - Ruslan Salakhutdinov
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2025'
+  URL: "https://arxiv.org/abs/2502.04576"
 - FIELD: WS5
   TYPE: Conference
   TITLE: "Explore Theory-of-Mind: Program-Guided Adversarial Data Generation for Theory of Mind Reasoning"
