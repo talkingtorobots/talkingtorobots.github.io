@@ -24,7 +24,7 @@
 
 % These are to create pretty spacing of pseudocolumns
 \newcommand{\numS}[1]{\makebox[\widthof{\# Students: 999}][l]{\# Students: #1}}
-\newcommand{\AC}[1]{\makebox[\widthof{AI/ML}][l]{\hfill #1}}
+\newcommand{\AC}[1]{\hfill \makebox[\widthof{AI/ML}][l]{#1}}
 \newcommand{\NW}[1]{\makebox[\widthof{Xiaoyu (Erin) Zhang}][l]{#1}}
 \newcommand{\NA}[1]{\makebox[\widthof{Collabortive Robot Art plus }][l]{#1}}
 \newcommand{\DW}[1]{\hfill \makebox[\widthof{MechE}][l]{#1}}
@@ -71,7 +71,6 @@
 \stud{PhD}{soyeonm.github.io/  }{Tiffany Min    }{she/her}{Instruction Following         }{(co-\href{https://www.cs.cmu.edu/~rsalakhu/}{R Salakhutdinov})}{MLD}{2021 --}
 \stud{PhD}{zdxdsw.github.io/      }{Yingshan Chang}{she/her}{Multimodal Reasoning}{}{LTI}{2022 --}
 \stud{PhD}{abitha-thankaraj.github.io  }{Abitha Thankaraj}{she/her}{LMs \& Reasoning}{}{CSD}{2024 --}
-\stud{PhD}{jiminsun.github.io/ }{Jimin Sun      }{she/her }{Tools}{}{LTI}{2024 --}
 \stud{PhD}{rosavitiello.github.io/}{Rosa Vitiello}{she/her}{Collaboration}{(co-\href{https://www.cs.cmu.edu/~cprose/}{C Rose})}{LTI}{2024 --}
 \stud{PhD}{quantingxie.github.io/}{Quanting Xie}{he/him}{Manipulation, LLMs, ...}{}{RI}{2024 --}
 \stud{PhD}{l-mathur.github.io/}{Leena Mathur}{she/her}{Social Robotics}{(co-\href{https://www.cs.cmu.edu/~morency/}{LP Morency})}{LTI}{2024 --}
@@ -80,6 +79,7 @@
 \stud{MSR}{https://www.linkedin.com/in/jacob-thompson-557080194/}{Jacob Thompson        }{he/him }{Generalist Agents          }{}{RI}{2024}
 \stud{MSR}{https://offjangir.github.io/}{Yash Jangir        }{he/him }{Robust Policies          }{}{RI}{2024}
 \stud{5th}{https://www.linkedin.com/in/sheryl-m-a26809188/}{Sheryl Mathew         }{she/her }{Collaboration          }{}{SCS}{2024}
+\stud{5th }{www.linkedin.com/in/claire-jin-a1474420a/}{Claire Jin}{she/her}{Embodied Dialogue}{  }{}{2024}
 
 \section{Alumni}
 \stud{PhD}{www.zhuhao.me       }{Hao Zhu        }{he/him }{Theory of Mind          }{(co-\href{http://www.phontron.com/}{G Neubig})}{LTI}{2019 -- 2024}
@@ -185,98 +185,44 @@
   {%- endfor -%}
 {%- endfor -%}
 
-{% raw %}
 \section{Thesis Committees}
-\cventry{--}{MSR}{\href{https://haochenz11.github.io/}{Haochen Zhang}}{\hfill Wenshan Wang and Ji Zhang}{CMU}{}
-\cventry{--}{PhD}{\href{https://nickgkan.github.io/}{Nikolaos Gkanatsios}}{\hfill Katerina Fragkiadaki}{CMU}{}
-\cventry{--}{PhD}{\href{https://gabesarch.me/}{Gabe Sarch}}{\hfill Katerina Fragkiadaki and Mike Tarr}{CMU}{}
-\cventry{--}{PhD}{\href{https://seungchan-kim.github.io/}{Seungchan Kim}}{\hfill Sebastian Scherer}{CMU}{}
-\cventry{--}{PhD}{\href{https://brendonjboldt.xyz/}{Brendon Boldt}}{\hfill David Mortensen}{CMU}{}
-\cventry{2024}{PhD}{\href{https://zgzxy001.github.io/}{Xiaoyu Zhu}}{\hfill Alex Hauptmann}{CMU}{}
-%\cventry{--}{PhD}{\href{https://scholar.google.com/citations?user=oM6Pj3MAAAAJ}{Liangke Gui}}{\hfill Alex Hauptmann}{CMU}{}
-\cventry{2024}{PhD}{\href{https://scholar.google.com/citations?user=toY-g1oAAAAJ}{Yijun Qian}}{\hfill Alex Hauptmann}{CMU}{}
-\cventry{2024}{PhD}{\href{https://www.cs.cmu.edu/~jielinq/}{Jielin Qiu}}{\hfill Lei Li \& Christos Faloutsos}{CMU}{}
-\cventry{2024}{PhD}{\href{https://www.cs.cmu.edu/~asrivats/}{Nikita Srivatsan}}{\hfill Taylor Berg-Kirkpatrick}{CMU}{}
-\cventry{2024}{PhD}{\href{https://me.lj-y.com/}{Lijun Yu}}{\hfill Alex Hauptmann}{CMU}{}
-\cventry{2023}{MSR}{\href{https://www.mateoguaman.com/}{Mateo Guaman Castro}}{\hfill Sebastian Scherer}{CMU}{}
-\cventry{2023}{PhD}{\href{https://scholar.google.com/citations?user=gDIMQp4AAAAJ&hl=en}{Kaixin Ma}}{\hfill Eric Nyberg}{CMU}{}
-\cventry{2023}{PhD}{\href{https://scholar.google.com/citations?user=5rS0yCoAAAAJ}{Nicholas Botzer}}{\hfill Tim Weninger}{Notre Dame}{}
-\cventry{2023}{PhD}{\href{http://naoki.ninja/}{Naoki Otani}}{\hfill Ed Hovy}{CMU}{}
-\cventry{2023}{PhD}{\href{https://dylanebert.com/}{Dylan Ebert}}{\hfill Ellie Pavlick}{Brown}{}
-\cventry{2022}{PhD}{\href{http://shikib.com/}{Shikib Mehri}}{\hfill Maxine Eskenazi }{CMU}{}
-\cventry{2022}{PhD}{\href{https://shrutijpalaskar.github.io/}{Shruti Palaskar}}{\hfill Alan Black and Florian Metze}{CMU}{}
-\cventry{2022}{PhD}{\href{https://sites.google.com/site/homepageevangeliaspiliopoulou/}{Evangelia Spiliopoulou}}{\hfill Ed Hovy}{CMU}{}
-\cventry{2022}{PhD}{\href{https://dheerajrajagopal.github.io/}{Dheeraj Rajagopal}}{\hfill Ed Hovy}{CMU}{}
-\cventry{2022}{PhD}{\href{https://www.cs.cmu.edu/~vcirik}{Volkan Cirik}}{\hfill Louis-Philippe Morency and Taylor Berg-Kirkpatrick}{CMU}{}
-\cventry{2022}{MLT}{Aishwarya Jadhav}{\hfill Katia Sycara}{CMU}{}
-\cventry{2021}{PhD}{\href{http://pcyin.me/}{Pengcheng Yin}}{\hfill Graham Neubig}{CMU}{}
-\cventry{2020}{PhD}{\href{https://zihangdai.github.io/}{Zihang Dai}}{\hfill Yiming Yang}{CMU}{}
-\cventry{2021}{MLT}{\href{https://wenj.github.io/}{Jing Wen}}{\hfill Katerina Fragkiadaki}{CMU}{}
-\cventry{2021}{Qual}{\href{https://mohitsharma0690.github.io/}{Mohit Sharma}}{\hfill Oliver Kroemer}{CMU}{}
+{%- for year, types in theses.items() %}
+  {%- for type, students in types.items() %}
+    {%- for student, properties in students.items() %}
+      \cventry{ {{- year -}} }
+              { {{- type -}} }
+              {\href{ {{- properties['URL'] -}} }
+              { {{- student -}} } }
+              {\hfill {{properties['ADV'] -}} }
+              { {{- properties['UNI'] -}} }
+              {}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endfor -%}
 
 \section{Teaching}
-\cventry{2025}{11-777 MultiModal Machine Learning}{}{\hfill \numS{145}}{SP}{}
-\cventry{2024}{11-851 Talking to Robots}{\hfill}{\numS{37} }{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{\hfill Co-Daniel Fried}{\numS{83}}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \numS{135}}{SP}{}
-\cventry{2023}{11-851 Talking to Robots (created)}{\hfill}{\numS{16}}{FA}{}
-\cventry{    }{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\numS{69}}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{\hfill Co-Daniel Fried}{\numS{107}}{SP}{}
-\cventry{2022}{11-767 On-Device Machine Learning}{\hfill Co-Emma Strubell}{\numS{42}}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \numS{94}}{SP}{}
-\cventry{2021}{11-767 On-Device Machine Learning (co-created)}{\hfill Co-Emma Strubell}{\numS{31}}{FA}{}
-\cventry{    }{11-777 MultiModal Machine Learning}{}{\hfill \numS{42}}{SP}{}
-
-\section{Diversity and Inclusion}
-\cventry{2022}{NAACL 2022 DEI Co-Chair}{}{}{}{}
-\cventry{2021}{Restructuring of LTI PhD Admissions}{}{}{\hfill \textit{2yr}}{}
-\cventry{2020}{LTI DEI Committee}{}{}{\hfill 2yrs}{}
-\cventry{2019}{\href{https://www.youtube.com/playlist?list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b}{CrashCourse AI}}{}{Educational YouTube series targeted at high-school age viewers.  Hosted by Jabril Ashe. Co-Written with Lana Yarosh and Tim Weninger}{\hfill \textit{1yr}}{}
-\cventry{2018}{ACM Council on Diversity \& Inclusion}{}{Investigating and initiating institutional change within ACM on behalf of underrepresented groups.}{\hfill \textit{1yr}}{}
-\cventry{--}{Grace Hopper PC member}{}{Review submissions to AI Technical Track}{\hfill \textit{1yr}}{}
-\cventry{2016}{NCWIT Collegiate Award}{}{Review applications for the National Center for Women \& Information Technology's Collegiate Award honoring college women}{ISI \hfill \textit{3yrs}}{}
-\cventry{2009}{NCWIT Aspirations in Computing}{}{Review applications for the National Center for Women \& Information Technology's Award for Aspirations in Computing which supports high-school girls interested in CS}{UIUC, ISI \hfill \textit{6yrs}}{}
-\cventry{--}{Tech Junket/Women in CS}{}{Outreach for local Urbana-Champaign pre-college students}{UIUC \hfill \textit{2yrs}}{}
-\cventry{2008}{Freshman Research Mentor}{}{Mentored students to perform research}{UTexas \hfill \textit{1yr}}{}
-\cventry{--}{First Bytes}{}{Helped organize a summer camp for girls interested in CS}{UTexas}{}
-\cventry{--}{Co-Founded Breakfast Bytes}{}{Professor talks for pre-college students}{UTexas \hfill \textit{1yr}}{}
-\cventry{--}{CS Roadshow}{}{CS presentations at Austin middle and high schools}{UTexas \hfill \textit{1yr}}{}
+{% for entry in teaching %}
+\cventry{ {{- entry['YEAR']  -}} }
+        { {{- entry['CLASS'] -}} }
+        { {{- 'w/' + entry['CO'] if 'CO' in entry else '' -}} }
+        { \hfill \numS{ {{- entry['SIZE'] -}} } }
+        { {{- entry['SEM'] -}} }{}
+{%- endfor -%}
 
 \section{(Senior) Area Chair / Action Editor}
-\cventry{2025}{IEEE International Conference on Robotics and Automation (ICRA)}{\hfill \AC{Robo}}{}{}{}
-\cventry{--}{Conference on Language Modeling (COLM)}{\hfill \AC{NLP}}{}{}{}
-\cventry{--}{Robotics: Science and Systems (RSS)}{\hfill \AC{Robo}}{}{}{}
-\cventry{--}{AE: \href{https://jmlr.org/tmlr/}{Transactions on Machine Learning Research} (TMLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{International Conference on Machine Learning (ICML)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{2024}{Conference on Robot Learning (CoRL)}{\hfill \AC{Robo}}{}{}{}
-\cventry{--}{Conference on Computer Vision and Pattern Recognition (CVPR)}{\hfill \AC{CV}}{}{}{}
-\cventry{--}{International Conference on Learning Representations (ICLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{European Chapter of the Association for Computational Linguistics (EACL)}{\hfill \AC{NLP}}{}{}{}
-\cventry{--}{Senior AE: ACL Rolling Review (ARR)}{\hfill \AC{NLP}}{}{}{}
-\cventry{--}{AE: \href{https://jmlr.org/tmlr/}{Transactions on Machine Learning Research} (TMLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{2023}{Neural Information Processing Systems (NeurIPS)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{International Conference on Machine Learning (ICML)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{AE: \href{https://jmlr.org/tmlr/}{Transactions on Machine Learning Research} (TMLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Senior AE: ACL Rolling Review (ARR)}{\hfill \AC{NLP}}{}{}{}
-\cventry{--}{Ethics Co-Chair: Association for Computational Linguistics (ACL)}{\hfill \AC{NLP}}{}{}{}
-\cventry{--}{Empirical Methods in Natural Language Proc (EMNLP)}{\hfill \AC{NLP}}{}{}{} %Senior AC: Language Grounding to Vision, Robotics and Beyond track}{}{}{}
-\cventry{2022}{International Conference on Learning Representations (ICLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Senior MR: Association for the Advancement of Artificial Intelligence (AAAI)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Senior AC: Empirical Methods in Natural Language Proc (EMNLP)}{\hfill \AC{NLP}}{}{}{} %{Senior AC: Speech, Vision, Robotics, Multimodal Grounding}{\hfill NLP}{}{}
-\cventry{--}{AE: \href{https://jmlr.org/tmlr/}{Transactions on Machine Learning Research} (TMLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Senior AE: ACL Rolling Review (ARR)}{\hfill \AC{NLP}}{}{}{}
-\cventry{--}{Neural Information Processing Systems (NeurIPS)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{2021}{International Conference on Learning Representations (ICLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Association for Computational Linguistics (ACL)}{\hfill \AC{NLP}}{}{}{} %{Machine Learning}{}{}
-\cventry{--}{Empirical Methods in Natural Language Proc (EMNLP)}{\hfill \AC{NLP}}{}{}{} %{Speech, Vision, Robotics, Multimodal Grounding}{\hfill NLP}{}{}
-\cventry{--}{Neural Information Processing Systems (NeurIPS)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{ACL Rolling Review (ARR)}{\hfill \AC{NLP}}{}{}{}
-\cventry{2020}{Association for Computational Linguistics (ACL)}{\hfill \AC{NLP}}{}{}{} %{Language Grounding to Vision, Robotics and Beyond}{\hfill NLP}{}{}
-\cventry{--}{Neural Information Processing Systems (NeurIPS)}{\hfill AI/ML}{}{}{}
-\cventry{--}{Asia-Pacific chapter of the Association for Computational Linguistics (AACL)}{\hfill \AC{NLP}}{}{}{}
-\cventry{2019}{Association for Computational Linguistics (ACL)}{\hfill \AC{NLP}}{}{}{} %{Vision, Robotics, Multimodal Grounding, and Speech}{\hfill NLP}{}{}
-\cventry{2018}{International Conference on Computational Linguistics}{\hfill \AC{NLP}}{}{}{}
-\cventry{2016}{Conference on Lexical and Computational Semantics (*SEM)}{\hfill \AC{NLP}}{}{}{} %{Sem. Parsing and Role Labeling}{}{}{}
+{%- for year, areas in areachair.items() %}
+  {%- for area, roles in areas.items() %}
+    {%- for role, conferences in roles.items() %}
+      {%- for conference in conferences %}
+        \cventry{ {{ year }} }
+                { {{ role -}}: {{ conference }} }
+                { \hfill \AC{ {{- area -}} } }{}{}{}
+      {%- endfor %}
+    {%- endfor %}
+  {%- endfor %}
+{%- endfor %}
+{% raw %}
+
 
 \section{Reviewer}
 \cventry{NLP}{\acro{ARR}\normalfont Association for Computational Linguistics Rolling Review}{\hfill 2021}{}{}{}
@@ -308,6 +254,7 @@
 \cventry{}{\acro{NeurIPS}\normalfont Neural Information Processing Systems}{\hfill 2018 -- 2019}{}{}{}
 \cventry{}{\acro{T-PAMI}\normalfont Transactions on Pattern Analysis and Machine Intelligence}{\hfill 2023 -- }{}{}{}
 \cventry{CV}{\acro{CVPR}\normalfont Computer Vision and Pattern Recognition}{\hfill 2020, 2023}{}{}{}
+\cventry{}{\acro{ICCV}\normalfont Internationsl Conference on Computer Vision }{\hfill 2025}{}{}{}
 
 \section{Organization (Workshops and Conference)}
 \cventry{2022}{Workshop}{\href{https://embodied-ai.org/}{Embodied AI Workshop -- Challenge Organizer}}{\newline Computer Vision and Pattern Recognition}{}{}
@@ -320,8 +267,6 @@
 \cventry{--}{Workshop}{\href{https://www.wordplay2018.com/}{Wordplay: Reinformcent and Language Learning in Text-Based Games}}{NeurIPS}{}{}
 \cventry{2017}{Conference}{Student Scholarship Chair and Student Volunteer Coordinator}{\newline Conference on Empirical Methods in Natural Language Processing}{}{}
 \cventry{--}{Workshop}{\href{https://robo-nlp.github.io/2017_index.html}{Language Grounding for Robotics}}{\newline Conference of the Association for Computational Linguistics}{}{}
-
-
 
 \section{Invitations and Talks}
 \cventry{2024}{Talking to Robots}{}{University Pennsylvania}{}{}{}

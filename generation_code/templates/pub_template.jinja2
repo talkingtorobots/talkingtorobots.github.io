@@ -269,7 +269,8 @@
                 <div class="card-text">
                   <i style="font-weight: 300; font-size:10pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['VENUE'] }} ({{ entry['YEAR'] }})
-                  </i><br>
+                  </i>
+                  <br>
                   <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate" style="font-weight: 300; font-size:10pt; max-width:100%;" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['AUTHORS-PRETTY'] }}
                   </font>
@@ -295,6 +296,9 @@
                         {% endif %}
                       {% endfor %}
                     {% endif %}
+                    <!-- {% if 'CUTE' in entry %}
+                      <a href=https://t2r.xyz/r/{{- entry['CUTE']}} style="font-weight: 300; font-size:10pt;display:inline-block;float: right;">t2r.xyz/r/{{- entry['CUTE']}}</a> 
+                    {% endif %} -->
                     <div id="idx{{- loop.revindex -}}" class="dynamic_link">
                       <pre>
     @{{types[entry['TYPE']][0] }}{ {{- entry["VENUE-ACR"]|replace(' ','-') -}}:{{- entry["AUTHORS"][0].split()[-1] -}} {{ entry["YEAR"] }},
