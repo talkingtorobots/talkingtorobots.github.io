@@ -10,6 +10,7 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2502.00197"
+  CUTE: "25-SuccessorFunctions"
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Self-Regulation and Requesting Interventions"
@@ -26,6 +27,26 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2502.04576"
+  CUTE: "25-SelfRegulation"
+- FIELD: WS3
+  TYPE: Conference
+  TITLE: "Re-thinking Temporal Search for Long-Form Video Understanding"
+  AUTHORS:
+    - Jinhui Ye
+    - Zihan Wang
+    - Haosen Sun
+    - Keshigeyan Chandrasegaran
+    - Zane Durante
+    - Cristobal Eyzaguirre
+    - Yonatan Bisk
+    - Juan Carlos Niebles
+    - Ehsan Adeli
+    - Li Fei-Fei
+    - Jiajun Wu
+    - Manling Li 
+  VENUE: "The IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+  VENUE-ACR: "CVPR"
+  YEAR: '2025'
 - FIELD: WS5
   TYPE: Conference
   TITLE: "Explore Theory-of-Mind: Program-Guided Adversarial Data Generation for Theory of Mind Reasoning"
@@ -40,7 +61,10 @@
   VENUE: "The Thirteenth International Conference on Learning Representations"
   VENUE-ACR: "ICLR"
   YEAR: '2025'
-  URL: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
+  URL: "https://arxiv.org/abs/2412.12175"
+  EXTRAS: 
+    Meta: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
+  CUTE: "25-ExploreToM"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training"
@@ -76,6 +100,7 @@
   URL: "https://arxiv.org/abs/2409.18313"
   EXTRAS:
       Website: https://quanting-xie.github.io/Embodied-RAG-web/
+  CUTE: "24-EmbodiedRAG"
 - FIELD: WS4
   TYPE: Journal
   TITLE: "MotIF: Motion Instruction Fine-tuning"
@@ -86,10 +111,11 @@
     - Yonatan Bisk
   VENUE: "IEEE Robotics and Automation Letters"
   VENUE-ACR: "RA-L"
-  YEAR: '2024'
+  YEAR: '2025'
   URL: "https://arxiv.org/abs/2409.10683"
   EXTRAS:
     Website: https://motif-1k.github.io/
+  CUTE: "25-MotIF"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation"
@@ -104,6 +130,7 @@
   URL: 'https://arxiv.org/abs/2410.18932'
   EXTRAS:
     Website: https://anavi-corl24.github.io/
+  CUTE: "24-ANAVI"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Situated Instruction Following"
@@ -124,6 +151,7 @@
   URL: 'https://arxiv.org/abs/2407.12061'
   EXTRAS:
     Website: https://soyeonm.github.io/SIF_webpage/
+  CUTE: "24-SIF"
 - FIELD: O
   TYPE: Conference
   TITLE: "Gradient Localization Improves Lifelong Pretraining of Language Models"
@@ -165,6 +193,7 @@
   VENUE-ACR: "EMNLP"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.19228"
+  CUTE: "24-ToolsFail"
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "DegustaBot: Zero-Shot Visual Preference Estimation for Personalized Multi-Object Rearrangement"
@@ -190,6 +219,7 @@
   VENUE-ACR: "ICLR"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2405.20131"
+  CUTE: "25-Counting"
 - FIELD: WS3
   TYPE: Conference
   TITLE: "DiffusionPID: Interpreting Diffusion via Partial Information Decomposition"
@@ -205,6 +235,7 @@
   VENUE-ACR: "NeurIPS"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.05191"
+  CUTE: "24-DiffusionPID"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Dialogue with Robots: Proposals for Broadening Participation and Research in the SLIVAR Community"
@@ -284,6 +315,7 @@
   VENUE-ACR: "ECCV"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.16394"
+  CUTE: "24-Skews"
 - FIELD: WS3
   TYPE: Conference
   TITLE: "Direct Preference Optimization of Video Large Multimodal Models from Language Model Reward"
@@ -329,6 +361,7 @@
   URL: "https://arxiv.org/abs/2403.12943"
   EXTRAS:
     Website: "https://vid2robot.github.io/"
+  CUTE: "24-Vid2Robot"
 - FIELD: WS5
   TYPE: Conference
   TITLE: "SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents"
@@ -349,6 +382,7 @@
   EXTRAS:
     GitHub: "https://github.com/sotopia-lab/sotopia-pi"
     Website: "https://www.sotopia.world/projects/sotopia-pi"
+  CUTE: "24-SotopiaPi"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "OpenEQA: Embodied Question Answering in the Era of Foundation Models"
@@ -437,6 +471,7 @@
   PRES: Spotlight
   URL: "http://arxiv.org/abs/2310.11667"
   YEAR: '2024'
+  CUTE: "24-Sotopia"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models: Open X-Embodiment Collaboration"
@@ -758,6 +793,7 @@
   YEAR: '2024'
   EXTRAS:
     GitHub: https://github.com/gtatiya/MOSAIC
+  CUTE: "24-Mosaic"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"

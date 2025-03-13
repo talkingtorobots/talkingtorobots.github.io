@@ -27,6 +27,11 @@ webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
 student_yaml = yaml.load(open("yaml/students/phd.yaml"), Loader=yaml.CLoader)
 student_names = set([s["NAME"] for s in student_yaml])
 
+# Theses
+theses_yaml = yaml.load(open("yaml/theses.yaml"), Loader=yaml.CLoader)
+teach_yaml = yaml.load(open("yaml/teaching.yaml"), Loader=yaml.CLoader)
+areachair_yaml = yaml.load(open("yaml/area_chair.yaml"), Loader=yaml.CLoader)
+
 # Load template
 types = {
          "Conference": ["inproceedings", "booktitle"],
@@ -66,6 +71,16 @@ def update_pub_entry(entry):
   for p in student_names:
     entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace(p, f"<div class=\"name\">{p}</div>")
   entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
+
+def generate_shorts():
+    for pub in pubs:
+        if "CUTE" in pub:
+            fname = f"../r/{pub['CUTE']}.html"
+            if os.path.exists(fname):
+                os.remove(fname)
+            o = open(fname,'wt')
+            o.write('<meta http-equiv="Refresh" content="0; url=\'{pub["URL"]}\'" />')
+            o.close()
 
 def generate_publications_website():
     with open("templates/pub_template.jinja2", 'r') as file:
@@ -116,10 +131,16 @@ def generate_CV():
 
     if args.onepager:
       latex_render = latex_template.render(pub_types=["Conference"], 
-                                          publications=latex_papers)
+                                           publications=latex_papers,
+                                           teaching=teach_yaml,
+                                           areachair=areachair_yaml,
+                                           theses=theses_yaml)
     else:
       latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
-                                          publications=latex_papers)
+                                           publications=latex_papers,
+                                           teaching=teach_yaml,
+                                           areachair=areachair_yaml,
+                                           theses=theses_yaml)
     with open("CV.tex", 'wt') as output_file:
         output_file.write(latex_render)
     os.system("pdflatex CV.tex")
@@ -215,6 +236,7 @@ def main():
     if not args.onepager:
         generate_group_page()
         generate_COA()
+    generate_shorts()
 
 if __name__ == "__main__":
     main()
