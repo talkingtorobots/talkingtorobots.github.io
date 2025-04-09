@@ -201,22 +201,43 @@
 {%- endfor -%}
 
 \section{Teaching}
-{% for entry in teaching %}
-\cventry{ {{- entry['YEAR']  -}} }
-        { {{- entry['CLASS'] -}} }
-        { {{- 'w/' + entry['CO'] if 'CO' in entry else '' -}} }
-        { \hfill \numS{ {{- entry['SIZE'] -}} } }
-        { {{- entry['SEM'] -}} }{}
+{%- for year, semesters in teaching.items() %}
+  {%- for semester, entries in semesters.items() %}
+    {%- set year_loop = loop %}
+    {%- for entry in entries %}
+      {%- if year_loop.first and loop.first %}
+          \cventry{ {{- year  -}} }
+                  { {{- entry['CLASS'] -}} }
+                  { {{- 'w/' + entry['CO'] if 'CO' in entry else '' -}} }
+                  { \hfill \numS{ {{- entry['SIZE'] -}} } }
+                  { {{- semester -}} }{}
+        {%- else %}
+          \cventry{ -- }
+                  { {{- entry['CLASS'] -}} }
+                  { {{- 'w/' + entry['CO'] if 'CO' in entry else '' -}} }
+                  { \hfill \numS{ {{- entry['SIZE'] -}} } }
+                  { {{- semester -}} }{}
+        {%- endif %}
+    {%- endfor -%}
+  {%- endfor -%}
 {%- endfor -%}
 
 \section{(Senior) Area Chair / Action Editor}
 {%- for year, areas in areachair.items() %}
   {%- for area, roles in areas.items() %}
+    {%- set year_loop = loop %}
     {%- for role, conferences in roles.items() %}
+      {%- set area_loop = loop %}
       {%- for conference in conferences %}
-        \cventry{ {{ year }} }
-                { {{ role -}}: {{ conference }} }
-                { \hfill \AC{ {{- area -}} } }{}{}{}
+        {%- if year_loop.first and area_loop.first and loop.first %}
+          \cventry{ {{ year }} }
+                  { {{ role -}}: {{ conference }} }
+                  { \hfill \AC{ {{- area -}} } }{}{}{}
+        {%- else %}
+          \cventry{ -- }
+                  { {{ role -}}: {{ conference }} }
+                  { \hfill \AC{ {{- area -}} } }{}{}{}
+        {%- endif %}
       {%- endfor %}
     {%- endfor %}
   {%- endfor %}

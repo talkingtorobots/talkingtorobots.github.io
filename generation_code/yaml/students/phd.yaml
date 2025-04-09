@@ -47,15 +47,15 @@
   WS: 4
   DEPT: CSD
   SPICY: "Have you actually looked at your data?"
-- NAME: Jimin Sun
-  NATIVE: 선지민
-  WEB: https://jiminsun.github.io/
-  PIC: jiminsun.jpg
-  X: jimin__sun
-  PRON: she/her
-  WS: 2
-  DEPT: LTI
-  SPICY: "Don't trust your LLM or its tools"
+# - NAME: Jimin Sun
+#   NATIVE: 선지민
+#   WEB: https://jiminsun.github.io/
+#   PIC: jiminsun.jpg
+#   X: jimin__sun
+#   PRON: she/her
+#   WS: 2
+#   DEPT: LTI
+#   SPICY: "Don't trust your LLM or its tools"
 - NAME: Rosa Vitiello
   NATIVE: Technically Rosanna
   WEB: https://rosavitiello.github.io/
