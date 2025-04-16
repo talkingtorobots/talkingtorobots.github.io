@@ -1,4 +1,18 @@
 ---
+- FIELD: WS2
+  TYPE: Preprint
+  TITLE: "Looking beyond the next token"
+  STUDENT: Abitha Thankaraj
+  AUTHORS:
+    - Abitha Thankaraj
+    - Yiding Jiang
+    - J. Zico Kolter
+    - Yonatan Bisk
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2025'
+  URL: "https://arxiv.org/abs/2504.11336"
+  CUTE: "25-lookingbeyond"
 - FIELD: O
   TYPE: Preprint
   TITLE: "Model Successor Functions"
