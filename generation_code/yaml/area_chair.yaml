@@ -8,6 +8,8 @@
   NLP:
     AC:
       - Conference on Language Modeling (COLM)
+    SAE:
+      - ACL Rolling Review (ARR)
   AI/ML:
     AC:
       - International Conference on Machine Learning (ICML)
