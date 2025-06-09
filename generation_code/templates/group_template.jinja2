@@ -151,14 +151,14 @@
         {% endraw %}
         {% for entry in students %}
             <div class="col card student" style="max-width: 270px; min-width:100px;">
-              <a href="{{ entry['WEB'] }}">
+              <a href="{{ entry['URL'] }}">
                 <img src=images/students/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
               </a>
               <div class="card-body">
                 <h5 class="card-title">
                   <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                    <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                    <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
                   </p>
                   <h6>🌶️ <i><b>{{entry['SPICY']}}</b></i></h6>
                   <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
@@ -169,7 +169,7 @@
                     <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
                     <h6><div class='coadvisor'>
                     {% if 'CO' in entry %}
-                      (co- <a href="{{- entry['CO-WEB'] -}}"> {{- entry['CO'] -}}</a>)
+                      (co- <a href="{{- entry['CO-URL'] -}}"> {{- entry['CO'] -}}</a>)
                     {% endif %}
                     </div></h6>
                 </p>
@@ -201,14 +201,14 @@
         {% endraw %}
         {% for entry in masters %}
           <div class="card student" style="max-width: 200px;">
-            <a href="{{ entry['WEB'] }}">
+            <a href="{{ entry['URL'] }}">
               <img src=images/students/{{ entry['PHOTO'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
             </a>
             <div class="card-body">
               <h6 class="card-title">
                 <p class="m-flip js-flip" style="font-weight:400; font-size: 14px;">
-                  <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                  <span class="m-flip_item"><a href="{{ entry['WEB'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{ entry['NAME'] }} {% endif %}</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{ entry['NAME'] }} {% endif %}</b></a></span>
                 </p>
                 <h6><font class="pronoun">{{ entry['PRON'] }}</font>
                     <br>{{ entry['CAPT'] }}</h6> 
