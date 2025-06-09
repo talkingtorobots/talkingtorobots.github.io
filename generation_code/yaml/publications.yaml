@@ -1,4 +1,16 @@
 ---
+- FIELD: WS3
+  TYPE: Conference
+  TITLE: "Position: You Can't Manufacture a NeRF"
+  AUTHORS:
+    - Ani Kimmel
+    - Mueed Ur Rehman
+    - Yonatan Bisk
+    - Gary K. Fedder
+  VENUE: "Forty-second International Conference on Machine Learning Position Paper Track"
+  VENUE-ACR: "ICML"
+  YEAR: '2025'
+  URL: "https://openreview.net/forum?id=kJzB6lQmcb"
 - FIELD: WS2
   TYPE: Preprint
   TITLE: "Looking beyond the next token"
@@ -26,7 +38,7 @@
   URL: "https://arxiv.org/abs/2502.00197"
   CUTE: "25-SuccessorFunctions"
 - FIELD: O
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "Energy Considerations of Large Language Model Inference and Efficiency Optimizations"
   STUDENT: Jared Fernandez
   AUTHORS:
@@ -36,8 +48,8 @@
     - Yonatan Bisk
     - Sasha Luccioni
     - Emma Strubell
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
+  VENUE: "The 63rd Annual Meeting of the Association for Computational Linguistics"
+  VENUE-ACR: "ACL"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2504.17674"
   CUTE: "25-energy"
@@ -97,8 +109,8 @@
     Meta: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
   CUTE: "25-ExploreToM"
 - FIELD: O
-  TYPE: Preprint
-  TITLE: "Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training"
+  TYPE: Journal
+  TITLE: "Efficient Hardware Scaling and Diminishing Returns in Large-Scale Training of Language Models"
   STUDENT: Jared Fernandez
   AUTHORS:
     - Jared Fernandez
@@ -109,9 +121,9 @@
     - Yonatan Bisk
     - Emma Strubell
     - Jacob Kahn
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
-  YEAR: '2024'
+  VENUE: "Transactions on Machine Learning Research"
+  VENUE-ACR: "TMLR"
+  YEAR: '2025'
   URL: "https://arxiv.org/abs/2411.13055"
 - FIELD: WS4
   TYPE: Preprint
