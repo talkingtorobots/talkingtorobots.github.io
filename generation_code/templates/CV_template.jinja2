@@ -183,7 +183,8 @@
           {{- ' (' + entry['PRES'] + ') ' if 'PRES' in entry else '' -}}
       \end{tabular} } { }{}
   {%- endfor -%}
-{%- endfor -%}
+{%- endfor %}
+
 
 \section{Thesis Committees}
 {%- for year, types in theses.items() %}
@@ -198,7 +199,8 @@
               {}
     {%- endfor -%}
   {%- endfor -%}
-{%- endfor -%}
+{%- endfor %}
+
 
 \section{Teaching}
 {%- for year, semesters in teaching.items() %}
@@ -220,7 +222,7 @@
         {%- endif %}
     {%- endfor -%}
   {%- endfor -%}
-{%- endfor -%}
+{%- endfor %}
 
 \section{(Senior) Area Chair / Action Editor}
 {%- for year, areas in areachair.items() %}
