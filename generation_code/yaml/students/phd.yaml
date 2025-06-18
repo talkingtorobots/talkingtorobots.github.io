@@ -7,32 +7,15 @@
   PRON: she/her
   WS: 4
   DEPT: RI
+  SPICY: Coming soon!
 - NAME: Annabella Macaluso
   URL: https://annabellamacaluso.github.io/
   PIC: annabellamacaluso.jpg
   X: anna_macalus
   PRON: she/her
   WS: 4
-- NAME: So Yeon Min
-  NATIVE: 민소연
-  URL: http://soyeonm.github.io/
-  PIC: soyeonmin.webp
-  X: SoYeonTiffMin
-  PRON: she/her
-  WS: 4
-  DEPT: MLD
-  CO: Rus Salakhutdinov
-  CO-URL: https://www.cs.cmu.edu/~rsalakhu/
-  SPICY: "Models don't know what they don't know"
-- NAME: Vidhi Jain
-  NATIVE: विधि जैन
-  URL: https://vidhijain.github.io/
-  PIC: vidhijain.webp
-  X: viddivj
-  PRON: she/her
-  WS: 4
   DEPT: RI
-  SPICY: "Life is multimodal, your robot instructions better be too"
+  SPICY: Coming soon!
 - NAME: Yingshan Chang
   NATIVE: 常影杉
   URL: https://zdxdsw.github.io/
