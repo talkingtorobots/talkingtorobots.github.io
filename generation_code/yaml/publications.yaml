@@ -37,6 +37,23 @@
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2502.00197"
   CUTE: "25-SuccessorFunctions"
+- FIELD: WS4
+  TYPE: Preprint
+  TITLE: 'Casper: Inferring Diverse Intents for Assistive Teleoperation with Vision Language Models'
+  AUTHORS:
+    - Huihan Liu
+    - Rutav Shah
+    - Shuijing Liu
+    - Jack Pittenger
+    - Mingyo Seo
+    - Yuchen Cui
+    - Yonatan Bisk
+    - Roberto Martín-Martín
+    - Yuke Zhu
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2025'
+  URL: "https://arxiv.org/abs/2506.14727"
 - FIELD: O
   TYPE: Conference
   TITLE: "Energy Considerations of Large Language Model Inference and Efficiency Optimizations"
