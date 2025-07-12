@@ -301,14 +301,13 @@
                     {% endif %} -->
                     <div id="idx{{- loop.revindex -}}" class="dynamic_link">
                       <pre>
-    @{{types[entry['TYPE']][0] }}{ {{- entry["VENUE-ACR"]|replace(' ','-') -}}:{{- entry["AUTHORS"][0].split()[-1] -}} {{ entry["YEAR"] }},
-        author    = { {{- entry['AUTHORS']|join(' and ') -}} },
-        title     = { {{- entry['TITLE'] -}} },
-        {{ types[entry['TYPE']][1] }} = { {{- entry['VENUE'] -}} },
-        year      = { {{- entry['YEAR'] -}} },
-        url       = { {{- entry['URL'] -}} },
-    }
-                      </pre>
+@{{types[entry['TYPE']][0] }}{ {{- entry["VENUE-ACR"]|replace(' ','-') -}}:{{- entry["AUTHORS"][0].split()[-1] -}} {{ entry["YEAR"] }},
+    author    = { {{- entry['AUTHORS']|join(' and ') -}} },
+    title     = { {{- entry['TITLE'] -}} },
+    {{ types[entry['TYPE']][1] }} = { {{- entry['VENUE'] -}} },
+    year      = { {{- entry['YEAR'] -}} },
+    url       = { {{- entry['URL'] -}} },
+}</pre>
                     </div>
                 </div> <!-- text -->
               </div>
