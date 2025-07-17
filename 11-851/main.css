@@ -5,6 +5,44 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+#doNotPushOverlay {
+  position: fixed; /* Stays in place even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Viewport width */
+  height: 100vh; /* Viewport height */
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it's on top of everything */
+  cursor: pointer;
+  color: white;
+  font-size: 5em;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#tempMessage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9998; /* Below the main overlay, but above content */
+            opacity: 0; /* Initially hidden */
+            visibility: hidden; /* Also hidden from accessibility tree */
+            transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out for message */
+            font-family: 'Arial', sans-serif;
+            font-size: 5vw;
+            text-align: center;
+        }
+
 .navbar {
     position: fixed;
     z-index: 99;

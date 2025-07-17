@@ -41,6 +41,12 @@
         <link rel="icon" type="image/png" href="https://yonatanbisk.com/images/cmu-icon.png">
     </head>
     <body>
+      <div id="doNotPushOverlay">
+        <h1>DO NOT PUSH</h1>
+      </div>
+       <div id="tempMessage">
+        <h2>"Free will is cool...can we give it to a robot?"</h2>
+        </div>
 
         <div class="jumbotron">
           <div class="container">
@@ -684,6 +690,39 @@
           </div>
       </div> <!-- accordian -->
      </main>
+    <script>
+        // All Gemini generated 
+        // JavaScript to handle the button click and message display
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('doNotPushOverlay');
+            const tempMessage = document.getElementById('tempMessage');
+
+            // Add a click event listener to the overlay
+            overlay.addEventListener('click', function() {
+                // 1. Start fading out the main overlay
+                overlay.style.opacity = '0';
+
+                // 2. Wait for the main overlay to mostly fade out (e.g., 250ms into its 500ms transition)
+                setTimeout(function() {
+                    // Make the message visible and fade it in
+                    tempMessage.style.visibility = 'visible';
+                    tempMessage.style.opacity = '1';
+                    overlay.style.display = 'none'; // Hide the original overlay after it's mostly gone
+                }, 250); // This delay is half of the overlay's fade-out duration
+
+                // 3. Keep the temporary message visible for a short period (e.g., 2 seconds), then fade it out
+                setTimeout(function() {
+                    tempMessage.style.opacity = '0';
+                }, 250 + 2000); // 250ms (for overlay fade) + 2000ms (message display duration)
+
+                // 4. Finally, hide the temporary message element after its fade-out transition
+                setTimeout(function() {
+                    tempMessage.style.visibility = 'hidden';
+                }, 250 + 2000 + 500); // Add message fade-out duration (500ms)
+            });
+        });
+    </script>
+
   </body>
 </html>
 
