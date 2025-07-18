@@ -1,4 +1,17 @@
 ---
+- FIELD: WS4
+  TYPE: Conference
+  TITLE: "REM: Evaluating LLM Embodied Spatial Reasoning through Multi-Frame Trajectories"
+  STUDENT: Jacob Thompson
+  AUTHORS:
+    - Jacob Thompson
+    - Emiliano Garcia-Lopez
+    - Yonatan Bisk
+  VENUE: "Second Conference on Language Modeling"
+  VENUE-ACR: "CoLM"
+  YEAR: '2025'
+  URL: "https://openreview.net/forum?id=qbWpEufkqk"
+  CUTE: '25-REM'
 - FIELD: WS3
   TYPE: Conference
   TITLE: "Position: You Can't Manufacture a NeRF"
