@@ -64,16 +64,18 @@
 \cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}  
 \cventry{2009}{BS in Computer Science}{The University of Texas at Austin}{Turing Scholar}{\newline Thesis: The Necessity of Separating Control and Logic When Grounding Language using Neuroevolution}{Advisor: Risto Miikkulainen\ \ \ \ \ \ \ \ Second Reader: Raymond Mooney}
 
-
 \section{PhD Students \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
-\stud{PhD}{jaredfern.com/      }{Jared Fernandez}{he/him }{Efficiency              }{(co-\href{http://strubell.github.io/}{E Strubell})}{LTI}{2020 --}
-\stud{PhD}{vidhijain.github.io/}{Vidhi Jain     }{she/her}{Multimodal Task Specification }{}{RI}{2021 --}
-\stud{PhD}{soyeonm.github.io/  }{Tiffany Min    }{she/her}{Instruction Following         }{(co-\href{https://www.cs.cmu.edu/~rsalakhu/}{R Salakhutdinov})}{MLD}{2021 --}
-\stud{PhD}{zdxdsw.github.io/      }{Yingshan Chang}{she/her}{Multimodal Reasoning}{}{LTI}{2022 --}
-\stud{PhD}{abitha-thankaraj.github.io  }{Abitha Thankaraj}{she/her}{LMs \& Reasoning}{}{CSD}{2024 --}
-\stud{PhD}{rosavitiello.github.io/}{Rosa Vitiello}{she/her}{Collaboration}{(co-\href{https://www.cs.cmu.edu/~cprose/}{C Rose})}{LTI}{2024 --}
-\stud{PhD}{quantingxie.github.io/}{Quanting Xie}{he/him}{Manipulation, LLMs, ...}{}{RI}{2024 --}
-\stud{PhD}{l-mathur.github.io/}{Leena Mathur}{she/her}{Social Robotics}{(co-\href{https://www.cs.cmu.edu/~morency/}{LP Morency})}{LTI}{2024 --}
+{% endraw %}
+{%- for entry in students %}
+  \stud{PhD}{ {{- entry['URL'] -}} }{ {{- entry['NAME'] -}} }{ {{- entry['PRON'] -}} }{ {{- entry['TOPIC'] -}} }
+    {%- if 'CO' in entry %}
+      {(co-\href{ {{- entry['CO-URL'] -}} }{ {{- entry['CO'] -}} })}
+    {%- else %}
+      {}
+    {%- endif %}
+    { {{- entry['DEPT'] -}} }{ {{- entry['START'] }} -- }
+{%- endfor %}
+{% raw %}
 
 \section{Masters}
 \stud{MSR}{https://www.linkedin.com/in/jacob-thompson-557080194/}{Jacob Thompson        }{he/him }{Generalist Agents          }{}{RI}{2024}
@@ -81,15 +83,22 @@
 \stud{5th}{www.linkedin.com/in/claire-jin-a1474420a/}{Claire Jin}{she/her}{Embodied Dialogue}{  }{}{2024}
 
 \section{Alumni}
+\subsection{PhD}
+\cventry{RI}{\href{https://vidhijain.github.io/}{Vidhi Jain}}{}{\hfill 2021-2025}{\newline Lowering Barriers in Human-Robot Communication}{} % \newline \textit{Next: Research Scientist @ OpenAI}}{} 
+\cventry{MLD}{\href{https://soyeonm.github.io/}{So Yeon Min}}{(co-\href{https://www.cs.cmu.edu/~rsalakhu/}{R Salakhutdinov})}{\hfill 2021-2025}{\newline Situated Instruction Following}{}% \newline \textit{Next: Research Scientist @ Anthropic}}{}  
+\cventry{LTI}{\href{https://www.zhuhao.me}{Hao Zhu}}{(co-\href{http://www.phontron.com/}{G Neubig})}{\hfill 2019-2024}{\newline Artificial Social Intelligence: Challenges, Environments, and Mechanisms}{} % \newline\textit{Next: Postdoc @ Stanford}}{}  
+
+\subsection{MS}
 \stud{5th}{https://www.linkedin.com/in/sheryl-m-a26809188/}{Sheryl Mathew         }{she/her }{Collaboration          }{}{SCS}{2024}
-\stud{PhD}{www.zhuhao.me       }{Hao Zhu        }{he/him }{Theory of Mind          }{(co-\href{http://www.phontron.com/}{G Neubig})}{LTI}{2019 -- 2024}
 \stud{MS}{quantingxie.github.io/}{Quanting Xie}{he/him}{LLMs for Robotics}{}{MechE}{\phantom{2023 -- } 2023}
 \stud{MLT}{jiminsun.github.io/ }{Jimin Sun      }{she/her }{Embodied Dialogue      }{}{LTI}{2022 -- 2023}
 \stud{MLT}{zdxdsw.github.io/      }{Yingshan Chang}{she/her}{Multimodal Reasoning}{}{LTI}{2020 -- 2022}
 \stud{MLT}{jzhanson.com/          }{Josh Zhanson  }{he/him }{Embodied Visual Reps}{}{LTI}{2020 -- 2022}
 \stud{MS }{erinzhang1998.github.io}{Xiaoyu (Erin) Zhang  }{she/her}{Collaborative Robots}{(co-\href{https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/}{O Kroemer})}{5th}{2021 -- 2022}
 
-\section{Interns and Undergraduates}
+
+
+\subsection{Interns and Undergraduates}
 \stud{Ugrad}{www.linkedin.com/in/suli23/}{Su Li}{she/her}{Robot Learning}{  }{}{2024}
 \stud{Ugrad}{www.linkedin.com/in/maria-yampolsky-1163b418a/}{Maria Yampolsky}{she/her}{Audio}{  }{}{2024}
 \stud{Intern}{minyoung1005.github.io/}{Minyoung Hwang}{she/her}{Preference Learning}{ }{}{2024}
@@ -100,7 +109,7 @@
 \stud{Intern}{msclar.github.io/             }{Melanie Sclar    }{she/her}{Symmetric Theory-of-Mind}{(co-\href{http://www.phontron.com/}{G Neubig})  }{}{2021}
 \stud{Intern}{blessingitorobassey.github.io/}{Blessing Bassey  }{she/her}{TextVQA                 }{}{}{2021}
 
-\section{Capstones}
+\subsection{Capstones}
 \cventry{MCDS}{VR Robot Teleop\hfill \textnormal{\hintfont{2024}}}{}{}{}{}{}\\
         \begin{tabular}{@{\hspace{42pt}}l@{\hspace{4em}}l@{\hspace{4em}}l}
           Sophia Huang &  Jensen (Yi-Che) Huang & Tianyi Cheng  \\
@@ -294,6 +303,11 @@
 \section{Invitations and Talks}
 \cventry{2025}{Following Instructions and Asking Questions}{}{Army Research Lab}{}{}{}
 \cventry{    }{Why is language an embodied problem?}{}{UK Robotics Summer School Edinburgh}{}{}{}
+\cventry{    }{Planning, Reasoning, and Generalization: A title too bold for me to actually deliver on}{}{JP Morgan AI Agents Seminar}{}{}{}
+\cventry{    }{Semantics? Reasoning? Can we define either of those terms?}{}{RSS Workshop: 2nd Workshop on Semantic Reasoning and Goal Understanding in Robotics}{}{}{}
+\cventry{    }{Humans Know Things, Humans Get in the Way}{}{RSS Workshop: Continual Robot Learning from Humans}{}{}{}
+\cventry{    }{Simulating People with Language Models -- Good Idea? Bad Idea?}{}{RSS Workshop: GenAI-HRI }{}{}{}
+\cventry{    }{AI: Powerful and Limited}{}{Next Gen Philanthropy}{}{}{}
 \cventry{2024}{Talking to Robots}{}{University Pennsylvania}{}{}{}
 \cventry{    }{Everything Fails, Everything is Ambiguous}{}{RSS Social Intelligence Workshop}{}{}{}
 \cventry{    }{Do It Like This, and Don't Wake the Baby}{}{RSS Task Specification Workshop}{}{}{}
@@ -333,6 +347,38 @@
 \cventry{2016}{Invited Poster}{The Impact of Computing in Our Physical World session of the CRA's Computing Community Consortium (CCC) Symposium on Computing Research}{}{}{}
 \cventry{2015}{Colloquium Talk}{Toyota Tech. Inst. of Chicago's Midwest Speech \& Language Days}{}{}{}
 \cventry{2013}{Colloquium Talk}{Toyota Tech. Inst. of Chicago's Midwest Speech \& Language Days}{}{}{}
+
+% \section{Department/University Service}
+% \cventry{2025}{House Select Committee on the CCP}{DC meetings and draft legislation/initiatives}{}{}{}
+% \cventry{    }{PhD/MLT Admissions}{Chair and Slate Transition}{}{}{}
+% \cventry{    }{Students in Admissions}{}{}{}{}
+% \cventry{    }{Space Committee}{}{}{}{}
+% \cventry{    }{Strategic Growth}{}{}{}{}
+% \cventry{    }{LTI Slack}{}{}{}{}
+% \cventry{2024}{PhD/MLT Admissions}{Slate conference}{}{}{}
+% \cventry{    }{Students in Admissions}{}{}{}{}
+% \cventry{    }{Space Committee}{}{}{}{}
+% \cventry{    }{Education Committee}{}{}{}{}
+% \cventry{    }{LTI Slack}{}{}{}{}
+% \cventry{2023}{PhD/MLT Admissions}{}{}{}{}
+% \cventry{    }{Students in Admissions}{}{}{}{}
+% \cventry{    }{Space Committee}{}{}{}{}
+% \cventry{    }{Education Committee}{}{}{}{}
+% \cventry{    }{Colloquium}{}{}{}{}
+% \cventry{    }{LTI Open House Spring 2023}{}{}{}{}
+% \cventry{2022}{PhD/MLT Admissions}{Score normalization, preselection, etc}{}{}{}
+% \cventry{    }{Colloquium}{}{}{}{}
+% \cventry{    }{Students in Admissions}{}{}{}{}
+% \cventry{    }{LTI Orientation for Fall 2022}{}{}{}{}
+% \cventry{    }{Curriculum Creation Committee}{}{}{}{}
+% \cventry{    }{LTI Slack}{}{}{}{}
+% \cventry{2021}{PhD/MLT Admissions}{Score normalization, preselection, etc}{}{}{}
+% \cventry{    }{DEI Committee}{Train and Include Students in Admissions}{}{}{}
+% \cventry{    }{Space Committee}{}{}{}{}
+% \cventry{2020}{PhD/MLT Admissions}{}{}{}{}
+% \cventry{    }{DEI Committee}{}{}{}{}
+% \cventry{    }{Social Media + YouTube}{}{}{}{}
+
 
 \end{document}
 {% endraw %}

@@ -132,12 +132,14 @@ def generate_CV():
     if args.onepager:
       latex_render = latex_template.render(pub_types=["Conference"], 
                                            publications=latex_papers,
+                                           students=student_yaml,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
                                            theses=theses_yaml)
     else:
       latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
                                            publications=latex_papers,
+                                           students=student_yaml,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
                                            theses=theses_yaml)
@@ -158,7 +160,8 @@ def generate_group_page():
                 stud["RESEARCH"].append(pub)
     masters = yaml.load(open("yaml/students/ms_intern.yaml"), Loader=yaml.CLoader)
     alumni = yaml.load(open("yaml/students/alumni.yaml"), Loader=yaml.CLoader)
-    group_render = group_template.render(students=student_yaml, alumni=alumni, masters=masters)
+    alumni_phd = yaml.load(open("yaml/students/phd_alumni.yaml"), Loader=yaml.CLoader)
+    group_render = group_template.render(students=student_yaml, alumni=alumni, alumni_phd=alumni_phd, masters=masters)
     with open("../CLAW/index.html", 'wt') as output_file:
         output_file.write(group_render)
 
