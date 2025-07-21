@@ -86,7 +86,7 @@
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Self-Regulation and Requesting Interventions"
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS:
     - So Yeon Min
     - Yue Wu
@@ -192,7 +192,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation"
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Rishi Veerapaneni
@@ -207,7 +207,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Situated Instruction Following"
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS:
     - So Yeon Min
     - Xavi Puig
@@ -413,7 +413,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Maria Attarian
@@ -548,7 +548,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models: Open X-Embodiment Collaboration"
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     -  Abby O’Neill
     -  Abdul Rehman
@@ -894,7 +894,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Spatial-Language Attention Policies for Efficient Robot Learning"
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     - Priyam Parashar
     - Vidhi Jain
@@ -934,7 +934,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "HomeRobot: Open-Vocabulary Mobile Manipulation"
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     - Sriram Yenamandra
     - Arun Ramachandran
@@ -965,7 +965,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning"
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS: 
     - Yue Wu
     - Shrimai Prabhumoye
@@ -984,7 +984,7 @@
 - FIELD: WS4
   TYPE: Preprint
   TITLE: "Plan, Eliminate, and Track -- Language Models are Good Teachers for Embodied Agents"
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS: 
     - Yue Wu
     - So Yeon Min 
@@ -1001,7 +1001,7 @@
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Towards Open-World Mobile Manipulation in Homes: Lessons from the Neurips 2023 HomeRobot Open Vocabulary Mobile Manipulation Challenge"
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS: 
     - Sriram Yenamandra
     - Arun Ramachandran
@@ -1111,7 +1111,7 @@
   TYPE: Conference
   TITLE: "Self-Supervised Object Goal Navigation with In-Situ Finetuning"
   YEAR: '2023'
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS:
     - So Yeon Min
     - Yao-Hung Hubert Tsai
@@ -1129,7 +1129,7 @@
   TYPE: Workshop
   TITLE: "MAEA: Multimodal Attribution for Embodied AI"
   YEAR: '2022'
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Jayant Sravan Tamarapalli
@@ -1143,7 +1143,7 @@
   TITLE: "Tackling AlfWorld with Action Attention and Common Sense from Language Models"
   YEAR: '2022'
   URL: 'https://openreview.net/forum?id=AqkPRUZ-YkO'
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS:
     - Yue Wu
     - So Yeon Min
@@ -1204,7 +1204,7 @@
   TITLE: "Don't Copy the Teacher: Data and Model Challenges in Embodied Dialogue"
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2210.04443'
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   AUTHORS:
     - So Yeon Min
     - Hao Zhu
@@ -1245,7 +1245,7 @@
   TITLE: 'Transformers are Adaptable Task Planners'
   YEAR: '2022'
   URL: 'https://arxiv.org/abs/2207.02442'
-  STUDENT: Vidhi Jain
+  ALUMN: Vidhi Jain
   AUTHORS:
     - Vidhi Jain
     - Yixin Lin
@@ -1368,7 +1368,7 @@
   TYPE: Conference
   TITLE: 'FILM: Following Instructions in Language with Modular Methods'
   YEAR: '2022'
-  STUDENT: So Yeon Min
+  ALUMN: So Yeon Min
   URL: "https://arxiv.org/abs/2110.07342"
   AUTHORS:
   - So Yeon Min
