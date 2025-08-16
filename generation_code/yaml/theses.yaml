@@ -9,14 +9,6 @@
       URL: https://markmlee.github.io/
       ADV: Oliver Kroemer
       UNI: CMU
-    Nikolaos Gkanatsios:
-      URL: https://nickgkan.github.io/
-      ADV:  Katerina Fragkiadaki
-      UNI: CMU
-    Gabe Sarch:
-      URL: https://gabesarch.me/
-      ADV:  Katerina Fragkiadaki and Mike Tarr
-      UNI: CMU
     Seungchan Kim:
       URL: https://seungchan-kim.github.io/
       ADV:  Sebastian Scherer
@@ -25,14 +17,24 @@
       URL: https://brendonjboldt.xyz/
       ADV:  David Mortensen
       UNI: CMU
-    Liangke Gui:
-      URL: https://scholar.google.com/citations?user=oM6Pj3MAAAAJ&hl=en
-      ADV: Alex Hauptmann
-      UNI: CMU
   MSR:
     Haochen Zhang:
       ADV: Wenshan Wang and Ji Zhang
       URL: https://haochenz11.github.io/
+      UNI: CMU
+2025:
+  PhD:
+    Liangke Gui:
+      URL: https://scholar.google.com/citations?user=oM6Pj3MAAAAJ&hl=en
+      ADV: Alex Hauptmann
+      UNI: CMU
+    Gabe Sarch:
+      URL: https://gabesarch.me/
+      ADV:  Katerina Fragkiadaki and Mike Tarr
+      UNI: CMU
+    Nikolaos Gkanatsios:
+      URL: https://nickgkan.github.io/
+      ADV:  Katerina Fragkiadaki
       UNI: CMU
 2024:
   PhD:
