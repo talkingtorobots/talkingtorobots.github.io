@@ -12,6 +12,19 @@
   YEAR: '2025'
   URL: "https://openreview.net/forum?id=qbWpEufkqk"
   CUTE: '25-REM'
+- FIELD: O
+  TYPE: Conference
+  TITLE: "MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Correction"
+  AUTHORS:
+    - Yuyang Wu
+    - Jinhui Ye
+    - Shuhao Zhang
+    - Lu Dai
+    - Yonatan Bisk
+    - Olexandr Isayev
+  VENUE: "Conference on Empirical Methods in Natural Language Processing"
+  VENUE-ACR: "EMNLP"
+  YEAR: '2025'
 - FIELD: WS3
   TYPE: Conference
   TITLE: "Position: You Can't Manufacture a NeRF"

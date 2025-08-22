@@ -1,0 +1,150 @@
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ7BV93KNM"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GZ7BV93KNM');
+        </script>
+
+        <script>
+        <!-- https://www.w3schools.com/howto/howto_js_filter_table.asp -->
+        function mySearch() {
+          // Declare variables
+          var filter, tr, td, i, txtValue;
+          filter = document.getElementById("myInput").value.toUpperCase();
+          tr = document.getElementsByClassName("card");
+
+          if (filter.length == 0) {
+            for (i = 0; i < tr.length; i++) {
+              tr[i].removeAttribute("hidden");
+            }
+          } else {
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByClassName("card-text")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 && filter.length != 0) {
+                  tr[i].removeAttribute("hidden");
+                } else {
+                  tr[i].hidden = true;
+                }
+              }
+            }
+          }
+        }
+        </script>
+
+        </script>
+        <script language="javascript">
+            function show( elem ) {
+                $('#'+elem).toggle();
+                copyDivToClipboard(elem);
+            }
+        </script>
+
+        <script>
+          function area(ON, OFF){
+              var ON = ON.split(',')
+              var OFF = OFF.split(',')
+              var turn_on = [];
+              var turn_off = [];
+              for (var idx = 0; idx < ON.length; idx++) {
+                turn_on = turn_on.concat(Array.from(document.getElementsByClassName(ON[idx])))
+              }
+              for (var idx = 0; idx < OFF.length; idx++) {
+                turn_off = turn_off.concat(Array.from(document.getElementsByClassName(OFF[idx])))
+              }
+
+              for (var i = 0; i < turn_on.length; i++){
+                    turn_on[i].removeAttribute("hidden");
+              }
+              for (var i = 0; i < turn_off.length; i++){
+                  if (!turn_on.includes(turn_off[i])) {
+                    turn_off[i].hidden = true;
+                  }
+              }
+          }
+        </script>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content:"Yonatan Bisk">
+        <link rel="canonical" href="https://talkingtorobots.com">
+        <title>T2R Papers</title>
+        <meta name="title" content="T2R Papers">
+        <meta name="description" content="Research papers from CLAW Lab at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://talkingtorobots.com/11-851/papers.html">
+        <meta property="og:title" content:"T2R Papers">
+        <meta property="og:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
+        <meta property="og:description" content="Research papers from CLAW Lab at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://talkingtorobots.com/11-851/papers.html">
+        <meta property="twitter:title" content:"T2R Papers">
+        <meta property="twitter:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
+        <meta property="twitter:description" content="Research papers from Talking to Robots">
+
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" type="image/png" href="https://talkingtorobots.com/images/cmu-icon.png">
+    </head>
+    <body>
+
+    <div class="wrapper" >
+      <div class="content">
+      <center>Just a big 'ol list.  Suggestions welcome<br><br>
+
+      <h3>Papers</h3>
+        <table class="table table-striped table-condensed">
+              <thead>
+                <tr> 
+                  <th scope="col">Title</th>
+                  <th scope="col">Venue</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        {% endraw %}
+        {% for entry in papers %}
+                <tr>
+                  <td><a href= {{ entry['URL'] }}>{{ entry['TITLE'] }}</a></td>
+                  <td>{{ entry['VENUE'] }}</td>
+                  <td>{{ entry['YEAR'] }}</td>
+                  <td>{{ entry['NOTE'] }}</td>
+                </tr>
+        {% endfor %}
+        {% raw %}
+
+        <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function toggleEllipsis(x) {
+          var element = document.querySelector("#ellipsis-ex"+x);
+          element.classList.toggle("text-truncate");
+        }
+        </script>
+
+    </main>
+  </body>
+</html>
+{% endraw %}

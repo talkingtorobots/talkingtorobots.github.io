@@ -41,17 +41,19 @@
         <link rel="icon" type="image/png" href="https://yonatanbisk.com/images/cmu-icon.png">
     </head>
     <body>
+      <!--
       <div id="doNotPushOverlay">
         <h1>DO NOT PUSH</h1>
       </div>
        <div id="tempMessage">
         <h2>"Free will is cool...can we give it to a robot?"</h2>
         </div>
+      -->
 
         <div class="jumbotron">
           <div class="container">
               <center><h1>11-851: <b>Talking to Robots</b></h1></center>
-              <center><h1>Fall 2024 (2025 coming soon...)</h1></center>
+              <center><h1>Fall 2025 (WIP)</h1></center>
           </div>
         </div>
 
@@ -125,309 +127,82 @@
         </div>
       </div>
       </div> <!-- container -->
-      <div class="accordion" id="accordion">
-          <div class="accordion-item">
-            <div class="accordion-header" id="course-schedule">
-              <button class="accordion-button show" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#schedule" aria-expanded="false" aria-controls="#schedule">
-                Course Schedule
-              </button>
-            </div>
-            <div id="schedule" class="accordion-collapse " aria-labelledby="course-schedule">
-              <div class="accordion-body">
-                A basic course schedule is presented below, additional readings here: 
-                <a href="papers/" style="font-size:1em">Additional Readings<a><br>
-                <table class="table table-striped">
-                  <thead>
-                    <tr class="d-flex">
-                      <th class="col-md-6"><center>Tues</center></th>
-                      <th class="col-md-6"><center>Thurs</center></th>
-                    </tr>
-                  </thead>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-12"  style="background-color:#FFFFFF"><font style="font-family:cursive"><center><h3>What is embodiment? Designing your world</h3></center></font>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-6">Aug 27: <b>Philosophy</b><br>
-                      <h6>
-                        <ul>
-                          <li><a href="https://aclanthology.org/2020.acl-main.463/">Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data</a>, 2020 </li>
-                          <li><a href="https://arxiv.org/abs/2004.10151">Experience Grounds Language</a>, 2020  </li>
-                          <li><a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-control-101119-071628">Robots That Use Language</a>,  2020  </li>
-                          <li><a href="https://www.sciencedirect.com/science/article/pii/S0885230821000620">Spoken language interaction with robots: Recommendations for future research</a>, 2022 </li>
-                        </ul>
-                      </h6>
-                  </td>
-                  <td class="col-md-6">Aug 29: <b>Origins of the Field</b><br>
-                    <h6>
-                      <ul>
-                      <li><a href="https://dspace.mit.edu/handle/1721.1/7095">SHRDLU</a> MIT Report 1971 </li>
-                      <li><a href="https://dl.acm.org/doi/10.5555/1597348.1597423">Walk the talk: connecting language, knowledge, and action in route instructions</a> AAAI 2006</li>
-                      <li><a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00209/43198/Weakly-Supervised-Learning-of-Semantic-Parsers-for">Weakly Supervised Learning of Semantic Parsers for Mapping Instructions to Actions </a> TACL 2013</li>
-                      </ul>
-                    </h6>
-                  </td>
+
+      <h2>Course Schedule</h2>
+        <table class="table table-striped table-condensed">
+              <thead>
+                <tr>
+                  <th scope="col">Tues</th>
+                  <th scope="col">Topic</th>
+                  <th scope="col">Thurs</th>
+                  <th scope="col">Topic</th>
                 </tr>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-6">Sept 3: <b>Simulators, Action Spaces, Robotics</b>
-                      <h6><ul>
-                        <li>SLAM</li>
-                        <li>Semantic Mapping</li>
-                        <li>Inverse Kinematics</li>
-                        <li><a href="https://sites.google.com/view/rlbench">RLBench</a>,  <a href="https://www.microsoft.com/en-us/research/project/textworld/">TextWorld</a>,  <a href="http://virtual-home.org/">VirtualHome</a></li>
-                        <li><a href="https://ai2thor.allenai.org/">AI2Thor</a>,  <a href="https://procthor.allenai.org/">ProcThor</a>,  <a href="https://ai2thor.allenai.org/robothor/">RoboThor</a>,  <a href="https://www.microsoft.com/en-us/ai/autonomous-systems-project-airsim">AirSim</a></li>
-                        <li><a href="https://ai2thor.allenai.org/manipulathor/">ManipulaThor</a>,  <a href="https://svl.stanford.edu/igibson/">iGibson</a>,  <a href="https://arxiv.org/abs/2106.14405">Habitat</a>,  <a href="https://www.threedworld.org/">ThreeDWorld</a>,  <a href="https://openreview.net/forum?id=_8DoIe8G3t">Behavior-1K</a></li>
-                        <li><a href="https://pybullet.org/wordpress/">PyBullet</a>,  <a href="https://developer.nvidia.com/isaac-gym">ISAAC Gym</a>,  <a href="https://www.nvidia.com/en-us/omniverse/">Omniverse</a>, <a href="https://robocasa.ai/">RoboCasa</a></li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6"  >Sept 5: <b>NLP, LLMs, VLMs, ...</b>
-                      <h6><ul>
-                        <li>Syntactic/Semantic Parsing</li>
-                        <li>(Large) Language Models</li>
-                        <li>Multimodal Transformers</li>
-                      </ul></h6>
-                    </td>
-                  </tr>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-6" style="background-color:#fae8e0">
-                      Sept 10: <b>No class (Prep Project Pitch)</b>
-                      <h6><ul>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6" style="background-color:#fae8e0">
-                       Sept 12: <b>Initial Group Pitches</b>
-                    </td>
-                  </tr>
-
-                  <tr class="d-flex">
-                    <td class="col-md-6" style="background-color:#fae8e0">
-                      Sept 17: <b>Perspective Excercise (Argue merits from the perspective of another field of ML)</b>
-                      <h6><ul>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6" style="background-color:#fae8e0">
-                       Sept 19: <b>Red team your project</b>
-                    </td>
-                  </tr>
-      
-      
-                  <tr class="d-flex">
-                    <td class="col-md-12"  style="background-color:#FFFFFF"><font style="font-family:cursive"><h3><center>Navigation</center></h3></font>
-                  </tr>
-                  <tr class="d-flex">
-                   <td class="col-md-6">Sept 24: <b> Discrete Worlds</b> </b>
-                      <h6><ul>
-                        <li> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/7974">Learning to Interpret Natural Language Navigation Instructions from Observations </a> AAAI 2011</li>
-                        <li> <a href="https://arxiv.org/abs/1711.07280">Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments</a> CVPR 2018</li>
-                        <li> <a href="https://arxiv.org/abs/2010.07954">Room-Across-Room: Multilingual Vision-and-Language Navigation with Dense Spatiotemporal Grounding</a> EMNLP 2020</li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">Sept 26: <b>Continuous Worlds</b>
-                      <h6><ul>
-                        <li> <a href="https://aclanthology.org/P10-1083/">Learning to Follow Navigational Directions</a> ACL 2010 </li> 
-                        <li> <a href="https://jacobkrantz.github.io/vlnce/">Vision and Language Navigation in Continuous Environments</a> ECCV 2020</li>
-                        <li> <a href="https://arxiv.org/abs/1811.04179">Mapping Navigation Instructions to Continuous Control Actions with Position-Visitation Prediction</a> CoRL 2018</li>
-                       <li> <a href="https://mahis.life/clip-fields/">CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory</a></li>
-                      </ul></h6>
-                      <b><font color="red">Project Report:</font> Assumpetions about meaning and Linguistic Analysis</b>
-                    </td>
-                  </tr>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-6">
-                      Oct 1: <b>Mapping and Replanning</b><br>
-                      <h6><ul>
-                        <li> <a href="https://dspace.mit.edu/handle/1721.1/87051">Learning Semantic Maps from Natural Language Descriptions</a> RSS 2013 </li>
-                      <li> <a href="https://openreview.net/forum?id=r1GAsjC5Fm">Self-Monitoring Navigation Agent via Auxiliary Progress Estimation</a> ICLR 2019</li>
-                      <li> <a href="https://arxiv.org/abs/1903.02547">Tactical Rewind: Self-Correction via Backtracking in Vision-and-Language Navigation</a> CVPR 2019</li>
-                      <li> <a href="https://wijmans.xyz/publication/eom/">Emergence of Maps in the Memories of Blind Navigation Agents</a> ICLR 2023</li>
-                      <li><a href="https://jacobkrantz.github.io/ivln">Iterative Vision-and-Language Navigation</a>CVPR 2023</li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">
-                      Oct 3: <b>Real Valued output and Sim2Real</b>
-                      <h6><ul>
-                        <li> <a href="https://arxiv.org/abs/2011.03807">Sim-to-Real Transfer for Vision-and-Language Navigation</a> CoRL 2020</li>
-                        <li> <a href="https://arxiv.org/abs/2104.10674">Hierarchical Cross-Modal Agent for Robotics Vision-and-Language Navigation</a> ICRA 2021</li>
-                        <li> <a href="https://arxiv.org/abs/1910.09664">Learning to Map Natural Language Instructions to Physical Quadcopter Control using Simulated Flight</a> CoRL 2019 </li>
-                        <li> <a href="https://aclanthology.org/N16-1089/">Natural Language Communication with Robots</a> NAACL 2016</li>
-                      </ul></h6>
-                    </td>
-                  </tr>
-      
-      
-                  <tr class="d-flex">
-                    <td class="col-md-6">
-                      Oct 8: <b>State Tracking and Task Planning</b>
-                      <h6><ul>
-                       <li> <a href="https://askforalfred.com/">ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks</a>CVPR 2020 </li>
-                       <li> <a href="https://arxiv.org/abs/2107.05612">A Persistent Spatial Semantic Representation for High-level Natural Language Instruction Execution</a> CoRL 2021</li>
-                       <li> <a href="https://soyeonm.github.io/FILM_webpage/">FILM: Following Instructions in Language with Modular Methods </a> ICLR 2022 </li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">Oct 10: <b>Language Models as Planners</b> 
-                      <h6><ul>
-                      <li> <a href="https://wenlong.page/language-planner/">Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents</a> 2022</li>
-                      <li> <a href="https://progprompt.github.io/">ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a> 2023 </li>
-                      <li> <a href="https://arxiv.org/abs/2211.03267">Prompter: Utilizing Large Language Model Prompting for a Data Efficient Embodied Instruction Following</a>2023</li>
-                      <li> <a href="https://code-as-policies.github.io/">Code as Policies: Language Model Programs for Embodied Control</a></li>
-                      <li> <a href="https://say-can.github.io/">Do As I Can, Not As I Say: Grounding Language in Robotic Affordances</a>, 2022</li>
-                      </ul></h6>
-                      <b><font color="red">Project Report:</font> Code-as-policies, Progprompt, ... </b>
-                    </td>
-                  </tr>
-                   <tr class="d-flex">
-                    <td class="col-md-12"  style="background-color:#FFFFFF"><font style="font-family:cursive"><h3><center>Manipulation</center></h3></font>
-                  </tr>     
-    
-                  <tr class="d-flex">
-                    <td class="col-md-12"><center> <b><i>Fall Break</i></b></center>
-                    </td>
-                  </tr>
-
-                   <tr class="d-flex">
-                    <td class="col-md-6">Oct 22: <b>Large _____  Models </b>
-                      <h6><ul>
-                      <li> <a href="https://vlmaps.github.io/">Visual Language Maps for Robot Navigation</a>, 2023</li>
-                      <li> <a href="http://hulc2.cs.uni-freiburg.de/">Grounding Language with Visual Affordances over Unstructured Data</a>, 2023 </li>
-                       <li> <a href="https://cliport.github.io/">CLIPort: What and Where Pathways for Robotic Manipulation</a>, 2021 </li>
-                       <li> <a href="https://peract.github.io/">Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation</a>, 2022 </li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">Oct 24: <b>Manipulators & Representing Space</b>
-                      <h6><ul>
-                       <li> <a href="https://transporternets.github.io/">Transporter Networks: Rearranging the Visual World for Robotic Manipulation </a>, 2020</li>
-                       <li> <a href="https://vimalabs.github.io/">VIMA: General Robot Manipulation with Multimodal Prompts</a> NeurIPS FMDM Workshop 2022</li>
-                       <li> <a href="https://language-play.github.io/">Language Conditioned Imitation Learning over Unstructured Data</a>, 2021 </li>
-                       <li> <a href="https://sites.google.com/ucsc.edu/vlmbench/home">VLMbench: A Compositional Benchmark for Vision-and-Language Manipulation</a>NeurIPS 2022 (Datasets and Benchmarks)</li>
-                      </ul></h6>
-                    </td>
-                  </tr>
-      
-
-                  <tr class="d-flex">
-                    <td class="col-md-6">Oct 29: <b>Imagination</b>
-                      <h6><ul>
-                       <li> <a href="https://arxiv.org/abs/1907.02022">Chasing Ghosts: Instruction Following as Bayesian State Tracking</a> NeurIPS 2019</li>
-                       <li> <a href="https://arxiv.org/abs/1903.08309">Prospection: Interpretable Plans From Language By Predicting the Future</a> ICRA 2019</li>
-                       <li> <a href="https://universal-policy.github.io/unipi/">Learning Universal Policies via Text-Guided Video Generation</a> 2023</li>
-                       <li> <a href="https://arxiv.org/abs/2301.06015">Diffusion-based Generation, Optimization, and Planning in 3D Scenes</a> 2023</li>
-                       <li> <a href="https://arxiv.org/abs/2301.04104">Mastering Diverse Domains through World Models</a> 2023</li>
-                       <li> <a href="https://www.robot-learning.uk/dall-e-bot">DALL-E-Bot: Introducing Web-Scale Diffusion Models to Robotics</a> 2023</li>
-                       <li> <a href="https://diffusion-rosie.github.io/">Scaling Robot Learning with Semantically Imagined Experience</a> 2023</li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6" style="background-color:#fae8e0">Oct 31: <b>Mid-Term Presentations (+Feedback)</b>
-                  </tr>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-12"  style="background-color:#FFFFFF"><font style="font-family:cursive"><h3><center>Feedback, Dialogue, and Teaching</center></h3></font>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-6">Nov 5: <b>Election Day</b>
-                     </td>
-                    <td class="col-md-6" >Nov 7: <b>
-                          Guest Lecture (e.g. <a href="https://dpfried.github.io/">Daniel Fried</a>)<b>
-                                            <h6><ul>
-                                              <li><a href="https://arxiv.org/abs/2002.04833">Reward-rational (implicit) choice: A unifying formalism for reward learning</a></li>
-                                              <li><a href="https://www.ri.cmu.edu/pub_files/2013/3/legiilitypredictabilityIEEE.pdf">Legibility and Predictability of Robot Motion</a></li>
-                                            </ul></h6>
-
-                      <h6><ul>
-                      </ul></h6>
-
-                    </td>
-
-                  </tr>
-      
-                  <tr class="d-flex">
-                    <td class="col-md-6"  >Nov 12: <b>Concept Learning</b>
-                      <h6><ul>
-                       <li> <a href="https://arxiv.org/abs/1606.02447">Learning Language Games through Interaction</a> ACL 2016</li>
-                       <li> <a href="https://arxiv.org/abs/1704.06956">Naturalizing a Programming Language via Interactive Learning</a> ACL 2017</li>
-                       <li> <a href="https://arxiv.org/abs/2011.07384">Few-shot Object Grounding and Mapping for Natural Language Robot Instruction Following</a> CoRL 2020</li>
-                       <li> <a href="https://iral.cs.umbc.edu/Pubs/MatuszekAAAI2014LangPlusGesture.pdf">Learning from Unscripted Deictic Gesture and Language for Human-Robot Interactions</a> AAAI 2014 </li>
-                       <li> <a href="https://www.ijcai.org/Proceedings/16/Papers/491.pdf">Learning Multi-Modal Grounded Linguistic Semantics by Playing “I Spy”</a> IJCAI 2016</li>
-                       <li> <a href="https://instructionaugmentation.github.io/">Robotic Skill Acquisition via Instruction Augmentation with Vision-Language Models</a></li>
-                      </ul></h6>
-
-                      <td class="col-md-6" style="background-color:#fae8e0">Nov 14: <b>  Project Office Hours (virtual) </b> 
-                        Sign-up sheet in canvas
-                    </td>
-                  </tr>
-      
-                  <tr class="d-flex">
-
-                    <td class="col-md-6">Nov 19: <b>Feedback </b>
-                      <h6><ul>
-                      <h6><ul>
-                       <li> <a href="https://arxiv.org/abs/2204.05186">Correcting Robot Plans with Natural Language Feedback</a></li>
-                       <li> <a href="https://arxiv.org/abs/2210.12511">DOROTHIE: Spoken Dialogue for Handling Unexpected Situations in Interactive Autonomous Driving Agents</a> 2022</li>
-                       <li> <a href="https://arxiv.org/abs/2301.02555">"No, to the Right" -- Online Language Corrections for Robotic Manipulation via Shared Autonomy</a> 2023</li>
-                       <li> <a href="https://arxiv.org/abs/2210.06407">Interactive Language: Talking to Robots in Real Time</a> 2022</li>
-                       <li> <a href="https://arxiv.org/abs/1903.00122">Improving Grounded Natural Language Understanding through Human-Robot Dialog</a> ICRA 2019</li>
-                      </ul></h6>
-                    </td>
-                    <td class="col-md-6">Nov 21:  <b>Asking for Help and Dialogue</b>
-                      <h6><ul>
-                       <li> <a href="https://cs.brown.edu/people/stellex/publications/tellex14.pdf">Asking for Help Using Inverse Semantics</a> RSS 2014</li>
-                       <li> <a href="https://arxiv.org/abs/1909.01871">Help, Anna! Visual Navigation with Natural Multimodal Assistance via Retrospective Curiosity-Encouraging Imitation Learning</a> EMNLP 2019 </li>
-                       <li> <a href="https://dl.acm.org/doi/abs/10.1145/3237189">Miscommunication Detection and Recovery in Situated Human–Robot Dialogue</a> ACM Transactions on Interactive Intelligent Systems 2019</li>
-
-                       <li> <a href="https://ronghanghu.com/speaker_follower/">Speaker-Follower Models for Vision-and-Language Navigation</a> NeurIPS 2018 </li>
-                       <li> <a href="https://cvdn.dev/">Cooperative Vision-and-Dialog Navigation</a> CoRL 2019</li>
-                       <li> <a href="https://aclanthology.org/W14-4313/">Back to the Blocks World: Learning New Actions through Situated Human-Robot Dialogue</a> SigDial 2014 </li>
-                       <li> <a href="https://teachingalfred.github.io/">TEACh: Task-driven Embodied Agents that Chat</a> AAAI 2022</li>
-                       <li> <a href="https://aclanthology.org/P19-1537/">Collaborative Dialogue in Minecraft</a> ACL 2019</li>
-                      <b><font color="red">Project Report:</font> How could you add pragmatics? legibility? social intelligence? </b>
-                      </ul></h6>
-                    </td>
-                  </tr>
-
-                  <tr class="d-flex">
-                    <td class="col-md-6">Nov 26: <b>Theory-of-mind</b>
-                      <h6><ul>
-                        <li> <a href="https://aclanthology.org/2021.emnlp-main.85/">MindCraft: Theory of Mind Modeling for Situated Dialogue in Collaborative Tasks</a> EMNLP 2021</li>
-                        <li> <a href="https://arxiv.org/abs/2210.12485">DANLI: Deliberative Agent for Following Natural Language Instructions</a> EMNLP 2022</li>
-                        <li> <a href="https://arxiv.org/abs/2210.04443">Don't Copy the Teacher: Data and Model Challenges in Embodied Dialogue</a> EMNLP 2022</li>
-                       </ul></h6>
-
-                    </td>
-                    <td class="col-md-6" style="background-color:#fae8e0">Nov 28: <b>Thanksgiving, no class</b>
-                      <h6>
-                        
-                      </h6>
-                    </td>
-                  </tr>
-      
-
-                  <tr class="d-flex">
-                    <td class="col-md-6">Dec 3: <b>Revisit Philosophy and Open Challenges</b>
-                    </td>
-                    <td class="col-md-6" style="background-color:#fae8e0">Dec 5: <b>Final Presentations</b>
-                    </td>
-                  </tr>
-
-
+              </thead>
+              <tbody>
+                <tr>
+                <td>Aug 26</td><td>Dualism                    </td>
+                <td>Aug 28</td><td>Symbol Grounding           </td>
+                </tr>
+                <tr>
+                <td>Sep 2 </td><td>Before 1990 + Prize        </td>
+                <td>Sep 4 </td><td>Defining intelligence      </td>
+                </tr>
+                <tr>
+                <td>Sep 9 </td><td>Building Worlds            </td>
+                <td>Sep 11</td><td>Linguistic Structure       </td>
+                </tr>
+                <tr  class="table-danger">
+                <td>Sep 16</td><td> Group Pitches              </td>
+                <td>Sep 18</td><td> Perspective & Red team     </td>
+                </tr>
+                <tr>
+                <td>Sep 23</td><td>Space and Time             </td>
+                <td>Sep 25</td><td>Continuous                 </td>
+                </tr>
+                <tr>
+                <td>Sep 30</td><td>Mapping & Planning         </td>
+                <td>Oct 2 </td><td>Real valued + Sim2Real     </td>
+                </tr>
+                <tr>
+                <td>Oct 7 </td><td>States & Tasks             </td>
+                <td>Oct 9 </td><td class="table-danger">Mid-term presentations     </td>
+                </tr>
+                <tr class="table-info">
+                <td>Oct 14</td><td>Fall Break                 </td>
+                <td>Oct 16</td><td>Fall Break                 </td>
+                </tr>
+                <tr>
+                <td>Oct 21</td><td>Manipulation               </td>
+                <td>Oct 23</td><td>Imagination                </td>
+                </tr>
+                <tr>
+                <td>Oct 28</td><td>Concept Learning           </td>
+                <td>Oct 30</td><td>Pragmatics and Dialogue    </td>
+                </tr>
+                <tr>
+                <td>Nov 4 </td><td class="table-info">Democracy Day              </td>
+                <td>Nov 6 </td><td>Theory of Mind             </td>
+                </tr>
+                <tr>
+                <td>Nov 11</td><td>                            </td>
+                <td>Nov 13</td><td class="table-info"> Project Hours (virtual) </td>
+                </tr>
+                <tr>
+                <td>Nov 18</td><td>Project Work              </td>
+                <td>Nov 20</td><td>Project Work               </td>
+                </tr>
+                <tr>
+                <td>Nov 25</td><td>Philosophy                 </td>
+                <td>Nov 27</td><td>Thanksgiving               </td>
+                </tr>
+                <tr class="table-danger">
+                <td>Dec 2 </td><td> Project Presentations      </td>
+                <td>Dec 4 </td><td> Philosophy Presentations   </td>
+                </tr>
               </table>
-              <a href="papers/" style="font-size:1em">Here are a few things that haven't made it into the schedule yet<a>
-              </div> <!-- body -->
-          </div> <!-- collapse -->
-        </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header" id="course-structure">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                 aria-expanded="true" aria-controls="structure" data-bs-target="#structure">
-                Course Structure and Grading
-              </button>
-            </div>
-            <div id="structure" class="accordion-collapse collapse" aria-labelledby="course-structure">
-              <div class="accordion-body">
-
+            <br>
+            <h2>Course Structure and Grading (WIP -- will be updated before class)</h2>
                 This course is available as both a seminar (6 credits) and project based (12 credits) course.
                 <table class="table table-condensed">
                   <thead>
@@ -566,60 +341,10 @@
                   <li>All: Team me something or try and change my mind about something from class</li>
                 </ul>
               </div> <!-- body -->
-          </div> <!-- collapse -->
-        </div>
-          
-          <div class="accordion-item">
-            <div class="accordion-header" id="course-projects">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#projects" aria-expanded="false" aria-controls="#projects">
-                Projects, Hardware, and Resources
-              </button>
-            </div>
-            <div id="projects" class="accordion-collapse collapse" aria-labelledby="course-projects">
-              <div class="accordion-body">
-                The course will be primarily centered on a few robot platforms or simulators based on the size of the course enrollment and the prior experience of students taking the class for 12 credits. <br><br>There are a couple other simulators/platforms I also like, which we can discuss as options.<br><br>
-           <center>
-                <table class="table table-condensed table-striped" style="max-width:800px">
-                  <thead>
-                    <tr class="d-flex">
-                      <th class="col-md-3">Platform</th>
-                      <th class="col-md-3">Type</th>
-                      <th class="col-md-6">Notes</th>
-                    </tr>
-                  </thead>
-                  <tr class="d-flex">
-                    <td class="col-md-3"><a href="https://jacobkrantz.github.io/vlnce/">VLN-CE</a></td>
-                    <td class="col-md-3">Simulated Navigation<br><img src="images/Habitat.jpg"></td>
-                    <td class="col-md-6">Minimal hardware experience<br><b>Proj:</b> Language to Angle/Distance<br><b>Teams:</b>No limit on teams</td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-3"><a href="https://rotrics.com/products/dexarm">DexArm</a></td>
-                    <td class="col-md-3">Simple gripper<br><img src="images/DexArm.jpg"></td>
-                    <td class="col-md-6">Basic manipulation platform<br><b>Proj:</b> Language to 3D Space<br><b>Teams:</b> Two teams of ~4</td>
-                  </tr>
-                  <tr class="d-flex">
-                    <td class="col-md-3"><a href="https://hello-robot.com/product">Hello Robot Stretch</a></td>
-                    <td class="col-md-3">Mobile Manipulator<br><img src="images/Stretch.jpg"></td>
-                    <td class="col-md-6">Requires skill specifications<br><b>Proj:</b> Language to ... let's decide<br><b>Teams</b> (Probably) one team -- Let's see<br><b>Control Code</b>: <a href="https://github.com/facebookresearch/home-robot">Meta Home-Robot</a><br><b>Collaborator</b>: <a href="https://cpaxton.github.io/about/">Chris Paxton</a></td>
-                  </tr>
-                </table>
-                </center>
-              </div> <!-- body -->
-          </div> <!-- collapse -->
-        </div>
-
-         <div class="accordion-item">
-            <div class="accordion-header" id="related-courses">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#related" aria-expanded="false" aria-controls="#related">
-               Relevant Related Courses 
-              </button>
-            </div>
-            <div id="related" class="accordion-collapse collapse " aria-labelledby="related-courses">
-              <div class="accordion-body">
+         
+              <h2>Relevant Related Courses </h2>
                 <ul>
-                  No other course addresses the role of language, but they do teach about relevant techniques and tools that will also come up in this course.
+                  While no other course addresses the role of language, but they do teach about relevant techniques and tools that will also come up in this course.
                     <li> <b>MLD</b> <a href="https://cmudeeprl.github.io/403website_s22/">Deep RL</a>
                       <br>Off policy RL is relevant, language is only discussed in CLIP</li>
                     <li> <b>RI</b>  <a href="http://www.cs.cmu.edu/~jeanoh/16-785/">Film Making using AI and Robotics</a>
@@ -640,19 +365,9 @@
                       <br>"Robot" typically refers to avatars, lots of relevant material, but not articulated/embodied.</li>
 
                 </ul>
-              </div> <!-- body -->
-            </div> <!-- collapse  -->
-         </div>
 
-         <div class="accordion-item">
-            <div class="accordion-header" id="policies">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#policy" aria-expanded="false" aria-controls="#policy">
-               Course Policies 
-              </button>
-            </div>
-            <div id="policy" class="accordion-collapse collapse " aria-labelledby="policies">
-              <div class="accordion-body">
+
+                <h2>Course Policies</h2>
                 <h5>Late Assignments</h5>
                 <ul>
                   <li>All teams have 5 late days, these are only applicable to reports (not demos).</li>
@@ -664,31 +379,22 @@
 
                 <h5>Accommodations for Students with Disabilities:</h5>
                 <p>If you have a disability and have an accommodations letter from the Disability Resources office, we encourage you to discuss your accommodations and needs with the instructors as early in the semester as possible. We will work with you to ensure that accommodations are provided as appropriate. If you suspect that you may have a disability and would benefit from accommodations but are not yet registered with the Office of Disability Resources, we encourage you to contact them at access@andrew.cmu.edu. </p>
-              </div> <!-- body -->
-            </div> <!-- collapse  -->
-          </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header" id="course-faq">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#faq" aria-expanded="false" aria-controls="#faq">
-                FAQ 
-              </button>
-            </div>
-            <div id="faq" class="accordion-collapse collapse " aria-labelledby="course-faq">
-              <div class="accordion-body">
+                <h2>FAQ</h2>
                 <ol>
-                  <li><b>Can we use other platforms?</b> Yes! What robots do you have? Also checkout <a href="https://www.cs.cmu.edu/initiatives/ai-maker-space/">AI Maker Space</a></li>
+                  <li><b>Can we use our own platforms?</b> Yes! What robots do you have? Also checkout <a href="https://www.cs.cmu.edu/initiatives/ai-maker-space/">AI Maker Space</a></li>
                   <li><b>What about custom sensors and hardware?</b> Same answer :)</li>
                   <li><b>What about other simulators?</b> Same answer :)</li>
+                  <li><b>What about Web Agents?</b> If multimodal and multi-turn</li>
                   <li><b>LTI Curriculum Categories?</b> 12 Hour version can be counted for a Task and a Lab</li>
                   <li><b>Do I /need/ simulator experience?</b> No, but plan to spend some time getting the engineering setup</li>
                   <li><b>Can I attend discussion without registering?</b> It's best to register (6hrs) even if you've finished your classes, since I need to prioritize time, energy, and space on registered students.  I'll try and update this once I have a room confirmed with the registrar and see how much space we have in the class.</li>
                 </ol>
-              </div>
-            </div>
-          </div>
-      </div> <!-- accordian -->
+
+                <h2>Some papers</h2>
+              <iframe src="papers.html" title="Some papers" width=100% height=800></iframe>
+
+
      </main>
     <script>
         // All Gemini generated 

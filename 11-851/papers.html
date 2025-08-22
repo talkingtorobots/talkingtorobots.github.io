@@ -1,0 +1,1143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ7BV93KNM"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GZ7BV93KNM');
+        </script>
+
+        <script>
+        <!-- https://www.w3schools.com/howto/howto_js_filter_table.asp -->
+        function mySearch() {
+          // Declare variables
+          var filter, tr, td, i, txtValue;
+          filter = document.getElementById("myInput").value.toUpperCase();
+          tr = document.getElementsByClassName("card");
+
+          if (filter.length == 0) {
+            for (i = 0; i < tr.length; i++) {
+              tr[i].removeAttribute("hidden");
+            }
+          } else {
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByClassName("card-text")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 && filter.length != 0) {
+                  tr[i].removeAttribute("hidden");
+                } else {
+                  tr[i].hidden = true;
+                }
+              }
+            }
+          }
+        }
+        </script>
+
+        </script>
+        <script language="javascript">
+            function show( elem ) {
+                $('#'+elem).toggle();
+                copyDivToClipboard(elem);
+            }
+        </script>
+
+        <script>
+          function area(ON, OFF){
+              var ON = ON.split(',')
+              var OFF = OFF.split(',')
+              var turn_on = [];
+              var turn_off = [];
+              for (var idx = 0; idx < ON.length; idx++) {
+                turn_on = turn_on.concat(Array.from(document.getElementsByClassName(ON[idx])))
+              }
+              for (var idx = 0; idx < OFF.length; idx++) {
+                turn_off = turn_off.concat(Array.from(document.getElementsByClassName(OFF[idx])))
+              }
+
+              for (var i = 0; i < turn_on.length; i++){
+                    turn_on[i].removeAttribute("hidden");
+              }
+              for (var i = 0; i < turn_off.length; i++){
+                  if (!turn_on.includes(turn_off[i])) {
+                    turn_off[i].hidden = true;
+                  }
+              }
+          }
+        </script>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content:"Yonatan Bisk">
+        <link rel="canonical" href="https://talkingtorobots.com">
+        <title>T2R Papers</title>
+        <meta name="title" content="T2R Papers">
+        <meta name="description" content="Research papers from CLAW Lab at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://talkingtorobots.com/11-851/papers.html">
+        <meta property="og:title" content:"T2R Papers">
+        <meta property="og:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
+        <meta property="og:description" content="Research papers from CLAW Lab at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://talkingtorobots.com/11-851/papers.html">
+        <meta property="twitter:title" content:"T2R Papers">
+        <meta property="twitter:image" content="https://yonatanbisk.com/images/CLAW-stacked-full.png">
+        <meta property="twitter:description" content="Research papers from Talking to Robots">
+
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" type="image/png" href="https://talkingtorobots.com/images/cmu-icon.png">
+    </head>
+    <body>
+
+    <div class="wrapper" >
+      <div class="content">
+      <center>Just a big 'ol list.  Suggestions welcome<br><br>
+
+      <h3>Papers</h3>
+        <table class="table table-striped table-condensed">
+              <thead>
+                <tr> 
+                  <th scope="col">Title</th>
+                  <th scope="col">Venue</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        
+        
+                <tr>
+                  <td><a href= https://aclanthology.org/2020.acl-main.463/>Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data</a></td>
+                  <td></td>
+                  <td>2020</td>
+                  <td>Philosophy</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2004.10151>Experience Grounds Language</a></td>
+                  <td></td>
+                  <td>2020</td>
+                  <td>Philosophy</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.annualreviews.org/doi/abs/10.1146/annurev-control-101119-071628>Robots That Use Language</a></td>
+                  <td></td>
+                  <td>2020</td>
+                  <td>Philosophy</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.sciencedirect.com/science/article/pii/S0885230821000620>Spoken language interaction with robots: Recommendations for future research</a></td>
+                  <td></td>
+                  <td>2022</td>
+                  <td>Philosophy</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://dspace.mit.edu/handle/1721.1/7095>SHRDLU</a></td>
+                  <td>MIT Report</td>
+                  <td>1971</td>
+                  <td>Origins</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://dl.acm.org/doi/10.5555/1597348.1597423>Walk the talk: connecting language, knowledge, and action in route instructions</a></td>
+                  <td>AAAI</td>
+                  <td>2006</td>
+                  <td>Origins</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00209/43198/Weakly-Supervised-Learning-of-Semantic-Parsers-for>Weakly Supervised Learning of Semantic Parsers for Mapping Instructions to Actions</a></td>
+                  <td>TACL</td>
+                  <td>2013</td>
+                  <td>Origins</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/view/rlbench>RLBench</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://ai2thor.allenai.org/>AI2Thor</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://ai2thor.allenai.org/manipulathor/>ManipulaThor</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://pybullet.org/wordpress/>PyBullet</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://developer.nvidia.com/isaac-gym>ISAAC Gym</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.nvidia.com/en-us/omniverse/>Omniverse</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://robocasa.ai/>RoboCasa</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.microsoft.com/en-us/research/project/textworld/>TextWorld</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= http://virtual-home.org/>VirtualHome</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://procthor.allenai.org/>ProcThor</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://ai2thor.allenai.org/robothor/>RoboThor</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.microsoft.com/en-us/ai/autonomous-systems-project-airsim>AirSim</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://svl.stanford.edu/igibson/>iGibson</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2106.14405>Habitat</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.threedworld.org/>ThreeDWorld</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://openreview.net/forum?id=_8DoIe8G3t>Behavior-1K</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Simulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://ojs.aaai.org/index.php/AAAI/article/view/7974>Learning to Interpret Natural Language Navigation Instructions from Observations</a></td>
+                  <td>AAAI</td>
+                  <td>2011</td>
+                  <td>Discrete</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1711.07280>Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments</a></td>
+                  <td>CVPR</td>
+                  <td>2018</td>
+                  <td>Discrete</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2010.07954>Room-Across-Room: Multilingual Vision-and-Language Navigation with Dense Spatiotemporal Grounding</a></td>
+                  <td>EMNLP</td>
+                  <td>2020</td>
+                  <td>Discrete</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://aclanthology.org/P10-1083/>Learning to Follow Navigational Directions</a></td>
+                  <td>ACL</td>
+                  <td>2010</td>
+                  <td>Continuous</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://jacobkrantz.github.io/vlnce/>Vision and Language Navigation in Continuous Environments</a></td>
+                  <td>ECCV</td>
+                  <td>2020</td>
+                  <td>Continuous</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1811.04179>Mapping Navigation Instructions to Continuous Control Actions with Position-Visitation Prediction</a></td>
+                  <td>CoRL</td>
+                  <td>2018</td>
+                  <td>Continuous</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://mahis.life/clip-fields/>CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory</a></td>
+                  <td>RSS</td>
+                  <td></td>
+                  <td>Continuous</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://dspace.mit.edu/handle/1721.1/87051>Learning Semantic Maps from Natural Language Descriptions</a></td>
+                  <td>RSS</td>
+                  <td>2013</td>
+                  <td>Mapping</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://openreview.net/forum?id=r1GAsjC5Fm>Self-Monitoring Navigation Agent via Auxiliary Progress Estimation</a></td>
+                  <td>ICLR</td>
+                  <td>2019</td>
+                  <td>Replanning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1903.02547>Tactical Rewind: Self-Correction via Backtracking in Vision-and-Language Navigation</a></td>
+                  <td>CVPR</td>
+                  <td>2019</td>
+                  <td>Replanning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://wijmans.xyz/publication/eom/>Emergence of Maps in the Memories of Blind Navigation Agents</a></td>
+                  <td>ICLR</td>
+                  <td>2023</td>
+                  <td>Mapping</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://jacobkrantz.github.io/ivln>Iterative Vision-and-Language Navigation</a></td>
+                  <td>CVPR</td>
+                  <td>2023</td>
+                  <td>Replanning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2011.03807>Sim-to-Real Transfer for Vision-and-Language Navigation</a></td>
+                  <td>CoRL</td>
+                  <td>2020</td>
+                  <td>Sim2Real</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2104.10674>Hierarchical Cross-Modal Agent for Robotics Vision-and-Language Navigation</a></td>
+                  <td>ICRA</td>
+                  <td>2021</td>
+                  <td>Sim2Real</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1910.09664>Learning to Map Natural Language Instructions to Physical Quadcopter Control using Simulated Flight</a></td>
+                  <td>CoRL</td>
+                  <td>2019</td>
+                  <td>Continuous</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://aclanthology.org/N16-1089/>Natural Language Communication with Robots</a></td>
+                  <td>NAACL</td>
+                  <td>2016</td>
+                  <td>Real values</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://askforalfred.com/>ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks</a></td>
+                  <td>CVPR</td>
+                  <td>2020</td>
+                  <td>State Tracking and Task Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2107.05612>A Persistent Spatial Semantic Representation for High-level Natural Language Instruction Execution</a></td>
+                  <td>CoRL</td>
+                  <td>2021</td>
+                  <td>State Tracking and Task Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://soyeonm.github.io/FILM_webpage/>FILM: Following Instructions in Language with Modular Methods</a></td>
+                  <td>ICLR</td>
+                  <td>2022</td>
+                  <td>State Tracking and Task Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://wenlong.page/language-planner/>Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents</a></td>
+                  <td></td>
+                  <td>2022</td>
+                  <td>LM Planners</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://progprompt.github.io/>ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>LM Planners</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2211.03267>Prompter: Utilizing Large Language Model Prompting for a Data Efficient Embodied Instruction Following</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>LM Planners</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://code-as-policies.github.io/>Code as Policies: Language Model Programs for Embodied Control</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>LM Planners</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://say-can.github.io/>Do As I Can, Not As I Say: Grounding Language in Robotic Affordances</a></td>
+                  <td></td>
+                  <td>2022</td>
+                  <td>LM Planners</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://vlmaps.github.io/>Visual Language Maps for Robot Navigation</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Large _____  Models</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= http://hulc2.cs.uni-freiburg.de/>Grounding Language with Visual Affordances over Unstructured Data</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Large _____  Models</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://cliport.github.io/>CLIPort: What and Where Pathways for Robotic Manipulation</a></td>
+                  <td></td>
+                  <td>2021</td>
+                  <td>Large _____  Models</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://peract.github.io/>Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation</a></td>
+                  <td></td>
+                  <td>2022</td>
+                  <td>Large _____  Models</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://transporternets.github.io/>Transporter Networks: Rearranging the Visual World for Robotic Manipulation</a></td>
+                  <td></td>
+                  <td>2020</td>
+                  <td>Manipulators & Representing Space</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= http://vimalabs.github.io/>VIMA: General Robot Manipulation with Multimodal Prompts</a></td>
+                  <td>NeurIPS FMDM Workshop</td>
+                  <td>2022</td>
+                  <td>Manipulators & Representing Space</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://language-play.github.io/>Language Conditioned Imitation Learning over Unstructured Data</a></td>
+                  <td></td>
+                  <td>2021</td>
+                  <td>Manipulators & Representing Space</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/ucsc.edu/vlmbench/home>VLMbench: A Compositional Benchmark for Vision-and-Language Manipulation</a></td>
+                  <td>NeurIPS Datasets and Benchmarks</td>
+                  <td>2022</td>
+                  <td>Manipulators & Representing Space</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1907.02022>Chasing Ghosts: Instruction Following as Bayesian State Tracking</a></td>
+                  <td>NeurIPS</td>
+                  <td>2019</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1903.08309>Prospection: Interpretable Plans From Language By Predicting the Future</a></td>
+                  <td>ICRA</td>
+                  <td>2019</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://universal-policy.github.io/unipi/>Learning Universal Policies via Text-Guided Video Generation</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2301.06015>Diffusion-based Generation, Optimization, and Planning in 3D Scenes</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2301.04104>Mastering Diverse Domains through World Models</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.robot-learning.uk/dall-e-bot>DALL-E-Bot: Introducing Web-Scale Diffusion Models to Robotics</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://diffusion-rosie.github.io/>Scaling Robot Learning with Semantically Imagined Experience</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Imagination</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2002.04833>Reward-rational (implicit) choice: A unifying formalism for reward learning</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Pragmatics</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.ri.cmu.edu/pub_files/2013/3/legiilitypredictabilityIEEE.pdf>Legibility and Predictability of Robot Motion</a></li></a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Pragmatics</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1606.02447>Learning Language Games through Interaction</a></td>
+                  <td>ACL</td>
+                  <td>2016</td>
+                  <td>Concept Learning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1704.06956>Naturalizing a Programming Language via Interactive Learning</a></td>
+                  <td>ACL</td>
+                  <td>2017</td>
+                  <td>Concept Learning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2011.07384>Few-shot Object Grounding and Mapping for Natural Language Robot Instruction Following</a></td>
+                  <td>CoRL</td>
+                  <td>2020</td>
+                  <td>Concept Learning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://iral.cs.umbc.edu/Pubs/MatuszekAAAI2014LangPlusGesture.pdf>Learning from Unscripted Deictic Gesture and Language for Human-Robot Interactions</a></td>
+                  <td>AAAI</td>
+                  <td>2014</td>
+                  <td>Concept Learning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.ijcai.org/Proceedings/16/Papers/491.pdf>Learning Multi-Modal Grounded Linguistic Semantics by Playing “I Spy”</a></td>
+                  <td>IJCAI</td>
+                  <td>2016</td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://instructionaugmentation.github.io/>Robotic Skill Acquisition via Instruction Augmentation with Vision-Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Concept Learning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2204.05186>Correcting Robot Plans with Natural Language Feedback</a></li></a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2210.12511>DOROTHIE: Spoken Dialogue for Handling Unexpected Situations in Interactive Autonomous Driving Agents</a></td>
+                  <td></td>
+                  <td>2022</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2301.02555>\"No, to the Right\" -- Online Language Corrections for Robotic Manipulation via Shared Autonomy</a></td>
+                  <td></td>
+                  <td>2023</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2210.06407>Interactive Language: Talking to Robots in Real Time</a></td>
+                  <td></td>
+                  <td>2022</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1903.00122>Improving Grounded Natural Language Understanding through Human-Robot Dialog</a></td>
+                  <td>ICRA</td>
+                  <td>2019</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://cs.brown.edu/people/stellex/publications/tellex14.pdf>Asking for Help Using Inverse Semantics</a></td>
+                  <td>RSS</td>
+                  <td>2014</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/1909.01871>Help, Anna! Visual Navigation with Natural Multimodal Assistance via Retrospective Curiosity-Encouraging Imitation Learning</a></td>
+                  <td>EMNLP</td>
+                  <td>2019</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://dl.acm.org/doi/abs/10.1145/3237189>Miscommunication Detection and Recovery in Situated Human–Robot Dialogue</a></td>
+                  <td>ACM Transactions on Interactive Intelligent Systems</td>
+                  <td>2019</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://ronghanghu.com/speaker_follower/>Speaker-Follower Models for Vision-and-Language Navigation</a></td>
+                  <td>NeurIPS</td>
+                  <td>2018</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://cvdn.dev/>Cooperative Vision-and-Dialog Navigation</a></td>
+                  <td>CoRL</td>
+                  <td>2019</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://aclanthology.org/W14-4313/>Back to the Blocks World: Learning New Actions through Situated Human-Robot Dialogue</a></td>
+                  <td>SigDial</td>
+                  <td>2014</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://teachingalfred.github.io/>TEACh: Task-driven Embodied Agents that Chat</a></td>
+                  <td>AAAI</td>
+                  <td>2022</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://aclanthology.org/P19-1537/>Collaborative Dialogue in Minecraft</a></td>
+                  <td>ACL</td>
+                  <td>2019</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://aclanthology.org/2021.emnlp-main.85/>MindCraft: Theory of Mind Modeling for Situated Dialogue in Collaborative Tasks</a></td>
+                  <td>EMNLP</td>
+                  <td>2021</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2210.12485>DANLI: Deliberative Agent for Following Natural Language Instructions</a></td>
+                  <td>EMNLP</td>
+                  <td>2022</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2210.04443>Don't Copy the Teacher: Data and Model Challenges in Embodied Dialogue</a></td>
+                  <td>EMNLP</td>
+                  <td>2022</td>
+                  <td>Feedback</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://lilianweng.github.io/posts/2023-06-23-agent/)>LLM Powered Autonomous Agents (blog)</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2302.02801)>LaMPP: Language Models as Probabilistic Priors for Perception and Action</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2304.11477)>LLM+P: Empowering Large Language Models with Optimal Planning Proficiency</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2301.12050>Do Embodied Agents Dream of Pixelated Sheep?: Embodied Decision Making using Language Guided World Modelling</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2304.08587>Grounding Classical Task Planners via Vision-Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.robot-learning.uk/language-models-trajectory-generators>Language Models as Zero-Shot Trajectory Generators</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Planning</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://visualnav-transformer.github.io/>ViNT: A Foundation Model for Visual Navigation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Navigation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/view/sacson-review/home>SACSoN: Scalable Autonomous Data Collection for Social Navigation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Navigation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2303.03178>A System for Generalized 3D Multi-Object Search</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Navigation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2203.10421>CoWs on Pasture: Baselines and Benchmarks for Language-Driven Zero-Shot Object Navigation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Navigation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2306.16740>Principles and Guidelines for Evaluating Social Robot Navigation Algorithms</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Navigation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://robotic-view-transformer.github.io/>RVT: Robotic View Transformer for 3D Object Manipulation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/view/physically-grounded-vlms>Physically Grounded Vision-Language Models for Robotic Manipulation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2208.02918>LATTE: LAnguage Trajectory TransformEr</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://penn-pal-lab.github.io/LIV/>LIV: Language-Image Representations and Rewards for Robotic Control</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/view/giraf23/home>Gesture-Informed Robot Assistance via Foundation Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://clvrai.github.io/sprint/>SPRINT: Semantic Policy Pre-training via Language Instruction Relabeling</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2302.12766>Language-Driven Representation Learning for Robotics</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://embodiedgpt.github.io/>EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://voxposer.github.io/>VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2210.03094>VIMA: General Robot Manipulation with Multimodal Prompts</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://deltaco-robot.github.io/>Using Both Demonstrations and Language Instructions to Efficiently Learn Robotic Tasks</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://grounded-decoding.github.io/>Grounded Decoding: Guiding Text Generation with Grounded Models for Robot Control</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://robot-moo.github.io/>Open-World Object Manipulation using Pre-Trained Vision-Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://instructionaugmentation.github.io/>Robotic Skill Acquisition via Instruction Augmentation with Vision-Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2306.11565>HomeRobot: Open-Vocabulary Mobile Manipulation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://languageguidedskillcoordination.github.io/>LSC: Language-guided Skill Coordination for Open-Vocabulary Mobile Pick-and-Place</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://robotslap.github.io/>Spatial-Language Attention Policies</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://tidybot.cs.princeton.edu/>TidyBot: Personalized Robot Assistance with Large Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sayplan.github.io/>SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Task Planning</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Mobile Manipulation</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://language-to-reward.github.io/>Language to Reward for Robot Skill Synthesis</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Language to Motion</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/stanford.edu/text2motion>Text2Motion: From Natural Language Instructions to Feasible Plans</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Language to Motion</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://saytap.github.io/>SayTap: Language to Quadrupedal Locomotion</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Language to Motion</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2405.10020)>Natural Language Can Help Bridge the Sim2Real Gap</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Sim2Real</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2306.17582)>ChatGPT for Robotics: Design Principles and Model Abilities</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sled.eecs.umich.edu/publication/zhang-2023-simbot/>SEAGULL: An Embodied Agent for Instruction Following through Situated Dialog</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Dialogue, QA,</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sqa3d.github.io/>SQA3D: Situated Question Answering in 3D Scenes</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Dialogue, QA,</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://robot-help.github.io/>Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners </a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Dialogue, QA,</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2402.17930>Pragmatic Instruction Following and Goal Assistance via Cooperative Language-Guided Inverse Planning</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Dialogue, QA,</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/stanford.edu/droc>DROC: Distilling and Retrieving Generalizable Knowledge for Robot Manipulation via Language Corrections</a></td>
+                  <td></td>
+                  <td></td>
+                  <td>Dialogue, QA,</td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://general-pattern-machines.github.io/>Large Language Models as General Pattern Machines</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://language-to-reward.github.io/>Language to Rewards for Robotic Skill Synthesis</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://eai-vc.github.io/>Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://motion-gpt.github.io/)>MotionGPT</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2305.17537>Modeling Dynamic Environments with Scene Graph Memory</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://robo-affordances.github.io/>Affordances from Human Videos as a Versatile Representation for Robotics</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.deepmind.com/blog/robocat-a-self-improving-robotic-agent>RoboCat: A self-improving robotic agent</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://zoom.taesiri.ai/>ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2302.14045>Language Is Not All You Need: Aligning Perception with Language Models</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2306.14824>Kosmos-2: Grounding Multimodal Large Language Models to the World</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://mahis.life/bet/>Behavior Transformers: Cloning k modes with one stone</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://play-to-policy.github.io/>From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://judyye.github.io/affordiffusion-www/>Affordance Diffusion: Synthesizing Hand-Object Interactions</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= ut-austin-rpl.github.io/sirius>Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://sites.google.com/view/robot-r3m/>R3M: A Universal Visual Representation for Robot Manipulation</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://www.robot-learning.uk/keypoint-action-tokens>Keypoint Action Tokens Enable In-Context Imitation Learning in Robotics</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+                <tr>
+                  <td><a href= https://arxiv.org/abs/2312.16084>LangSplat: 3D Language Gaussian Splatting</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        
+        
+
+        <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function toggleEllipsis(x) {
+          var element = document.querySelector("#ellipsis-ex"+x);
+          element.classList.toggle("text-truncate");
+        }
+        </script>
+
+    </main>
+  </body>
+</html>
