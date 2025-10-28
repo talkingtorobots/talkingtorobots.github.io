@@ -1,5 +1,24 @@
 ---
 - FIELD: WS4
+  TYPE: Preprint
+  TITLE: "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation"
+  STUDENT: Yash Jangir 
+  AUTHORS:
+    - Yash Jangir
+    - Yidi Zhang
+    - Kashu Yamazaki
+    - Chenyu Zhang
+    - Kuan-Hsun Tu
+    - Tsung-Wei Ke
+    - Lei Ke
+    - Yonatan Bisk
+    - Katerina Fragkiadaki
+  VENUE: "ArXiv"
+  VENUE-ACR: "ArXiv"
+  YEAR: '2025'
+  URL: "https://arxiv.org/abs/2510.23571"
+  CUTE: '25-RobotArena'
+- FIELD: WS4
   TYPE: Conference
   TITLE: "REM: Evaluating LLM Embodied Spatial Reasoning through Multi-Frame Trajectories"
   STUDENT: Jacob Thompson
