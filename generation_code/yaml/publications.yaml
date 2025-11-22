@@ -18,6 +18,22 @@
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2510.23571"
   CUTE: '25-RobotArena'
+- FIELD: WS3
+  TYPE: Conference
+  TITLE: "Unsupervised Discovery of Long-Term Spatiotemporal Periodic Workflows in Human Activities"
+  AUTHORS:
+    - Fan Yang
+    - Quanting Xie
+    - Atsunori Moteki
+    - Shoichi Masui
+    - Shan Jiang
+    - Kanji Uchino
+    - Yonatan Bisk
+    - Graham Neubig
+  VENUE: "The Winter Conference on Applications of Computer Vision"
+  VENUE-ACR: "WACV"
+  YEAR: '2026'
+  URL: "https://arxiv.org/abs/2511.14945"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "REM: Evaluating LLM Embodied Spatial Reasoning through Multi-Frame Trajectories"
