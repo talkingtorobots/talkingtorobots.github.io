@@ -1,5 +1,17 @@
 ---
 - FIELD: WS4
+  TYPE: Journal 
+  TITLE: "Affordance RAG: Hierarchical Multimodal Retrieval with Affordance-Aware Embodied Memory for Mobile Manipulation"
+  AUTHORS:
+    - Ryosuke Korekata
+    - Quanting Xie
+    - Yonatan Bisk
+    - Komei Sugiura
+  VENUE: "IEEE Robotics and Automation Letters"
+  VENUE-ACR: "RA-L"
+  YEAR: '2025'
+  URL: "https://arxiv.org/abs/2512.18987"
+- FIELD: WS4
   TYPE: Preprint
   TITLE: "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation"
   STUDENT: Yash Jangir 
