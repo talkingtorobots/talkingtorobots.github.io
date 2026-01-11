@@ -109,7 +109,7 @@
       </div>
     </nav>
 
-    <div class="wrapper" style="background-image: url(images/CLAW_Spring2024.jpg);background-size: 880px 230px;">
+    <div class="wrapper">
       <div class="content">
         <center><h3><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</h3></center>
       </div>
@@ -117,11 +117,19 @@
 
     <br>
     <div class="table">
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10">
+        <br>The lab is run by <a href="https://yonatanbisk.com">Yonatan Bisk</a> and is housed primarily in the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI),</a> with members from the <a href="https://www.ri.cmu.edu/">Robotics Institute(RI),</a> <a href="https://csd.cmu.edu/">Computer Science Department (CSD),</a> and <a href="https://www.cmu.edu/ni">Neuroscience Institute (NI).</a>
+        </div>
+        <div class="col-sm-1">
+        </div>
+      </div>
     <div class="row">
       <div class="col-sm-1">
       </div>
-      <div class="col-sm-6">
-        <br>The lab is run by <a href="https://yonatanbisk.com">Yonatan Bisk</a> and is housed primarily in the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI),</a> with members from the <a href="https://www.ml.cmu.edu/">Machine Learning Department (MLD),</a> <a href="https://www.ri.cmu.edu/">Robotics Institute(RI),</a> and <a href="https://csd.cmu.edu/">Computer Science Department (CSD).</a> 
+      <div class="col-sm-5">
 
           <br><br>
           What're we up to? <br>
@@ -138,9 +146,25 @@
             </li>
           </ol>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <div class="row" style="justify-content: center;">
-          <a href="https://yonatanbisk.com"><img src="images/YonatanBisk_400.jpg" alt="Yonatan Bisk (white male wearing a black t-shirt in front of a window)" style="width:200px;height:200px;display:inline;float:right;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px;border-radius:20%;"></a>
+
+          <script>
+                // Array of image paths
+                const images = ["images/retreat_2025.jpeg", 
+                                ];
+                let currentImageIndex = 0;
+
+                function flipPhoto() {
+                    // Increment the index and reset if it exceeds the array length
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    
+                    // Change the image source to the next image in the array
+                    document.getElementById("photo").src = images[currentImageIndex];
+                }
+          </script>
+          <img id="photo" src="images/retreat_2026.jpeg" alt="Group photo" style="width:400px;display:inline;float:right;margin-top:5px;margin-right:5px;margin-bottom:5px;margin-left:5px;border-radius:20%;" onmouseover="flipPhoto()" onmouseout="this.src='images/retreat_2026.jpeg'">
+
         </div>
       </div> <!-- col-->
     </div> <!-- row -->
