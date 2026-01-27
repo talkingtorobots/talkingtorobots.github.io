@@ -12,7 +12,7 @@
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2512.18987"
 - FIELD: WS4
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation"
   STUDENT: Yash Jangir 
   AUTHORS:
