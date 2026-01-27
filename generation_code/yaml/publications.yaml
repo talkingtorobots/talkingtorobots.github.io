@@ -25,11 +25,11 @@
     - Lei Ke
     - Yonatan Bisk
     - Katerina Fragkiadaki
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
-  YEAR: '2025'
+  VENUE: "The Fourteenth International Conference on Learning Representations"
+  VENUE-ACR: "ICLR"
+  YEAR: '2026'
   URL: "https://arxiv.org/abs/2510.23571"
-  CUTE: '25-RobotArena'
+  CUTE: '26-RobotArena'
 - FIELD: WS3
   TYPE: Conference
   TITLE: "Unsupervised Discovery of Long-Term Spatiotemporal Periodic Workflows in Human Activities"
