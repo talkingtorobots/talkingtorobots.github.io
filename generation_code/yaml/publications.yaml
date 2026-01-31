@@ -60,7 +60,7 @@
   URL: "https://openreview.net/forum?id=qbWpEufkqk"
   CUTE: '25-REM'
 - FIELD: WS4
-  TYPE: Preprint
+  TYPE: Conference
   TITLE: "RAVEN: Resilient Aerial Navigation via Open-Set Semantic Memory and Behavior Adaptation"
   AUTHORS:
     - Seungchan Kim
@@ -71,9 +71,9 @@
     - Wenshan Wang
     - Yonatan Bisk
     - Sebastian Scherer
-  VENUE: "ArXiv"
-  VENUE-ACR: "ArXiv"
-  YEAR: '2025'
+  VENUE: "2026 IEEE International Conference on Robotics and Automation (ICRA)"
+  VENUE-ACR: "ICRA"
+  YEAR: '2026'
 - FIELD: O
   TYPE: Conference
   TITLE: "MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Correction"
