@@ -52,16 +52,17 @@
 
           var options = {
               title: '',
-              chartArea: {width: '500px', height:'30%'},
+              chartArea: {width: '100%', height:'30%'},
               legend: { position: "none" },
               bar: {groupWidth: '100%', groupHeight: '50%'},
               height: 100,
               legend: { position: 'top', maxLines: 1 },
               colors: ['#007EF6', '#53A351', '#CB444A', '#f6c144', '#49A0B5'],
-              isStacked: true,
+              isStacked: 'percent',
               hAxis: {
+                    minValue: 0,
                     title: 'World Scope Paper Counts (made up by Yonatan)',
-                    textPosition: 'none' // This will hide the x-axis labels
+                    textPosition: 'none' // This will hide the x-axis labels,
               },
             };
 
@@ -224,10 +225,10 @@
           </div> <!-- row -->
       </div>
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <br><br> Click a category 
         </div>
-        <div class="col-md-6" id="chart_div"></div>
+        <div class="col-md-5" id="chart_div"></div>
         <div class="col-md-4">
         <br>
           <label for="myInput" class="sr-only">
