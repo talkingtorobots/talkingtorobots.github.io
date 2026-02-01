@@ -2,6 +2,7 @@
 - FIELD: WS4
   TYPE: Journal 
   TITLE: "Affordance RAG: Hierarchical Multimodal Retrieval with Affordance-Aware Embodied Memory for Mobile Manipulation"
+  STUDENT: Quanting Xie
   AUTHORS:
     - Ryosuke Korekata
     - Quanting Xie
@@ -33,6 +34,7 @@
 - FIELD: WS3
   TYPE: Conference
   TITLE: "Unsupervised Discovery of Long-Term Spatiotemporal Periodic Workflows in Human Activities"
+  STUDENT: Quanting Xie
   AUTHORS:
     - Fan Yang
     - Quanting Xie
@@ -90,6 +92,7 @@
 - FIELD: WS3
   TYPE: Conference
   TITLE: "Position: You Can't Manufacture a NeRF"
+  STUDENT: Ani Kimmel
   AUTHORS:
     - Ani Kimmel
     - Mueed Ur Rehman
