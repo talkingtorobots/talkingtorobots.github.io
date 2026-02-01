@@ -16,11 +16,11 @@ html {
 .wrapper .content {
   position: absolute; /* Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* Full width */
-  padding: 1px; /* Some padding */
+  padding: 15px; /* Some padding */
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -80,12 +80,14 @@ a.nav-link:visited {
 
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
-    margin: 20px;
+    margin: 10px 0;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
@@ -116,9 +118,10 @@ body {
 }
 
 .blib {
-    max-width: 1400px;
-    min-width: 1400px;
+    max-width: 100%; 
+    width: 100%; 
     font-size: 11px;
+    overflow-x: auto
 }
 
 
@@ -184,7 +187,7 @@ pre {
 
 .text-truncate {
   display: inline-block;
-  max-width: 750px;
+  max-width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

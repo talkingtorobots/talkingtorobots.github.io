@@ -633,6 +633,7 @@
   EXTRAS:
     GitHub: https://github.com/JeffreyYH/robotics-fm-survey
     Website: https://robotics-fm-survey.github.io/
+  FIG: "survey.jpg"
 - FIELD: WS5
   TYPE: Conference
   TITLE: "SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents"
@@ -654,6 +655,7 @@
   PRES: Spotlight
   URL: "http://arxiv.org/abs/2310.11667"
   YEAR: '2024'
+  FIG: "sotopia.jpg"
   CUTE: "24-Sotopia"
 - FIELD: WS4
   TYPE: Conference
@@ -978,6 +980,7 @@
   EXTRAS:
     GitHub: https://github.com/gtatiya/MOSAIC
   CUTE: "24-Mosaic"
+  FIG: "mosaic.jpg"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
@@ -1002,6 +1005,7 @@
   EXTRAS:
     GitHub: https://github.com/web-arena-x/webarena
     Website: https://webarena.dev/
+  FIG: "webarena.jpg"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Spatial-Language Attention Policies for Efficient Robot Learning"
@@ -1073,6 +1077,7 @@
     GitHub: https://github.com/facebookresearch/home-robot
     Website: https://ovmm.github.io/
     Video: https://www.youtube.com/watch?v=EA8HEzopkc0
+  FIG: "homerobot.jpg"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning"
