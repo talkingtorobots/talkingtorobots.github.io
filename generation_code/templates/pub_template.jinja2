@@ -266,7 +266,7 @@
                                {% endif %}
                   {% endif %}
               </div>
-              <div class="col-md-11">
+              <div class="col-md-7">
                 <b style="font-weight: 550; font-size:13pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['TITLE'] }}
                 </b><br>
@@ -314,6 +314,11 @@
 }</pre>
                     </div>
                 </div> <!-- text -->
+              </div>
+              <div class="col-md-4">
+                {% if 'FIG' in entry %}
+                  <img src="figures/{{- entry['FIG'] -}}">
+                {% endif %}
               </div>
             </div>
           </div> <!-- body -->

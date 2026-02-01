@@ -11,6 +11,7 @@
   VENUE: "IEEE Robotics and Automation Letters"
   VENUE-ACR: "RA-L"
   YEAR: '2025'
+  FIG: affordance-rag.jpg
   URL: "https://arxiv.org/abs/2512.18987"
 - FIELD: WS4
   TYPE: Conference
@@ -28,6 +29,7 @@
     - Katerina Fragkiadaki
   VENUE: "The Fourteenth International Conference on Learning Representations"
   VENUE-ACR: "ICLR"
+  FIG: roboarena.jpg
   YEAR: '2026'
   URL: "https://arxiv.org/abs/2510.23571"
   CUTE: '26-RobotArena'
@@ -47,6 +49,7 @@
   VENUE: "The Winter Conference on Applications of Computer Vision"
   VENUE-ACR: "WACV"
   YEAR: '2026'
+  FIG: workflows.jpg
   URL: "https://arxiv.org/abs/2511.14945"
 - FIELD: WS4
   TYPE: Conference
@@ -60,6 +63,7 @@
   VENUE-ACR: "CoLM"
   YEAR: '2025'
   URL: "https://openreview.net/forum?id=qbWpEufkqk"
+  FIG: rem.jpg
   CUTE: '25-REM'
 - FIELD: WS4
   TYPE: Conference
@@ -76,6 +80,8 @@
   VENUE: "2026 IEEE International Conference on Robotics and Automation (ICRA)"
   VENUE-ACR: "ICRA"
   YEAR: '2026'
+  FIG: raven.jpg
+  URL: "https://arxiv.org/abs/2509.23563"
 - FIELD: O
   TYPE: Conference
   TITLE: "MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Correction"
@@ -88,6 +94,8 @@
     - Olexandr Isayev
   VENUE: "Conference on Empirical Methods in Natural Language Processing"
   VENUE-ACR: "EMNLP"
+  URL: "https://arxiv.org/abs/2509.00063"
+  FIG: molerr2fix.jpg
   YEAR: '2025'
 - FIELD: WS3
   TYPE: Conference
@@ -101,6 +109,7 @@
   VENUE: "Forty-second International Conference on Machine Learning Position Paper Track"
   VENUE-ACR: "ICML"
   YEAR: '2025'
+  FIG: manufacture.jpg
   URL: "https://openreview.net/forum?id=kJzB6lQmcb"
 - FIELD: WS2
   TYPE: Preprint
@@ -115,6 +124,7 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2504.11336"
+  FIG: trelawney.jpg
   CUTE: "25-lookingbeyond"
 - FIELD: O
   TYPE: Preprint
@@ -127,6 +137,7 @@
   VENUE-ACR: "ArXiv"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2502.00197"
+  FIG: model-successor.jpg
   CUTE: "25-SuccessorFunctions"
 - FIELD: WS4
   TYPE: Conference
@@ -144,6 +155,7 @@
   VENUE: "Conference on Robot Learning"
   VENUE-ACR: "CoRL"
   YEAR: '2025'
+  FIG: casper.jpg
   URL: "https://arxiv.org/abs/2506.14727"
 - FIELD: O
   TYPE: Conference
@@ -160,6 +172,7 @@
   VENUE-ACR: "ACL"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2504.17674"
+  FIG: "energy-considerations.jpg"
   CUTE: "25-energy"
 - FIELD: WS4
   TYPE: Preprint
@@ -176,6 +189,7 @@
   VENUE: "ArXiv"
   VENUE-ACR: "ArXiv"
   YEAR: '2025'
+  FIG: "self-regulation.jpg"
   URL: "https://arxiv.org/abs/2502.04576"
   CUTE: "25-SelfRegulation"
 - FIELD: WS3
@@ -197,6 +211,7 @@
   VENUE: "The IEEE/CVF Conference on Computer Vision and Pattern Recognition"
   VENUE-ACR: "CVPR"
   YEAR: '2025'
+  FIG: "T-star.jpg"
   URL: "https://arxiv.org/abs/2504.02259"
 - FIELD: WS5
   TYPE: Conference
@@ -215,6 +230,7 @@
   URL: "https://arxiv.org/abs/2412.12175"
   EXTRAS: 
     Meta: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
+  FIG: explore-tom.jpg
   CUTE: "25-ExploreToM"
 - FIELD: O
   TYPE: Journal
@@ -232,6 +248,7 @@
   VENUE: "Transactions on Machine Learning Research"
   VENUE-ACR: "TMLR"
   YEAR: '2025'
+  FIG: hardware-scaling.jpg
   URL: "https://arxiv.org/abs/2411.13055"
 - FIELD: WS4
   TYPE: Preprint
@@ -251,6 +268,7 @@
   URL: "https://arxiv.org/abs/2409.18313"
   EXTRAS:
       Website: https://quanting-xie.github.io/Embodied-RAG-web/
+  FIG: embodied-rag.jpg
   CUTE: "24-EmbodiedRAG"
 - FIELD: WS4
   TYPE: Journal
@@ -266,6 +284,7 @@
   URL: "https://arxiv.org/abs/2409.10683"
   EXTRAS:
     Website: https://motif-1k.github.io/
+  FIG: "motif.jpg"
   CUTE: "25-MotIF"
 - FIELD: WS4
   TYPE: Conference
@@ -282,6 +301,7 @@
   EXTRAS:
     Website: https://anavi-corl24.github.io/
   CUTE: "24-ANAVI"
+  FIG: "anavi.jpg"
 - FIELD: WS4
   TYPE: Conference
   TITLE: "Situated Instruction Following"
@@ -302,6 +322,7 @@
   URL: 'https://arxiv.org/abs/2407.12061'
   EXTRAS:
     Website: https://soyeonm.github.io/SIF_webpage/
+  FIG: "sif.jpg"
   CUTE: "24-SIF"
 - FIELD: O
   TYPE: Conference
@@ -314,6 +335,7 @@
   VENUE: "Findings of the Conference on Empirical Methods in Natural Language Processing"
   VENUE-ACR: "EMNLP Findings"
   YEAR: '2024'
+  FIG: "gradient-local.jpg"
   URL: "https://arxiv.org/abs/2411.04448"
 - FIELD: WS3
   TYPE: Conference
@@ -330,6 +352,7 @@
   VENUE: "Findings of the Conference on Empirical Methods in Natural Language Processing "
   VENUE-ACR: "EMNLP Findings"
   YEAR: '2024'
+  FIG: "fact-verifier.jpg"
   URL: "https://arxiv.org/abs/2407.00369"
 - FIELD: WS4
   TYPE: Conference
@@ -344,6 +367,7 @@
   VENUE-ACR: "EMNLP"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.19228"
+  FIG: "toolsfail.jpg"
   CUTE: "24-ToolsFail"
 - FIELD: WS4
   TYPE: Preprint
@@ -386,6 +410,7 @@
   VENUE-ACR: "NeurIPS"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2406.05191"
+  FIG: "pid.jpg"
   CUTE: "24-DiffusionPID"
 - FIELD: O
   TYPE: Preprint
@@ -417,6 +442,7 @@
   VENUE: "ArXiv"
   VENUE-ACR: "ArXiv"
   YEAR: '2024'
+  FIG: "dialogue-with-robots.jpg"
   URL: "https://arxiv.org/abs/2404.01158"
 - FIELD: WS3
   TYPE: Conference
@@ -431,6 +457,7 @@
   VENUE: "Findings of the 62nd Annual Meeting of the Association for Computational Linguistics"
   VENUE-ACR: "ACL Findings"
   YEAR: '2024'
+  FIG: "visreas.jpg"
   URL: "https://arxiv.org/abs/2403.10534"
 - FIELD: WS4
   TYPE: Conference
@@ -466,6 +493,7 @@
   VENUE-ACR: "ECCV"
   YEAR: '2024'
   URL: "https://arxiv.org/abs/2403.16394"
+  FIG: "skews.jpg"
   CUTE: "24-Skews"
 - FIELD: WS3
   TYPE: Conference
@@ -486,6 +514,7 @@
   VENUE-ACR: "NAACL"
   YEAR: '2025'
   URL: "https://arxiv.org/abs/2404.01258"
+  FIG: "dpo-video.jpg"
   EXTRAS:
     GitHub: https://github.com/RifleZhang/LLaVA-Hound-DPO
 - FIELD: WS4
@@ -512,6 +541,7 @@
   URL: "https://arxiv.org/abs/2403.12943"
   EXTRAS:
     Website: "https://vid2robot.github.io/"
+  FIG: "vid2robot.jpg"
   CUTE: "24-Vid2Robot"
 - FIELD: WS5
   TYPE: Conference
@@ -533,6 +563,7 @@
   EXTRAS:
     GitHub: "https://github.com/sotopia-lab/sotopia-pi"
     Website: "https://www.sotopia.world/projects/sotopia-pi"
+  FIG: "sotopia-pi.jpg"
   CUTE: "24-SotopiaPi"
 - FIELD: WS4
   TYPE: Conference
@@ -568,6 +599,7 @@
   EXTRAS: 
     Website: "https://open-eqa.github.io/"
     Blog: "https://ai.meta.com/blog/openeqa-embodied-question-answering-robotics-ar-glasses/"
+  FIG: "openeqa.jpg"
   YEAR: '2024'
 - FIELD: WS4
   TYPE: Preprint 
