@@ -259,7 +259,7 @@
                       <img class="align-self-center" 
                                {% if 'STUDENT' in entry %}
                                src="CLAW/images/students/{{- entry['STUDENT']|replace(' ','')|lower -}}.webp" \
-                               height=44pt width=44pt alt="{{- entry['STUDENT'] -}}">
+                               height=54pt width=54pt alt="{{- entry['STUDENT'] -}}">
                                {% else %}
                                src="CLAW/images/students/alumni/{{- entry['ALUMN']|replace(' ','')|lower -}}.jpg" \
                                height=44pt width=44pt alt="{{- entry['ALUMN'] -}}">
@@ -267,7 +267,7 @@
                   {% endif %}
               </div>
               <div class="col-md-7">
-                <b style="font-weight: 550; font-size:13pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                <b style="font-weight: 600; font-size:12pt" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['TITLE'] }}
                 </b><br>
                 <div class="card-text">
