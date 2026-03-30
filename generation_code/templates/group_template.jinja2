@@ -145,6 +145,54 @@
       </div> <!-- col-->
     </div> <!-- row -->
 
+    <h3>Postdocs </h3>
+    <div class="container" id="postdocs">
+      <div class="row row-cols-auto g-0">
+        {% endraw %}
+        {% for entry in postdocs %}
+            <div class="col card student" style="max-width: 270px; min-width:100px;">
+              <a href="{{ entry['URL'] }}">
+                <img src=images/students/postdoc/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
+                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
+                  </p>
+                  <h6>🌶️ <i><b>{{entry['SPICY']}}</b></i></h6>
+                  <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
+                      <font class="pronoun">{{ entry['PRON'] }}</font></h6>
+                </h5>
+                <p class="card-text">
+                    <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
+                    <h6><div class='coadvisor'>
+                    {% if 'CO' in entry %}
+                      (co- <a href="{{- entry['CO-URL'] -}}"> {{- entry['CO'] -}}</a>)
+                    {% endif %}
+                    </div></h6>
+                </p>
+                <hr>
+                <h6>
+                  {% if entry['RESEARCH']|length > 0 %}
+                    <button class="collapsible">Research</button>
+                    <div class="content">
+                      <p style='margin-top:1rem;margin-bottom:0;'>
+                        {% for paper in entry['RESEARCH'] %}
+                          <a href="{{ paper['URL'] }}">{{ paper['TITLE'] }}</a><br><br>
+                        {% endfor %}
+                      </p>
+                    </div>
+                  {% endif %}
+                </h6>
+              </div> <!-- card-body -->
+            </div> 
+        {% endfor %}
+        {% raw %}
+      </div>
+    </div>
+    <br><br>
+
     <h3>PhD Students</h3>
     <div class="container" id="students">
       <div class="row row-cols-auto g-0">

@@ -52,7 +52,7 @@
 \maketitle
 
 \section{Positions}
-\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy)}
+\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy) \newline Electrical and Computer Engineering (courtesy)}
 \subsection{Previous}
 \cventry{2022 --}{Visiting Professor}{Meta Fundamental AI Research (FAIR) \hfill w/ Dhruv Batra \& Roozbeh Mottaghi}{}{}{}
 \cventry{2021 --}{Consulting Professor}{Microsoft Research}{}{}{}
@@ -64,7 +64,20 @@
 \cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}  
 \cventry{2009}{BS in Computer Science}{The University of Texas at Austin}{Turing Scholar}{\newline Thesis: The Necessity of Separating Control and Logic When Grounding Language using Neuroevolution}{Advisor: Risto Miikkulainen\ \ \ \ \ \ \ \ Second Reader: Raymond Mooney}
 
-\section{PhD Students \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
+\section{Postdocs \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
+{% endraw %}
+{%- for entry in postdocs %}
+  \stud{Postdoc}{ {{- entry['URL'] -}} }{ {{- entry['NAME'] -}} }{ {{- entry['PRON'] -}} }{ {{- entry['TOPIC'] -}} }
+    {%- if 'CO' in entry %}
+      {(co-\href{ {{- entry['CO-URL'] -}} }{ {{- entry['CO'] -}} })}
+    {%- else %}
+      {}
+    {%- endif %}
+    { {{- entry['DEPT'] -}} }{ {{- entry['START'] }} -- }
+{%- endfor %}
+{% raw %}
+
+\section{PhD Students} % \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
 {% endraw %}
 {%- for entry in students %}
   \stud{PhD}{ {{- entry['URL'] -}} }{ {{- entry['NAME'] -}} }{ {{- entry['PRON'] -}} }{ {{- entry['TOPIC'] -}} }
@@ -89,6 +102,8 @@
 \cventry{LTI}{\href{https://www.zhuhao.me}{Hao Zhu}}{(co-\href{http://www.phontron.com/}{G Neubig})}{\hfill 2019-2024}{\newline Artificial Social Intelligence: Challenges, Environments, and Mechanisms}{} % \newline\textit{Next: Postdoc @ Stanford}}{}  
 
 \subsection{MS}
+\stud{MSR}{https://offjangir.github.io}{Yash Jangir}{he/him}{Robot Evaluation}{}{RI}{2024 --  2026}
+\stud{MSR}{https://jacobthompson.site}{Jacob Thompson}{he/him}{Spatial Reaosning}{}{RI}{2024 --  2026}
 \stud{5th}{https://www.linkedin.com/in/sheryl-m-a26809188/}{Sheryl Mathew         }{she/her }{Collaboration          }{}{SCS}{2024}
 \stud{MS}{quantingxie.github.io/}{Quanting Xie}{he/him}{LLMs for Robotics}{}{MechE}{\phantom{2023 -- } 2023}
 \stud{MLT}{jiminsun.github.io/ }{Jimin Sun      }{she/her }{Embodied Dialogue      }{}{LTI}{2022 -- 2023}

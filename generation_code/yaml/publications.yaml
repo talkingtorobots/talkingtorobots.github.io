@@ -1,4 +1,21 @@
 ---
+- FIELD: WS3
+  TYPE: Conference
+  TITLE: "MM-SeR: Multimodal Self-Refinement for Lightweight Image Captioning"
+  AUTHORS: 
+    - Junha Song
+    - Yongsik Jo
+    - So Yeon Min
+    - Quanting Xie
+    - Taehwan Kim
+    - Yonatan Bisk
+    - Jaegul Choo
+  VENUE: "Computer Vision and Pattern Recognition Conference"
+  VENUE-ACR: "CVPR"
+  YEAR: '2026'
+  URL: "https://arxiv.org/abs/2508.21451"
+  EXTRAS: 
+    Website: "https://sites.google.com/view/junha/mm-ser"
 - FIELD: WS4
   TYPE: Journal 
   TITLE: "Affordance RAG: Hierarchical Multimodal Retrieval with Affordance-Aware Embodied Memory for Mobile Manipulation"

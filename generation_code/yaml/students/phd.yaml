@@ -50,8 +50,6 @@
   PRON: she/her
   WS: 5
   DEPT: LTI
-  CO: Carolyn Rose
-  CO-URL: https://www.cs.cmu.edu/~cprose/
   SPICY: "If you're not trying to help people, what's the point?"
   START: 2024
   TOPIC: Collaboration
@@ -86,8 +84,8 @@
   PRON: she/her
   WS: 4
   DEPT: RI
-  SPICY: Coming soon!
-  TOPIC: Incoming
+  SPICY: "Coming soon!"
+  TOPIC: Robot Learning
   START: 2025
 - NAME: Annabella Macaluso
   URL: https://annabellamacaluso.github.io/
@@ -96,8 +94,8 @@
   PRON: she/her
   WS: 4
   DEPT: RI
-  SPICY: Coming soon!
-  TOPIC: Incoming
+  SPICY: "Coming soon!"
+  TOPIC: Robot Generalization
   START: 2025
 - NAME: Wenjie Li
   NATIVE: 李文洁 
@@ -109,4 +107,21 @@
   START: 2024
   PRON: she/her
   SPICY: Symbols, Fact or Fiction?
-  TOPIC: Incoming
+  TOPIC: Machine Cognition
+- NAME: Jacob Thompson
+  PRON: he/him
+  TOPIC: Generalist Agents
+  URL: https://jacobthompson.site
+  PIC: jacobthompson.png
+  DEPT: LTI
+  WS: 3
+  SPICY: "Science requires hypotheses and rigor"
+  TOPIC: Actual Reasoning
+  START: 2026
+- NAME: Ani Kimmel
+  PRON: she/her
+  TOPIC: 3D ML for Manufacturing
+  URL:  https://scholar.google.com/citations?user=lRvBcUsAAAAJ&hl=en&oi=ao
+  PIC: anikimmel.jpg
+  WS: 3
+  DEPT: ECE

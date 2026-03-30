@@ -26,6 +26,8 @@ webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
 # Students
 student_yaml = yaml.load(open("yaml/students/phd.yaml"), Loader=yaml.CLoader)
 student_names = set([s["NAME"] for s in student_yaml])
+postdoc_yaml = yaml.load(open("yaml/students/postdoc.yaml"), Loader=yaml.CLoader)
+#student_names = student_names.add(set([s["NAME"] for s in student_yaml]))
 
 # Theses
 theses_yaml = yaml.load(open("yaml/theses.yaml"), Loader=yaml.CLoader)
@@ -133,6 +135,7 @@ def generate_CV():
       latex_render = latex_template.render(pub_types=["Conference"], 
                                            publications=latex_papers,
                                            students=student_yaml,
+                                           postdocs=postdoc_yaml,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
                                            theses=theses_yaml)
@@ -140,6 +143,7 @@ def generate_CV():
       latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
                                            publications=latex_papers,
                                            students=student_yaml,
+                                           postdocs=postdoc_yaml,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
                                            theses=theses_yaml)
@@ -161,7 +165,11 @@ def generate_group_page():
     masters = yaml.load(open("yaml/students/ms_intern.yaml"), Loader=yaml.CLoader)
     alumni = yaml.load(open("yaml/students/alumni.yaml"), Loader=yaml.CLoader)
     alumni_phd = yaml.load(open("yaml/students/phd_alumni.yaml"), Loader=yaml.CLoader)
-    group_render = group_template.render(students=student_yaml, alumni=alumni, alumni_phd=alumni_phd, masters=masters)
+    group_render = group_template.render(students=student_yaml, 
+                                         postdocs=postdoc_yaml, 
+                                         alumni=alumni, 
+                                         alumni_phd=alumni_phd, 
+                                         masters=masters)
     with open("../CLAW/index.html", 'wt') as output_file:
         output_file.write(group_render)
 
