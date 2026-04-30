@@ -1,27 +1,4 @@
 ---
-- NAME: Jared Fernandez
-  URL: https://www.jaredfern.com/
-  PIC: jaredfernandez.webp
-  X: FernJared
-  PRON: he/him
-  WS: 3
-  DEPT: LTI
-  CO: Emma Strubell
-  CO-URL: http://strubell.github.io/
-  SPICY: "You train models but don't know how computers work"
-  START: 2020
-  TOPIC: Efficiency
-- NAME: Yingshan Chang
-  NATIVE: 常影杉
-  URL: https://zdxdsw.github.io/
-  PIC: yingshanchang.jpg
-  X: _Yingshan
-  PRON: she/her
-  WS: 3
-  DEPT: LTI
-  SPICY: "Data won't save you, understand your architecture"
-  START: 2022
-  TOPIC: Generalization
 - NAME: Abitha Thankaraj
   NATIVE: അബിത തങ്കരാജ്
   URL: https://abitha-thankaraj.github.io/
@@ -33,15 +10,6 @@
   SPICY: "Have you actually looked at your data?"
   START: 2024
   TOPIC: Planning
-# - NAME: Jimin Sun
-#   NATIVE: 선지민
-#   URL: https://jiminsun.github.io/
-#   PIC: jiminsun.jpg
-#   X: jimin__sun
-#   PRON: she/her
-#   WS: 2
-#   DEPT: LTI
-#   SPICY: "Don't trust your LLM or its tools"
 - NAME: Rosa Vitiello
   NATIVE: Technically Rosanna
   URL: https://rosavitiello.github.io/
@@ -125,3 +93,4 @@
   PIC: anikimmel.jpg
   WS: 3
   DEPT: ECE
+  START: 2025

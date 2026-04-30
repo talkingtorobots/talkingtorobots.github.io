@@ -3,6 +3,9 @@
   NLP:
     AC:
       - Conference on Language Modeling (COLM)
+  Robo:
+    AC:
+      - Conference on Robot Learning (CoRL)
 2025:
   Robo:
     AC:

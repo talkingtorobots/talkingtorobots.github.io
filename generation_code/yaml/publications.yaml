@@ -1,4 +1,18 @@
 ---
+- FIELD: O
+  TYPE: Conference
+  TITLE: "Position: Evaluation of {ML} Resource Utilization Requires Model Life Cycle Assessment"
+  VENUE: "Forty-third International Conference on Machine Learning Position Paper Track"
+  VENUE-ACR: "ICML"
+  YEAR: "2026"
+  URL: "https://openreview.net/forum?id=8voi61IiZC"
+  STUDENT: Jared Fernandez
+  AUTHORS: 
+    - Jared Fernandez
+    - Clara Na 
+    - Yonatan Bisk
+    - Constantine Samaras
+    - Emma Strubell
 - FIELD: WS3
   TYPE: Conference
   TITLE: "MM-SeR: Multimodal Self-Refinement for Lightweight Image Captioning"
@@ -128,6 +142,25 @@
   YEAR: '2025'
   FIG: manufacture.jpg
   URL: "https://openreview.net/forum?id=kJzB6lQmcb"
+- FIELD: WS3
+  TYPE: Conference
+  TITLE: "FieldWorkArena: Agentic AI Benchmark for Real Field Work Tasks"
+  AUTHORS: 
+    - Atsunori Moteki
+    - Shoichi Masui
+    - Fan Yang
+    - Yueqi Song
+    - Yonatan Bisk
+    - Graham Neubig
+    - Ikuo Kusajima
+    - Yasuto Watanabe
+    - Hiroyuki Ishida
+    - Jun Takahashi
+    - Shan Jiang
+  URL: https://arxiv.org/abs/2505.19662
+  VENUE: "International Conference on Pattern Recognition" 
+  VENUE-ACR: "ICPR"
+  YEAR: '2026'
 - FIELD: WS2
   TYPE: Preprint
   TITLE: "Looking beyond the next token"

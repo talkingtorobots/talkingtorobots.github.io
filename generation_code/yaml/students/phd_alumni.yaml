@@ -1,3 +1,30 @@
+- NAME: Yingshan Chang
+  NATIVE: 常影杉
+  URL: https://zdxdsw.github.io/
+  PIC: yingshanchang.jpg
+  X: _Yingshan
+  PRON: she/her
+  WS: 3
+  DEPT: LTI
+  SPICY: "Data won't save you, understand your architecture"
+  START: 2022
+  TOPIC: Generalization
+  POS: Postdoc coming soon
+  YEAR: 2026
+- NAME: Jared Fernandez
+  URL: https://www.jaredfern.com/
+  PIC: jaredfernandez.webp
+  X: FernJared
+  PRON: he/him
+  WS: 3
+  DEPT: LTI
+  CO: Emma Strubell
+  CO-URL: http://strubell.github.io/
+  SPICY: "You train models but don't know how computers work"
+  START: 2020
+  TOPIC: Efficiency
+  POS: Postdoc coming soon
+  YEAR: 2026
 - NAME: Vidhi Jain
   NATIVE: विधि जैन
   URL: https://vidhijain.github.io/
