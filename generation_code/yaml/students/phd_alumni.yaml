@@ -36,7 +36,7 @@
   spicy: "Life is multimodal, your robot instructions better be too"
   pos: RS @ OpenAI
   year:  2025
-  Thesis: Lowering Barriers in Human-Robot Communication 
+  thesis: Lowering Barriers in Human-Robot Communication 
 - name: So Yeon Min
   native: 민소연
   url: http://soyeonm.github.io/
@@ -50,11 +50,9 @@
   spicy: "Models don't know what they don't know"
   pos: RS @ Microsoft
   year:  2025
-  Thesis: Situated Instruction Following
+  thesis: Situated Instruction Following
 - name: Hao Zhu
   native: 朱昊
-  year: 2024
-  ROLE: PhD
   dept: LTI
   x: _Hao_Zhu
   pron: he/him/他
@@ -63,6 +61,6 @@
   ws: 5
   pic: 'haozhu.jpg'
   year: 2024
-  Thesis: 'Artificial Social Intelligence: Challenges, Environments, and Mechanisms'
+  thesis: 'Artificial Social Intelligence: Challenges, Environments, and Mechanisms'
   co: Graham Neubig
   co_url: https://phontron.com
