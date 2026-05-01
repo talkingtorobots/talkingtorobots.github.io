@@ -63,18 +63,18 @@
 \section{ Publications}
   {% for entry in publications[pub_type] %}
   \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
-      \href{ {{- entry['URL'] if 'URL' in entry else '' -}} }
-            { {{ entry['TITLE'].replace('&', '\\&') }}     }
-      \end{minipage}\hfill \textnormal{ {{ entry['YEAR'] }} } }
+      \href{ {{- entry['url'] if 'url' in entry else '' -}} }
+            { {{ entry['title'].replace('&', '\\&') }}     }
+      \end{minipage}\hfill \textnormal{ {{ entry['year'] }} } }
       {\begin{tabular}{ @{}p{5.2in} }
-          {{ entry['AUTHORS']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
+          {{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
       \end{tabular} }
       {\begin{tabular}{@{}p{5in} }
-          {{ entry['VENUE'] }} 
-          {%- if 'NOTE' in entry -%}
-          \\ -- \textbf{ {{- entry['NOTE'] -}} }
+          {{ entry['venue'] }} 
+          {%- if 'note' in entry -%}
+          \\ -- \textbf{ {{- entry['note'] -}} }
           {% endif %}
-          {{- ' (' + entry['PRES'] + ') ' if 'PRES' in entry else '' -}}
+          {{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}}
       \end{tabular} } { }{}
   {%- endfor -%}
 {%- endfor -%}

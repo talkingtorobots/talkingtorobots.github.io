@@ -151,35 +151,35 @@
         {% endraw %}
         {% for entry in postdocs %}
             <div class="col card student" style="max-width: 270px; min-width:100px;">
-              <a href="{{ entry['URL'] }}">
-                <img src=images/students/postdoc/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+              <a href="{{ entry['url'] }}">
+                <img src=images/students/postdoc/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
               </a>
               <div class="card-body">
                 <h5 class="card-title">
                   <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <h6>🌶️ <i><b>{{entry['SPICY']}}</b></i></h6>
-                  <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
-                      <font class="pronoun">{{ entry['PRON'] }}</font></h6>
+                  <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6>
+                  <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
+                      <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
                 <p class="card-text">
-                    <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
+                    <img width=45 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="right-float-img" alt="small robot">
                     <h6><div class='coadvisor'>
-                    {% if 'CO' in entry %}
-                      (co- <a href="{{- entry['CO-URL'] -}}"> {{- entry['CO'] -}}</a>)
+                    {% if 'co' in entry %}
+                      (co- <a href="{{- entry['co_url'] -}}"> {{- entry['co'] -}}</a>)
                     {% endif %}
                     </div></h6>
                 </p>
                 <hr>
                 <h6>
-                  {% if entry['RESEARCH']|length > 0 %}
+                  {% if entry['research']|length > 0 %}
                     <button class="collapsible">Research</button>
                     <div class="content">
                       <p style='margin-top:1rem;margin-bottom:0;'>
-                        {% for paper in entry['RESEARCH'] %}
-                          <a href="{{ paper['URL'] }}">{{ paper['TITLE'] }}</a><br><br>
+                        {% for paper in entry['research'] %}
+                          <a href="{{ paper['url'] }}">{{ paper['title'] }}</a><br><br>
                         {% endfor %}
                       </p>
                     </div>
@@ -199,36 +199,36 @@
         {% endraw %}
         {% for entry in students %}
             <div class="col card student" style="max-width: 270px; min-width:100px;">
-              <a href="{{ entry['URL'] }}">
-                <img src=images/students/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+              <a href="{{ entry['url'] }}">
+                <img src=images/students/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
               </a>
               <div class="card-body">
                 <h5 class="card-title">
                   <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                    <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
+                    <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <h6>🌶️ <i><b>{{entry['SPICY']}}</b></i></h6>
-                  <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
-                      <font class="pronoun">{{ entry['PRON'] }}</font></h6>
+                  <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6>
+                  <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
+                      <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
                 <p class="card-text">
-                    <img src="images/{{ entry['DEPT'] }}.png" height=35px class="left-float-img" alt="{{ entry['DEPT'] }} logo">
-                    <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
+                    <img src="images/{{ entry['dept'] }}.png" height=35px class="left-float-img" alt="{{ entry['dept'] }} logo">
+                    <img width=45 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="right-float-img" alt="small robot">
                     <h6><div class='coadvisor'>
-                    {% if 'CO' in entry %}
-                      (co- <a href="{{- entry['CO-URL'] -}}"> {{- entry['CO'] -}}</a>)
+                    {% if 'co' in entry %}
+                      (co- <a href="{{- entry['co_url'] -}}"> {{- entry['co'] -}}</a>)
                     {% endif %}
                     </div></h6>
                 </p>
                 <hr>
                 <h6>
-                  {% if entry['RESEARCH']|length > 0 %}
+                  {% if entry['research']|length > 0 %}
                     <button class="collapsible">Research</button>
                     <div class="content">
                       <p style='margin-top:1rem;margin-bottom:0;'>
-                        {% for paper in entry['RESEARCH'] %}
-                          <a href="{{ paper['URL'] }}">{{ paper['TITLE'] }}</a><br><br>
+                        {% for paper in entry['research'] %}
+                          <a href="{{ paper['url'] }}">{{ paper['title'] }}</a><br><br>
                         {% endfor %}
                       </p>
                     </div>
@@ -249,17 +249,17 @@
         {% endraw %}
         {% for entry in masters %}
           <div class="card student" style="max-width: 200px;">
-            <a href="{{ entry['URL'] }}">
-              <img src=images/students/{{ entry['PHOTO'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+            <a href="{{ entry['url'] }}">
+              <img src=images/students/{{ entry['photo'] }} class="card-img-top" alt="{{ entry['name'] }}">
             </a>
             <div class="card-body">
               <h6 class="card-title">
                 <p class="m-flip js-flip" style="font-weight:400; font-size: 14px;">
-                  <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                  <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{ entry['NAME'] }} {% endif %}</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
+                  <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{ entry['name'] }} {% endif %}</b></a></span>
                 </p>
-                <h6><font class="pronoun">{{ entry['PRON'] }}</font>
-                    <br>{{ entry['CAPT'] }}</h6> 
+                <h6><font class="pronoun">{{ entry['pron'] }}</font>
+                    <br>{{ entry['capt'] }}</h6> 
                 </h6>
             </div>
           </div>
@@ -298,25 +298,25 @@
             {% endraw %}
             {% for entry in alumni_phd %}
                 <div class="col card student" style="max-width: 200px; min-width:100px;">
-                  <a href="{{ entry['URL'] }}">
-                    <img src=images/students/alumni/{{ entry['PIC'] }} class="card-img-top" alt="{{ entry['NAME'] }}">
+                  <a href="{{ entry['url'] }}">
+                    <img src=images/students/alumni/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
                   </a>
                   <div class="card-body">
                     <h5 class="card-title">
                       <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                        <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{{ entry['NAME'] }}</b></a></span>
-                        <span class="m-flip_item"><a href="{{ entry['URL'] }}"><b>{% if 'NATIVE' in entry %} {{- entry['NATIVE'] -}} {% else %} {{- entry['NAME'] -}} {% endif %} </b></a></span>
+                        <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
+                        <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                       </p>
-                      <h6> Ph.D. {{entry['YEAR']}} <br> <i><b>{{entry['POS']}}</b></i></h6>
-                      <h6><a href="https://twitter.com/{{ entry['X'] }}">@{{ entry['X'] }}</a>
-                          <font class="pronoun">{{ entry['PRON'] }}</font></h6>
+                      <h6> Ph.D. {{entry['year']}} <br> <i><b>{{entry['pos']}}</b></i></h6>
+                      <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
+                          <font class="pronoun">{{ entry['pron'] }}</font></h6>
                     </h5>
                     <p class="card-text">
-                        <img src="images/{{ entry['DEPT'] }}.png" height=35px class="left-float-img" alt="{{ entry['DEPT'] }} logo">
-                        <img width=45 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="right-float-img" alt="small robot">
+                        <img src="images/{{ entry['dept'] }}.png" height=35px class="left-float-img" alt="{{ entry['dept'] }} logo">
+                        <img width=45 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="right-float-img" alt="small robot">
                         <h6><div class='coadvisor'>
-                        {% if 'CO' in entry %}
-                          (co- <a href="{{- entry['CO-URL'] -}}"> {{- entry['CO'] -}}</a>)
+                        {% if 'co' in entry %}
+                          (co- <a href="{{- entry['co_url'] -}}"> {{- entry['co'] -}}</a>)
                         {% endif %}
                         </div></h6>
                     </p>
@@ -332,16 +332,16 @@
             {% endraw %}
             {% for entry in alumni %}
                 <tr>
-                  <td scope="row">{{ entry['YEAR'] }}</td>
+                  <td scope="row">{{ entry['year'] }}</td>
                   <td>
-                      <a href="{{ entry['URL'] }}">{{ entry['NAME'] }}</a>
-                      {% if entry['ROLE'] == 'PhD' %}
-                      <img width=100pt src=images/students/alumni/{{ entry['PIC'] }} alt="{{ entry['NAME'] }}">
+                      <a href="{{ entry['url'] }}">{{ entry['name'] }}</a>
+                      {% if entry['role'] == 'PhD' %}
+                      <img width=100pt src=images/students/alumni/{{ entry['pic'] }} alt="{{ entry['name'] }}">
                       {% endif %}
                   </td>
-                  <td>{{ entry['ROLE'] }}</td>
-                  <td>→ {{ entry['POS'] }}</td>
-                  <td><img width=30 src="images/WSs/WS{{ entry['WS'] }}_small.webp" class="float-right-image" alt="small robot"></td>
+                  <td>{{ entry['role'] }}</td>
+                  <td>→ {{ entry['pos'] }}</td>
+                  <td><img width=30 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="float-right-image" alt="small robot"></td>
                 </tr>
             {% endfor %}
             {% raw %}

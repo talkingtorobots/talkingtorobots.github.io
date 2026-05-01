@@ -1,68 +1,68 @@
-- NAME: Yingshan Chang
-  NATIVE: 常影杉
-  URL: https://zdxdsw.github.io/
-  PIC: yingshanchang.jpg
-  X: _Yingshan
-  PRON: she/her
-  WS: 3
-  DEPT: LTI
-  SPICY: "Data won't save you, understand your architecture"
-  START: 2022
-  TOPIC: Generalization
-  POS: Postdoc coming soon
-  YEAR: 2026
-- NAME: Jared Fernandez
-  URL: https://www.jaredfern.com/
-  PIC: jaredfernandez.webp
-  X: FernJared
-  PRON: he/him
-  WS: 3
-  DEPT: LTI
-  CO: Emma Strubell
-  CO-URL: http://strubell.github.io/
-  SPICY: "You train models but don't know how computers work"
-  START: 2020
-  TOPIC: Efficiency
-  POS: Postdoc coming soon
-  YEAR: 2026
-- NAME: Vidhi Jain
-  NATIVE: विधि जैन
-  URL: https://vidhijain.github.io/
-  PIC: vidhijain.webp
-  X: viddivj
-  PRON: she/her
-  WS: 4
-  DEPT: RI
-  SPICY: "Life is multimodal, your robot instructions better be too"
-  POS: RS @ OpenAI
-  YEAR:  2025
+- name: Yingshan Chang
+  native: 常影杉
+  url: https://zdxdsw.github.io/
+  pic: yingshanchang.jpg
+  x: _Yingshan
+  pron: she/her
+  ws: 3
+  dept: LTI
+  spicy: "Data won't save you, understand your architecture"
+  start: 2022
+  topic: Generalization
+  pos: Postdoc coming soon
+  year: 2026
+- name: Jared Fernandez
+  url: https://www.jaredfern.com/
+  pic: jaredfernandez.webp
+  x: FernJared
+  pron: he/him
+  ws: 3
+  dept: LTI
+  co: Emma Strubell
+  co_url: http://strubell.github.io/
+  spicy: "You train models but don't know how computers work"
+  start: 2020
+  topic: Efficiency
+  pos: Postdoc coming soon
+  year: 2026
+- name: Vidhi Jain
+  native: विधि जैन
+  url: https://vidhijain.github.io/
+  pic: vidhijain.webp
+  x: viddivj
+  pron: she/her
+  ws: 4
+  dept: RI
+  spicy: "Life is multimodal, your robot instructions better be too"
+  pos: RS @ OpenAI
+  year:  2025
   Thesis: Lowering Barriers in Human-Robot Communication 
-- NAME: So Yeon Min
-  NATIVE: 민소연
-  URL: http://soyeonm.github.io/
-  PIC: soyeonmin.webp
-  X: SoYeonTiffMin
-  PRON: she/her
-  WS: 4
-  DEPT: MLD
-  CO: Rus Salakhutdinov
-  CO-URL: https://www.cs.cmu.edu/~rsalakhu/
-  SPICY: "Models don't know what they don't know"
-  POS: RS @ Microsoft
-  YEAR:  2025
+- name: So Yeon Min
+  native: 민소연
+  url: http://soyeonm.github.io/
+  pic: soyeonmin.webp
+  x: SoYeonTiffMin
+  pron: she/her
+  ws: 4
+  dept: MLD
+  co: Rus Salakhutdinov
+  co_url: https://www.cs.cmu.edu/~rsalakhu/
+  spicy: "Models don't know what they don't know"
+  pos: RS @ Microsoft
+  year:  2025
   Thesis: Situated Instruction Following
-- NAME: Hao Zhu
-  NATIVE: 朱昊
-  YEAR: 2024
+- name: Hao Zhu
+  native: 朱昊
+  year: 2024
   ROLE: PhD
-  DEPT: LTI
-  X: _Hao_Zhu
-  PRON: he/him/他
-  POS: Postdoc @ Stanford
-  URL: http://www.zhuhao.me/
-  WS: 5
-  PIC: 'haozhu.jpg'
-  YEAR: 2024
+  dept: LTI
+  x: _Hao_Zhu
+  pron: he/him/他
+  pos: Postdoc @ Stanford
+  url: http://www.zhuhao.me/
+  ws: 5
+  pic: 'haozhu.jpg'
+  year: 2024
   Thesis: 'Artificial Social Intelligence: Challenges, Environments, and Mechanisms'
-  CO: Graham Neubig
-  CO-URL: https://phontron.com
+  co: Graham Neubig
+  co_url: https://phontron.com

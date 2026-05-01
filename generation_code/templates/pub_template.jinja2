@@ -20,16 +20,35 @@
         </script>
 
         <script>
-            function copyDivToClipboard(idx) {
-                var range = document.createRange();
-                range.selectNode(document.getElementById(idx));
-                window.getSelection().removeAllRanges(); // clear current selection
-                window.getSelection().addRange(range); // to select text
-                document.execCommand("copy");
-                $('[id="button' + idx + '"]').attr('data-original-title', "Copied!").tooltip('show')
-                window.getSelection().removeAllRanges();// to deselect
-            }
+          function copyDivToClipboard(idx) {
+            var el = document.getElementById(idx);
+            if (!el) return;
+            var text = el.innerText || el.textContent;
+            navigator.clipboard.writeText(text).then(function() {
+              var btn = document.getElementById('button' + idx);
+              if (btn) {
+                var orig = btn.innerHTML;
+                btn.innerHTML = '<h6>copied</h6>';
+                btn.style.color = '#28a745';
+                setTimeout(function() {
+                  btn.innerHTML = orig;
+                  btn.style.color = '';
+                }, 1500);
+              }
+            });
+          }
+        </script>
 
+        <script>
+          function toggleArxiv(hide) {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function(card) {
+              var badge = card.querySelector('button.ybtn');
+              if (badge && badge.textContent.trim() === 'ArXiv') {
+                card.style.display = hide ? 'none' : '';
+              }
+            });
+          }
         </script>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -101,10 +120,15 @@
           } else {
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
-              td = tr[i].getElementsByClassName("card-text")[0];
-              if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1 && filter.length != 0) {
+              // search card-text AND the venue badge button
+              var textEl  = tr[i].getElementsByClassName("card-text")[0];
+              var badgeEl = tr[i].querySelector("button.ybtn");
+              var combined = "";
+              if (textEl)  combined += textEl.textContent || textEl.innerText;
+              if (badgeEl) combined += " " + (badgeEl.textContent || badgeEl.innerText);
+              if (combined) {
+                txtValue = combined;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
                   tr[i].removeAttribute("hidden");
                 } else {
                   tr[i].hidden = true;
@@ -192,7 +216,7 @@
                   onmouseout="this.src='images/CLAW.svg';"
                   style="padding: 2px;filter: invert(1);"></a>
             <a class="nav-item nav-link" href="teaching.html">Teaching</a>
-            <a class="nav-item nav-link" href="resources.html">Resources</a>
+            <a class="nav-item nav-link" href="yonatanbisk.html">Yonatan</a>
           </div>
         </div>
       </div>
@@ -204,7 +228,12 @@
       </div>
     </div>
       <br>
-      <center>Just a big 'ol list.  You can use the buttons to filter or text box to search.<br><br>
+      <center>Just a big 'ol list. You can use the buttons to filter or text box to search.
+      &nbsp;<button class="btn btn-sm btn-outline-secondary"
+                    onclick="area('WS1,WS2,WS3,WS4,WS5,O',''); document.getElementById('myInput').value='';"
+                    style="font-size:10pt;">
+        ✕ Show all
+      </button><br><br>
       <div class="container">
           <div class="row">
             <div class="col-md-3">
@@ -241,49 +270,73 @@
                        placeholder="Search ..." 
                        title="Filter publications" 
                        alt="search box for filtering publications">
+              <br><br>
+              <label style="font-size:0.85rem; font-weight:300;">
+                <input type="checkbox" id="hideArxiv" onchange="toggleArxiv(this.checked)">
+                &nbsp;Hide preprints
+              </label>
       </div>
       </center>
     <br>
 
       <h3>Publications</h3>
         {% endraw %}
+        {% set ns = namespace(current_year=None) %}
         {% for entry in publications %}
-        <div class="card {{ entry['FIELD'] }}">
+          {% if entry['year'] != ns.current_year %}
+             {% set ns.current_year = entry['year'] %}
+             <div class="row" style="margin-top:18px; margin-bottom:4px;">
+               <div class="col-12">
+                 <h5 style="color:#888; font-weight:300; border-bottom:1px solid #ddd; padding-bottom:4px;">
+                   {{ entry['year'] }}
+                 </h5>
+               </div>
+             </div>
+          {% endif %}
+        <div class="card {{ entry['field'] }}">
           <div class="card-body">
             <div class="row">
               <div class="col-md-1" style="text-align: center;">
-                <button type="button" disabled 
-                        class="btn ybtn btn-outline-{{ colors[entry['FIELD']] }}" style="font-size:12pt">{{ entry['VENUE-ACR'] }}</button>
-                  {% if 'STUDENT' in entry or 'ALUMN' in entry %}
+                {% if entry['venue'] == 'ArXiv' %}
+                <button type="button" disabled title="Preprint — not peer reviewed"
+                  class="btn ybtn btn-outline-secondary"
+                  style="font-size:12pt; opacity:0.65;">ArXiv</button>
+                {% else %}
+                <button type="button" disabled
+                  class="btn ybtn btn-outline-{{ colors[entry['field']] }}" style="font-size:12pt">{{ entry['venue_acr'] }}</button>
+                {% endif %}
+
+
+                  {% if 'student' in entry or 'alumn' in entry %}
                       <br>
                       <img class="align-self-center" 
-                               {% if 'STUDENT' in entry %}
-                               src="CLAW/images/students/{{- entry['STUDENT']|replace(' ','')|lower -}}.webp" \
-                               height=54pt width=54pt alt="{{- entry['STUDENT'] -}}">
+                               {% if 'student' in entry %}
+                               src="CLAW/images/students/{{- entry['student']|replace(' ','')|lower -}}.webp" \
+                               height=54pt width=54pt alt="{{- entry['student'] -}}">
                                {% else %}
-                               src="CLAW/images/students/alumni/{{- entry['ALUMN']|replace(' ','')|lower -}}.jpg" \
-                               height=44pt width=44pt alt="{{- entry['ALUMN'] -}}">
+                               src="CLAW/images/students/alumni/{{- entry['alumn']|replace(' ','')|lower -}}.jpg" \
+                               height=44pt width=44pt alt="{{- entry['alumn'] -}}">
                                {% endif %}
                   {% endif %}
               </div>
               <div class="col-md-7">
                 <b style="font-weight: 600; font-size:12pt" onclick="toggleEllipsis({{- loop.revindex -}});">
-                    {{ entry['TITLE'] }}
+                    {{ entry['title'] }}
                 </b><br>
                 <div class="card-text">
                   <i style="font-weight: 300; font-size:10pt" onclick="toggleEllipsis({{- loop.revindex -}});">
-                    {{ entry['VENUE'] }} ({{ entry['YEAR'] }})
+                    {{ entry['venue'] }} ({{ entry['year'] }})
                   </i>
                   <br>
                   <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate" style="font-weight: 300; font-size:10pt; max-width:100%;" onclick="toggleEllipsis({{- loop.revindex -}});">
-                    {{ entry['AUTHORS-PRETTY'] }}
+                    {{ entry['authors_pretty'] }}
                   </font>
                       <br>
-                  {% if 'URL' in entry and entry['URL']|length > 0 %}
-                    {% if 'arxiv' in entry['URL'] %}
-                      <a href={{- entry['URL']}} style="display:inline-block;width:50px"><img src="images/arxiv.svg" style="display:inline;" height=18pt></a>
+                  {% if 'url' in entry and entry['url']|length > 0 %}
+                    {% if 'arxiv' in entry['url'] %}
+                      <a href={{- entry['url']}} style="display:inline-block;width:50px"><img src="images/arxiv.svg" style="display:inline;" height=18pt></a>
                     {% else %}
-                      <a href={{- entry['URL']}} style="display:inline-block;width:50px;"><img src="images/pdf.svg" style="display:inline;" height=16pt class="filter-blue"><font style="font-size:11pt">PDF</font> </a>
+                      <a href={{- entry['url']}} style="display:inline-block;width:50px;"><img src="images/pdf.svg" style="display:inline;" height=16pt class="filter-blue"><font style="font-size:11pt">PDF</font> </a>
                     {% endif %}
                   {% endif %}
                   <a  title style="display:inline-block;width:50px;"
@@ -291,33 +344,34 @@
                       href="javascript:void(0)" onclick="show('idx{{- loop.revindex -}}')">
                       <img src="images/tex.svg" width=30pt style="display:inline;" class="filter-blue">
                     </a>
-                    {% if 'EXTRAS' in entry %}
-                      {% for key in entry['EXTRAS'] %}
-                        {% if 'GitHub' in key %}
-                          <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}" style="display:inline-block;width:50px;"><img src="images/github.svg" style="display:inline;"  class="filter-blue" height=18pt></a></font>
+                    {% if 'extras' in entry %}
+                      {% for key in entry['extras'] %}
+                        {% if 'github' in key %}
+                          <font style="font-size:11pt"><a href="{{- entry['extras'][key] -}}" style="display:inline-block;width:50px;"><img src="images/github.svg" style="display:inline;"  class="filter-blue" height=18pt></a></font>
                         {% else %}
-                          <font style="font-size:11pt"><a href="{{- entry['EXTRAS'][key] -}}" style="padding-right:20px;">{{- key -}}</a></font>
+                          <font style="font-size:11pt"><a href="{{- entry['extras'][key] -}}" style="padding-right:20px;">{{- key -}}</a></font>
                         {% endif %}
                       {% endfor %}
                     {% endif %}
-                    <!-- {% if 'CUTE' in entry %}
-                      <a href=https://t2r.xyz/r/{{- entry['CUTE']}} style="font-weight: 300; font-size:10pt;display:inline-block;float: right;">t2r.xyz/r/{{- entry['CUTE']}}</a> 
+                    <!-- {% if 'cute' in entry %}
+                      <a href=https://t2r.xyz/r/{{- entry['cute']}} style="font-weight: 300; font-size:10pt;display:inline-block;float: right;">t2r.xyz/r/{{- entry['cute']}}</a> 
                     {% endif %} -->
                     <div id="idx{{- loop.revindex -}}" class="dynamic_link">
                       <pre>
-@{{types[entry['TYPE']][0] }}{ {{- entry["VENUE-ACR"]|replace(' ','-') -}}:{{- entry["AUTHORS"][0].split()[-1] -}} {{ entry["YEAR"] }},
-    author    = { {{- entry['AUTHORS']|join(' and ') -}} },
-    title     = { {{- entry['TITLE'] -}} },
-    {{ types[entry['TYPE']][1] }} = { {{- entry['VENUE'] -}} },
-    year      = { {{- entry['YEAR'] -}} },
-    url       = { {{- entry['URL'] -}} },
+@{{types[entry['type']][0] }}{ {{- entry["venue_acr"]|replace(' ','-') -}}:{{- entry["authors"][0].split()[-1] -}} {{ entry["year"] }},
+    author    = { {{- entry['authors']|join(' and ') -}} },
+    title     = { {{- entry['title'] -}} },
+    {{ types[entry['type']][1] }} = { {{- entry['venue'] -}} },
+    year      = { {{- entry['year'] -}} },
+    url       = { {{- entry['url'] -}} },
 }</pre>
                     </div>
                 </div> <!-- text -->
               </div>
               <div class="col-md-4">
-                {% if 'FIG' in entry %}
-                  <img src="figures/{{- entry['FIG'] -}}">
+                {% if 'fig' in entry %}
+                  <img src="figures/{{- entry['fig'] -}}"
+                    style="width:100%; height:120px; object-fit:cover; border-radius:4px;">
                 {% endif %}
               </div>
             </div>

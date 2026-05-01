@@ -67,26 +67,26 @@
 \section{Postdocs \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
 {% endraw %}
 {%- for entry in postdocs %}
-  \stud{Post}{ {{- entry['URL'] -}} }{ {{- entry['NAME'] -}} }{ {{- entry['PRON'] -}} }{ {{- entry['TOPIC'] -}} }
-    {%- if 'CO' in entry %}
-      {(co-\href{ {{- entry['CO-URL'] -}} }{ {{- entry['CO'] -}} })}
+  \stud{Post}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['topic'] -}} }
+    {%- if 'co' in entry %}
+      {(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} })}
     {%- else %}
       {}
     {%- endif %}
-    { {{- entry['DEPT'] -}} }{ {{- entry['START'] }} -- }
+    { {{- entry['dept'] -}} }{ {{- entry['start'] }} -- }
 {%- endfor %}
 {% raw %}
 
 \section{PhD Students} % \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
 {% endraw %}
 {%- for entry in students %}
-  \stud{PhD}{ {{- entry['URL'] -}} }{ {{- entry['NAME'] -}} }{ {{- entry['PRON'] -}} }{ {{- entry['TOPIC'] -}} }
-    {%- if 'CO' in entry %}
-      {(co-\href{ {{- entry['CO-URL'] -}} }{ {{- entry['CO'] -}} })}
+  \stud{PhD}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['topic'] -}} }
+    {%- if 'co' in entry %}
+      {(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} })}
     {%- else %}
       {}
     {%- endif %}
-    { {{- entry['DEPT'] -}} }{ {{- entry['START'] }} -- }
+    { {{- entry['dept'] -}} }{ {{- entry['start'] }} -- }
 {%- endfor %}
 {% raw %}
 
@@ -193,18 +193,18 @@
 \section{ {{- pub_type }} Publications}
   {% for entry in publications[pub_type] %}
   \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
-      \href{ {{- entry['URL'] if 'URL' in entry else '' -}} }
-            { {{ entry['TITLE'].replace('&', '\\&') }}     }
-      \end{minipage}\hfill \textnormal{ {{ entry['YEAR'] }} } }
+      \href{ {{- entry['url'] if 'url' in entry else '' -}} }
+            { {{ entry['title'].replace('&', '\\&') }}     }
+      \end{minipage}\hfill \textnormal{ {{ entry['year'] }} } }
       {\begin{tabular}{ @{}p{5.2in} }
-          {{ entry['AUTHORS']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
+          {{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
       \end{tabular} }
       {\begin{tabular}{@{}p{5in} }
-          {{ entry['VENUE'] }} 
-          {%- if 'NOTE' in entry -%}
-          \\ -- \textbf{ {{- entry['NOTE'] -}} }
+          {{ entry['venue'] }} 
+          {%- if 'note' in entry -%}
+          \\ -- \textbf{ {{- entry['note'] -}} }
           {% endif %}
-          {{- ' (' + entry['PRES'] + ') ' if 'PRES' in entry else '' -}}
+          {{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}}
       \end{tabular} } { }{}
   {%- endfor -%}
 {%- endfor %}
@@ -216,10 +216,10 @@
     {%- for student, properties in students.items() %}
       \cventry{ {{- year -}} }
               { {{- type -}} }
-              {\href{ {{- properties['URL'] -}} }
+              {\href{ {{- properties['url'] -}} }
               { {{- student -}} } }
-              {\hfill {{properties['ADV'] -}} }
-              { {{- properties['UNI'] -}} }
+              {\hfill {{properties['adv'] -}} }
+              { {{- properties['uni'] -}} }
               {}
     {%- endfor -%}
   {%- endfor -%}
@@ -233,15 +233,15 @@
     {%- for entry in entries %}
       {%- if year_loop.first and loop.first %}
           \cventry{ {{- year  -}} }
-                  { {{- entry['CLASS'] -}} }
-                  { {{- 'w/' + entry['CO'] if 'CO' in entry else '' -}} }
-                  { \hfill \numS{ {{- entry['SIZE'] -}} } }
+                  { {{- entry['class'] -}} }
+                  { {{- 'w/' + entry['co'] if 'co' in entry else '' -}} }
+                  { \hfill \numS{ {{- entry['size'] -}} } }
                   { {{- semester -}} }{}
         {%- else %}
           \cventry{ -- }
-                  { {{- entry['CLASS'] -}} }
-                  { {{- 'w/' + entry['CO'] if 'CO' in entry else '' -}} }
-                  { \hfill \numS{ {{- entry['SIZE'] -}} } }
+                  { {{- entry['class'] -}} }
+                  { {{- 'w/' + entry['co'] if 'co' in entry else '' -}} }
+                  { \hfill \numS{ {{- entry['size'] -}} } }
                   { {{- semester -}} }{}
         {%- endif %}
     {%- endfor -%}

@@ -25,9 +25,9 @@ webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
 
 # Students
 student_yaml = yaml.load(open("yaml/students/phd.yaml"), Loader=yaml.CLoader)
-student_names = set([s["NAME"] for s in student_yaml])
+student_names = set([s["name"] for s in student_yaml])
 postdoc_yaml = yaml.load(open("yaml/students/postdoc.yaml"), Loader=yaml.CLoader)
-#student_names = student_names.add(set([s["NAME"] for s in student_yaml]))
+#student_names = student_names.add(set([s["name"] for s in student_yaml]))
 
 # Theses
 theses_yaml = yaml.load(open("yaml/theses.yaml"), Loader=yaml.CLoader)
@@ -67,21 +67,21 @@ def pretty_author_names(s):
 
 def update_pub_entry(entry):
   # Authors and links to all co-authors
-  entry["AUTHORS-PRETTY"] = pretty_author_names(", ".join(entry["AUTHORS"]))
+  entry["authors_pretty"] = pretty_author_names(", ".join(entry["authors"]))
   for v in webs:
-    entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
+    entry["authors_pretty"] = entry["authors_pretty"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
   for p in student_names:
-    entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace(p, f"<div class=\"name\">{p}</div>")
-  entry["AUTHORS-PRETTY"] = entry["AUTHORS-PRETTY"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
+    entry["authors_pretty"] = entry["authors_pretty"].replace(p, f"<div class=\"name\">{p}</div>")
+  entry["authors_pretty"] = entry["authors_pretty"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
 
 def generate_shorts():
     for pub in pubs:
-        if "CUTE" in pub:
-            fname = f"../r/{pub['CUTE']}.html"
+        if "cute" in pub:
+            fname = f"../r/{pub['cute']}.html"
             if os.path.exists(fname):
                 os.remove(fname)
             o = open(fname,'wt')
-            o.write('<meta http-equiv="Refresh" content="0; url=\'{pub["URL"]}\'" />')
+            o.write('<meta http-equiv="Refresh" content="0; url=\'{pub["url"]}\'" />')
             o.close()
 
 def generate_publications_website():
@@ -95,7 +95,7 @@ def generate_publications_website():
     data = {"WS1":0, "WS2":0, "WS3":0, "WS4":0, "WS5":0, "O":0}
     for entry in pubs:
         u = 1.0
-        data[entry["FIELD"]] += u
+        data[entry["field"]] += u
 
     rendered = pub_template.render(publications=pubs, data=data, colors=colors, types=types)
     with open("../publications.html", 'wt') as output_file:
@@ -121,7 +121,7 @@ def generate_CV():
                     "Preprint": [],
                     }
     for entry in pubs:
-      latex_papers[entry["TYPE"]].append(entry)
+      latex_papers[entry["type"]].append(entry)
 
     # Hi dear reader, why is Yonatan doing this ugly thing? 
     # This categorization and numbering is a required format for submitting 
@@ -158,10 +158,10 @@ def generate_group_page():
     with open("templates/group_template.jinja2", 'r') as file:
       group_template = Template(file.read())
     for stud in student_yaml:
-        stud["RESEARCH"] = []
+        stud["research"] = []
         for pub in pubs:
-            if stud["NAME"] in pub["AUTHORS"] and pub["TYPE"] != "workshop":
-                stud["RESEARCH"].append(pub)
+            if stud["name"] in pub["authors"] and pub["type"] != "workshop":
+                stud["research"].append(pub)
     masters = yaml.load(open("yaml/students/ms_intern.yaml"), Loader=yaml.CLoader)
     alumni = yaml.load(open("yaml/students/alumni.yaml"), Loader=yaml.CLoader)
     alumni_phd = yaml.load(open("yaml/students/phd_alumni.yaml"), Loader=yaml.CLoader)
@@ -178,17 +178,17 @@ def generate_COA():
     ## Create a list of collaborators from the last 48 months with affiliations (for NSF)
     collaborators = {}
     for pub in pubs:
-        if int(pub["YEAR"]) > 2024 - 4 and "Open X-" not in pub["TITLE"]:
-            for a in pub["AUTHORS"]:
+        if int(pub["year"]) > 2024 - 4 and "Open X-" not in pub["title"]:
+            for a in pub["authors"]:
               if a != "Yonatan Bisk" and a not in student_names:
                 parts = a.rsplit(' ',1)
                 last_first = parts[1] + ", "+ parts[0]
-                collaborators[last_first] = max(int(pub["YEAR"]), collaborators.get(last_first, 0))
+                collaborators[last_first] = max(int(pub["year"]), collaborators.get(last_first, 0))
 
     aff_yaml = yaml.load(open("yaml/affiliations.yaml"), Loader=yaml.CLoader)
     affiliations = {}
     for entry in aff_yaml:
-        affiliations[entry["NAME"]] = entry["affiliation"]
+        affiliations[entry["name"]] = entry["affiliation"]
     
     new_entries = len(collaborators)
 

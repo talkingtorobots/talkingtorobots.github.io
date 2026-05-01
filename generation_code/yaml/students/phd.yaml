@@ -1,96 +1,96 @@
 ---
-- NAME: Abitha Thankaraj
-  NATIVE: അബിത തങ്കരാജ്
-  URL: https://abitha-thankaraj.github.io/
-  PIC: abithathankaraj.jpg
-  X: abitha___
-  PRON: she/her
-  WS: 4
-  DEPT: CSD
-  SPICY: "Have you actually looked at your data?"
-  START: 2024
-  TOPIC: Planning
-- NAME: Rosa Vitiello
-  NATIVE: Technically Rosanna
-  URL: https://rosavitiello.github.io/
-  PIC: rosavitiello.jpg
-  X: rosie_vitiello
-  PRON: she/her
-  WS: 5
-  DEPT: LTI
-  SPICY: "If you're not trying to help people, what's the point?"
-  START: 2024
-  TOPIC: Collaboration
-- NAME: Quanting Xie
-  NATIVE: 谢泉廷
-  URL: http://quantingxie.github.io/
-  PIC: quantingxie.jpg
-  X: DanielXieee
-  PRON: he/him
-  WS: 4
-  DEPT: RI
-  SPICY: "Dexterity is the future of robotics"
-  START: 2024
-  TOPIC: Manipulation
-- NAME: Leena Mathur
-  URL: https://l-mathur.github.io/
-  PIC: leenamathur.jpg
-  X: lmathur_
-  PRON: she/her
-  WS: 5
-  DEPT: LTI
-  CO: LP Morency
-  CO-URL: https://www.cs.cmu.edu/~morency/
-  SPICY: "You do know robots need to exist around people right?"
-  START: 2024
-  TOPIC: Social Intelligence
-- NAME: Haochen Zhang
-  NATIVE: 张皓晨
-  URL: https://haochenz11.github.io/
-  PIC: haochenzhang.jpg
-  X: haochenz_11
-  PRON: she/her
-  WS: 4
-  DEPT: RI
-  SPICY: "Coming soon!"
-  TOPIC: Robot Learning
-  START: 2025
-- NAME: Annabella Macaluso
-  URL: https://annabellamacaluso.github.io/
-  PIC: annabellamacaluso.jpg
-  X: anna_macalus
-  PRON: she/her
-  WS: 4
-  DEPT: RI
-  SPICY: "Coming soon!"
-  TOPIC: Robot Generalization
-  START: 2025
-- NAME: Wenjie Li
-  NATIVE: 李文洁 
-  URL: https://wliwenjieli.github.io/
-  PIC: wenjieli.jpg
-  X: WenjieWLi
-  WS: 5
-  DEPT: NI
-  START: 2024
-  PRON: she/her
-  SPICY: Symbols, Fact or Fiction?
-  TOPIC: Machine Cognition
-- NAME: Jacob Thompson
-  PRON: he/him
-  TOPIC: Generalist Agents
-  URL: https://jacobthompson.site
-  PIC: jacobthompson.png
-  DEPT: LTI
-  WS: 3
-  SPICY: "Science requires hypotheses and rigor"
-  TOPIC: Actual Reasoning
-  START: 2026
-- NAME: Ani Kimmel
-  PRON: she/her
-  TOPIC: 3D ML for Manufacturing
-  URL:  https://scholar.google.com/citations?user=lRvBcUsAAAAJ&hl=en&oi=ao
-  PIC: anikimmel.jpg
-  WS: 3
-  DEPT: ECE
-  START: 2025
+- name: Abitha Thankaraj
+  native: അബിത തങ്കരാജ്
+  url: https://abitha-thankaraj.github.io/
+  pic: abithathankaraj.jpg
+  x: abitha___
+  pron: she/her
+  ws: 4
+  dept: CSD
+  spicy: "Have you actually looked at your data?"
+  start: 2024
+  topic: Planning
+- name: Rosa Vitiello
+  native: Technically Rosanna
+  url: https://rosavitiello.github.io/
+  pic: rosavitiello.jpg
+  x: rosie_vitiello
+  pron: she/her
+  ws: 5
+  dept: LTI
+  spicy: "If you're not trying to help people, what's the point?"
+  start: 2024
+  topic: Collaboration
+- name: Quanting Xie
+  native: 谢泉廷
+  url: http://quantingxie.github.io/
+  pic: quantingxie.jpg
+  x: DanielXieee
+  pron: he/him
+  ws: 4
+  dept: RI
+  spicy: "Dexterity is the future of robotics"
+  start: 2024
+  topic: Manipulation
+- name: Leena Mathur
+  url: https://l-mathur.github.io/
+  pic: leenamathur.jpg
+  x: lmathur_
+  pron: she/her
+  ws: 5
+  dept: LTI
+  co: LP Morency
+  co_url: https://www.cs.cmu.edu/~morency/
+  spicy: "You do know robots need to exist around people right?"
+  start: 2024
+  topic: Social Intelligence
+- name: Haochen Zhang
+  native: 张皓晨
+  url: https://haochenz11.github.io/
+  pic: haochenzhang.jpg
+  x: haochenz_11
+  pron: she/her
+  ws: 4
+  dept: RI
+  spicy: "Coming soon!"
+  topic: Robot Learning
+  start: 2025
+- name: Annabella Macaluso
+  url: https://annabellamacaluso.github.io/
+  pic: annabellamacaluso.jpg
+  x: anna_macalus
+  pron: she/her
+  ws: 4
+  dept: RI
+  spicy: "Coming soon!"
+  topic: Robot Generalization
+  start: 2025
+- name: Wenjie Li
+  native: 李文洁 
+  url: https://wliwenjieli.github.io/
+  pic: wenjieli.jpg
+  x: WenjieWLi
+  ws: 5
+  dept: NI
+  start: 2024
+  pron: she/her
+  spicy: Symbols, Fact or Fiction?
+  topic: Machine Cognition
+- name: Jacob Thompson
+  pron: he/him
+  topic: Generalist Agents
+  url: https://jacobthompson.site
+  pic: jacobthompson.png
+  dept: LTI
+  ws: 3
+  spicy: "Science requires hypotheses and rigor"
+  topic: Actual Reasoning
+  start: 2026
+- name: Ani Kimmel
+  pron: she/her
+  topic: 3D ML for Manufacturing
+  url:  https://scholar.google.com/citations?user=lRvBcUsAAAAJ&hl=en&oi=ao
+  pic: anikimmel.jpg
+  ws: 3
+  dept: ECE
+  start: 2025

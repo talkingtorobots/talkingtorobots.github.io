@@ -1,78 +1,78 @@
 ---
-- NAME: Yash Jangir
-  YEAR: 2026
-  PRON: he/him
-  CAPT: Robust Policies<br>MSR
-  URL: 'https://offjangir.github.io/'
-  PHOTO: yashjangir.jpg
-  NATIVE: यश जांगिड़
-  POS: PhD @ JHU
-  ROLE: MSR
-  WS: 4
-- NAME: Claire Jin
-  YEAR: 2026
-  PRON: she/her
-  CAPT: Mapping
-  URL: https://www.linkedin.com/in/claire-jin-a1474420a/
-  PHOTO: clairejin.jpg
-  POS: PhD @ CMU
-  ROLE: 5th Year MS
-  WS: 3
-- NAME: Sheryl Matthew
-  YEAR: 2025
-  PRON: she/her
-  WS: 5
-  URL: https://www.linkedin.com/in/sheryl-m-a26809188/
-  ROLE: Undergrad
-  POS: PhD @ USC
-- NAME: Minyoung Hwang
-  YEAR: 2024
-  ROLE: Intern
-  POS: PhD @ MIT
-  URL: https://minyoung1005.github.io
-  WS: 4
-- NAME: Xiang Fan
-  YEAR: 2022
-  ROLE: Undergraduate
-  POS:  PhD @ UWashington
-  URL: https://xiangfan.io/
-  WS: 3
-- NAME: Andy Liu
-  YEAR: 2022
-  ROLE: Intern
-  POS: PhD @ CMU
-  WS: 5
-  URL: https://andyjliu.github.io/
-- NAME: Deogratias Amani
-  YEAR: 2022
-  ROLE: Intern
-  WS: 4
-- NAME: Josh Zhanson
-  YEAR: 2022
-  ROLE: MLT
-  POS: Data Scientist @ MSFT
-  WS: 4
-  URL: https://jzhanson.com/
-- NAME: Xiaoyu (Erin) Zhang
-  YEAR: 2022
-  ROLE: 5th year MS
-  POS: PhD @ UIUC
-  WS: 4
-  URL: https://erinzhang1998.github.io/
-- NAME: Feiyu (Gavin) Zhu
-  YEAR: 2021
-  ROLE: Undergrad
-  POS: PhD @ CMU
-  WS: 3
-  URL: https://zfy0314.github.io
-- NAME: Blessing Bassey
-  YEAR: 2021
-  ROLE: Intern
-  WS: 3
-  URL: https://blessingitorobassey.github.io/
-- NAME: Melanie Sclar
-  YEAR: 2021
-  ROLE: Intern
-  POS: PhD @ UWashington
-  WS: 5
-  URL: https://msclar.github.io/
+- name: Yash Jangir
+  year: 2026
+  pron: he/him
+  capt: Robust Policies<br>MSR
+  url: 'https://offjangir.github.io/'
+  photo: yashjangir.jpg
+  native: यश जांगिड़
+  pos: PhD @ JHU
+  role: MSR
+  ws: 4
+- name: Claire Jin
+  year: 2026
+  pron: she/her
+  capt: Mapping
+  url: https://www.linkedin.com/in/claire-jin-a1474420a/
+  photo: clairejin.jpg
+  pos: PhD @ CMU
+  role: 5th Year MS
+  ws: 3
+- name: Sheryl Matthew
+  year: 2025
+  pron: she/her
+  ws: 5
+  url: https://www.linkedin.com/in/sheryl-m-a26809188/
+  role: Undergrad
+  pos: PhD @ USC
+- name: Minyoung Hwang
+  year: 2024
+  role: Intern
+  pos: PhD @ MIT
+  url: https://minyoung1005.github.io
+  ws: 4
+- name: Xiang Fan
+  year: 2022
+  role: Undergraduate
+  pos:  PhD @ UWashington
+  url: https://xiangfan.io/
+  ws: 3
+- name: Andy Liu
+  year: 2022
+  role: Intern
+  pos: PhD @ CMU
+  ws: 5
+  url: https://andyjliu.github.io/
+- name: Deogratias Amani
+  year: 2022
+  role: Intern
+  ws: 4
+- name: Josh Zhanson
+  year: 2022
+  role: MLT
+  pos: Data Scientist @ MSFT
+  ws: 4
+  url: https://jzhanson.com/
+- name: Xiaoyu (Erin) Zhang
+  year: 2022
+  role: 5th year MS
+  pos: PhD @ UIUC
+  ws: 4
+  url: https://erinzhang1998.github.io/
+- name: Feiyu (Gavin) Zhu
+  year: 2021
+  role: Undergrad
+  pos: PhD @ CMU
+  ws: 3
+  url: https://zfy0314.github.io
+- name: Blessing Bassey
+  year: 2021
+  role: Intern
+  ws: 3
+  url: https://blessingitorobassey.github.io/
+- name: Melanie Sclar
+  year: 2021
+  role: Intern
+  pos: PhD @ UWashington
+  ws: 5
+  url: https://msclar.github.io/
