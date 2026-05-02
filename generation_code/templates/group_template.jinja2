@@ -103,7 +103,7 @@
                   onmouseout="this.src='../images/CLAW.svg';"
                   style="padding: 2px;filter: invert(1);"></a>
             <a class="nav-item nav-link" href="../teaching.html">Teaching</a>
-            <a class="nav-item nav-link" href="../yonatanbisk.html">Yonatan</a>
+            <a class="nav-item nav-link" href="https://www.origami-robotics.com">Origami Robotics</a>
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
                   <h6> 📚 <i><b>{{entry['capt']}}</b></i></h6>
-                  <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
+                  <h6>{% if 'x' in entry %} <a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>{% endif %}
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
                 <p class="card-text">
@@ -211,7 +211,7 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
                   <h6> 📚<i><b>{{entry['capt']}}</b></i></h6> 
-                  <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
+                  <h6>{% if 'x' in entry %}<a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a> {% else %} &nbsp; {% endif %}
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
                 <p class="card-text">
