@@ -6,7 +6,7 @@
   pron: she/her
   ws: 4
   dept: RI
-  spicy: "Life is multimodal, your robot instructions better be too"
+  capt: "Life is multimodal, your robot instructions better be too"
   pos: RS @ OpenAI
   year:  2025
   thesis: Lowering Barriers in Human-Robot Communication 
@@ -20,7 +20,7 @@
   dept: MLD
   co: Rus Salakhutdinov
   co_url: https://www.cs.cmu.edu/~rsalakhu/
-  spicy: "Models don't know what they don't know"
+  capt: "Models don't know what they don't know"
   pos: RS @ Microsoft
   year:  2025
   thesis: Situated Instruction Following

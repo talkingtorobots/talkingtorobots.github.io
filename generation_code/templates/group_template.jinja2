@@ -162,7 +162,7 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <!-- <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6> -->
+                  <h6> 📚 <i><b>{{entry['capt']}}</b></i></h6>
                   <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
@@ -210,7 +210,7 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <!-- <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6> -->
+                  <h6> 📚<i><b>{{entry['capt']}}</b></i></h6> 
                   <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
@@ -261,7 +261,7 @@
                   <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{ entry['name'] }} {% endif %}</b></a></span>
                 </p>
                 <h6><font class="pronoun">{{ entry['pron'] }}</font>
-                    <!-- <br>{{ entry['capt'] }} -->
+                    <br>📚 {{ entry['capt'] }}
                 </h6>
             </div>
           </div>
