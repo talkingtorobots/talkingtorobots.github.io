@@ -67,7 +67,7 @@
 \section{Postdocs \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
 {% endraw %}
 {%- for entry in postdocs %}
-  \stud{Post}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['topic'] -}} }
+  \stud{Post}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['capt'] -}} }
     {%- if 'co' in entry %}
       {(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} })}
     {%- else %}
@@ -80,7 +80,7 @@
 \section{PhD Students} % \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
 {% endraw %}
 {%- for entry in students %}
-  \stud{PhD}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['topic'] -}} }
+  \stud{PhD}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['capt'] -}} }
     {%- if 'co' in entry %}
       {(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} })}
     {%- else %}
@@ -91,9 +91,7 @@
 {% raw %}
 
 \section{Masters}
-\stud{MSR}{https://www.linkedin.com/in/jacob-thompson-557080194/}{Jacob Thompson        }{he/him }{Generalist Agents          }{}{RI}{2024}
-\stud{MSR}{https://offjangir.github.io/}{Yash Jangir        }{he/him }{Robust Policies          }{}{RI}{2024}
-\stud{5th}{www.linkedin.com/in/claire-jin-a1474420a/}{Claire Jin}{she/her}{Embodied Dialogue}{  }{}{2024}
+\stud{MSR}{https://www.linkedin.com/in/soumya-teotia-3083091bb/}{Soumya Teotia}{she/her}{Social Robotics}{  }{}{2025}
 
 \section{Alumni}
 \subsection{PhD}
@@ -102,8 +100,9 @@
 \cventry{LTI}{\href{https://www.zhuhao.me}{Hao Zhu}}{(co-\href{http://www.phontron.com/}{G Neubig})}{\hfill 2019-2024}{\newline Artificial Social Intelligence: Challenges, Environments, and Mechanisms}{} % \newline\textit{Next: Postdoc @ Stanford}}{}  
 
 \subsection{MS}
+\stud{5th}{www.linkedin.com/in/claire-jin-a1474420a/}{Claire Jin}{she/her}{Embodied Dialogue}{  }{}{2024}
 \stud{MSR}{https://offjangir.github.io}{Yash Jangir}{he/him}{Robot Evaluation}{}{RI}{2024 --  2026}
-\stud{MSR}{https://jacobthompson.site}{Jacob Thompson}{he/him}{Spatial Reaosning}{}{RI}{2024 --  2026}
+\stud{MSR}{https://jacobthompson.site}{Jacob Thompson}{he/him}{Spatial Reasoning}{}{RI}{2024 --  2026}
 \stud{5th}{https://www.linkedin.com/in/sheryl-m-a26809188/}{Sheryl Mathew         }{she/her }{Collaboration          }{}{SCS}{2024}
 \stud{MS}{quantingxie.github.io/}{Quanting Xie}{he/him}{LLMs for Robotics}{}{MechE}{\phantom{2023 -- } 2023}
 \stud{MLT}{jiminsun.github.io/ }{Jimin Sun      }{she/her }{Embodied Dialogue      }{}{LTI}{2022 -- 2023}

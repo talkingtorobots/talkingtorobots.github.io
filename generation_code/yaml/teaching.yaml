@@ -1,45 +1,45 @@
 ---
 2025: 
   FA: 
-  - CLASS: 11-851 Talking to Robots
-    SIZE:  38
+  - class: 11-851 Talking to Robots
+    size:  38
   SP: 
-  - CLASS: 11-777 MultiModal Machine Learning
-    SIZE:  145
+  - class: 11-777 MultiModal Machine Learning
+    size:  145
 2024:
   FA: 
-    - CLASS: 11-851 Talking to Robots
-      SIZE:  37
-    - CLASS: 11-777 MultiModal Machine Learning
+    - class: 11-851 Talking to Robots
+      size:  37
+    - class: 11-777 MultiModal Machine Learning
       CO:    Daniel Fried
-      SIZE:  83
+      size:  83
   SP:
-    - CLASS: 11-777 MultiModal Machine Learning
-      SIZE:  135
+    - class: 11-777 MultiModal Machine Learning
+      size:  135
 2023:
   FA: 
-    - CLASS: 11-851 Talking to Robots (created)
-      SIZE:  16
-    - CLASS: 11-767 On-Device Machine Learning
+    - class: 11-851 Talking to Robots (created)
+      size:  16
+    - class: 11-767 On-Device Machine Learning
       CO:    Emma Strubell
-      SIZE:  69
+      size:  69
   SP:
-    - CLASS: 11-777 MultiModal Machine Learning
+    - class: 11-777 MultiModal Machine Learning
       CO:    Daniel Fried
-      SIZE:  107
+      size:  107
 2022:
   FA: 
-    - CLASS: 11-767 On-Device Machine Learning
+    - class: 11-767 On-Device Machine Learning
       CO:    Emma Strubell
-      SIZE:  42
+      size:  42
   SP: 
-    - CLASS: 11-777 MultiModal Machine Learning
-      SIZE:  94
+    - class: 11-777 MultiModal Machine Learning
+      size:  94
 2021:
   FA:
-    - CLASS: 11-767 On-Device Machine Learning (co-created)
+    - class: 11-767 On-Device Machine Learning (co-created)
       CO:    Emma Strubell
-      SIZE:  31
+      size:  31
   SP:
-    - CLASS: 11-777 MultiModal Machine Learning
-      SIZE:  42
+    - class: 11-777 MultiModal Machine Learning
+      size:  42
