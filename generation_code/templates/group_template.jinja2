@@ -103,7 +103,7 @@
                   onmouseout="this.src='../images/CLAW.svg';"
                   style="padding: 2px;filter: invert(1);"></a>
             <a class="nav-item nav-link" href="../teaching.html">Teaching</a>
-            <a class="nav-item nav-link" href="../resources.html">Resources</a>
+            <a class="nav-item nav-link" href="../yonatanbisk.html">Yonatan</a>
           </div>
         </div>
       </div>
@@ -133,9 +133,11 @@
                 <li><a href="https://bookshop.org/p/books/mind-in-motion-how-action-shapes-thought-barbara-tversky/11138346">Mind in Motion: How Action Shapes Thought – Barbara Tversky</a></li>
               </ul>
             </li>
-            <li>
-            🌶️ takes made up by Yonatan about everyone.<br>
-            </li>
+            <!--
+              <li>
+              🌶️ takes made up by Yonatan about everyone.<br>
+              </li>
+            --> 
           </ol>
       </div>
       <div class="col-sm-4">
@@ -160,7 +162,7 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6>
+                  <!-- <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6> -->
                   <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
@@ -208,7 +210,7 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6>
+                  <!-- <h6>🌶️ <i><b>{{entry['spicy']}}</b></i></h6> -->
                   <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
                 </h5>
@@ -299,7 +301,7 @@
             {% for entry in alumni_phd %}
                 <div class="col card student" style="max-width: 200px; min-width:100px;">
                   <a href="{{ entry['url'] }}">
-                    <img src=images/students/alumni/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
+                    <img src=images/students/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
                   </a>
                   <div class="card-body">
                     <h5 class="card-title">
@@ -336,7 +338,7 @@
                   <td>
                       <a href="{{ entry['url'] }}">{{ entry['name'] }}</a>
                       {% if entry['role'] == 'PhD' %}
-                      <img width=100pt src=images/students/alumni/{{ entry['pic'] }} alt="{{ entry['name'] }}">
+                      <img width=100pt src=images/students/{{ entry['pic'] }} alt="{{ entry['name'] }}">
                       {% endif %}
                   </td>
                   <td>{{ entry['role'] }}</td>
