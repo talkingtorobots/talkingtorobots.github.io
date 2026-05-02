@@ -77,19 +77,35 @@
     <div class="container">
       <div class="table">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-6">
             <br>
             <center>
               <h1>About CLAW @ CMU</h1>
               <hr style="width:200pt;border:none;height:2pt;background-color:#333;">
-              <h4 style="font-weight: 300;">
+              <h5 style="font-weight: 300;">
                 <i>Yonatan is roughly motivated by  what he wrote in 
                   <a href="https://arxiv.org/abs/2004.10151">Experience Grounds Language</a>.           
-                  <br><br>He is indebted to the <a href="CLAW/">students</a> who are willing to explore crazy questions, 
-                  <br>and build the future.</h4></i>
+                  <br><br>He is indebted to the <a href="CLAW/">students</a> who are willing to explore crazy questions.</h4></i>
             </center>
           </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-5">
+              <img id="hero-img" alt="Group retreat photos" />
+
+              <script>
+                const images = [
+                  "CLAW/images/retreat_2025.jpeg",
+                  "CLAW/images/retreat_2026.jpeg",
+                ];
+
+                const img = document.getElementById("hero-img");
+                img.src = images[Math.floor(Math.random() * images.length)];
+              </script>
+
+          </div>
         </div>
+       <hr>
         <div class="row" style="margin:10pt;">
           <div class="card-group" style="margin: 0 auto; float:none;">
 
