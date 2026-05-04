@@ -13,26 +13,28 @@ parser.add_argument('--onepager', action='store_true',
                     help='One-pager vs full')
 args = parser.parse_args()
 
+def load_yaml(path):
+    return yaml.load(open(path), Loader=yaml.CLoader)
 
 # Load Publications 
 if args.onepager:
-    pubs = yaml.load(open("yaml/publications_1p.yaml"), Loader=yaml.CLoader)
+    pubs = load_yaml("yaml/publications_1p.yaml")
 else:
-    pubs = yaml.load(open("yaml/publications.yaml"), Loader=yaml.CLoader)
+    pubs = load_yaml("yaml/publications.yaml")
 
 # Load Author urls
-webs = yaml.load(open("yaml/websites.yaml"), Loader=yaml.CLoader)
+webs = load_yaml("yaml/websites.yaml")
 
 # Students
-student_yaml = yaml.load(open("yaml/students/phd.yaml"), Loader=yaml.CLoader)
+student_yaml = load_yaml("yaml/students/phd.yaml")
 student_names = set([s["name"] for s in student_yaml])
-postdoc_yaml = yaml.load(open("yaml/students/postdoc.yaml"), Loader=yaml.CLoader)
+postdoc_yaml = load_yaml("yaml/students/postdoc.yaml")
 #student_names = student_names.add(set([s["name"] for s in student_yaml]))
 
 # Theses
-theses_yaml = yaml.load(open("yaml/theses.yaml"), Loader=yaml.CLoader)
-teach_yaml = yaml.load(open("yaml/teaching.yaml"), Loader=yaml.CLoader)
-areachair_yaml = yaml.load(open("yaml/area_chair.yaml"), Loader=yaml.CLoader)
+theses_yaml = load_yaml("yaml/theses.yaml")
+teach_yaml = load_yaml("yaml/teaching.yaml")
+areachair_yaml = load_yaml("yaml/area_chair.yaml")
 
 # Load template
 types = {
@@ -162,9 +164,9 @@ def generate_group_page():
         for pub in pubs:
             if stud["name"] in pub["authors"] and pub["type"] != "workshop":
                 stud["research"].append(pub)
-    masters = yaml.load(open("yaml/students/ms_intern.yaml"), Loader=yaml.CLoader)
-    alumni = yaml.load(open("yaml/students/alumni.yaml"), Loader=yaml.CLoader)
-    alumni_phd = yaml.load(open("yaml/students/phd_alumni.yaml"), Loader=yaml.CLoader)
+    masters = load_yaml("yaml/students/ms_intern.yaml")
+    alumni = load_yaml("yaml/students/alumni.yaml")
+    alumni_phd = load_yaml("yaml/students/phd_alumni.yaml")
     group_render = group_template.render(students=student_yaml, 
                                          postdocs=postdoc_yaml, 
                                          alumni=alumni, 
@@ -185,7 +187,7 @@ def generate_COA():
                 last_first = parts[1] + ", "+ parts[0]
                 collaborators[last_first] = max(int(pub["year"]), collaborators.get(last_first, 0))
 
-    aff_yaml = yaml.load(open("yaml/affiliations.yaml"), Loader=yaml.CLoader)
+    aff_yaml = load_yaml("yaml/affiliations.yaml")
     affiliations = {}
     for entry in aff_yaml:
         affiliations[entry["name"]] = entry["affiliation"]
