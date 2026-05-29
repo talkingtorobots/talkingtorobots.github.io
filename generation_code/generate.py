@@ -134,7 +134,7 @@ def generate_CV():
     number_pub(latex_papers["Preprint"], pub_count)
 
     if args.onepager:
-      latex_render = latex_template.render(pub_types=["Conference"], 
+      latex_render = latex_template.render(pub_types=["Journal", "Conference"], 
                                            publications=latex_papers,
                                            students=student_yaml,
                                            postdocs=postdoc_yaml,

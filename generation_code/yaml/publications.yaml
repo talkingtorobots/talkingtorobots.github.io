@@ -1,5 +1,23 @@
 - year: "2026"
   field: O
+  type: Preprint
+  title: "When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents"
+  venue: "ArXiv"
+  venue_acr: "ArXiv"
+  url: "https://arxiv.org/abs/2605.29938"
+  student: Leena Mathur
+  authors:
+  - Leena Mathur
+  - Jenny T. Liang
+  - Vasudha Varadarajan
+  - Jimin Mun
+  - Xuhui Zhou
+  - Jana Schaich Borg
+  - Yonatan Bisk
+  - Louis-Philippe Morency
+  - Maarten Sap
+- year: "2026"
+  field: O
   type: Conference
   title: "Position: Evaluation of {ML} Resource Utilization Requires Model Life Cycle Assessment"
   venue: "Forty-third International Conference on Machine Learning Position Paper Track"
