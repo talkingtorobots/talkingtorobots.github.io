@@ -19,6 +19,7 @@
   - Yonatan Bisk
   extras:
     Website: "https://fandulu.github.io/IndoorR2X_project_page/"
+  fig: indoorR2X.jpg
 - year: "2026"
   field: O
   type: Preprint
@@ -37,6 +38,7 @@
   - Yonatan Bisk
   - Louis-Philippe Morency
   - Maarten Sap
+  fig: readroom.png
 - year: "2026"
   field: O
   type: Conference
@@ -51,6 +53,7 @@
   - Yonatan Bisk
   - Constantine Samaras
   - Emma Strubell
+  fig: LCA.png
 - year: '2026'
   field: WS3
   type: Conference
@@ -66,8 +69,9 @@
   venue: "Computer Vision and Pattern Recognition Conference"
   venue_acr: "CVPR"
   url: "https://arxiv.org/abs/2508.21451"
+  fig: mmser.png
   extras:
-    Website: "https://sites.google.com/view/junha/mm-ser"
+    Website: "https://june-page.github.io/mmser/"
 - year: '2026'
   field: WS4
   type: Conference
@@ -142,6 +146,7 @@
   url: https://arxiv.org/abs/2505.19662
   venue: "International Conference on Pattern Recognition"
   venue_acr: "ICPR"
+  fig: fieldwork.jpg
 - year: '2025'
   field: WS4
   type: Journal
