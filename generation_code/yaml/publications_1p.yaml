@@ -1,120 +1,116 @@
 ---
-- FIELD: O
-  TYPE: Conference
-  TITLE: "Language Models Need Inductive Biases to Count Inductively"
-  STUDENT: Yingshan Chang
-  AUTHORS:
-    - Yingshan Chang
-    - Yonatan Bisk
-  VENUE: "The Thirteenth International Conference on Learning Representations"
-  VENUE-ACR: "ICLR"
-  YEAR: '2025'
-  URL: "https://arxiv.org/abs/2405.20131"
-  CUTE: "25-Counting"
-- FIELD: WS3
-  TYPE: Conference
-  TITLE: "DiffusionPID: Interpreting Diffusion via Partial Information Decomposition"
-  STUDENT: Yingshan Chang
-  AUTHORS:
-    - Shaurya Dewan
-    - Rushikesh Zawar
-    - Prakanshul Saxena
-    - Yingshan Chang 
-    - Andrew Luo
-    - Yonatan Bisk
-  VENUE: "Thirty-Eighth Annual Conference on Neural Information Processing Systems"
-  VENUE-ACR: "NeurIPS"
-  YEAR: '2024'
-  URL: "https://arxiv.org/abs/2406.05191"
-  CUTE: "24-DiffusionPID"
+- year: '2026'
+  field: WS4
+  type: Conference
+  title: "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation"
+  student: Yash Jangir
+  authors:
+  - Yash Jangir
+  - Yidi Zhang
+  - Kashu Yamazaki
+  - Chenyu Zhang
+  - Kuan-Hsun Tu
+  - Tsung-Wei Ke
+  - Lei Ke
+  - Yonatan Bisk
+  - Katerina Fragkiadaki
+  venue: "The Fourteenth International Conference on Learning Representations"
+  venue_acr: "ICLR"
+  fig: roboarena.jpg
+  url: "https://arxiv.org/abs/2510.23571"
+  cute: '26-RobotArena'
+- year: '2025'
+  field: WS4
+  type: Journal
+  title: "Affordance RAG: Hierarchical Multimodal Retrieval with Affordance-Aware Embodied Memory for Mobile Manipulation"
+  student: Quanting Xie
+  authors:
+  - Ryosuke Korekata
+  - Quanting Xie
+  - Yonatan Bisk
+  - Komei Sugiura
+  venue: "IEEE Robotics and Automation Letters"
+  venue_acr: "RA-L"
+  fig: affordance-rag.jpg
+  url: "https://arxiv.org/abs/2512.18987"
+- year: '2025'
+  field: WS4
+  type: Journal
+  title: "MotIF: Motion Instruction Fine-tuning"
+  authors:
+  - Minyoung Hwang
+  - Joey Hejna
+  - Dorsa Sadigh
+  - Yonatan Bisk
+  venue: "IEEE Robotics and Automation Letters"
+  venue_acr: "RA-L"
+  url: "https://arxiv.org/abs/2409.10683"
+  extras:
+    Website: https://motif-1k.github.io/
+  fig: "motif.jpg"
+  cute: "25-MotIF"
+- year: '2024'
+  field: WS4
+  type: Conference
+  title: "ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation"
+  alumn: Vidhi Jain
+  authors:
+  - Vidhi Jain
+  - Rishi Veerapaneni
+  - Yonatan Bisk
+  venue: "Conference on Robot Learning"
+  venue_acr: "CoRL"
+  url: 'https://arxiv.org/abs/2410.18932'
+  extras:
+    Website: https://anavi-corl24.github.io/
+  cute: "24-ANAVI"
+  fig: "anavi.jpg"
+- year: '2024'
+  field: WS4
+  type: Conference
+  title: "Situated Instruction Following"
+  alumn: So Yeon Min
+  authors:
+  - So Yeon Min
+  - Xavi Puig
+  - Devendra Singh Chaplot
+  - Tsung-Yen Yang
+  - Akshara Rai
+  - Priyam Parashar
+  - Ruslan Salakhutdinov
+  - Yonatan Bisk
+  - Roozbeh Mottaghi
+  venue: "European Conference on Computer Vision"
+  venue_acr: "ECCV"
+  url: 'https://arxiv.org/abs/2407.12061'
+  extras:
+    Website: https://soyeonm.github.io/SIF_webpage/
+  fig: "sif.jpg"
+  cute: "24-SIF"
+- year: '2024'
+  field: WS4
+  type: Conference
+  title: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
+  alumn: Vidhi Jain
+  authors:
+  - Vidhi Jain
+  - Maria Attarian
+  - Nikhil J Joshi
+  - Ayzaan Wahid
+  - Danny Driess
+  - Quan Vuong
+  - Pannag R Sanketi
+  - Pierre Sermanet
+  - Stefan Welker
+  - Christine Chan
+  - Igor Gilitschenski
+  - Yonatan Bisk
+  - Debidatta Dwibedi
+  venue: "Robotics: Science and Systems"
+  venue_acr: "RSS"
+  url: "https://arxiv.org/abs/2403.12943"
+  extras:
+    Website: "https://vid2robot.github.io/"
+  fig: "vid2robot.jpg"
+  cute: "24-Vid2Robot"
 
-- FIELD: WS4
-  TYPE: Conference
-  TITLE: "AgentKit: Flow Engineering with Graphs, not Coding"
-  AUTHORS:
-    - Yue Wu
-    - Yewen Fan
-    - So Yeon Min
-    - Shrimai Prabhumoye
-    - Stephen McAleer
-    - Yonatan Bisk
-    - Ruslan Salakhutdinov
-    - Yuanzhi Li
-    - Tom Mitchell
-  VENUE: "Conference on Language Modeling"
-  VENUE-ACR: "COLM"
-  YEAR: '2024'
-  URL: "https://arxiv.org/abs/2404.11483"
-  EXTRAS:
-    GitHub: https://github.com/holmeswww/AgentKit
-- FIELD: WS4
-  TYPE: Conference
-  TITLE: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
-  ALUMN: Hao Zhu
-  AUTHORS:
-    - Shuyan Zhou
-    - Frank F. Xu
-    - Hao Zhu
-    - Xuhui Zhou
-    - Robert Lo
-    - Abishek Sridhar
-    - Xianyi Cheng
-    - Tianyue Ou
-    - Yonatan Bisk
-    - Daniel Fried
-    - Uri Alon
-    - Graham Neubig
-  VENUE: "The Twelfth International Conference on Learning Representations"
-  VENUE-ACR: "ICLR"
-  URL: "https://arxiv.org/abs/2307.13854"
-  YEAR: '2024'
-  EXTRAS:
-    GitHub: https://github.com/web-arena-x/webarena
-    Website: https://webarena.dev/
-- FIELD: WS5
-  TYPE: Conference
-  TITLE: "SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents"
-  ALUMN: Hao Zhu
-  AUTHORS:
-    - Xuhui Zhou 
-    - Hao Zhu 
-    - Leena Mathur 
-    - Ruohong Zhang 
-    - Haofei Yu 
-    - Zhengyang Qi 
-    - Louis-Philippe Morency 
-    - Yonatan Bisk 
-    - Daniel Fried 
-    - Graham Neubig 
-    - Maarten Sap
-  VENUE: "The Twelfth International Conference on Learning Representations"
-  VENUE-ACR: "ICLR"
-  PRES: Spotlight
-  URL: "http://arxiv.org/abs/2310.11667"
-  YEAR: '2024'
-- FIELD: WS2
-  TYPE: Conference
-  TITLE: 'HellaSwag: Can a Machine Really Finish Your Sentence? '
-  YEAR: '2019'
-  URL: https://arxiv.org/abs/1905.07830
-  AUTHORS:
-  - Rowan Zellers
-  - Ari Holtzman
-  - Yonatan Bisk
-  - Ali Farhadi
-  - Yejin Choi
-  VENUE: Association for Computational Linguistics
-  VENUE-ACR: ACL
-  EXTRAS:
-    GitHub: https://github.com/rowanz/hellaswag
-- FIELD: WS2
-  TYPE: Conference
-  TITLE: 'Synthetic and Natural Noise Both Break Neural Machine Translation '
-  YEAR: '2018'
-  URL: https://arxiv.org/abs/1711.02173
-  AUTHORS:
-  - Yonatan Belinkov
-  - Yonatan Bisk
-  VENUE: 6th International Conference on Learning Representations 
-  VENUE-ACR: ICLR 
-  PRES: Oral

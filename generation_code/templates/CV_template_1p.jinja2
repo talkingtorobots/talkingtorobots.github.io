@@ -59,8 +59,8 @@
 
 %\section{Publications} %\hfill \href{https://scholar.google.com/citations?user=bWoGh8UAAAAJ&hl=en}{Google Scholar} h-index:38}
 {% endraw %}
-{% for pub_type in pub_types %}
 \section{ Publications}
+  {% for pub_type in pub_types %}
   {% for entry in publications[pub_type] %}
   \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
       \href{ {{- entry['url'] if 'url' in entry else '' -}} }

@@ -1,5 +1,26 @@
 - year: "2026"
   field: O
+  type: Conference
+  title: "IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning"
+  venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  venue_acr: "IROS"
+  url: "https://arxiv.org/abs/2603.20182"
+  authors:
+  - Fan Yang
+  - Soumya Teotia
+  - Shaunak A. Mehta
+  - Prajit KrisshnaKumar
+  - Quanting Xie
+  - Jun Liu
+  - Yueqi Song
+  - Wenkai Li
+  - Atsunori Moteki
+  - Kanji Uchino
+  - Yonatan Bisk
+  extras:
+    Website: "https://fandulu.github.io/IndoorR2X_project_page/"
+- year: "2026"
+  field: O
   type: Preprint
   title: "When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents"
   venue: "ArXiv"
