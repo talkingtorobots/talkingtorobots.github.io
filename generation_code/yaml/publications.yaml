@@ -147,6 +147,30 @@
   venue: "International Conference on Pattern Recognition"
   venue_acr: "ICPR"
   fig: fieldwork.jpg
+- year: '2026'
+  field: WS4
+  type: Journal
+  title: "Bridging Language and Action: A Survey of Language-Conditioned Robot Manipulation"
+  authors:
+  - Xiangtong Yao
+  - Hongkuan Zhou
+  - Oier Mees
+  - Yuan Meng
+  - Ted Xiao
+  - Yonatan Bisk
+  - Jean Oh
+  - Edward Johns
+  - Mohit Shridhar
+  - Dhruv Shah
+  - Jesse Thomason
+  - Kai Huang
+  - Joyce Chai
+  - Zhenshan Bing
+  - Alois Knoll"
+  url: https://arxiv.org/abs/2312.10807
+  venue: "International Journal of Robotics Research"
+  venue_acr: "IJRR"
+  fig: ijrr_survey.jpg
 - year: '2025'
   field: WS4
   type: Journal
