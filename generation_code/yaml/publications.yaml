@@ -1857,7 +1857,6 @@
   pres: Oral
   extras:
     Video: https://youtu.be/cQasYLUC_00
-    Slides: https://talkingtorobots.com/papers/2020-EMNLP.pdf
 - year: '2020'
   field: WS5
   type: Conference
@@ -1940,7 +1939,6 @@
   venue_acr: AAAI
   pres: Oral
   extras:
-    Slides: papers/2020-AAAI-PIQA-Slides.pdf
     Leaderboard: https://leaderboard.allenai.org/physicaliqa/submissions/public
 - year: '2019'
   field: WS4
@@ -2216,7 +2214,6 @@
   venue_acr: AAAI
   extras:
     Data: https://groundedlanguage.github.io/
-    Poster: "http://talkingtorobots.com/papers/2018-AAAI-Poster.pdf"
 - year: '2017'
   field: WS2
   type: Conference
@@ -2243,7 +2240,6 @@
   pres: Oral
   extras:
     Data: https://groundedlanguage.github.io/
-    Slides: "http://talkingtorobots.com/papers/2016-NAACL-Slides.pdf"
 - year: '2016'
   field: WS1
   type: Conference
@@ -2261,7 +2257,7 @@
   field: WS4
   type: Workshop
   title: 'Towards a Dataset for Human Computer Communication via Grounded Language Acquisition'
-  url: "http://talkingtorobots.com/papers/2016-AAAI-Wksp.pdf"
+  url: "https://cdn.aaai.org/ocs/ws/ws0236/12652-57513-1-PB.pdf"
   authors:
   - Yonatan Bisk
   - Daniel Marcu
@@ -2282,8 +2278,6 @@
   venue: Workshop on Structured Prediction for NLP
   venue_acr: Struc. Pred Wksp
   pres: Oral
-  extras:
-    Slides: "http://talkingtorobots.com/papers/2016-EMNLP-StrcPred-Slides.pdf"
 - year: '2016'
   field: WS1
   type: Conference
@@ -2311,7 +2305,7 @@
 - year: '2015'
   field: WS1
   type: Conference
-  title: 'Labeled Grammar Induction with Minimal Supervision  '
+  title: 'Labeled Grammar Induction with Minimal Supervision'
   url: "http://talkingtorobots.com/papers/2015-ACLShort-Fixed.pdf"
   authors:
   - Yonatan Bisk
@@ -2319,8 +2313,6 @@
   - Julia Hockenmaier
   venue: '53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)'
   venue_acr: ACL Short
-  extras:
-    Poster: "http://talkingtorobots.com/papers/2015_ACLShort_Poster.pdf"
 - year: '2013'
   field: WS1
   type: Journal
@@ -2331,8 +2323,6 @@
   - Julia Hockenmaier
   venue: Transactions of the Association for Computational Linguistics
   venue_acr: TACL
-  extras:
-    Slides: "http://talkingtorobots.com/papers/2013-TACL-Slides.pdf"
 - year: '2012'
   field: WS1
   type: Conference
@@ -2357,8 +2347,8 @@
 - year: '2012'
   field: WS1
   type: Workshop
-  title: 'Induction of Linguistic Structure with Combinatory Categorial Grammars '
-  url: "http://talkingtorobots.com/papers/2012-NAACL-WILS.pdf"
+  title: 'Induction of Linguistic Structure with Combinatory Categorial Grammars'
+  url: "https://aclanthology.org/W12-1912/"
   authors:
   - Yonatan Bisk
   - Julia Hockenmaier
