@@ -1,4 +1,16 @@
 - year: "2026"
+  field: WS3
+  type: Conference
+  title: "Not All Thinking Helps: Which Reasoning Behaviors Matter Most in Thinking Models"
+  authors: 
+  - Jean de Dieu Nyandwi
+  - Leena Mathur
+  - Yonatan Bisk
+  - Graham Neubig 
+  student: Leena Mathur
+  venue: Third Conference on Language Modeling
+  venue_acr: CoLM
+- year: "2026"
   field: WS4
   type: Preprint
   title: "Inductive Generalization for Robotic Manipulation"
@@ -6,10 +18,10 @@
   venue_acr: ArXiv
   url: https://arxiv.org/abs/2606.20999
   authors:
-    - Annabella Macaluso
-    - Haochen Zhang
-    - Ishaan Masilamony
-    - Yingshan Chang
+  - Annabella Macaluso
+  - Haochen Zhang
+  - Ishaan Masilamony
+  - Yingshan Chang
   student: Annabella Macaluso
   fig: inductive.jpg
 - year: "2026"
@@ -20,12 +32,25 @@
   venue_acr: ArXiv
   url: https://arxiv.org/abs/2606.23641
   authors:
-    - Haochen Zhang
-    - Yonatan Bisk
+  - Haochen Zhang
+  - Yonatan Bisk
   student: Haochen Zhang
   extras:
     Website: https://haochenz11.github.io/papers/flatness-vla/
   fig: flatness.jpg
+- year: "2026"
+  field: WS4
+  type: Preprint
+  title: "ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies"
+  venue: ArXiv
+  venue_acr: ArXiv
+  url: "https://arxiv.org/abs/2606.31132"
+  authors:
+  - Andrew Zou Li
+  - Gokul Swamy
+  - Yonatan Bisk
+  - Andrea Bajcsy
+  fig: elastic.jpg
 - year: "2026"
   field: O
   type: Conference
