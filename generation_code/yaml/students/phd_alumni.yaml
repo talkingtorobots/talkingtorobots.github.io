@@ -8,8 +8,9 @@
   dept: RI
   capt: "Life is multimodal, your robot instructions better be too"
   pos: RS @ OpenAI
+  start: 2021
   year:  2025
-  thesis: Lowering Barriers in Human-Robot Communication 
+  thesis: Lowering Barriers in Human-Robot Communication
 - name: So Yeon Min
   native: 민소연
   url: http://soyeonm.github.io/
@@ -22,6 +23,7 @@
   co_url: https://www.cs.cmu.edu/~rsalakhu/
   capt: "Models don't know what they don't know"
   pos: RS @ Microsoft
+  start: 2021
   year:  2025
   thesis: Situated Instruction Following
 - name: Hao Zhu
@@ -33,6 +35,7 @@
   url: http://www.zhuhao.me/
   ws: 5
   pic: 'haozhu.jpg'
+  start: 2019
   year: 2024
   thesis: 'Artificial Social Intelligence: Challenges, Environments, and Mechanisms'
   co: Graham Neubig

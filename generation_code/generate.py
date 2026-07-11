@@ -44,6 +44,9 @@ webs = load_yaml("yaml/websites.yaml")
 student_yaml = load_validated("yaml/students/phd.yaml", Person)
 student_names = set([s["name"] for s in student_yaml])
 postdoc_yaml = load_validated("yaml/students/postdoc.yaml", Person)
+alumni_phd = load_validated("yaml/students/phd_alumni.yaml", Person)
+masters = load_validated("yaml/students/ms_intern.yaml", Person)
+alumni = load_validated("yaml/students/alumni.yaml", Person)
 #student_names = student_names.add(set([s["name"] for s in student_yaml]))
 
 # Theses
@@ -138,10 +141,13 @@ def generate_CV():
                                            areachair=areachair_yaml,
                                            theses=theses_yaml)
     else:
-      latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"], 
+      latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"],
                                            publications=latex_papers,
                                            students=student_yaml,
                                            postdocs=postdoc_yaml,
+                                           alumni_phd=alumni_phd,
+                                           masters=masters,
+                                           alumni=alumni,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
                                            theses=theses_yaml)
@@ -160,10 +166,7 @@ def generate_group_page():
         for pub in pubs:
             if stud["name"] in pub["authors"] and pub["type"] != "workshop":
                 stud["research"].append(pub)
-    masters = load_validated("yaml/students/ms_intern.yaml", Person)
-    alumni = load_validated("yaml/students/alumni.yaml", Person)
-    alumni_phd = load_validated("yaml/students/phd_alumni.yaml", Person)
-    group_render = group_template.render(students=student_yaml, 
+    group_render = group_template.render(students=student_yaml,
                                          postdocs=postdoc_yaml, 
                                          alumni=alumni, 
                                          alumni_phd=alumni_phd, 

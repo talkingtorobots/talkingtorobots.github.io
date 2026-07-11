@@ -151,10 +151,10 @@
     <div class="container" id="postdocs">
       <div class="row row-cols-auto g-0">
         {% endraw %}
-        {% for entry in postdocs %}
-            <div class="col card student" style="max-width: 270px; min-width:100px;">
+        {% macro person_card(entry, image_dir='', max_width=270, show_dept=false, show_research=false) %}
+            <div class="col card student" style="max-width: {{ max_width }}px; min-width:100px;">
               <a href="{{ entry['url'] }}">
-                <img src=images/students/postdoc/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
+                <img src=images/students/{{ image_dir }}{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
               </a>
               <div class="card-body">
                 <h5 class="card-title">
@@ -162,11 +162,10 @@
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
                     <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
                   </p>
-                  <h6> 📚 <i><b>{{entry['capt']}}</b></i></h6>
-                  <h6>{% if 'x' in entry %} <a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>{% endif %}
-                      <font class="pronoun">{{ entry['pron'] }}</font></h6>
+                  {{ caller() }}
                 </h5>
                 <p class="card-text">
+                    {% if show_dept %}<img src="images/{{ entry['dept'] }}.png" height=35px class="left-float-img" alt="{{ entry['dept'] }} logo">{% endif %}
                     <img width=45 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="right-float-img" alt="small robot">
                     <h6><div class='coadvisor'>
                     {% if 'co' in entry %}
@@ -174,6 +173,7 @@
                     {% endif %}
                     </div></h6>
                 </p>
+                {% if show_research %}
                 <hr>
                 <h6>
                   {% if entry['research']|length > 0 %}
@@ -187,8 +187,16 @@
                     </div>
                   {% endif %}
                 </h6>
+                {% endif %}
               </div> <!-- card-body -->
-            </div> 
+            </div>
+        {% endmacro %}
+        {% for entry in postdocs %}
+          {% call person_card(entry, image_dir='postdoc/', show_research=true) %}
+                  <h6> 📚 <i><b>{{entry['capt']}}</b></i></h6>
+                  <h6>{% if 'x' in entry %} <a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>{% endif %}
+                      <font class="pronoun">{{ entry['pron'] }}</font></h6>
+          {% endcall %}
         {% endfor %}
         {% raw %}
       </div>
@@ -200,44 +208,11 @@
       <div class="row row-cols-auto g-0">
         {% endraw %}
         {% for entry in students %}
-            <div class="col card student" style="max-width: 270px; min-width:100px;">
-              <a href="{{ entry['url'] }}">
-                <img src=images/students/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                    <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
-                    <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
-                  </p>
-                  <h6> 📚<i><b>{{entry['capt']}}</b></i></h6> 
+          {% call person_card(entry, show_dept=true, show_research=true) %}
+                  <h6> 📚<i><b>{{entry['capt']}}</b></i></h6>
                   <h6>{% if 'x' in entry %}<a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a> {% else %} &nbsp; {% endif %}
                       <font class="pronoun">{{ entry['pron'] }}</font></h6>
-                </h5>
-                <p class="card-text">
-                    <img src="images/{{ entry['dept'] }}.png" height=35px class="left-float-img" alt="{{ entry['dept'] }} logo">
-                    <img width=45 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="right-float-img" alt="small robot">
-                    <h6><div class='coadvisor'>
-                    {% if 'co' in entry %}
-                      (co- <a href="{{- entry['co_url'] -}}"> {{- entry['co'] -}}</a>)
-                    {% endif %}
-                    </div></h6>
-                </p>
-                <hr>
-                <h6>
-                  {% if entry['research']|length > 0 %}
-                    <button class="collapsible">Research</button>
-                    <div class="content">
-                      <p style='margin-top:1rem;margin-bottom:0;'>
-                        {% for paper in entry['research'] %}
-                          <a href="{{ paper['url'] }}">{{ paper['title'] }}</a><br><br>
-                        {% endfor %}
-                      </p>
-                    </div>
-                  {% endif %}
-                </h6>
-              </div> <!-- card-body -->
-            </div> 
+          {% endcall %}
         {% endfor %}
         {% raw %}
       </div>
@@ -299,31 +274,11 @@
           <div class="row row-cols-auto g-0">
             {% endraw %}
             {% for entry in alumni_phd %}
-                <div class="col card student" style="max-width: 200px; min-width:100px;">
-                  <a href="{{ entry['url'] }}">
-                    <img src=images/students/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
-                  </a>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <p class="m-flip js-flip" style="font-weight:200; font-size: 20px;">
-                        <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
-                        <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{- entry['name'] -}} {% endif %} </b></a></span>
-                      </p>
+              {% call person_card(entry, max_width=200, show_dept=true) %}
                       <h6> Ph.D. {{entry['year']}} <br> <i><b>{{entry['pos']}}</b></i></h6>
                       <h6><a href="https://twitter.com/{{ entry['x'] }}">@{{ entry['x'] }}</a>
                           <font class="pronoun">{{ entry['pron'] }}</font></h6>
-                    </h5>
-                    <p class="card-text">
-                        <img src="images/{{ entry['dept'] }}.png" height=35px class="left-float-img" alt="{{ entry['dept'] }} logo">
-                        <img width=45 src="images/WSs/WS{{ entry['ws'] }}_small.webp" class="right-float-img" alt="small robot">
-                        <h6><div class='coadvisor'>
-                        {% if 'co' in entry %}
-                          (co- <a href="{{- entry['co_url'] -}}"> {{- entry['co'] -}}</a>)
-                        {% endif %}
-                        </div></h6>
-                    </p>
-                  </div> <!-- card-body -->
-                </div> 
+              {% endcall %}
             {% endfor %}
             {% raw %}
           </div>

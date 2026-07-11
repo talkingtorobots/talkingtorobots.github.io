@@ -37,7 +37,7 @@
 % personal data
 \firstname{Yonatan}
 \familyname{Bisk}
-\title{Assistant Professor of Computer Science} % optional, remove the line if not wanted
+\title{Associate Professor of Computer Science} % optional, remove the line if not wanted
 \address{ }{GHC 6703}
 \email{ybisk@cs.cmu.edu}                        % optional, remove the line if not wanted
 \extrainfo{he/him}                        % optional, remove the line if not wanted
@@ -52,10 +52,12 @@
 \maketitle
 
 \section{Positions}
-\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy) \newline Electrical and Computer Engineering (courtesy)}
+\cventry{2026 --}{Associate Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy) \newline Electrical and Computer Engineering (courtesy)}
+\cventry{2026 --}{Research Lead}{\href{https://www.origami-robotics.com}{Origami Robotics}}{}{}{}
 \subsection{Previous}
 \cventry{2022 --}{Visiting Professor}{Meta Fundamental AI Research (FAIR) \hfill w/ Dhruv Batra \& Roozbeh Mottaghi}{}{}{}
 \cventry{2021 --}{Consulting Professor}{Microsoft Research}{}{}{}
+\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute}
 \cventry{2019 --}{Visiting Researcher}{Microsoft Research\hfill w/ Jianfeng Gao}{}{}{}
 \cventry{2017 --}{Postdoctoral Scholar}{}{}{}{University of Washington \& Allen Institute for Artificial Intelligence \hfill w/ Yejin Choi}
 \cventry{2015 --}{Postdoctoral Scholar}{}{}{}{Information Sciences Institute, University of Southern California \hfill w/ Daniel Marcu}
@@ -88,40 +90,43 @@
     {%- endif %}
     { {{- entry['dept'] -}} }{ {{- entry['start'] }} -- }
 {%- endfor %}
+{% set role_tag = {'Intern': 'Intern', 'Undergrad': 'Ugrad', 'Undergraduate': 'Ugrad',
+                    '5th Year MS': '5th', '5th year MS': '5th',
+                    'MSR': 'MSR', 'MLT': 'MLT', 'MS': 'MS'} %}
+{%- set intern_roles = ['Intern', 'Undergrad', 'Undergraduate'] %}
+{% macro stud_entry(entry) -%}
+\stud{ {{- role_tag.get(entry['role'], entry['role']) -}} }{ {{- entry['url']|default('')|replace('https://','')|replace('http://','') -}} }{ {{- entry['name'] -}} }{ {{- entry['pron']|default('') -}} }{ {{- entry['topic'] -}} }{ {%- if 'co' in entry -%}(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} }){%- endif -%} }{ {{- entry.get('dept','') -}} }{ {{- entry['start'] ~ ' -- ' ~ entry['year'] if 'start' in entry and entry['start'] != entry['year'] else entry['year'] -}} }
+{%- endmacro -%}
 {% raw %}
 
 \section{Masters}
-\stud{MSR}{https://www.linkedin.com/in/soumya-teotia-3083091bb/}{Soumya Teotia}{she/her}{Social Robotics}{  }{}{2025}
+{% endraw %}
+{%- for entry in masters %}
+{{ stud_entry(entry) }}
+{%- endfor %}
+{% raw %}
 
 \section{Alumni}
 \subsection{PhD}
-\cventry{RI}{\href{https://vidhijain.github.io/}{Vidhi Jain}}{}{\hfill 2021-2025}{\newline Lowering Barriers in Human-Robot Communication}{} % \newline \textit{Next: Research Scientist @ OpenAI}}{} 
-\cventry{MLD}{\href{https://soyeonm.github.io/}{So Yeon Min}}{(co-\href{https://www.cs.cmu.edu/~rsalakhu/}{R Salakhutdinov})}{\hfill 2021-2025}{\newline Situated Instruction Following}{}% \newline \textit{Next: Research Scientist @ Anthropic}}{}  
-\cventry{LTI}{\href{https://www.zhuhao.me}{Hao Zhu}}{(co-\href{http://www.phontron.com/}{G Neubig})}{\hfill 2019-2024}{\newline Artificial Social Intelligence: Challenges, Environments, and Mechanisms}{} % \newline\textit{Next: Postdoc @ Stanford}}{}  
+{% endraw %}
+{%- for entry in alumni_phd %}
+\cventry{ {{- entry['dept'] -}} }{\href{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }}{ {%- if 'co' in entry -%}(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} }){%- endif -%} }{\hfill {{ entry['start'] }}-{{ entry['year'] }}}{\newline {{ entry['thesis'] }}}{}
+{%- endfor %}
+{% raw %}
 
 \subsection{MS}
-\stud{5th}{www.linkedin.com/in/claire-jin-a1474420a/}{Claire Jin}{she/her}{Embodied Dialogue}{  }{}{2024}
-\stud{MSR}{https://offjangir.github.io}{Yash Jangir}{he/him}{Robot Evaluation}{}{RI}{2024 --  2026}
-\stud{MSR}{https://jacobthompson.site}{Jacob Thompson}{he/him}{Spatial Reasoning}{}{RI}{2024 --  2026}
-\stud{5th}{https://www.linkedin.com/in/sheryl-m-a26809188/}{Sheryl Mathew         }{she/her }{Collaboration          }{}{SCS}{2024}
-\stud{MS}{quantingxie.github.io/}{Quanting Xie}{he/him}{LLMs for Robotics}{}{MechE}{\phantom{2023 -- } 2023}
-\stud{MLT}{jiminsun.github.io/ }{Jimin Sun      }{she/her }{Embodied Dialogue      }{}{LTI}{2022 -- 2023}
-\stud{MLT}{zdxdsw.github.io/      }{Yingshan Chang}{she/her}{Multimodal Reasoning}{}{LTI}{2020 -- 2022}
-\stud{MLT}{jzhanson.com/          }{Josh Zhanson  }{he/him }{Embodied Visual Reps}{}{LTI}{2020 -- 2022}
-\stud{MS }{erinzhang1998.github.io}{Xiaoyu (Erin) Zhang  }{she/her}{Collaborative Robots}{(co-\href{https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/}{O Kroemer})}{5th}{2021 -- 2022}
-
-
+{% endraw %}
+{%- for entry in alumni if entry['role'] not in intern_roles %}
+{{ stud_entry(entry) }}
+{%- endfor %}
+{% raw %}
 
 \subsection{Interns and Undergraduates}
-\stud{Ugrad}{www.linkedin.com/in/suli23/}{Su Li}{she/her}{Robot Learning}{  }{}{2024}
-\stud{Ugrad}{www.linkedin.com/in/maria-yampolsky-1163b418a/}{Maria Yampolsky}{she/her}{Audio}{  }{}{2024}
-\stud{Intern}{minyoung1005.github.io/}{Minyoung Hwang}{she/her}{Preference Learning}{ }{}{2024}
-\stud{Ugrad}{}{Xiang Fan}{he/him}{Transformer Efficiency}{(co-\href{http://strubell.github.io/}{E Strubell})}{}{2022}
-\stud{Intern}{}{Andy Liu}{he/him}{Theory-of-Mind}{(co-\href{http://www.phontron.com/}{G Neubig})  }{}{2022}
-\stud{Intern}{}{Deogratias Amani}{he/him}{Grounding}{}{}{2022}
-\stud{Ugrad }{                              }{Feiyu (Gavin) Zhu}{he/him}{Video Summarization     }{(co-\href{https://cpaxton.github.io/}{C Paxton})}{}{2021}
-\stud{Intern}{msclar.github.io/             }{Melanie Sclar    }{she/her}{Symmetric Theory-of-Mind}{(co-\href{http://www.phontron.com/}{G Neubig})  }{}{2021}
-\stud{Intern}{blessingitorobassey.github.io/}{Blessing Bassey  }{she/her}{TextVQA                 }{}{}{2021}
+{% endraw %}
+{%- for entry in alumni if entry['role'] in intern_roles %}
+{{ stud_entry(entry) }}
+{%- endfor %}
+{% raw %}
 
 \subsection{Capstones}
 \cventry{MCDS}{VR Robot Teleop\hfill \textnormal{\hintfont{2024}}}{}{}{}{}{}\\
