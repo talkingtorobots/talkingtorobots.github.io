@@ -11,7 +11,7 @@ from openpyxl.utils import range_boundaries, get_column_letter
 from openpyxl.worksheet.table import Table
 from pydantic import ValidationError
 
-from schemas import Publication, Person, Affiliation
+from schemas import Publication, PersonRecord, Affiliation
 from authors import render_authors
 
 parser = argparse.ArgumentParser(description='Generate Website, CV, COA')
@@ -42,13 +42,28 @@ if args.onepager:
 # Load Author urls
 webs = load_yaml("yaml/websites.yaml")
 
-# Students
-student_yaml = load_validated("yaml/students/phd.yaml", Person)
+# Students: one record per person, each with a list of stints (postdoc/phd/other x
+# current/alumni). A person with both a current and an alumni stint (e.g. someone who
+# did a Masters in the lab and is now a PhD student) shows up in both derived lists below.
+people = load_validated("yaml/people.yaml", PersonRecord)
+
+def stints_for(program, status):
+    return [{**{k: v for k, v in p.items() if k != "stints"}, **stint}
+            for p in people for stint in p["stints"]
+            if stint["program"] == program and stint["status"] == status]
+
+postdoc_yaml = stints_for("postdoc", "current")
+student_yaml = stints_for("phd", "current")
 student_names = set([s["name"] for s in student_yaml])
-postdoc_yaml = load_validated("yaml/students/postdoc.yaml", Person)
-alumni_phd = load_validated("yaml/students/phd_alumni.yaml", Person)
-masters = load_validated("yaml/students/ms_intern.yaml", Person)
-alumni = load_validated("yaml/students/alumni.yaml", Person)
+alumni_phd = stints_for("phd", "alumni")
+masters = stints_for("other", "current")
+alumni = stints_for("other", "alumni")
+
+# The CV counts every degree, so someone who did a Masters here and is now a current
+# PhD student here appears in both `alumni` and `student_yaml`. The website's alumni
+# table would be redundant for them (they're already shown as a current PhD card), so
+# it gets the subset that excludes anyone currently active as a PhD student here.
+alumni_website = [a for a in alumni if a["name"] not in student_names]
 
 # Theses
 theses_yaml = load_yaml("yaml/theses.yaml")
@@ -156,9 +171,9 @@ def generate_group_page():
             if stud["name"] in pub["authors"] and pub["type"] != "workshop":
                 stud["research"].append(pub)
     group_render = group_template.render(students=student_yaml,
-                                         postdocs=postdoc_yaml, 
-                                         alumni=alumni, 
-                                         alumni_phd=alumni_phd, 
+                                         postdocs=postdoc_yaml,
+                                         alumni=alumni_website,
+                                         alumni_phd=alumni_phd,
                                          masters=masters)
     with open("../CLAW/index.html", 'wt') as output_file:
         output_file.write(group_render)

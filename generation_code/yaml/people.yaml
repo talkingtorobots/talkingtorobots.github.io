@@ -1,0 +1,420 @@
+---
+- name: Maithili Patel
+  pron: she/her
+  native: મૈથિલી પટેલ
+  pic: maithilipatel.jpg
+  x: MaithiliPatel31
+  url: https://maithili.github.io
+  ws: 5
+  stints:
+  - program: postdoc
+    status: current
+    start: 2026
+    capt: Proactive Robotics
+- name: Yingshan Chang
+  pron: she/her
+  native: 常影杉
+  pic: yingshanchang.jpg
+  x: _Yingshan
+  url: https://zdxdsw.github.io/
+  ws: 3
+  stints:
+  - program: phd
+    status: current
+    dept: LTI
+    start: 2022
+    capt: Generalization
+    pos: Postdoc coming soon
+    year: 2026
+  - program: other
+    status: alumni
+    year: 2022
+    start: 2020
+    role: MLT
+    dept: LTI
+    topic: Multimodal Reasoning
+- name: Jared Fernandez
+  pron: he/him
+  pic: jaredfernandez.webp
+  x: FernJared
+  url: https://www.jaredfern.com/
+  ws: 3
+  stints:
+  - program: phd
+    status: current
+    dept: LTI
+    co: Emma Strubell
+    co_url: http://strubell.github.io/
+    start: 2020
+    capt: Energy/Resource Efficiency
+    pos: Postdoc coming soon
+    year: 2026
+- name: Abitha Thankaraj
+  pron: she/her
+  native: അബിത തങ്കരാജ്
+  pic: abithathankaraj.jpg
+  x: abitha___
+  url: https://abitha-thankaraj.github.io/
+  ws: 4
+  stints:
+  - program: phd
+    status: current
+    dept: CSD
+    capt: Language Modeling
+    start: 2024
+- name: Rosa Vitiello
+  pron: she/her
+  native: Technically Rosanna
+  pic: rosavitiello.jpg
+  x: rosie_vitiello
+  url: https://rosavitiello.github.io/
+  ws: 5
+  stints:
+  - program: phd
+    status: current
+    dept: LTI
+    capt: Pedagogy
+    start: 2024
+- name: Quanting Xie
+  pron: he/him
+  native: 谢泉廷
+  pic: quantingxie.jpg
+  x: DanielXieee
+  url: http://quantingxie.github.io/
+  ws: 4
+  stints:
+  - program: phd
+    status: current
+    dept: RI
+    capt: Dexterity
+    start: 2024
+  - program: other
+    status: alumni
+    year: 2023
+    role: MS
+    dept: MechE
+    topic: LLMs for Robotics
+- name: Leena Mathur
+  pron: she/her
+  pic: leenamathur.jpg
+  x: lmathur_
+  url: https://l-mathur.github.io/
+  ws: 5
+  stints:
+  - program: phd
+    status: current
+    dept: LTI
+    co: LP Morency
+    co_url: https://www.cs.cmu.edu/~morency/
+    capt: Social Intelligence
+    start: 2024
+- name: Haochen Zhang
+  pron: she/her
+  native: 张皓晨
+  pic: haochenzhang.jpg
+  x: haochenz_11
+  url: https://haochenz11.github.io/
+  ws: 4
+  stints:
+  - program: phd
+    status: current
+    dept: RI
+    capt: Robust Robot Learning
+    start: 2025
+- name: Annabella Macaluso
+  pron: she/her
+  pic: annabellamacaluso.jpg
+  x: anna_macalus
+  url: https://annabellamacaluso.github.io/
+  ws: 4
+  stints:
+  - program: phd
+    status: current
+    dept: RI
+    capt: Robot Generalization
+    start: 2025
+- name: Wenjie Li
+  pron: she/her
+  native: 李文洁
+  pic: wenjieli.jpg
+  x: WenjieWLi
+  url: https://wliwenjieli.github.io/
+  ws: 5
+  stints:
+  - program: phd
+    status: current
+    dept: NI
+    start: 2024
+    capt: Machine Cognition
+- name: Jacob Thompson
+  pron: he/him
+  pic: jacobthompson.png
+  url: https://jacobthompson.site
+  ws: 3
+  stints:
+  - program: phd
+    status: current
+    dept: LTI
+    capt: Spatial Reasoning
+    start: 2026
+  - program: other
+    status: alumni
+    year: 2026
+    start: 2024
+    role: MSR
+    dept: RI
+    topic: Spatial Reasoning
+- name: Ani Kimmel
+  pron: she/her
+  pic: anikimmel.jpg
+  url: https://scholar.google.com/citations?user=lRvBcUsAAAAJ&hl=en&oi=ao
+  ws: 3
+  stints:
+  - program: phd
+    status: current
+    dept: ECE
+    start: 2025
+    capt: 3D Manufacturing
+- name: Vidhi Jain
+  pron: she/her
+  native: विधि जैन
+  pic: vidhijain.webp
+  x: viddivj
+  url: https://vidhijain.github.io/
+  ws: 4
+  stints:
+  - program: phd
+    status: alumni
+    dept: RI
+    capt: Life is multimodal, your robot instructions better be too
+    pos: RS @ OpenAI
+    start: 2021
+    year: 2025
+    thesis: Lowering Barriers in Human-Robot Communication
+- name: So Yeon Min
+  pron: she/her
+  native: 민소연
+  pic: soyeonmin.webp
+  x: SoYeonTiffMin
+  url: http://soyeonm.github.io/
+  ws: 4
+  stints:
+  - program: phd
+    status: alumni
+    dept: MLD
+    co: Rus Salakhutdinov
+    co_url: https://www.cs.cmu.edu/~rsalakhu/
+    capt: Models don't know what they don't know
+    pos: RS @ Microsoft
+    start: 2021
+    year: 2025
+    thesis: Situated Instruction Following
+- name: Hao Zhu
+  pron: he/him/他
+  native: 朱昊
+  pic: haozhu.jpg
+  x: _Hao_Zhu
+  url: http://www.zhuhao.me/
+  ws: 5
+  stints:
+  - program: phd
+    status: alumni
+    dept: LTI
+    pos: Postdoc @ Stanford
+    start: 2019
+    year: 2024
+    thesis: 'Artificial Social Intelligence: Challenges, Environments, and Mechanisms'
+    co: Graham Neubig
+    co_url: https://phontron.com
+- name: Soumya Teotia
+  pron: she/her
+  native: सौम्या तेवतिया
+  pic: soumyateotia.jpg
+  url: https://www.linkedin.com/in/soumya-teotia-3083091bb/
+  stints:
+  - program: other
+    status: current
+    capt: Robot ToM<br>MSR
+    role: MSR
+    start: 2025
+    topic: Robot ToM
+- name: Yash Jangir
+  pron: he/him
+  native: यश जांगिड़
+  pic: yashjangir.jpg
+  url: https://offjangir.github.io/
+  ws: 4
+  stints:
+  - program: other
+    status: alumni
+    year: 2026
+    start: 2024
+    capt: Robust Policies<br>MSR
+    pos: PhD @ JHU
+    role: MSR
+    dept: RI
+    topic: Robot Evaluation
+- name: Claire Jin
+  pron: she/her
+  pic: clairejin.jpg
+  url: https://www.linkedin.com/in/claire-jin-a1474420a/
+  ws: 3
+  stints:
+  - program: other
+    status: alumni
+    year: 2026
+    capt: Mapping
+    pos: PhD @ CMU
+    role: 5th Year MS
+    topic: Mapping
+- name: Sheryl Mathew
+  pron: she/her
+  url: https://www.linkedin.com/in/sheryl-m-a26809188/
+  ws: 5
+  stints:
+  - program: other
+    status: alumni
+    year: 2024
+    role: 5th Year MS
+    dept: SCS
+    topic: Collaboration
+    pos: PhD @ USC
+- name: Minyoung Hwang
+  pron: she/her
+  url: https://minyoung1005.github.io
+  ws: 4
+  stints:
+  - program: other
+    status: alumni
+    year: 2024
+    role: Intern
+    pos: PhD @ MIT
+    topic: Preference Learning
+- name: Su Li
+  pron: she/her
+  url: https://www.linkedin.com/in/suli23/
+  stints:
+  - program: other
+    status: alumni
+    year: 2024
+    role: Undergrad
+    topic: Robot Learning
+- name: Maria Yampolsky
+  pron: she/her
+  url: https://www.linkedin.com/in/maria-yampolsky-1163b418a/
+  stints:
+  - program: other
+    status: alumni
+    year: 2024
+    role: Undergrad
+    topic: Audio
+- name: Jimin Sun
+  pron: she/her
+  url: https://jiminsun.github.io/
+  stints:
+  - program: other
+    status: alumni
+    year: 2023
+    start: 2022
+    role: MLT
+    dept: LTI
+    topic: Embodied Dialogue
+- name: Xiang Fan
+  pron: he/him
+  url: https://xiangfan.io/
+  ws: 3
+  stints:
+  - program: other
+    status: alumni
+    year: 2022
+    role: Undergraduate
+    pos: PhD @ UWashington
+    co: Emma Strubell
+    co_url: http://strubell.github.io/
+    topic: Transformer Efficiency
+- name: Andy Liu
+  pron: he/him
+  url: https://andyjliu.github.io/
+  ws: 5
+  stints:
+  - program: other
+    status: alumni
+    year: 2022
+    role: Intern
+    pos: PhD @ CMU
+    co: Graham Neubig
+    co_url: http://www.phontron.com/
+    topic: Theory-of-Mind
+- name: Deogratias Amani
+  pron: he/him
+  ws: 4
+  stints:
+  - program: other
+    status: alumni
+    year: 2022
+    role: Intern
+    topic: Grounding
+- name: Josh Zhanson
+  pron: he/him
+  url: https://jzhanson.com/
+  ws: 4
+  stints:
+  - program: other
+    status: alumni
+    year: 2022
+    start: 2020
+    role: MLT
+    pos: Data Scientist @ MSFT
+    dept: LTI
+    topic: Embodied Visual Reps
+- name: Xiaoyu (Erin) Zhang
+  pron: she/her
+  url: https://erinzhang1998.github.io/
+  ws: 4
+  stints:
+  - program: other
+    status: alumni
+    year: 2022
+    start: 2021
+    role: 5th year MS
+    pos: PhD @ UIUC
+    dept: 5th
+    topic: Collaborative Robots
+    co: Oliver Kroemer
+    co_url: https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/
+- name: Feiyu (Gavin) Zhu
+  pron: he/him
+  url: https://zfy0314.github.io
+  ws: 3
+  stints:
+  - program: other
+    status: alumni
+    year: 2021
+    role: Undergrad
+    pos: PhD @ CMU
+    co: Chris Paxton
+    co_url: https://cpaxton.github.io/
+    topic: Video Summarization
+- name: Blessing Bassey
+  pron: she/her
+  url: https://blessingitorobassey.github.io/
+  ws: 3
+  stints:
+  - program: other
+    status: alumni
+    year: 2021
+    role: Intern
+    topic: TextVQA
+- name: Melanie Sclar
+  pron: she/her
+  url: https://msclar.github.io/
+  ws: 5
+  stints:
+  - program: other
+    status: alumni
+    year: 2021
+    role: Intern
+    pos: PhD @ UWashington
+    co: Graham Neubig
+    co_url: http://www.phontron.com/
+    topic: Symmetric Theory-of-Mind
