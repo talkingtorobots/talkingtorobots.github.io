@@ -4,7 +4,8 @@ import yaml
 import openpyxl
 import argparse
 from copy import copy
-from jinja2 import Template
+from datetime import date
+from jinja2 import Environment, FileSystemLoader
 from openpyxl.styles import Border, Side
 from openpyxl.utils import range_boundaries, get_column_letter
 from openpyxl.worksheet.table import Table
@@ -17,6 +18,8 @@ parser = argparse.ArgumentParser(description='Generate Website, CV, COA')
 parser.add_argument('--onepager', action='store_true',
                     help='One-pager vs full')
 args = parser.parse_args()
+
+jinja_env = Environment(loader=FileSystemLoader("templates"))
 
 def load_yaml(path):
     return yaml.load(open(path), Loader=yaml.CLoader)
@@ -47,7 +50,6 @@ postdoc_yaml = load_validated("yaml/students/postdoc.yaml", Person)
 alumni_phd = load_validated("yaml/students/phd_alumni.yaml", Person)
 masters = load_validated("yaml/students/ms_intern.yaml", Person)
 alumni = load_validated("yaml/students/alumni.yaml", Person)
-#student_names = student_names.add(set([s["name"] for s in student_yaml]))
 
 # Theses
 theses_yaml = load_yaml("yaml/theses.yaml")
@@ -75,19 +77,8 @@ def update_pub_entry(entry):
   # Authors and links to all co-authors
   entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names)
 
-def generate_shorts():
-    for pub in pubs:
-        if "cute" in pub:
-            fname = f"../r/{pub['cute']}.html"
-            if os.path.exists(fname):
-                os.remove(fname)
-            o = open(fname,'wt')
-            o.write('<meta http-equiv="Refresh" content="0; url=\'{pub["url"]}\'" />')
-            o.close()
-
 def generate_publications_website():
-    with open("templates/pub_template.jinja2", 'r') as file:
-      pub_template = Template(file.read())
+    pub_template = jinja_env.get_template("pub_template.jinja2")
 
     for entry in pubs:
       update_pub_entry(entry)
@@ -111,11 +102,10 @@ def number_pub(vals, pub_count=1):
 def generate_CV():
     ## Generate CV ##
     if args.onepager:
-        template = "templates/CV_template_1p.jinja2"
+        template = "CV_template_1p.jinja2"
     else:
-        template = "templates/CV_template.jinja2"
-    with open(template, 'r') as file:
-      latex_template = Template(file.read())
+        template = "CV_template.jinja2"
+    latex_template = jinja_env.get_template(template)
     latex_papers = {"Journal": [],
                     "Conference": [],
                     "Workshop": [],
@@ -153,14 +143,14 @@ def generate_CV():
                                            theses=theses_yaml)
     with open("CV.tex", 'wt') as output_file:
         output_file.write(latex_render)
-    os.system("pdflatex CV.tex")
+    if os.system("pdflatex -interaction=nonstopmode CV.tex") != 0 or not os.path.exists("CV.pdf"):
+        sys.exit("pdflatex failed to produce CV.pdf; see CV.log. Leaving the previous CV.pdf untouched.")
     os.system("rm CV.tex CV.log CV.aux CV.out")
     os.system("mv CV.pdf ../")
 
 def generate_group_page():
     ## Generate group page
-    with open("templates/group_template.jinja2", 'r') as file:
-      group_template = Template(file.read())
+    group_template = jinja_env.get_template("group_template.jinja2")
     for stud in student_yaml:
         stud["research"] = []
         for pub in pubs:
@@ -178,8 +168,9 @@ def generate_COA():
 
     ## Create a list of collaborators from the last 48 months with affiliations (for NSF)
     collaborators = {}
+    cutoff_year = date.today().year - 4
     for pub in pubs:
-        if int(pub["year"]) > 2024 - 4 and "Open X-" not in pub["title"]:
+        if int(pub["year"]) > cutoff_year and "Open X-" not in pub["title"]:
             for a in pub["authors"]:
               if a != "Yonatan Bisk" and a not in student_names:
                 parts = a.rsplit(' ',1)
@@ -248,7 +239,6 @@ def main():
     if not args.onepager:
         generate_group_page()
         generate_COA()
-    generate_shorts()
 
 if __name__ == "__main__":
     main()

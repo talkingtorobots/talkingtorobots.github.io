@@ -1,49 +1,5 @@
+{% include 'cv_preamble.jinja2' %}
 {% raw %}
-%% start of file `template_en.tex'.
-%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-\documentclass[10pt,letter]{moderncv}
-\setlength{\hintscolumnwidth}{30pt}
-\moderncvtheme[grey]{classic}                % idem
-% character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
-\usepackage{fdsymbol}
-\usepackage{newunicodechar} % To write the definition on the next line
-\newunicodechar{π}{\ensuremath{\pi}}
-% adjust the page margins
-\usepackage[left=0.95in,top=1.0in,bottom=1.0in,right=0.95in]{geometry}
-\usepackage{calc}
-\recomputelengths                             % required when changes are made to page layout lengths
-\usepackage{ragged2e}
-\RaggedRight
-\usepackage[none]{hyphenat}
-
-% These are to create pretty spacing of pseudocolumns
-\newcommand{\numS}[1]{\makebox[\widthof{\# Students: 999}][l]{\# Students: #1}}
-\newcommand{\AC}[1]{\makebox[\widthof{AI/ML}][l]{\hfill #1}}
-\newcommand{\NW}[1]{\makebox[\widthof{Xiaoyu (Erin) Zhang}][l]{#1}}
-\newcommand{\NA}[1]{\makebox[\widthof{Collabortive Robot Art plus }][l]{#1}}
-\newcommand{\DW}[1]{\hfill \makebox[\widthof{MechE}][l]{#1}}
-\newcommand{\pron}[1]{\makebox[\widthof{\footnotesize she/her}][l]{\textcolor{black}{\scriptsize \normalfont{#1}}}}
-% type, url, name, pronouns, area, extra, dept, year
-\newcommand{\stud}[8]{\cventry{#1}{\NW{\href{https://#2}{#3}} \pron{#4}}{\NA{#5} #6}{\DW{#7} #8}{}{}}
-\newcommand{\studnoL}[8]{\cventry{#1}{\NW{#3} \pron{#4}}{\NA{#5} #6}{\DW{#7} #8}{}{}}
-\newcommand{\SNW}[1]{\makebox[\widthof{Bharani Ujjaini Kempaiah \pron{she/her}}][l]{#1}}
-
-% personal data
-\firstname{Yonatan}
-\familyname{Bisk}
-\title{Assistant Professor of Computer Science} % optional, remove the line if not wanted
-\address{ }{GHC 6703}
-\email{ybisk@cs.cmu.edu}                        % optional, remove the line if not wanted
-\extrainfo{he/him}                        % optional, remove the line if not wanted
-
-\newcommand{\acro}[1]{\parbox{4em}{#1}}
-\newcommand{\YB}{\underline{Yonatan Bisk}}
 
 %----------------------------------------------------------------------------------
 %            content
@@ -81,10 +37,10 @@
 
 {% raw %}
 \section{(Senior) Area Chair / Action Editor}
-\cventry{2025}{Conference on Robot Learning (CoRL)}{\hfill \AC{Robo}}{}{}{}
-\cventry{--}{International Conference on Machine Learning (ICML)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Transactions on Machine Learning Research (TMLR)}{\hfill \AC{AI/ML}}{}{}{}
-\cventry{--}{Robotics: Science and Systems (RSS)}{\hfill \AC{Robo}}{}{}{}
-\cventry{--}{Conference on Language Modeling (COLM)}{\hfill \AC{NLP}}{}{}{}
+\cventry{2025}{Conference on Robot Learning (CoRL)}{\AC{Robo}}{}{}{}
+\cventry{--}{International Conference on Machine Learning (ICML)}{\AC{AI/ML}}{}{}{}
+\cventry{--}{Transactions on Machine Learning Research (TMLR)}{\AC{AI/ML}}{}{}{}
+\cventry{--}{Robotics: Science and Systems (RSS)}{\AC{Robo}}{}{}{}
+\cventry{--}{Conference on Language Modeling (COLM)}{\AC{NLP}}{}{}{}
 \end{document}
 {% endraw %}

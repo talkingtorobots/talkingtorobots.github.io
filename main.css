@@ -411,3 +411,26 @@ img {
   white-space: nowrap;
   border: 0;
 }
+
+/* publications.html card icons/text */
+.icon-link {
+  display: inline-block;
+  width: 50px;
+}
+
+.icon-img {
+  display: inline;
+}
+
+.pub-badge {
+  font-size: 12pt;
+}
+
+.pub-meta {
+  font-weight: 300;
+  font-size: 10pt;
+}
+
+.extra-link-font {
+  font-size: 11pt;
+}

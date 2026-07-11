@@ -19,7 +19,6 @@ class Publication(BaseModel):
     student: Optional[str] = None
     alumn: Optional[str] = None
     fig: Optional[str] = None
-    cute: Optional[str] = None
     note: Optional[str] = None
     pres: Optional[str] = None
     extras: Optional[dict[str, str]] = None

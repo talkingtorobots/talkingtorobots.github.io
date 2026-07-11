@@ -18,7 +18,6 @@
   venue_acr: "ICLR"
   fig: roboarena.jpg
   url: "https://arxiv.org/abs/2510.23571"
-  cute: '26-RobotArena'
 - year: '2025'
   field: WS4
   type: Journal
@@ -48,7 +47,6 @@
   extras:
     Website: https://motif-1k.github.io/
   fig: "motif.jpg"
-  cute: "25-MotIF"
 - year: '2024'
   field: WS4
   type: Conference
@@ -63,7 +61,6 @@
   url: 'https://arxiv.org/abs/2410.18932'
   extras:
     Website: https://anavi-corl24.github.io/
-  cute: "24-ANAVI"
   fig: "anavi.jpg"
 - year: '2024'
   field: WS4
@@ -86,7 +83,6 @@
   extras:
     Website: https://soyeonm.github.io/SIF_webpage/
   fig: "sif.jpg"
-  cute: "24-SIF"
 - year: '2024'
   field: WS4
   type: Conference
@@ -112,5 +108,4 @@
   extras:
     Website: "https://vid2robot.github.io/"
   fig: "vid2robot.jpg"
-  cute: "24-Vid2Robot"
 

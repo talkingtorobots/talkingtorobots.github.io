@@ -144,7 +144,6 @@
   venue_acr: "ICLR"
   fig: roboarena.jpg
   url: "https://arxiv.org/abs/2510.23571"
-  cute: '26-RobotArena'
 - year: '2026'
   field: WS3
   type: Conference
@@ -251,7 +250,6 @@
   venue_acr: "CoLM"
   url: "https://openreview.net/forum?id=qbWpEufkqk"
   fig: rem.jpg
-  cute: '25-REM'
 - year: '2025'
   field: O
   type: Conference
@@ -295,7 +293,6 @@
   venue_acr: "ArXiv"
   url: "https://arxiv.org/abs/2504.11336"
   fig: trelawney.jpg
-  cute: "25-lookingbeyond"
 - year: '2025'
   field: O
   type: Preprint
@@ -308,7 +305,6 @@
   venue_acr: "ArXiv"
   url: "https://arxiv.org/abs/2502.00197"
   fig: model-successor.jpg
-  cute: "25-SuccessorFunctions"
 - year: '2025'
   field: WS4
   type: Conference
@@ -343,7 +339,6 @@
   venue_acr: "ACL"
   url: "https://arxiv.org/abs/2504.17674"
   fig: "energy-considerations.jpg"
-  cute: "25-energy"
 - year: '2025'
   field: WS4
   type: Preprint
@@ -361,7 +356,6 @@
   venue_acr: "ArXiv"
   fig: "self-regulation.jpg"
   url: "https://arxiv.org/abs/2502.04576"
-  cute: "25-SelfRegulation"
 - year: '2025'
   field: WS3
   type: Conference
@@ -401,7 +395,6 @@
   extras:
     Meta: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
   fig: explore-tom.jpg
-  cute: "25-ExploreToM"
 - year: '2025'
   field: O
   type: Journal
@@ -435,7 +428,6 @@
   extras:
     Website: https://motif-1k.github.io/
   fig: "motif.jpg"
-  cute: "25-MotIF"
 - year: '2025'
   field: O
   type: Conference
@@ -447,7 +439,6 @@
   venue: "The Thirteenth International Conference on Learning Representations"
   venue_acr: "ICLR"
   url: "https://arxiv.org/abs/2405.20131"
-  cute: "25-Counting"
 - year: '2025'
   field: WS3
   type: Conference
@@ -489,7 +480,6 @@
   extras:
     Website: https://quanting-xie.github.io/Embodied-RAG-web/
   fig: embodied-rag.jpg
-  cute: "24-EmbodiedRAG"
 - year: '2024'
   field: WS4
   type: Conference
@@ -504,7 +494,6 @@
   url: 'https://arxiv.org/abs/2410.18932'
   extras:
     Website: https://anavi-corl24.github.io/
-  cute: "24-ANAVI"
   fig: "anavi.jpg"
 - year: '2024'
   field: WS4
@@ -527,7 +516,6 @@
   extras:
     Website: https://soyeonm.github.io/SIF_webpage/
   fig: "sif.jpg"
-  cute: "24-SIF"
 - year: '2024'
   field: O
   type: Conference
@@ -572,7 +560,6 @@
   venue_acr: "EMNLP"
   url: "https://arxiv.org/abs/2406.19228"
   fig: "toolsfail.jpg"
-  cute: "24-ToolsFail"
 - year: '2024'
   field: WS4
   type: Preprint
@@ -603,7 +590,6 @@
   venue_acr: "NeurIPS"
   url: "https://arxiv.org/abs/2406.05191"
   fig: "pid.jpg"
-  cute: "24-DiffusionPID"
 - year: '2024'
   field: O
   type: Preprint
@@ -686,7 +672,6 @@
   venue_acr: "ECCV"
   url: "https://arxiv.org/abs/2403.16394"
   fig: "skews.jpg"
-  cute: "24-Skews"
 - year: '2024'
   field: WS4
   type: Conference
@@ -712,7 +697,6 @@
   extras:
     Website: "https://vid2robot.github.io/"
   fig: "vid2robot.jpg"
-  cute: "24-Vid2Robot"
 - year: '2024'
   field: WS5
   type: Conference
@@ -734,7 +718,6 @@
     GitHub: "https://github.com/sotopia-lab/sotopia-pi"
     Website: "https://www.sotopia.world/projects/sotopia-pi"
   fig: "sotopia-pi.jpg"
-  cute: "24-SotopiaPi"
 - year: '2024'
   field: WS4
   type: Conference
@@ -793,7 +776,6 @@
   pres: Spotlight
   url: "http://arxiv.org/abs/2310.11667"
   fig: "sotopia.jpg"
-  cute: "24-Sotopia"
 - year: '2024'
   field: WS4
   type: Conference
@@ -1100,7 +1082,6 @@
   url: "https://arxiv.org/abs/2309.08508"
   extras:
     GitHub: https://github.com/gtatiya/MOSAIC
-  cute: "24-Mosaic"
   fig: "mosaic.jpg"
 - year: '2024'
   field: WS4

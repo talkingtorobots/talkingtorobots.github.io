@@ -139,7 +139,6 @@
         }
         </script>
 
-        </script>
         <script language="javascript">
             function show( elem ) {
                 $('#'+elem).toggle();
@@ -276,9 +275,11 @@
                 &nbsp;Hide preprints
               </label>
       </div>
+      </div> <!-- row -->
       </center>
     <br>
 
+    <main>
       <h3>Publications</h3>
         {% endraw %}
         {% set ns = namespace(current_year=None) %}
@@ -299,11 +300,11 @@
               <div class="col-md-1" style="text-align: center;">
                 {% if entry['venue'] == 'ArXiv' %}
                 <button type="button" disabled title="Preprint — not peer reviewed"
-                  class="btn ybtn btn-outline-secondary"
-                  style="font-size:12pt; opacity:0.65;">ArXiv</button>
+                  class="btn ybtn btn-outline-secondary pub-badge"
+                  style="opacity:0.65;">ArXiv</button>
                 {% else %}
                 <button type="button" disabled
-                  class="btn ybtn btn-outline-{{ colors[entry['field']] }}" style="font-size:12pt">{{ entry['venue_acr'] }}</button>
+                  class="btn ybtn btn-outline-{{ colors[entry['field']] }} pub-badge">{{ entry['venue_acr'] }}</button>
                 {% endif %}
 
 
@@ -324,38 +325,35 @@
                     {{ entry['title'] }}
                 </b><br>
                 <div class="card-text">
-                  <i style="font-weight: 300; font-size:10pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                  <i class="pub-meta" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['venue'] }} ({{ entry['year'] }})
                   </i>
                   <br>
-                  <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate" style="font-weight: 300; font-size:10pt; max-width:100%;" onclick="toggleEllipsis({{- loop.revindex -}});">
+                  <font id="ellipsis-ex{{- loop.revindex -}}" class="d-inline-block text-truncate pub-meta" style="max-width:100%;" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['authors_pretty'] }}
                   </font>
                       <br>
                   {% if 'url' in entry and entry['url']|length > 0 %}
                     {% if 'arxiv' in entry['url'] %}
-                      <a href={{- entry['url']}} style="display:inline-block;width:50px"><img src="images/arxiv.svg" style="display:inline;" height=18pt></a>
+                      <a href={{- entry['url']}} class="icon-link"><img src="images/arxiv.svg" class="icon-img" height=18pt></a>
                     {% else %}
-                      <a href={{- entry['url']}} style="display:inline-block;width:50px;"><img src="images/pdf.svg" style="display:inline;" height=16pt class="filter-blue"><font style="font-size:11pt">PDF</font> </a>
+                      <a href={{- entry['url']}} class="icon-link"><img src="images/pdf.svg" class="icon-img filter-blue" height=16pt><font class="extra-link-font">PDF</font> </a>
                     {% endif %}
                   {% endif %}
-                  <a  title style="display:inline-block;width:50px;"
+                  <a  title class="icon-link"
                       data-original-title="Copy BibTex" id="buttonidx{{- loop.revindex -}}"
                       href="javascript:void(0)" onclick="show('idx{{- loop.revindex -}}')">
-                      <img src="images/tex.svg" width=30pt style="display:inline;" class="filter-blue">
+                      <img src="images/tex.svg" width=30pt class="icon-img filter-blue">
                     </a>
                     {% if 'extras' in entry %}
                       {% for key in entry['extras'] %}
                         {% if 'github' in key %}
-                          <font style="font-size:11pt"><a href="{{- entry['extras'][key] -}}" style="display:inline-block;width:50px;"><img src="images/github.svg" style="display:inline;"  class="filter-blue" height=18pt></a></font>
+                          <font class="extra-link-font"><a href="{{- entry['extras'][key] -}}" class="icon-link"><img src="images/github.svg" class="icon-img filter-blue" height=18pt></a></font>
                         {% else %}
-                          <font style="font-size:11pt"><a href="{{- entry['extras'][key] -}}" style="padding-right:20px;">{{- key -}}</a></font>
+                          <font class="extra-link-font"><a href="{{- entry['extras'][key] -}}" style="padding-right:20px;">{{- key -}}</a></font>
                         {% endif %}
                       {% endfor %}
                     {% endif %}
-                    <!-- {% if 'cute' in entry %}
-                      <a href=https://t2r.xyz/r/{{- entry['cute']}} style="font-weight: 300; font-size:10pt;display:inline-block;float: right;">t2r.xyz/r/{{- entry['cute']}}</a> 
-                    {% endif %} -->
                     <div id="idx{{- loop.revindex -}}" class="dynamic_link">
                       <pre>
 @{{types[entry['type']][0] }}{ {{- entry["venue_acr"]|replace(' ','-') -}}:{{- entry["authors"][0].split()[-1] -}} {{ entry["year"] }},
