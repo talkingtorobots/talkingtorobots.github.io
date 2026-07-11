@@ -1,4 +1,5 @@
 import os
+import sys
 import yaml
 import openpyxl
 import argparse
@@ -7,6 +8,9 @@ from jinja2 import Template
 from openpyxl.styles import Border, Side
 from openpyxl.utils import range_boundaries, get_column_letter
 from openpyxl.worksheet.table import Table
+from pydantic import ValidationError
+
+from schemas import Publication, Person, Affiliation
 
 parser = argparse.ArgumentParser(description='Generate Website, CV, COA')
 parser.add_argument('--onepager', action='store_true',
@@ -17,18 +21,28 @@ def load_yaml(path):
     return yaml.load(open(path), Loader=yaml.CLoader)
 
 # Load Publications 
+def load_validated(path, model):
+    entries = load_yaml(path)
+    validated = []
+    for i, entry in enumerate(entries):
+        try:
+            validated.append(model(**entry).model_dump(exclude_unset=True))
+        except ValidationError as e:
+            sys.exit(f"{path}: entry {i} ({entry.get('name', entry.get('title', '?'))}) failed validation:\n{e}")
+    return validated
+
 if args.onepager:
-    pubs = load_yaml("yaml/publications_1p.yaml")
+    pubs = load_validated("yaml/publications_1p.yaml", Publication)
 else:
-    pubs = load_yaml("yaml/publications.yaml")
+    pubs = load_validated("yaml/publications.yaml", Publication)
 
 # Load Author urls
 webs = load_yaml("yaml/websites.yaml")
 
 # Students
-student_yaml = load_yaml("yaml/students/phd.yaml")
+student_yaml = load_validated("yaml/students/phd.yaml", Person)
 student_names = set([s["name"] for s in student_yaml])
-postdoc_yaml = load_yaml("yaml/students/postdoc.yaml")
+postdoc_yaml = load_validated("yaml/students/postdoc.yaml", Person)
 #student_names = student_names.add(set([s["name"] for s in student_yaml]))
 
 # Theses
@@ -164,9 +178,9 @@ def generate_group_page():
         for pub in pubs:
             if stud["name"] in pub["authors"] and pub["type"] != "workshop":
                 stud["research"].append(pub)
-    masters = load_yaml("yaml/students/ms_intern.yaml")
-    alumni = load_yaml("yaml/students/alumni.yaml")
-    alumni_phd = load_yaml("yaml/students/phd_alumni.yaml")
+    masters = load_validated("yaml/students/ms_intern.yaml", Person)
+    alumni = load_validated("yaml/students/alumni.yaml", Person)
+    alumni_phd = load_validated("yaml/students/phd_alumni.yaml", Person)
     group_render = group_template.render(students=student_yaml, 
                                          postdocs=postdoc_yaml, 
                                          alumni=alumni, 
@@ -187,7 +201,7 @@ def generate_COA():
                 last_first = parts[1] + ", "+ parts[0]
                 collaborators[last_first] = max(int(pub["year"]), collaborators.get(last_first, 0))
 
-    aff_yaml = load_yaml("yaml/affiliations.yaml")
+    aff_yaml = load_validated("yaml/affiliations.yaml", Affiliation)
     affiliations = {}
     for entry in aff_yaml:
         affiliations[entry["name"]] = entry["affiliation"]
