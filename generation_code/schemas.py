@@ -22,6 +22,7 @@ class Publication(BaseModel):
     note: Optional[str] = None
     pres: Optional[str] = None
     extras: Optional[dict[str, str]] = None
+    onepager: Optional[bool] = None
 
 
 class Person(BaseModel):

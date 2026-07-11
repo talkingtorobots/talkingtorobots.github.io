@@ -129,6 +129,7 @@
   field: WS4
   type: Conference
   title: "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation"
+  onepager: true
   student: Yash Jangir
   authors:
   - Yash Jangir
@@ -227,6 +228,7 @@
   field: WS4
   type: Journal
   title: "Affordance RAG: Hierarchical Multimodal Retrieval with Affordance-Aware Embodied Memory for Mobile Manipulation"
+  onepager: true
   student: Quanting Xie
   authors:
   - Ryosuke Korekata
@@ -417,6 +419,7 @@
   field: WS4
   type: Journal
   title: "MotIF: Motion Instruction Fine-tuning"
+  onepager: true
   authors:
   - Minyoung Hwang
   - Joey Hejna
@@ -484,6 +487,7 @@
   field: WS4
   type: Conference
   title: "ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation"
+  onepager: true
   alumn: Vidhi Jain
   authors:
   - Vidhi Jain
@@ -499,6 +503,7 @@
   field: WS4
   type: Conference
   title: "Situated Instruction Following"
+  onepager: true
   alumn: So Yeon Min
   authors:
   - So Yeon Min
@@ -676,6 +681,7 @@
   field: WS4
   type: Conference
   title: "Vid2Robot: End-to-end Video-conditioned Policy Learning with Cross-Attention Transformers"
+  onepager: true
   alumn: Vidhi Jain
   authors:
   - Vidhi Jain

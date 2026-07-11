@@ -35,10 +35,9 @@ def load_validated(path, model):
             sys.exit(f"{path}: entry {i} ({entry.get('name', entry.get('title', '?'))}) failed validation:\n{e}")
     return validated
 
+pubs = load_validated("yaml/publications.yaml", Publication)
 if args.onepager:
-    pubs = load_validated("yaml/publications_1p.yaml", Publication)
-else:
-    pubs = load_validated("yaml/publications.yaml", Publication)
+    pubs = [p for p in pubs if p.get("onepager")]
 
 # Load Author urls
 webs = load_yaml("yaml/websites.yaml")
