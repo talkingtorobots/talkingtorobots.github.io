@@ -11,6 +11,7 @@ from openpyxl.worksheet.table import Table
 from pydantic import ValidationError
 
 from schemas import Publication, Person, Affiliation
+from authors import render_authors
 
 parser = argparse.ArgumentParser(description='Generate Website, CV, COA')
 parser.add_argument('--onepager', action='store_true',
@@ -67,28 +68,9 @@ colors = {
           "A": "secondary"
         }
 
-accents = {"{\\'e}": "é", "{\\`e}": "è", "{\\'a}": "á", "{\\'o}": "ó", 
-           "{\\'u}": "ú", "{\\'c}": "ć", "{\\'\\\\i}":"í",
-           "{\\\"a}": "ä", "{\\o}": "ø", "{\\aa}": "å", "{\\l}": "ł", "{\\'y}": "ý",
-           "{\\\"o}": "ö","{\\\"u}": "ü", "{\\'s}": "ś", "{\\^o}": "ô",
-           "\\v{c}": "č", "\\v{s}": "š", "\\v{r}": "ř"}
-
-def pretty_author_names(s):
-  for k in accents:
-    s = s.replace(k, accents[k])
-    s = s.replace(k.upper(), accents[k].upper())
-  if s[0] == "{" and s[-1] == "}":
-    s = s[1:-1]
-  return s
-
 def update_pub_entry(entry):
   # Authors and links to all co-authors
-  entry["authors_pretty"] = pretty_author_names(", ".join(entry["authors"]))
-  for v in webs:
-    entry["authors_pretty"] = entry["authors_pretty"].replace(v, "<a href={}>{}</a>".format(webs[v], v))
-  for p in student_names:
-    entry["authors_pretty"] = entry["authors_pretty"].replace(p, f"<div class=\"name\">{p}</div>")
-  entry["authors_pretty"] = entry["authors_pretty"].replace("Yonatan Bisk", f"<div class=\"name\">Yonatan Bisk</div>")
+  entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names)
 
 def generate_shorts():
     for pub in pubs:
