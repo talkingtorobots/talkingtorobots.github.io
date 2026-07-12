@@ -434,3 +434,81 @@ img {
 .extra-link-font {
   font-size: 11pt;
 }
+
+/* Neutralize default heading font sizing when a heading tag is used for
+   .accordion-header (needed for real heading semantics; the visible size
+   still comes entirely from the nested .accordion-button). */
+h1.accordion-header, h2.accordion-header, h3.accordion-header,
+h4.accordion-header, h5.accordion-header, h6.accordion-header {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: inherit;
+}
+
+/* Publication title, promoted to <h6> for heading navigation; the inline
+   style on the element itself still sets the real size/weight. */
+h6.pub-title {
+  margin: 0;
+}
+
+/* FAQ.html: visible page title (previously sr-only, so the page had no
+   title at all) */
+.faq-title {
+  text-align: center;
+  margin: 1.5rem 0 0.15rem;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* FAQ.html: give the four top-level sections (Department/Emailing/
+   Admissions/Internships) real visual weight and separation, so they read
+   as section breaks instead of blending into body text. Overrides the
+   generic .accordion-header reset above, scoped to .faq-section only. */
+.faq-section {
+  margin-top: 2.5rem;
+}
+
+.faq-section:first-of-type {
+  margin-top: 1rem;
+}
+
+.faq-section > .accordion-header .accordion-button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Visible outline around each accordion item/dropdown, so the boundary
+   between one question and the next is unambiguous. Covers both Bootstrap's
+   own .accordion-item wrapper (yonatanbisk.html) and this site's ad-hoc
+   <div class="accordion"> used as a per-item wrapper (FAQ.html's nested
+   questions, which don't use .accordion-item at all). */
+.accordion-item,
+#accordionEmail > .accordion,
+#accordion_admissions > .accordion {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+/* Repeated site tagline in the header banner. Not a real heading (it doesn't
+   describe the page that follows it, and it repeats identically on every
+   page), so it's a <p> rather than an <h3> -- these values replicate the
+   previous h3's exact computed style so nothing shifts visually. */
+.banner-title {
+  display: block;
+  font-size: 20.8px;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 24.96px;
+  margin: 0 0 8px;
+}

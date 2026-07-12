@@ -114,9 +114,11 @@
       </div>
     </nav>
 
+    <h1 class="sr-only">CLAW Lab</h1>
+
     <div class="wrapper" style="background-image: url(images/CLAW_Spring2024.jpg);background-size: 880px 230px;">
       <div class="content">
-        <center><h3><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</h3></center>
+        <center><p class="banner-title"><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</p></center>
       </div>
     </div>
 
@@ -181,8 +183,8 @@
                 <hr>
                 <h6>
                   {% if entry['research']|length > 0 %}
-                    <button class="collapsible">Research</button>
-                    <div class="content">
+                    <button class="collapsible" aria-expanded="false" aria-controls="research-{{- entry['name']|replace(' ','-')|lower -}}">Research</button>
+                    <div class="content" id="research-{{- entry['name']|replace(' ','-')|lower -}}">
                       <p style='margin-top:1rem;margin-bottom:0;'>
                         {% for paper in entry['research'] %}
                           <a href="{{ paper['url'] }}">{{ paper['title'] }}</a><br><br>
@@ -234,7 +236,7 @@
               <img src=images/students/{{ entry['pic'] }} class="card-img-top" alt="{{ entry['name'] }}">
             </a>
             <div class="card-body">
-              <h6 class="card-title">
+              <h5 class="card-title">
                 <p class="m-flip js-flip" style="font-weight:400; font-size: 14px;">
                   <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{{ entry['name'] }}</b></a></span>
                   <span class="m-flip_item"><a href="{{ entry['url'] }}"><b>{% if 'native' in entry %} {{- entry['native'] -}} {% else %} {{ entry['name'] }} {% endif %}</b></a></span>
@@ -242,6 +244,7 @@
                 <h6><font class="pronoun">{{ entry['pron'] }}</font>
                     <br>📚 {{ entry['capt'] }}
                 </h6>
+              </h5>
             </div>
           </div>
         {% endfor %}
@@ -274,7 +277,7 @@
 
       <br><br>
       <h3>Alumni</h3>
-        <div class="container" id="students">
+        <div class="container" id="alumni">
           <div class="row row-cols-auto g-0">
             {% endraw %}
             {% for entry in alumni_phd %}
@@ -289,11 +292,20 @@
         </div>
       <center>
         <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col">Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Next Position</th>
+              <th scope="col"><span class="sr-only">Icon</span></th>
+            </tr>
+          </thead>
           <tbody>
             {% endraw %}
             {% for entry in alumni %}
                 <tr>
-                  <td scope="row">{{ entry['year'] }}</td>
+                  <th scope="row">{{ entry['year'] }}</th>
                   <td>
                       <a href="{{ entry['url'] }}">{{ entry['name'] }}</a>
                       {% if entry['role'] == 'PhD' %}
@@ -322,8 +334,10 @@
             var content = this.nextElementSibling;
             if (content.style.display === "block") {
               content.style.display = "none";
+              this.setAttribute("aria-expanded", "false");
             } else {
               content.style.display = "block";
+              this.setAttribute("aria-expanded", "true");
             }
           });
         }

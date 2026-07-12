@@ -75,12 +75,18 @@
         </div>
       </div>
     </nav>
-      <div class="accordion-item">
-        <div class="accordion-header" id="department">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDept" expanded=True>
+
+    <center>
+      <h1 class="faq-title">Grad School FAQ</h1>
+      <p class="faq-subtitle">Answers to common questions from prospective PhD and Masters students.</p>
+    </center>
+
+      <div class="accordion-item faq-section">
+        <h2 class="accordion-header" id="department">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDept" aria-expanded="true" aria-controls="collapseDept">
             Should I apply to LTI, RI, or MLD?
           </button>
-        </div>
+        </h2>
         <div id="collapseDept" class="accordion-collapse collapse show" data-parent="#accordion"  >
           <div class="accordion-body">
             <b>Applying to LTI vs RI vs MLD: </b> The short answer is you should apply to the department whose curriculum aligns most closely with your educational and research goals.  The department does not restrict who can serve as your advisor, <b>but</b> it does change <i>when</i> we get access to the applicant pool a little to add comments and whether my name is in the default drop down for visit days.  You can select me during visit days regardless.
@@ -88,12 +94,12 @@
         </div>
       </div>
 
-      <div class="accordion-item">
-        <div class="accordion-header" id="emailing">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterOne">
+      <div class="accordion-item faq-section">
+        <h2 class="accordion-header" id="emailing">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterOne" aria-controls="collapseOuterOne">
             Information about Emailing Professors
           </button>
-        </div>
+        </h2>
         <div id="collapseOuterOne" class="accordion-collapse collapse show" data-parent="#accordion"  >
           <div class="accordion-body">
 
@@ -106,6 +112,9 @@
 
             Before we get too far in.  Are you ...
             <table class="table table-responsive-sm table-sm">
+              <thead>
+                <tr><th scope="col">Situation</th><th scope="col">Recommendation</th></tr>
+              </thead>
               <tbody>
                 <tr><td>a current or previous collaborator?</td><td> 	Email me</td></tr>
                 <!-- <tr><td>a member of a historically marginalized group in academia?</td><td> 	Email me</td></tr> -->
@@ -122,11 +131,11 @@
             <div class="container">
               <div class="accordion" id="accordionEmail">
                 <div class="accordion">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                       Why you &nbsp;<b>should</b>&nbsp; email professors
-                    </h2>
-                  </div>
+                    </button>
+                  </h3>
                   <div id="collapseOne" class="accordion-collapse collapse" data-parent="#accordionEmail"  >
                     <div class="accordion-body">
                       Success in academia, like many aspects of society, is often a function of who you
@@ -149,11 +158,11 @@
                 </div>
 
                 <div class="accordion">
-                  <div class="accordion-header" id="headingTwo">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" >
+                  <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" >
                       Why is your email being ignored?
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseTwo" data-parent="#accordionEmail" class="accordion-collapse collapse" >
                     <div class="accordion-body">
                       Professors get lots of emails, that’s why you’re reading this.  Many of them are
@@ -182,6 +191,9 @@
                       <b>The following are a few broad classes of common emails we receive:</b><br>
                       <center>
                         <table class="table table-responsive-sm table-sm">
+                          <thead>
+                            <tr><th scope="col">Common email types</th></tr>
+                          </thead>
                           <tbody>
                             <tr><td>
                                 ❌Generic “please accept me into your program” email -- DOS attack
@@ -221,12 +233,12 @@
                   </div>
                 </div>
                 <div class="accordion">
-                  <div class="accordion-header" id="headingThree">
+                  <h3 class="accordion-header" id="headingThree">
 
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
                       Will emailing help me get into grad school?
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseThree" data-parent="#accordionEmail"  class="accordion-collapse collapse">
                     <div class="accordion-body">
                       No, maybe, it's complicated.  I think we need to talk a little about how admissions
@@ -263,11 +275,11 @@
 
 
                 <div class="accordion">
-                  <div class="accordion-header" id="headingFive">
-                    <button class="accordion-button type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-controls="collapseFive">
+                  <h3 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-controls="collapseFive">
                       When is the most effective time to email? And who should I email?
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseFive" data-parent="#accordionEmail"  class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <b>When?</b> After applications have been submitted.  Because, again, the <i>main</i>
@@ -286,12 +298,12 @@
                   </div>
                 </div>
                 <div class="accordion">
-                  <div class="accordion-header" id="headingSix">
+                  <h3 class="accordion-header" id="headingSix">
 
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-controls="collapseSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-controls="collapseSix">
                       Should I ask for a meeting? What about at a conference?
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseSix" data-parent="#accordionEmail"  class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <b>Ask for a meeting?</b> It doesn't hurt to ask, but meetings take even longer
@@ -303,12 +315,12 @@
                   </div>
                 </div>
                 <div class="accordion">
-                  <div class="accordion-header" id="headingSeven">
+                  <h3 class="accordion-header" id="headingSeven">
 
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-controls="collapseSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-controls="collapseSeven">
                       I’m an outsider, I’m not sure I even know how to write a “tailored” email
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseSeven"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       That’s 100% fine, and you should say that.  You can indicate where you have tried
@@ -318,12 +330,12 @@
                   </div>
                 </div>
                 <div class="accordion">
-                  <div class="accordion-header" id="headingEight">
+                  <h3 class="accordion-header" id="headingEight">
 
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-controls="collapseEight">
                       How do I know if a professor is taking students? Postdocs?
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseEight"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       You don’t and that sucks, I’m sorry.  Normally you can assume they will try and take
@@ -334,11 +346,11 @@
                   </div>
                 </div>
                 <div class="accordion">
-                  <div class="accordion-header" id="headingNine">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                  <h3 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-controls="collapseNine">
                       This is the &nbsp;<b>one and only</b>&nbsp; best advisor for me
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseNine"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       While flattering, that’s probably not true.  Related to my own multimodal research
@@ -346,6 +358,10 @@
                       no particular order that I wish I had more time to work with:<br>
                       <center>
                         <table>
+                          <thead>
+                            <tr><th scope="col">Name</th><th scope="col">Institution</th></tr>
+                          </thead>
+                          <tbody>
                           <tr><td width=200><a href="http://www.hennyadmoni.com/">Henny Admoni     </a></td><td>(CMU)</td></tr>
                           <tr><td><a href="http://www.cse.msu.edu/~jchai/">Joyce Chai              </a></td><td>(U Michigan)</td></tr>
                           <tr><td><a href="https://homes.cs.washington.edu/~yejin/">Yejin Choi     </a></td><td>(U Washington)</td></tr>
@@ -359,17 +375,18 @@
                           <tr><td><a href="https://elliottd.github.io/">Desmond Elliott  </a></td><td>(U Copenhagen)</td></tr>
                           <tr><td><a href="https://dpfried.github.io/">Daniel Fried       </a></td><td>(CMU)</td></tr>
                           <tr><td><a href="https://jessethomason.com/">Jesse Thomason  </a></td><td>(U Southern California)</td></tr>
+                          </tbody>
                         </table>
                       </center>
                     </div>
                   </div>
                 </div>
                 <div class="accordion">
-                  <div class="accordion-header" id="headingTen">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                  <h3 class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-controls="collapseTen">
                       I have a geographic constraint (e.g. two-body problem)
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseTen"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       That’s legit, and please let me know.  It doesn’t mean I can solve it, but with more
@@ -379,11 +396,11 @@
                 </div>
 
                 <div class="accordion">
-                  <div class="accordion-header" id="headingThirteen">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3">
+                  <h3 class="accordion-header" id="headingThirteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-controls="collapseOne3">
                       My question/issue isn’t on this list
                     </button>
-                  </div>
+                  </h3>
                   <div id="collapseOne3"  data-parent="#accordionEmail" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       Email me, let’s see what’s up. :)
@@ -396,12 +413,12 @@
         </div>
       </div>
 
-      <div class="accordion">
-          <div class="accordion-header" id="admissions">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterTwo">
+      <div class="accordion faq-section">
+          <h2 class="accordion-header" id="admissions">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterTwo" aria-controls="collapseOuterTwo">
               Understanding Graduate Admissions
             </button>
-          </div>
+          </h2>
           <div id="collapseOuterTwo" class="accordion-collapse collapse show" data-parent="#accordion"  >
             <div class="accordion-body">
               If you have additional questions, feel free to email me. Thanks!
@@ -409,11 +426,11 @@
                 <div class="accordion" id="accordion_admissions">
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingSixteen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-controls="collapseSixteen">
+                    <h3 class="accordion-header" id="headingSixteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-controls="collapseSixteen">
                         When should I start preparing my apps?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseSixteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Regardless of when you're reading this, you already have started your application.
@@ -438,11 +455,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingEighteen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen">
+                    <h3 class="accordion-header" id="headingEighteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-controls="collapseEighteen">
                         Should I do a 5th year MS? A professional MS? etc.
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseEighteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         It depends, but there are two factors that are potentially balancing each other out.
@@ -460,11 +477,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingFour">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                    <h3 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-controls="collapseFour">
                         When do you actually read applications?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseFour"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         We probably need to discuss how "rounds" work at LTI/RI.  There is an admissions
@@ -533,11 +550,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingTwelve">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
+                    <h3 class="accordion-header" id="headingTwelve">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-controls="collapseTwelve">
                         Feedback on my application?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseTwelve"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Hopefully this helps:
@@ -560,11 +577,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingEleven">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
+                    <h3 class="accordion-header" id="headingEleven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-controls="collapseEleven">
                         People say I should just apply, but I don’t have the money for that
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseEleven"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Hopefully this helps: <a href="https://www.cs.cmu.edu/academics/fee-waiver">https://www.cs.cmu.edu/academics/fee-waiver</a>
@@ -573,11 +590,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingThirteen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen">
+                    <h3 class="accordion-header" id="headingRecommendations">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-controls="collapseThirteen">
                         Who should write my recommendations?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseThirteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         TL;DR -- Professors with whom you have done research.<br><br>
@@ -593,6 +610,9 @@
                         notes.<br><br>
 
                         <table class="table table-responsive-sm table-sm">
+                          <thead>
+                            <tr><th scope="col">Letter writer</th><th scope="col">Assessment</th></tr>
+                          </thead>
                           <tbody>
                             <tr><td><b>Famous Professor</b></td>
                               <td>
@@ -650,11 +670,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingFourteen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen">
+                    <h3 class="accordion-header" id="headingFourteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-controls="collapseFourteen">
                         What to expect from an interview
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseFourteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         If you have been asked to interview, congrats! This is big, regardless of the result.
@@ -681,11 +701,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingFifteen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen">
+                    <h3 class="accordion-header" id="headingFifteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-controls="collapseFifteen">
                         Do I need publications to get into PhDs programs?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseFifteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         It's complicated.  In this space, we are looking for two things:
@@ -726,11 +746,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingSeventeen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen">
+                    <h3 class="accordion-header" id="headingSeventeen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-controls="collapseSeventeen">
                         Do I need a website?  Do I need to submit a video to LTI?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseSeventeen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Both of these contribute to your general professionalism. I don't recommend
@@ -763,11 +783,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingNineteen">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen">
+                    <h3 class="accordion-header" id="headingNineteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-controls="collapseNineteen">
                         I've heard that offers were already sent out, am I rejected?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseNineteen"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         Two important things here:
@@ -792,11 +812,11 @@
                   </div>
 
                   <div class="accordion">
-                    <div class="accordion-header" id="headingTwenty">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty">
+                    <h3 class="accordion-header" id="headingTwenty">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty" aria-controls="collapseTwenty">
                         English Scores?
                       </button>
-                    </div>
+                    </h3>
                     <div id="collapseTwenty"  data-parent="#accordion_admissions" class="accordion-collapse collapse">
                       <div class="accordion-body">
                         This is above my pay grade -- university level policies, etc etc but
@@ -823,12 +843,12 @@
           </div>
       </div>
 
-      <div class="accordion">
-          <div class="accordion-header" id="internships">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterThree">
+      <div class="accordion faq-section">
+          <h2 class="accordion-header" id="internships">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuterThree" aria-controls="collapseOuterThree">
               Emails about Internships, Visiting Researchers, and Collaborations.
             </button>
-          </div>
+          </h2>
           <div id="collapseOuterThree" class="accordion-collapse collapse show" data-parent="#accordion"  >
             <div class="accordion-body">
               <b>Internships and Visiting Researchers</b><br>

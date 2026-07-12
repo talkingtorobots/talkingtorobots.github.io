@@ -244,9 +244,11 @@
       </div>
     </nav>
 
+    <h1 class="sr-only">Publications</h1>
+
     <div class="wrapper" >
       <div class="content">
-        <center><h3><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</h3></center>
+        <center><p class="banner-title"><b>C</b>onnecting <b>L</b>anguage to <b>A</b>ctions & the <b>W</b>orld @ CMU</p></center>
       </div>
     </div>
       <br>
@@ -311,7 +313,7 @@
              {% set ns.current_year = entry['year'] %}
              <div class="row" style="margin-top:18px; margin-bottom:4px;">
                <div class="col-12">
-                 <h5 style="color:#888; font-weight:300; border-bottom:1px solid #ddd; padding-bottom:4px;">
+                 <h5 style="color:#767676; font-weight:300; border-bottom:1px solid #ddd; padding-bottom:4px;">
                    {{ entry['year'] }}
                  </h5>
                </div>
@@ -344,9 +346,12 @@
                   {% endif %}
               </div>
               <div class="col-md-7">
-                <b style="font-weight: 600; font-size:12pt" onclick="toggleEllipsis({{- loop.revindex -}});">
+                <h6 class="pub-title" id="pub-title-{{- loop.revindex -}}" style="font-weight: 600; font-size:12pt"
+                    tabindex="0" role="button" aria-expanded="false" aria-controls="ellipsis-ex{{- loop.revindex -}}"
+                    onclick="toggleEllipsis({{- loop.revindex -}});"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEllipsis({{- loop.revindex -}});}">
                     {{ entry['title'] }}
-                </b><br>
+                </h6><br>
                 <div class="card-text">
                   <i class="pub-meta" onclick="toggleEllipsis({{- loop.revindex -}});">
                     {{ entry['venue'] }} ({{ entry['year'] }})
@@ -406,6 +411,10 @@
         function toggleEllipsis(x) {
           var element = document.querySelector("#ellipsis-ex"+x);
           element.classList.toggle("text-truncate");
+          var trigger = document.querySelector("#pub-title-"+x);
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", !element.classList.contains("text-truncate"));
+          }
         }
         </script>
 
