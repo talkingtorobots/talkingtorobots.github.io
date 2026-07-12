@@ -3,10 +3,8 @@
 <html lang="en">
 
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <meta name=viewport content="width=device-width, initial-scale=1">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,42 +19,19 @@
 
     <!-- https://codemyui.com/text-flip-on-hover/ -->
     <script>
-      (function($){
-        $.fn.flip = function(options){
-        var options = $.extend({
-          targetClass: '.m-flip_item'
-        }, options);
-    
-            return this.each(function(){
-              console.log(this);
-          var $this = $(this),
-            $target = $this.find(options.targetClass);
-    
-          $this
-            .on({
-              'init.flip': function(){
-                var targetFirst_height = $target.eq(0).height();
-    
-                $this
-                  .data('height', targetFirst_height)
-                  .css({ height: targetFirst_height });
-              },
-              'mouseenter.flip': function(){
-                $target.css({ top: -$this.data('height')  + 'px' });
-              },
-              'mouseleave.flip': function(){
-                $target.css({ top: 0 + 'px' });
-              }
-            })
-            .trigger('init.flip');
+      document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.js-flip').forEach(function(el){
+          var target = el.querySelectorAll('.m-flip_item');
+          var height = target[0].offsetHeight;
+          el.style.height = height + 'px';
+          el.addEventListener('mouseenter', function(){
+            target.forEach(function(item){ item.style.top = -height + 'px'; });
+          });
+          el.addEventListener('mouseleave', function(){
+            target.forEach(function(item){ item.style.top = '0px'; });
+          });
         });
-        };
-    }(jQuery));
-    
-    $(function(){
-      $('.js-flip').flip();
-    });
-
+      });
     </script>
 
     <meta charset="utf-8">
@@ -116,7 +91,6 @@
     </div>
 
     <br>
-    <div class="table">
     <div class="row">
       <div class="col-sm-1">
       </div>
@@ -736,7 +710,7 @@
               <div class="card student" style="max-width: 200px;">
                 <img src=images/students/star.jpg class="card-img-top" alt="Black cat">
                 <div class="card-body">
-                      <span class="m-flip_item"><b>Star 🌟</b></a></span>
+                      <span class="m-flip_item"><b>Star 🌟</b></span>
                     <h6><font class="pronoun">she/her</font>
                     </h6>
                 </div>
@@ -744,7 +718,7 @@
               <div class="card student" style="max-width: 200px;">
                 <img src=images/students/comet.jpg class="card-img-top" alt="Black and white cat">
                 <div class="card-body">
-                      <span class="m-flip_item"><b>Comet 💫</b></a></span>
+                      <span class="m-flip_item"><b>Comet 💫</b></span>
                     <h6><font class="pronoun">he/him</font>
                     </h6>
                 </div>
