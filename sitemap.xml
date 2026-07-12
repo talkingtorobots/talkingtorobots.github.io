@@ -4,59 +4,51 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://talkingtorobots.com/</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
+  <lastmod>2026-07-11</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://talkingtorobots.com/publications.html</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
+  <lastmod>2026-07-11</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://talkingtorobots.com/CLAW/</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://talkingtorobots.com/teaching.html</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://talkingtorobots.com/resources.html</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
+  <lastmod>2026-07-11</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://talkingtorobots.com/yonatanbisk.html</loc>
-  <lastmod>2023-12-29T16:52:40+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-07-11</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://talkingtorobots.com/CLAW/index.html</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://talkingtorobots.com/teaching.html</loc>
+  <lastmod>2026-07-11</lastmod>
+  <priority>0.60</priority>
 </url>
 <url>
-  <loc>https://talkingtorobots.com/index.html</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://talkingtorobots.com/resources.html</loc>
+  <lastmod>2026-07-11</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://talkingtorobots.com/FAQ.html</loc>
+  <lastmod>2026-07-11</lastmod>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://talkingtorobots.com/11-851/</loc>
-  <lastmod>2023-10-10T16:13:40+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-07-11</lastmod>
+  <priority>0.50</priority>
 </url>
 <url>
-  <loc>https://talkingtorobots.com/11-851/papers/</loc>
-  <lastmod>2023-10-10T16:13:45+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://talkingtorobots.com/11-851/papers.html</loc>
+  <lastmod>2026-07-11</lastmod>
+  <priority>0.40</priority>
 </url>
-
 
 </urlset>
