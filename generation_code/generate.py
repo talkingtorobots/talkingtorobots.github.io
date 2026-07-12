@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 import yaml
 import openpyxl
 import argparse
@@ -105,6 +106,27 @@ def update_pub_entry(entry):
   # Authors and links to all co-authors
   entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names)
 
+def build_recent_pubs_jsonld(n=5):
+    items = []
+    for i, entry in enumerate(pubs[:n], start=1):
+        article = {
+            "@type": "ScholarlyArticle",
+            "name": entry["title"],
+            "author": [{"@type": "Person", "name": a} for a in entry["authors"]],
+            "datePublished": entry["year"],
+            "isPartOf": {"@type": "Periodical", "name": entry["venue"]},
+        }
+        if entry.get("url"):
+            article["url"] = entry["url"]
+        items.append({"@type": "ListItem", "position": i, "item": article})
+
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Most Recent Publications - CLAW @ CMU",
+        "itemListElement": items,
+    }, indent=2)
+
 def generate_publications_website():
     pub_template = jinja_env.get_template("pub_template.jinja2")
 
@@ -117,7 +139,10 @@ def generate_publications_website():
         u = 1.0
         data[entry["field"]] += u
 
-    rendered = pub_template.render(publications=pubs, data=data, colors=colors, types=types)
+    recent_pubs_jsonld = build_recent_pubs_jsonld()
+
+    rendered = pub_template.render(publications=pubs, data=data, colors=colors, types=types,
+                                   recent_pubs_jsonld=recent_pubs_jsonld)
     with open("../publications.html", 'wt') as output_file:
         output_file.write(rendered)
 
@@ -191,6 +216,35 @@ def generate_group_page():
                                          masters=masters)
     with open("../CLAW/index.html", 'wt') as output_file:
         output_file.write(group_render)
+
+def generate_llms_txt():
+    lines = [
+        "# Yonatan Bisk / CLAW @ CMU",
+        "",
+        "> Connecting Language to Action and the World -- Yonatan Bisk's lab at "
+        "Carnegie Mellon University, working on embodied AI, grounded language, "
+        "robotics, and multimodal machine learning.",
+        "",
+        "## Pages",
+        "",
+        "- [Homepage](https://talkingtorobots.com/): About the CLAW lab and its research themes.",
+        "- [Publications](https://talkingtorobots.com/publications.html): Full, searchable list of papers.",
+        "- [Group](https://talkingtorobots.com/CLAW/): Current students, postdocs, and alumni.",
+        "- [Yonatan Bisk](https://talkingtorobots.com/yonatanbisk.html): PI homepage, bio, and contact FAQ.",
+        "- [Teaching](https://talkingtorobots.com/teaching.html): Courses taught at CMU.",
+        "- [Resources](https://talkingtorobots.com/resources.html): Benchmarks and code released by the lab.",
+        "- [Grad School FAQ](https://talkingtorobots.com/FAQ.html): Advice for prospective students.",
+        "",
+        "## Recent Publications",
+        "",
+    ]
+    for entry in pubs[:10]:
+        link = entry.get("url") or "https://talkingtorobots.com/publications.html"
+        lines.append(f"- [{entry['title']}]({link}): {entry['venue']} ({entry['year']})")
+    lines.append("")
+
+    with open("../llms.txt", 'wt') as output_file:
+        output_file.write("\n".join(lines))
 
 def generate_COA():
 
@@ -267,6 +321,7 @@ def main():
     if not args.onepager:
         generate_group_page()
         generate_COA()
+        generate_llms_txt()
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,26 @@
+# Yonatan Bisk / CLAW @ CMU
+
+> Connecting Language to Action and the World -- Yonatan Bisk's lab at Carnegie Mellon University, working on embodied AI, grounded language, robotics, and multimodal machine learning.
+
+## Pages
+
+- [Homepage](https://talkingtorobots.com/): About the CLAW lab and its research themes.
+- [Publications](https://talkingtorobots.com/publications.html): Full, searchable list of papers.
+- [Group](https://talkingtorobots.com/CLAW/): Current students, postdocs, and alumni.
+- [Yonatan Bisk](https://talkingtorobots.com/yonatanbisk.html): PI homepage, bio, and contact FAQ.
+- [Teaching](https://talkingtorobots.com/teaching.html): Courses taught at CMU.
+- [Resources](https://talkingtorobots.com/resources.html): Benchmarks and code released by the lab.
+- [Grad School FAQ](https://talkingtorobots.com/FAQ.html): Advice for prospective students.
+
+## Recent Publications
+
+- [Not All Thinking Helps: Which Reasoning Behaviors Matter Most in Thinking Models](https://talkingtorobots.com/publications.html): Third Conference on Language Modeling (2026)
+- [Inductive Generalization for Robotic Manipulation](https://arxiv.org/abs/2606.20999): ArXiv (2026)
+- [Flatness Preserves Instruction Following in Vision-Language-Action Models](https://arxiv.org/abs/2606.23641): ArXiv (2026)
+- [ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies](https://arxiv.org/abs/2606.31132): ArXiv (2026)
+- [IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning](https://arxiv.org/abs/2603.20182): IEEE/RSJ International Conference on Intelligent Robots and Systems (2026)
+- [When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents](https://arxiv.org/abs/2605.29938): ArXiv (2026)
+- [Position: Evaluation of {ML} Resource Utilization Requires Model Life Cycle Assessment](https://openreview.net/forum?id=8voi61IiZC): Forty-third International Conference on Machine Learning Position Paper Track (2026)
+- [MM-SeR: Multimodal Self-Refinement for Lightweight Image Captioning](https://arxiv.org/abs/2508.21451): Computer Vision and Pattern Recognition Conference (2026)
+- [RobotArena $\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation](https://arxiv.org/abs/2510.23571): The Fourteenth International Conference on Learning Representations (2026)
+- [Unsupervised Discovery of Long-Term Spatiotemporal Periodic Workflows in Human Activities](https://arxiv.org/abs/2511.14945): The Winter Conference on Applications of Computer Vision (2026)
