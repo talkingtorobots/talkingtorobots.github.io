@@ -1,5 +1,4 @@
-{% include 'cv_preamble.jinja2' %}
-{% raw %}
+\BLOCK{include 'cv_preamble.jinja2'}
 
 %----------------------------------------------------------------------------------
 %            content
@@ -19,70 +18,63 @@
 \cventry{2015 --}{Postdoctoral Scholar}{}{}{}{Information Sciences Institute, University of Southern California \hfill w/ Daniel Marcu}
 
 \section{Education}
-\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}  
+\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}
 \cventry{2009}{BS in Computer Science}{The University of Texas at Austin}{Turing Scholar}{\newline Thesis: The Necessity of Separating Control and Logic When Grounding Language using Neuroevolution}{Advisor: Risto Miikkulainen\ \ \ \ \ \ \ \ Second Reader: Raymond Mooney}
 
 \section{Postdocs \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
-{% endraw %}
-{%- for entry in postdocs %}
-  \stud{Post}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['capt'] -}} }
-    {%- if 'co' in entry %}
-      {(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} })}
-    {%- else %}
+\BLOCK{for entry in postdocs}
+  \stud{Post}{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }{ \VAR{- entry['pron'] -} }{ \VAR{- entry['capt'] -} }
+    \BLOCK{- if 'co' in entry}
+      {(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })}
+    \BLOCK{- else}
       {}
-    {%- endif %}
-    { {{- entry['dept'] -}} }{ {{- entry['start'] }} -- }
-{%- endfor %}
-{% raw %}
+    \BLOCK{- endif}
+    { \VAR{- entry['dept'] -} }{ \VAR{- entry['start'] } -- }
+\BLOCK{- endfor}
+
 
 \section{PhD Students} % \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
-{% endraw %}
-{%- for entry in students %}
-  \stud{PhD}{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }{ {{- entry['pron'] -}} }{ {{- entry['capt'] -}} }
-    {%- if 'co' in entry %}
-      {(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} })}
-    {%- else %}
+\BLOCK{for entry in students}
+  \stud{PhD}{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }{ \VAR{- entry['pron'] -} }{ \VAR{- entry['capt'] -} }
+    \BLOCK{- if 'co' in entry}
+      {(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })}
+    \BLOCK{- else}
       {}
-    {%- endif %}
-    { {{- entry['dept'] -}} }{ {{- entry['start'] }} -- }
-{%- endfor %}
-{% set role_tag = {'Intern': 'Intern', 'Undergrad': 'Ugrad', 'Undergraduate': 'Ugrad',
+    \BLOCK{- endif}
+    { \VAR{- entry['dept'] -} }{ \VAR{- entry['start'] } -- }
+\BLOCK{- endfor}
+\BLOCK{ set role_tag = {'Intern': 'Intern', 'Undergrad': 'Ugrad', 'Undergraduate': 'Ugrad',
                     '5th Year MS': '5th', '5th year MS': '5th',
-                    'MSR': 'MSR', 'MLT': 'MLT', 'MS': 'MS'} %}
-{%- set intern_roles = ['Intern', 'Undergrad', 'Undergraduate'] %}
-{% macro stud_entry(entry) -%}
-\stud{ {{- role_tag.get(entry['role'], entry['role']) -}} }{ {{- entry['url']|default('')|replace('https://','')|replace('http://','') -}} }{ {{- entry['name'] -}} }{ {{- entry['pron']|default('') -}} }{ {{- entry['topic'] -}} }{ {%- if 'co' in entry -%}(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} }){%- endif -%} }{ {{- entry.get('dept','') -}} }{ {{- entry['start'] ~ ' -- ' ~ entry['year'] if 'start' in entry and entry['start'] != entry['year'] else entry['year'] -}} }
-{%- endmacro -%}
-{% raw %}
+                    'MSR': 'MSR', 'MLT': 'MLT', 'MS': 'MS'} }
+\BLOCK{- set intern_roles = ['Intern', 'Undergrad', 'Undergraduate']}
+\BLOCK{ macro stud_entry(entry) -}
+\stud{ \VAR{- role_tag.get(entry['role'], entry['role']) -} }{ \VAR{- entry['url']|default('')|replace('https://','')|replace('http://','') -} }{ \VAR{- entry['name'] -} }{ \VAR{- entry['pron']|default('') -} }{ \VAR{- entry['topic'] -} }{ \BLOCK{- if 'co' in entry -}(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })\BLOCK{- endif -} }{ \VAR{- entry.get('dept','') -} }{ \VAR{- entry['start'] ~ ' -- ' ~ entry['year'] if 'start' in entry and entry['start'] != entry['year'] else entry['year'] -} }
+\BLOCK{- endmacro}
 
 \section{Masters}
-{% endraw %}
-{%- for entry in masters %}
-{{ stud_entry(entry) }}
-{%- endfor %}
-{% raw %}
+\BLOCK{for entry in masters}
+\VAR{ stud_entry(entry) }
+\BLOCK{- endfor}
+
 
 \section{Alumni}
 \subsection{PhD}
-{% endraw %}
-{%- for entry in alumni_phd %}
-\cventry{ {{- entry['dept'] -}} }{\href{ {{- entry['url'] -}} }{ {{- entry['name'] -}} }}{ {%- if 'co' in entry -%}(co-\href{ {{- entry['co_url'] -}} }{ {{- entry['co'] -}} }){%- endif -%} }{\hfill {{ entry['start'] }}-{{ entry['year'] }}}{\newline {{ entry['thesis'] }}}{}
-{%- endfor %}
-{% raw %}
+\BLOCK{for entry in alumni_phd}
+\cventry{ \VAR{- entry['dept'] -} }{\href{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }}{ \BLOCK{- if 'co' in entry -}(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })\BLOCK{- endif -} }{\hfill \VAR{ entry['start'] }-\VAR{ entry['year'] }}{\newline \VAR{ entry['thesis'] }}{}
+\BLOCK{- endfor}
+
 
 \subsection{MS}
-{% endraw %}
-{%- for entry in alumni if entry['role'] not in intern_roles %}
-{{ stud_entry(entry) }}
-{%- endfor %}
-{% raw %}
+\BLOCK{for entry in alumni if entry['role'] not in intern_roles}
+\VAR{ stud_entry(entry) }
+\BLOCK{- endfor}
+
 
 \subsection{Interns and Undergraduates}
-{% endraw %}
-{%- for entry in alumni if entry['role'] in intern_roles %}
-{{ stud_entry(entry) }}
-{%- endfor %}
-{% raw %}
+\BLOCK{for entry in alumni if entry['role'] in intern_roles}
+\VAR{ stud_entry(entry) }
+\BLOCK{- endfor}
+
 
 \subsection{Capstones}
 \cventry{MCDS}{VR Robot Teleop\hfill \textnormal{\hintfont{2024}}}{}{}{}{}{}\\
@@ -97,21 +89,21 @@
 \cventry{MRSD}{\href{https://mrsdprojects.ri.cmu.edu/2023teamf/}{Assistive Robotics for Eldercare}
         (*co-\href{https://zackory.com/}{Z Erickson}) \hfill \textnormal{\hintfont{2023}}}{}{}{}{}{}
         \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          \href{}{Abhinav Gupta     } & \pron{he/him}  & 
+          \href{}{Abhinav Gupta     } & \pron{he/him}  &
           \href{}{Atharva Pusalkar  } & \pron{he/him} \\
-          \href{}{Praveen Venkatesh } & \pron{he/him}  & 
+          \href{}{Praveen Venkatesh } & \pron{he/him}  &
           \href{}{Shaolin Kataria   } & \pron{he/him}  \\
-          \href{}{Shivam Tripathy   } & \pron{he/him} & 
+          \href{}{Shivam Tripathy   } & \pron{he/him} &
           \href{}{} & \pron{} \\
         \end{tabular}
-\cventry{MRSD}{Modular Teleop with Autonomy 
+\cventry{MRSD}{Modular Teleop with Autonomy
         (*co-\href{https://zackory.com/}{Z Erickson}) \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
         \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          \href{https://linkedin.com/in/jashdiyora/         }{Jashkumar Diyora   } & \pron{he/him}  & 
+          \href{https://linkedin.com/in/jashdiyora/         }{Jashkumar Diyora   } & \pron{he/him}  &
           \href{https://linkedin.com/in/shruti-gangopadhyay/}{Shruti Gangopadhyay} & \pron{she/her} \\
-          \href{https://linkedin.com/in/jigarkumar-patel/   }{Jigar Patel        } & \pron{he/him}  & 
+          \href{https://linkedin.com/in/jigarkumar-patel/   }{Jigar Patel        } & \pron{he/him}  &
           \href{https://linkedin.com/in/prakharpradeep/     }{Prakhar Pradeep    } & \pron{he/him}  \\
-          \href{https://allaboutrobotix.com/                }{Shivani Sivakumar  } & \pron{she/her} & 
+          \href{https://allaboutrobotix.com/                }{Shivani Sivakumar  } & \pron{she/her} &
           \href{}{} & \pron{} \\
         \end{tabular}
 \cventry{MCDS}{Embodied Navigation and Interaction \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
@@ -134,7 +126,7 @@
         \end{tabular}
 \cventry{MCDS}{Novel Concept Learning \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
         \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          Bharani Ujjaini Kempaiah & \pron{she/her} & 
+          Bharani Ujjaini Kempaiah & \pron{she/her} &
           Linyi Li                 & \pron{she/her}\\
         \end{tabular}
 \cventry{MSAII}{Visual Patent Search \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
@@ -143,92 +135,92 @@
           Zhiyuan Guo                                                          & \pron{he/him } \\
           \href{https://linkedin.com/in/goyal-mansi/}{Mansi Goyal}             & \pron{she/her} &
           \href{https://linkedin.com/in/martamendezsimon/}{Marta Mendez Simon} & \pron{she/her} \\
-          Sreenidhi Sundaram                                                   & \pron{she/her} & 
+          Sreenidhi Sundaram                                                   & \pron{she/her} &
           Leon Van Den Berghe                                                  & \pron{he/him}  \\
         \end{tabular}
 
 %\section{Publications} %\hfill \href{https://scholar.google.com/citations?user=bWoGh8UAAAAJ&hl=en}{Google Scholar} h-index:38}
-{% endraw %}
-{% for pub_type in pub_types %}
-\section{ {{- pub_type }} Publications}
-  {% for entry in publications[pub_type] %}
-  \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
-      \href{ {{- entry['url'] if 'url' in entry else '' -}} }
-            { {{ entry['title'].replace('&', '\\&') }}     }
-      \end{minipage}\hfill \textnormal{ {{ entry['year'] }} } }
+
+\BLOCK{ for pub_type in pub_types }
+\section{ \VAR{- pub_type } Publications}
+  \BLOCK{ for entry in publications[pub_type] }
+  \pub{ \VAR{entry['idx']} }{\begin{minipage}[t]{5.2in}
+      \href{ \VAR{- entry['url'] if 'url' in entry else '' -} }
+            { \VAR{ entry['title'].replace('&', '\\&') }     }
+      \end{minipage}\hfill \textnormal{ \VAR{ entry['year'] } } }
       {\begin{tabular}{ @{}p{5.2in} }
-          {{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
+          \VAR{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }
       \end{tabular} }
       {\begin{tabular}{@{}p{5in} }
-          {{ entry['venue'] }} 
-          {%- if 'note' in entry -%}
-          \\ -- \textbf{ {{- entry['note'] -}} }
-          {% endif %}
-          {{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}}
+          \VAR{ entry['venue'] }
+          \BLOCK{- if 'note' in entry -}
+          \\ -- \textbf{ \VAR{- entry['note'] -} }
+          \BLOCK{ endif }
+          \VAR{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}
       \end{tabular} } { }{}
-  {%- endfor -%}
-{%- endfor %}
+  \BLOCK{- endfor -}
+\BLOCK{- endfor }
 
 
 \section{Thesis Committees}
-{%- for year, types in theses.items() %}
-  {%- for type, students in types.items() %}
-    {%- for student, properties in students.items() %}
-      \cventry{ {{- year -}} }
-              { {{- type -}} }
-              {\href{ {{- properties['url'] -}} }
-              { {{- student -}} } }
-              {\hfill {{properties['adv'] -}} }
-              { {{- properties['uni'] -}} }
+\BLOCK{- for year, types in theses.items() }
+  \BLOCK{- for type, students in types.items() }
+    \BLOCK{- for student, properties in students.items() }
+      \cventry{ \VAR{- year -} }
+              { \VAR{- type -} }
+              {\href{ \VAR{- properties['url'] -} }
+              { \VAR{- student -} } }
+              {\hfill \VAR{properties['adv'] -} }
+              { \VAR{- properties['uni'] -} }
               {}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor %}
+    \BLOCK{- endfor -}
+  \BLOCK{- endfor -}
+\BLOCK{- endfor }
 
 
 \section{Teaching}
-{%- for year, semesters in teaching.items() %}
-  {%- for semester, entries in semesters.items() %}
-    {%- set year_loop = loop %}
-    {%- for entry in entries %}
-      {%- if year_loop.first and loop.first %}
-          \cventry{ {{- year  -}} }
-                  { {{- entry['class'] -}} }
-                  { {{- 'w/' + entry['co'] if 'co' in entry else '' -}} }
-                  { \hfill \numS{ {{- entry['size'] -}} } }
-                  { {{- semester -}} }{}
-        {%- else %}
+\BLOCK{- for year, semesters in teaching.items() }
+  \BLOCK{- for semester, entries in semesters.items() }
+    \BLOCK{- set year_loop = loop }
+    \BLOCK{- for entry in entries }
+      \BLOCK{- if year_loop.first and loop.first }
+          \cventry{ \VAR{- year  -} }
+                  { \VAR{- entry['class'] -} }
+                  { \VAR{- 'w/' + entry['co'] if 'co' in entry else '' -} }
+                  { \hfill \numS{ \VAR{- entry['size'] -} } }
+                  { \VAR{- semester -} }{}
+        \BLOCK{- else }
           \cventry{ -- }
-                  { {{- entry['class'] -}} }
-                  { {{- 'w/' + entry['co'] if 'co' in entry else '' -}} }
-                  { \hfill \numS{ {{- entry['size'] -}} } }
-                  { {{- semester -}} }{}
-        {%- endif %}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor %}
+                  { \VAR{- entry['class'] -} }
+                  { \VAR{- 'w/' + entry['co'] if 'co' in entry else '' -} }
+                  { \hfill \numS{ \VAR{- entry['size'] -} } }
+                  { \VAR{- semester -} }{}
+        \BLOCK{- endif }
+    \BLOCK{- endfor -}
+  \BLOCK{- endfor -}
+\BLOCK{- endfor }
 
 \section{(Senior) Area Chair / Action Editor}
-{%- for year, areas in areachair.items() %}
-  {%- for area, roles in areas.items() %}
-    {%- set year_loop = loop %}
-    {%- for role, conferences in roles.items() %}
-      {%- set area_loop = loop %}
-      {%- for conference in conferences %}
-        {%- if year_loop.first and area_loop.first and loop.first %}
-          \cventry{ {{ year }} }
-                  { {{ role -}}: {{ conference }} }
-                  { \AC{ {{- area -}} } }{}{}{}
-        {%- else %}
+\BLOCK{- for year, areas in areachair.items() }
+  \BLOCK{- for area, roles in areas.items() }
+    \BLOCK{- set year_loop = loop }
+    \BLOCK{- for role, conferences in roles.items() }
+      \BLOCK{- set area_loop = loop }
+      \BLOCK{- for conference in conferences }
+        \BLOCK{- if year_loop.first and area_loop.first and loop.first }
+          \cventry{ \VAR{ year } }
+                  { \VAR{ role -}: \VAR{ conference } }
+                  { \AC{ \VAR{- area -} } }{}{}{}
+        \BLOCK{- else }
           \cventry{ -- }
-                  { {{ role -}}: {{ conference }} }
-                  { \AC{ {{- area -}} } }{}{}{}
-        {%- endif %}
-      {%- endfor %}
-    {%- endfor %}
-  {%- endfor %}
-{%- endfor %}
-{% raw %}
+                  { \VAR{ role -}: \VAR{ conference } }
+                  { \AC{ \VAR{- area -} } }{}{}{}
+        \BLOCK{- endif }
+      \BLOCK{- endfor }
+    \BLOCK{- endfor }
+  \BLOCK{- endfor }
+\BLOCK{- endfor }
+
 
 
 \section{Reviewer}
@@ -361,4 +353,3 @@
 
 
 \end{document}
-{% endraw %}

@@ -21,6 +21,20 @@ args = parser.parse_args()
 
 jinja_env = Environment(loader=FileSystemLoader("templates"))
 
+# LaTeX's own syntax is full of { and }, which collide with Jinja's default
+# delimiters and force every template to wrap literal LaTeX in {% raw %}/{% endraw %}.
+# This environment uses LaTeX-friendly delimiters instead, so CV templates can be
+# plain LaTeX with \VAR{...}/\BLOCK{...} sprinkled in and no raw blocks anywhere.
+latex_env = Environment(
+    block_start_string=r'\BLOCK{',
+    block_end_string='}',
+    variable_start_string=r'\VAR{',
+    variable_end_string='}',
+    comment_start_string=r'\#{',
+    comment_end_string='}',
+    loader=FileSystemLoader("templates"),
+)
+
 def load_yaml(path):
     return yaml.load(open(path), Loader=yaml.CLoader)
 
@@ -119,7 +133,7 @@ def generate_CV():
         template = "CV_template_1p.jinja2"
     else:
         template = "CV_template.jinja2"
-    latex_template = jinja_env.get_template(template)
+    latex_template = latex_env.get_template(template)
     latex_papers = {"Journal": [],
                     "Conference": [],
                     "Workshop": [],

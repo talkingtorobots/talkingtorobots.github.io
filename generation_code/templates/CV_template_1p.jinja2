@@ -1,5 +1,4 @@
-{% include 'cv_preamble.jinja2' %}
-{% raw %}
+\BLOCK{include 'cv_preamble.jinja2'}
 
 %----------------------------------------------------------------------------------
 %            content
@@ -11,31 +10,29 @@
 \cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy)}
 
 \section{Education}
-\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}  
+\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}
 
 %\section{Publications} %\hfill \href{https://scholar.google.com/citations?user=bWoGh8UAAAAJ&hl=en}{Google Scholar} h-index:38}
-{% endraw %}
 \section{ Publications}
-  {% for pub_type in pub_types %}
-  {% for entry in publications[pub_type] %}
-  \pub{ {{entry['idx']}} }{\begin{minipage}[t]{5.2in}
-      \href{ {{- entry['url'] if 'url' in entry else '' -}} }
-            { {{ entry['title'].replace('&', '\\&') }}     }
-      \end{minipage}\hfill \textnormal{ {{ entry['year'] }} } }
+  \BLOCK{for pub_type in pub_types}
+  \BLOCK{for entry in publications[pub_type]}
+  \pub{ \VAR{entry['idx']} }{\begin{minipage}[t]{5.2in}
+      \href{ \VAR{- entry['url'] if 'url' in entry else '' -} }
+            { \VAR{ entry['title'].replace('&', '\\&') }     }
+      \end{minipage}\hfill \textnormal{ \VAR{ entry['year'] } } }
       {\begin{tabular}{ @{}p{5.2in} }
-          {{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }}
+          \VAR{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }
       \end{tabular} }
       {\begin{tabular}{@{}p{5in} }
-          {{ entry['venue'] }} 
-          {%- if 'note' in entry -%}
-          \\ -- \textbf{ {{- entry['note'] -}} }
-          {% endif %}
-          {{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}}
+          \VAR{ entry['venue'] }
+          \BLOCK{- if 'note' in entry -}
+          \\ -- \textbf{ \VAR{- entry['note'] -} }
+          \BLOCK{ endif }
+          \VAR{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}
       \end{tabular} } { }{}
-  {%- endfor -%}
-{%- endfor -%}
+  \BLOCK{- endfor -}
+\BLOCK{- endfor -}
 
-{% raw %}
 \section{(Senior) Area Chair / Action Editor}
 \cventry{2025}{Conference on Robot Learning (CoRL)}{\AC{Robo}}{}{}{}
 \cventry{--}{International Conference on Machine Learning (ICML)}{\AC{AI/ML}}{}{}{}
@@ -43,4 +40,3 @@
 \cventry{--}{Robotics: Science and Systems (RSS)}{\AC{Robo}}{}{}{}
 \cventry{--}{Conference on Language Modeling (COLM)}{\AC{NLP}}{}{}{}
 \end{document}
-{% endraw %}
