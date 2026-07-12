@@ -358,20 +358,20 @@
                       <br>
                   {% if 'url' in entry and entry['url']|length > 0 %}
                     {% if 'arxiv' in entry['url'] %}
-                      <a href={{- entry['url']}} class="icon-link"><img src="images/arxiv.svg" class="icon-img" height=18pt></a>
+                      <a href={{- entry['url']}} class="icon-link"><img src="images/arxiv.svg" class="icon-img" height=18pt alt="arXiv preprint"></a>
                     {% else %}
-                      <a href={{- entry['url']}} class="icon-link"><img src="images/pdf.svg" class="icon-img filter-blue" height=16pt><font class="extra-link-font">PDF</font> </a>
+                      <a href={{- entry['url']}} class="icon-link"><img src="images/pdf.svg" class="icon-img filter-blue" height=16pt alt="PDF"><font class="extra-link-font">PDF</font> </a>
                     {% endif %}
                   {% endif %}
                   <a  title class="icon-link"
                       data-original-title="Copy BibTex" id="buttonidx{{- loop.revindex -}}"
                       href="javascript:void(0)" onclick="show('idx{{- loop.revindex -}}')">
-                      <img src="images/tex.svg" width=30pt class="icon-img filter-blue">
+                      <img src="images/tex.svg" width=30pt class="icon-img filter-blue" alt="Copy BibTeX">
                     </a>
                     {% if 'extras' in entry %}
                       {% for key in entry['extras'] %}
                         {% if 'github' in key %}
-                          <font class="extra-link-font"><a href="{{- entry['extras'][key] -}}" class="icon-link"><img src="images/github.svg" class="icon-img filter-blue" height=18pt></a></font>
+                          <font class="extra-link-font"><a href="{{- entry['extras'][key] -}}" class="icon-link"><img src="images/github.svg" class="icon-img filter-blue" height=18pt alt="GitHub code"></a></font>
                         {% else %}
                           <font class="extra-link-font"><a href="{{- entry['extras'][key] -}}" style="padding-right:20px;">{{- key -}}</a></font>
                         {% endif %}
@@ -392,6 +392,7 @@
               <div class="col-md-4">
                 {% if 'fig' in entry %}
                   <img src="figures/{{- entry['fig'] -}}"
+                    alt="{{- entry['caption']|e -}}"
                     style="width:100%; height:120px; object-fit:cover; border-radius:4px;">
                 {% endif %}
               </div>

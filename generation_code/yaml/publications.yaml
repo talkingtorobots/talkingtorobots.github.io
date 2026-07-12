@@ -24,6 +24,7 @@
   - Yingshan Chang
   student: Annabella Macaluso
   fig: inductive.jpg
+  caption: "Diagram contrasting conventional train/test evaluation with inductive generalization, where a robot arm must succeed on tasks along a changing axis it wasn't directly trained on."
 - year: "2026"
   field: WS4
   type: Preprint
@@ -38,6 +39,7 @@
   extras:
     Website: https://haochenz11.github.io/papers/flatness-vla/
   fig: flatness.jpg
+  caption: "Two 3D loss-landscape plots comparing standard VLA finetuning, which has sharp peaks, against flatness-preserving finetuning, which yields a smoother loss surface."
 - year: "2026"
   field: WS4
   type: Preprint
@@ -51,6 +53,7 @@
   - Yonatan Bisk
   - Andrea Bajcsy
   fig: elastic.jpg
+  caption: "Diagram of the ELASTIC denoising process, showing parallel candidate trajectories scored by a Q-function and the real robot execution of the selected \"put purple mug in basket\" action."
 - year: "2026"
   field: O
   type: Conference
@@ -73,6 +76,7 @@
   extras:
     Website: "https://fandulu.github.io/IndoorR2X_project_page/"
   fig: indoorR2X.jpg
+  caption: "System diagram of IndoorR2X showing a house floorplan with cameras and IoT sensors feeding a coordination hub and LLM-based planner that assigns tasks to three robots."
 - year: "2026"
   field: O
   type: Preprint
@@ -92,6 +96,7 @@
   - Louis-Philippe Morency
   - Maarten Sap
   fig: readroom.png
+  caption: "Bar chart of survey responses on whether current AI agents are sociable, understand emotion, have social intelligence, and other social-intelligence traits."
 - year: "2026"
   field: O
   type: Conference
@@ -107,6 +112,7 @@
   - Constantine Samaras
   - Emma Strubell
   fig: LCA.png
+  caption: "Diagram mapping a cradle-to-grave model life cycle (material extraction, manufacture, use, end of life) onto the pretraining, post-training, and inference stages of language models like GPT-2 and Llama 3."
 - year: '2026'
   field: WS3
   type: Conference
@@ -123,6 +129,7 @@
   venue_acr: "CVPR"
   url: "https://arxiv.org/abs/2508.21451"
   fig: mmser.png
+  caption: "Example of multimodal self-refinement correcting a blurry image caption from placeholder tokens to accurate details, alongside the model architecture with a vision transformer, connector, and language model."
   extras:
     Website: "https://june-page.github.io/mmser/"
 - year: '2026'
@@ -144,6 +151,7 @@
   venue: "The Fourteenth International Conference on Learning Representations"
   venue_acr: "ICLR"
   fig: roboarena.jpg
+  caption: "Overview of RobotArena's pipeline: converting real robot videos into large-scale simulated environments for automatic policy evaluation and human preference comparison."
   url: "https://arxiv.org/abs/2510.23571"
 - year: '2026'
   field: WS3
@@ -162,6 +170,7 @@
   venue: "The Winter Conference on Applications of Computer Vision"
   venue_acr: "WACV"
   fig: workflows.jpg
+  caption: "Comparison of short-term periodic activity detection against the paper's long-term method, which tokenizes spatiotemporal activity sequences and extracts a multi-branch workflow graph."
   url: "https://arxiv.org/abs/2511.14945"
 - year: '2026'
   field: WS4
@@ -179,6 +188,7 @@
   venue: "2026 IEEE International Conference on Robotics and Automation (ICRA)"
   venue_acr: "ICRA"
   fig: raven.jpg
+  caption: "Simulated construction-site navigation showing a drone reasoning step by step through semantic voxel search, ray-based memory, and LVLM-guided search to locate a bio toilet."
   url: "https://arxiv.org/abs/2509.23563"
 - year: '2026'
   field: WS3
@@ -200,6 +210,7 @@
   venue: "International Conference on Pattern Recognition"
   venue_acr: "ICPR"
   fig: fieldwork.jpg
+  caption: "Sample surveillance-camera frames from FieldWorkArena's four field categories: factory, warehouse, convenience store, and supermarket."
 - year: '2026'
   field: WS4
   type: Journal
@@ -224,6 +235,7 @@
   venue: "International Journal of Robotics Research"
   venue_acr: "IJRR"
   fig: ijrr_survey.jpg
+  caption: "System diagram of a language-conditioned robot manipulation pipeline linking a control module, perception module, and language module that connect user instructions to robot actions."
 - year: '2025'
   field: WS4
   type: Journal
@@ -238,6 +250,7 @@
   venue: "IEEE Robotics and Automation Letters"
   venue_acr: "RA-L"
   fig: affordance-rag.jpg
+  caption: "Hierarchical embodied memory graph (building, area, zone, view, instance, affordance) used by Affordance RAG to retrieve the right object for an instruction like \"bring the paper towels to the kitchen counter.\""
   url: "https://arxiv.org/abs/2512.18987"
 - year: '2025'
   field: WS4
@@ -252,6 +265,7 @@
   venue_acr: "CoLM"
   url: "https://openreview.net/forum?id=qbWpEufkqk"
   fig: rem.jpg
+  caption: "Example REM benchmark scene showing an agent's trajectory across three frames alongside egocentric views and spatial-reasoning Q&A pairs like object counting and relative positioning."
 - year: '2025'
   field: O
   type: Conference
@@ -267,6 +281,7 @@
   venue_acr: "EMNLP"
   url: "https://arxiv.org/abs/2509.00063"
   fig: molerr2fix.jpg
+  caption: "Example molecule-captioning task showing a SMILES string, its generated description, and traditional BLEU/ROUGE scores that fail to flag factual errors -- the problem MolErr2Fix targets."
 - year: '2025'
   field: WS3
   type: Conference
@@ -280,6 +295,7 @@
   venue: "Forty-second International Conference on Machine Learning Position Paper Track"
   venue_acr: "ICML"
   fig: manufacture.jpg
+  caption: "Side-by-side comparison of a precise CAD model of a mechanical hook against a NeRF-style volumetric reconstruction of the same part, illustrating why NeRFs aren't manufacturable CAD replacements."
   url: "https://openreview.net/forum?id=kJzB6lQmcb"
 - year: '2025'
   field: WS2
@@ -295,6 +311,7 @@
   venue_acr: "ArXiv"
   url: "https://arxiv.org/abs/2504.11336"
   fig: trelawney.jpg
+  caption: "Diagram contrasting standard next-token training with Trelawney's approach, which interleaves special tokens so the model also predicts future tokens out of order."
 - year: '2025'
   field: O
   type: Preprint
@@ -307,6 +324,7 @@
   venue_acr: "ArXiv"
   url: "https://arxiv.org/abs/2502.00197"
   fig: model-successor.jpg
+  caption: "Venn diagram showing how a learner's inductive bias narrows the space of expressible hypotheses down to feasible, low-risk hypotheses."
 - year: '2025'
   field: WS4
   type: Conference
@@ -324,6 +342,7 @@
   venue: "Conference on Robot Learning"
   venue_acr: "CoRL"
   fig: casper.jpg
+  caption: "Four-stage pipeline for Casper: human teleoperation, confidence-scored intent inference, the robot offering help in dialogue, and the robot executing the inferred skill."
   url: "https://arxiv.org/abs/2506.14727"
 - year: '2025'
   field: O
@@ -341,6 +360,7 @@
   venue_acr: "ACL"
   url: "https://arxiv.org/abs/2504.17674"
   fig: "energy-considerations.jpg"
+  caption: "Scatter plot comparing theoretical, PyTorch, and vLLM energy consumption in kWh across three inference workloads: BurstGPT, Azure Code, and Azure Conversation."
 - year: '2025'
   field: WS4
   type: Preprint
@@ -357,6 +377,7 @@
   venue: "ArXiv"
   venue_acr: "ArXiv"
   fig: "self-regulation.jpg"
+  caption: "Illustration of an unreliable LLM agent's two core challenges: identifying which reward function to trust, and obtaining good demonstrations when many rollouts fail."
   url: "https://arxiv.org/abs/2502.04576"
 - year: '2025'
   field: WS3
@@ -378,6 +399,7 @@
   venue: "The IEEE/CVF Conference on Computer Vision and Pattern Recognition"
   venue_acr: "CVPR"
   fig: "T-star.jpg"
+  caption: "Pipeline for T* showing iterative temporal and spatial upsampling of video frame grids to localize target objects before answering a long-form video question."
   url: "https://arxiv.org/abs/2504.02259"
 - year: '2025'
   field: WS5
@@ -397,6 +419,7 @@
   extras:
     Meta: "https://ai.meta.com/research/publications/explore-theory-of-mind-program-guided-adversarial-data-generation-for-theory-of-mind-reasoning/"
   fig: explore-tom.jpg
+  caption: "Example story generated with tracked world-state and belief updates, alongside tracker-generated theory-of-mind questions used to evaluate model accuracy."
 - year: '2025'
   field: O
   type: Journal
@@ -414,6 +437,7 @@
   venue: "Transactions on Machine Learning Research"
   venue_acr: "TMLR"
   fig: hardware-scaling.jpg
+  caption: "Scatter plot of normalized kernel latency by operator type (GEMM, attention, AllGather, ReduceScatter) as the number of training nodes scales up."
   url: "https://arxiv.org/abs/2411.13055"
 - year: '2025'
   field: WS4
@@ -431,6 +455,7 @@
   extras:
     Website: https://motif-1k.github.io/
   fig: "motif.jpg"
+  caption: "Four example scenes for MotIF showing two alternative robot motion paths for the same instruction across outdoor navigation, indoor navigation, object manipulation, and user-interactive manipulation."
 - year: '2025'
   field: O
   type: Conference
@@ -462,6 +487,7 @@
   venue_acr: "NAACL"
   url: "https://arxiv.org/abs/2404.01258"
   fig: "dpo-video.jpg"
+  caption: "Pipeline showing video frames captioned by GPT-4V, used to build instruction-tuning Q&A data, then refined through a factually-enhanced DPO feedback loop."
   extras:
     GitHub: https://github.com/RifleZhang/LLaVA-Hound-DPO
 - year: '2024'
@@ -483,6 +509,7 @@
   extras:
     Website: https://quanting-xie.github.io/Embodied-RAG-web/
   fig: embodied-rag.jpg
+  caption: "Diagram of Embodied-RAG's pipeline: building a semantic forest memory from robot and human trajectories over a campus map, then retrieving from it to answer global, implicit, and explicit natural-language queries."
 - year: '2024'
   field: WS4
   type: Conference
@@ -499,6 +526,7 @@
   extras:
     Website: https://anavi-corl24.github.io/
   fig: "anavi.jpg"
+  caption: "Indoor scene showing a robot's two navigation paths overlaid on the room, paired with the corresponding audio waveform amplitude recorded along each path."
 - year: '2024'
   field: WS4
   type: Conference
@@ -521,6 +549,7 @@
   extras:
     Website: https://soyeonm.github.io/SIF_webpage/
   fig: "sif.jpg"
+  caption: "Two-phase Situated Instruction Following task: an agent first explores a house to track object locations, then must fulfill a fetch instruction that accounts for objects being moved or a human's stated plans."
 - year: '2024'
   field: O
   type: Conference
@@ -533,6 +562,7 @@
   venue: "Findings of the Conference on Empirical Methods in Natural Language Processing"
   venue_acr: "EMNLP Findings"
   fig: "gradient-local.jpg"
+  caption: "Illustration of how an entity-relation edit (e.g., updating a sports team) propagates through a stale pretrained language model, producing a gradient-norm curve that peaks at middle model depths."
   url: "https://arxiv.org/abs/2411.04448"
 - year: '2024'
   field: WS3
@@ -550,6 +580,7 @@
   venue: "Findings of the Conference on Empirical Methods in Natural Language Processing "
   venue_acr: "EMNLP Findings"
   fig: "fact-verifier.jpg"
+  caption: "Pipeline showing a multimodal verifier that takes image-and-text evidence to classify claims as supported, refuted, or unverifiable, classify toxicity, and generate a natural-language explanation."
   url: "https://arxiv.org/abs/2407.00369"
 - year: '2024'
   field: WS4
@@ -565,6 +596,7 @@
   venue_acr: "EMNLP"
   url: "https://arxiv.org/abs/2406.19228"
   fig: "toolsfail.jpg"
+  caption: "Examples of LLM tool-use failures: a calculator returning a subtly wrong digit, and an object detector misidentifying a tomato as an apple, causing a failed pick action."
 - year: '2024'
   field: WS4
   type: Preprint
@@ -595,6 +627,7 @@
   venue_acr: "NeurIPS"
   url: "https://arxiv.org/abs/2406.05191"
   fig: "pid.jpg"
+  caption: "Diffusion-based heatmaps showing which image regions uniquely explain a caption word (e.g., the tennis racket) versus regions of synergy between multiple words (e.g., the swinging bat and its motion)."
 - year: '2024'
   field: O
   type: Preprint
@@ -626,6 +659,7 @@
   venue: "ArXiv"
   venue_acr: "ArXiv"
   fig: "dialogue-with-robots.jpg"
+  caption: "Conceptual diagram connecting human-robot interaction research areas -- gaze and gesture, dialogue systems, conversational grounding, and perception/symbol grounding -- around a shared human-robot task."
   url: "https://arxiv.org/abs/2404.01158"
 - year: '2024'
   field: WS3
@@ -641,6 +675,7 @@
   venue: "Findings of the 62nd Annual Meeting of the Association for Computational Linguistics"
   venue_acr: "ACL Findings"
   fig: "visreas.jpg"
+  caption: "Pipeline for generating complex visual-reasoning questions from a scene graph, including an example where the reasoning steps correctly flag the question itself as unanswerable."
   url: "https://arxiv.org/abs/2403.10534"
 - year: '2024'
   field: WS4
@@ -677,6 +712,7 @@
   venue_acr: "ECCV"
   url: "https://arxiv.org/abs/2403.16394"
   fig: "skews.jpg"
+  caption: "Diagram of how role-filler bindings from a text prompt (e.g., \"a book right of a cap\") map through a communication channel into generated images, evaluated for completeness and balance in both text and image space."
 - year: '2024'
   field: WS4
   type: Conference
@@ -703,6 +739,7 @@
   extras:
     Website: "https://vid2robot.github.io/"
   fig: "vid2robot.jpg"
+  caption: "A human demonstration video of picking up a can (top) alongside the Vid2Robot policy's own camera views as it imitates the same action on its robot arm (bottom)."
 - year: '2024'
   field: WS5
   type: Conference
@@ -724,6 +761,7 @@
     GitHub: "https://github.com/sotopia-lab/sotopia-pi"
     Website: "https://www.sotopia.world/projects/sotopia-pi"
   fig: "sotopia-pi.jpg"
+  caption: "Line chart showing goal-completion scores rising with each training method (self-reinforcement, behavior cloning, BC+SR), while the gap between GPT-4's ratings and human ratings also grows."
 - year: '2024'
   field: WS4
   type: Conference
@@ -760,6 +798,7 @@
     Website: "https://open-eqa.github.io/"
     Blog: "https://ai.meta.com/blog/openeqa-embodied-question-answering-robotics-ar-glasses/"
   fig: "openeqa.jpg"
+  caption: "Example OpenEQA episode showing a robot's reconstructed environment trajectory, its multimodal RGB-D-camera observations over time, and open-vocabulary questions it must answer about the space."
 - year: '2024'
   field: WS5
   type: Conference
@@ -782,6 +821,7 @@
   pres: Spotlight
   url: "http://arxiv.org/abs/2310.11667"
   fig: "sotopia.jpg"
+  caption: "Overview of SOTOPIA's pipeline: sampling a social scenario and goals, sampling two characters with a relationship, simulating their dialogue, and evaluating whether each agent achieved its social goal."
 - year: '2024'
   field: WS4
   type: Conference
@@ -1089,6 +1129,7 @@
   extras:
     GitHub: https://github.com/gtatiya/MOSAIC
   fig: "mosaic.jpg"
+  caption: "Diagram of MOSAIC's architecture: video, acoustic, and haptic observations encoded separately and fused through multi-sensory self-attention."
 - year: '2024'
   field: WS4
   type: Conference
@@ -1114,6 +1155,7 @@
     GitHub: https://github.com/web-arena-x/webarena
     Website: https://webarena.dev/
   fig: "webarena.jpg"
+  caption: "Overview of WebArena: an AI agent takes actions and receives feedback while completing realistic tasks (like creating a GitHub repo) across real web applications, checked for functional success or failure."
 - year: '2023'
   field: WS4
   type: Preprint
@@ -1147,6 +1189,7 @@
     GitHub: https://github.com/JeffreyYH/robotics-fm-survey
     Website: https://robotics-fm-survey.github.io/
   fig: "survey.jpg"
+  caption: "Survey diagram mapping data modalities and foundation models through robotic embodiment across different morphologies and environments, alongside open challenges and future research directions."
 - year: '2023'
   field: WS4
   type: Preprint
@@ -1235,6 +1278,7 @@
     Website: https://ovmm.github.io/
     Video: https://www.youtube.com/watch?v=EA8HEzopkc0
   fig: "homerobot.jpg"
+  caption: "Side-by-side real and simulated robot trials of HomeRobot's four-step task: find, pick, find goal, and place an object such as moving a toy animal from a chair to a table."
 - year: '2023'
   field: WS4
   type: Conference

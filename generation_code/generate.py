@@ -105,6 +105,9 @@ colors = {
 def update_pub_entry(entry):
   # Authors and links to all co-authors
   entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names)
+  # Alt text for the `fig` thumbnail; a hand-written `caption` always wins.
+  if entry.get("fig") and not entry.get("caption"):
+      entry["caption"] = f'Key figure from {entry["title"]}'
 
 def build_pubs_jsonld(entries, list_name):
     items = []
@@ -118,6 +121,8 @@ def build_pubs_jsonld(entries, list_name):
         }
         if entry.get("url"):
             article["url"] = entry["url"]
+        if entry.get("fig"):
+            article["image"] = f"https://talkingtorobots.com/figures/{entry['fig']}"
         items.append({"@type": "ListItem", "position": i, "item": article})
 
     return json.dumps({

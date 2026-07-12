@@ -19,6 +19,7 @@ class Publication(BaseModel):
     student: Optional[str] = None
     alumn: Optional[str] = None
     fig: Optional[str] = None
+    caption: Optional[str] = None  # alt text for `fig`; falls back to a generic title-based caption when unset
     note: Optional[str] = None
     pres: Optional[str] = None
     extras: Optional[dict[str, str]] = None
