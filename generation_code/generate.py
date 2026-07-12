@@ -106,9 +106,9 @@ def update_pub_entry(entry):
   # Authors and links to all co-authors
   entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names)
 
-def build_recent_pubs_jsonld(n=5):
+def build_pubs_jsonld(entries, list_name):
     items = []
-    for i, entry in enumerate(pubs[:n], start=1):
+    for i, entry in enumerate(entries, start=1):
         article = {
             "@type": "ScholarlyArticle",
             "name": entry["title"],
@@ -123,7 +123,7 @@ def build_recent_pubs_jsonld(n=5):
     return json.dumps({
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Most Recent Publications - CLAW @ CMU",
+        "name": list_name,
         "itemListElement": items,
     }, indent=2)
 
@@ -139,10 +139,12 @@ def generate_publications_website():
         u = 1.0
         data[entry["field"]] += u
 
-    recent_pubs_jsonld = build_recent_pubs_jsonld()
+    recent_pubs_jsonld = build_pubs_jsonld(pubs[:5], "Most Recent Publications - CLAW @ CMU")
+    all_pubs_jsonld = build_pubs_jsonld(pubs, "Publications - CLAW @ CMU")
 
     rendered = pub_template.render(publications=pubs, data=data, colors=colors, types=types,
-                                   recent_pubs_jsonld=recent_pubs_jsonld)
+                                   recent_pubs_jsonld=recent_pubs_jsonld,
+                                   all_pubs_jsonld=all_pubs_jsonld)
     with open("../publications.html", 'wt') as output_file:
         output_file.write(rendered)
 

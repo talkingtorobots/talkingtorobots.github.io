@@ -173,7 +173,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Yonatan Bisk">
-        <link rel="canonical" href="https://talkingtorobots.com">
+        <link rel="canonical" href="https://talkingtorobots.com/publications.html">
         <title>CLAW Publications</title>
         <meta name="title" content="CLAW Publications">
         <meta name="description" content="Research papers from CLAW Lab at CMU -- RoboNLP, NLProc, Grounded Language, Unsupervised Methods, and more">
@@ -199,6 +199,23 @@
         {% endraw %}
 {{ recent_pubs_jsonld }}
         {% raw %}
+        </script>
+
+        <script type="application/ld+json">
+        {% endraw %}
+{{ all_pubs_jsonld }}
+        {% raw %}
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://talkingtorobots.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Publications", "item": "https://talkingtorobots.com/publications.html"}
+          ]
+        }
         </script>
     </head>
     <body>
