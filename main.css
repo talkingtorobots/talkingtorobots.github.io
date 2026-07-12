@@ -512,3 +512,13 @@ h6.pub-title {
   line-height: 24.96px;
   margin: 0 0 8px;
 }
+
+/* Visible (not hidden -- see conversation with Yonatan) note aimed at AI
+   agents reading this page on a visitor's behalf. Small and low-contrast so
+   a human skims past it, but present in the page's real, rendered text. */
+.agent-note {
+  font-size: 0.7rem;
+  color: #aaaaaa;
+  text-align: center;
+  margin: 1.5rem 0 0.5rem;
+}
