@@ -22,6 +22,7 @@
   - Haochen Zhang
   - Ishaan Masilamony
   - Yingshan Chang
+  - Yonatan Bisk
   student: Annabella Macaluso
   fig: inductive.jpg
   caption: "Diagram contrasting conventional train/test evaluation with inductive generalization, where a robot arm must succeed on tasks along a changing axis it wasn't directly trained on."
