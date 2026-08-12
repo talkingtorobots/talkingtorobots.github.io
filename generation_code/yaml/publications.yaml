@@ -29,6 +29,23 @@
 - year: "2026"
   field: WS4
   type: Preprint
+  title: "Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models"
+  venue: ArXiv
+  venue_acr: ArXiv
+  url: https://arxiv.org/abs/2608.10484
+  authors:
+  - Li Wenjie
+  - Yash Jangir
+  - Ignacy Stepka
+  - Yash Agarwal
+  - Marion Kipsang
+  - Yonatan Bisk
+  student: Wenjie Li
+  fig: SALT.jpg
+  caption: "Comparison of verbs and movement trajectories necessary to represent them in robotics domains"
+- year: "2026"
+  field: WS4
+  type: Preprint
   title: "Flatness Preserves Instruction Following in Vision-Language-Action Models"
   venue: ArXiv
   venue_acr: ArXiv
