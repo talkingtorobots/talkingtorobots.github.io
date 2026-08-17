@@ -14,7 +14,7 @@
 
 ## Recent Publications
 
-- [Not All Thinking Helps: Which Reasoning Behaviors Matter Most in Thinking Models](https://talkingtorobots.com/publications.html): Third Conference on Language Modeling (2026)
+- [Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models](https://arxiv.org/abs/2608.13760): Third Conference on Language Modeling (2026)
 - [Inductive Generalization for Robotic Manipulation](https://arxiv.org/abs/2606.20999): ArXiv (2026)
 - [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484): ArXiv (2026)
 - [Flatness Preserves Instruction Following in Vision-Language-Action Models](https://arxiv.org/abs/2606.23641): ArXiv (2026)

@@ -1,7 +1,7 @@
 - year: "2026"
   field: WS3
   type: Conference
-  title: "Not All Thinking Helps: Which Reasoning Behaviors Matter Most in Thinking Models"
+  title: "Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models"
   authors: 
   - Jean de Dieu Nyandwi
   - Leena Mathur
@@ -10,6 +10,7 @@
   student: Leena Mathur
   venue: Third Conference on Language Modeling
   venue_acr: CoLM
+  url: https://arxiv.org/abs/2608.13760
 - year: "2026"
   field: WS4
   type: Preprint
