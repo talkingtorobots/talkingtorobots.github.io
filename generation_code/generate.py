@@ -36,6 +36,16 @@ latex_env = Environment(
     loader=FileSystemLoader("templates"),
 )
 
+# The yaml is plain text shared by the website and the CV, so a literal "&" (or "%",
+# "#", "_") in a title is fine in HTML but blows up pdflatex. Pipe such fields through
+# \VAR{ ... | tex } in the LaTeX templates.
+def tex_escape(text):
+    for char in "&%#_":
+        text = text.replace(char, "\\" + char)
+    return text
+
+latex_env.filters["tex"] = tex_escape
+
 def load_yaml(path):
     return yaml.load(open(path), Loader=yaml.CLoader)
 

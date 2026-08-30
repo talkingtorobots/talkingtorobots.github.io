@@ -60,7 +60,7 @@
 \section{Alumni}
 \subsection{PhD}
 \BLOCK{for entry in alumni_phd}
-\cventry{ \VAR{- entry['dept'] -} }{\href{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }}{ \BLOCK{- if 'co' in entry -}(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })\BLOCK{- endif -} }{\hfill \VAR{ entry['start'] }-\VAR{ entry['year'] }}{\newline \VAR{ entry['thesis'] }}{}
+\cventry{ \VAR{- entry['dept'] -} }{\href{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }}{ \BLOCK{- if 'co' in entry -}(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })\BLOCK{- endif -} }{\hfill \VAR{ entry['start'] }-\VAR{ entry['year'] }}{\newline \VAR{ entry['thesis'] | tex }}{}
 \BLOCK{- endfor}
 
 

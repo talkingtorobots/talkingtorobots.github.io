@@ -20,12 +20,13 @@
   ws: 3
   stints:
   - program: phd
-    status: current
+    status: alumni
     dept: LTI
     start: 2022
     capt: Generalization
-    pos: Postdoc coming soon
+    pos: Postdoc Univ of Amsterdam
     year: 2026
+    thesis: Generalization Beyond Observed Support
   - program: other
     status: alumni
     year: 2022
@@ -41,13 +42,14 @@
   ws: 3
   stints:
   - program: phd
-    status: current
+    status: alumni
     dept: LTI
     co: Emma Strubell
     co_url: http://strubell.github.io/
     start: 2020
     capt: Energy/Resource Efficiency
-    pos: Postdoc coming soon
+    pos: Postdoc @ Cornell
+    thesis: "Towards Efficient & Sustainable AI: Workload Characterizations and Algorithmic Mitigations"
     year: 2026
 - name: Abitha Thankaraj
   pron: she/her
@@ -214,7 +216,7 @@
   native: 朱昊
   pic: haozhu.jpg
   x: _Hao_Zhu
-  url: http://www.zhuhao.me/
+  url: https://hao.computer
   ws: 5
   stints:
   - program: phd
