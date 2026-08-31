@@ -14,6 +14,7 @@
 
 ## Recent Publications
 
+- [Contextual Observer Grounding: Evaluating Situated Spatial Reasoning in Vision-Language Models](https://mimo-owl.github.io/POVBench/): Findings of The 2026 Conference on Empirical Methods in Natural Language Processing (2026)
 - [Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models](https://arxiv.org/abs/2608.13760): Third Conference on Language Modeling (2026)
 - [Inductive Generalization for Robotic Manipulation](https://arxiv.org/abs/2606.20999): ArXiv (2026)
 - [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484): ArXiv (2026)
@@ -23,4 +24,3 @@
 - [When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents](https://arxiv.org/abs/2605.29938): ArXiv (2026)
 - [Position: Evaluation of {ML} Resource Utilization Requires Model Life Cycle Assessment](https://openreview.net/forum?id=8voi61IiZC): Forty-third International Conference on Machine Learning Position Paper Track (2026)
 - [MM-SeR: Multimodal Self-Refinement for Lightweight Image Captioning](https://arxiv.org/abs/2508.21451): Computer Vision and Pattern Recognition Conference (2026)
-- [RobotArena $\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation](https://arxiv.org/abs/2510.23571): The Fourteenth International Conference on Learning Representations (2026)

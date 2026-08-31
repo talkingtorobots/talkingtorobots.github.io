@@ -1,4 +1,16 @@
 - year: "2026"
+  field: WS4
+  type: Conference
+  title: "Contextual Observer Grounding: Evaluating Situated Spatial Reasoning in Vision-Language Models"
+  authors:
+  - Mimo Shirasaka
+  - Haochen Zhang
+  - Yonatan Bisk
+  student: Haochen Zhang
+  venue: Findings of The 2026 Conference on Empirical Methods in Natural Language Processing
+  venue_acr: EMNLP Findings
+  url: https://mimo-owl.github.io/POVBench/
+- year: "2026"
   field: WS3
   type: Conference
   title: "Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models"
@@ -35,7 +47,7 @@
   venue_acr: ArXiv
   url: https://arxiv.org/abs/2608.10484
   authors:
-  - Li Wenjie
+  - Wenjie Li
   - Yash Jangir
   - Ignacy Stepka
   - Yash Agarwal

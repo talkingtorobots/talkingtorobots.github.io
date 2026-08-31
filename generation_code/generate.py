@@ -90,6 +90,14 @@ alumni = stints_for("other", "alumni")
 # it gets the subset that excludes anyone currently active as a PhD student here.
 alumni_website = [a for a in alumni if a["name"] not in student_names]
 
+# publications.yaml always spells a lab member the way people.yaml does, so name
+# matching stays exact everywhere. `authors_display` is the byline to actually print
+# for anyone who publishes under a different form of their name. Computed here rather
+# than in update_pub_entry because --onepager skips the website but still builds a CV.
+pubnames = {p["name"]: p["pubname"] for p in people if p.get("pubname")}
+for entry in pubs:
+    entry["authors_display"] = [pubnames.get(a, a) for a in entry["authors"]]
+
 # Theses
 theses_yaml = load_yaml("yaml/theses.yaml")
 teach_yaml = load_yaml("yaml/teaching.yaml")
@@ -114,7 +122,7 @@ colors = {
 
 def update_pub_entry(entry):
   # Authors and links to all co-authors
-  entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names)
+  entry["authors_pretty"] = render_authors(entry["authors"], webs, student_names, pubnames=pubnames)
   # Alt text for the `fig` thumbnail; a hand-written `caption` always wins.
   if entry.get("fig") and not entry.get("caption"):
       entry["caption"] = f'Key figure from {entry["title"]}'
@@ -125,7 +133,7 @@ def build_pubs_jsonld(entries, list_name):
         article = {
             "@type": "ScholarlyArticle",
             "name": entry["title"],
-            "author": [{"@type": "Person", "name": a} for a in entry["authors"]],
+            "author": [{"@type": "Person", "name": a} for a in entry["authors_display"]],
             "datePublished": entry["year"],
             "isPartOf": {"@type": "Periodical", "name": entry["venue"]},
         }
@@ -224,7 +232,7 @@ def generate_group_page():
     for stud in student_yaml:
         stud["research"] = []
         for pub in pubs:
-            if stud["name"] in pub["authors"] and pub["type"] != "workshop":
+            if stud["name"] in pub["authors"] and pub["type"] != "Workshop":
                 stud["research"].append(pub)
     group_render = group_template.render(students=student_yaml,
                                          postdocs=postdoc_yaml,

@@ -149,7 +149,7 @@
             { \VAR{ entry['title'].replace('&', '\\&') }     }
       \end{minipage}\hfill \textnormal{ \VAR{ entry['year'] } } }
       {\begin{tabular}{ @{}p{5.2in} }
-          \VAR{ entry['authors']|join(', ')|replace("Yonatan Bisk", "\YB{}") }
+          \VAR{ entry['authors_display']|join(', ')|replace("Yonatan Bisk", "\YB{}") }
       \end{tabular} }
       {\begin{tabular}{@{}p{5in} }
           \VAR{ entry['venue'] }

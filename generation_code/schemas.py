@@ -47,6 +47,11 @@ class PersonRecord(BaseModel):
     """A person and every stint (appointment) they've held in the lab."""
     model_config = ConfigDict(extra="allow")
     name: str
+    # Byline to show when this person's published name differs from `name` (e.g. a
+    # Chinese name published surname-first). `name` stays the key everything else
+    # matches on -- publications.yaml, websites.yaml, the COA -- and only the
+    # rendered author lists use `pubname`.
+    pubname: Optional[str] = None
     url: Optional[str] = None
     pron: Optional[str] = None
     pic: Optional[str] = None
