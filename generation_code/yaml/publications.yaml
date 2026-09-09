@@ -7,9 +7,12 @@
   - Haochen Zhang
   - Yonatan Bisk
   student: Haochen Zhang
+  fig: pov.jpg
   venue: Findings of The 2026 Conference on Empirical Methods in Natural Language Processing
   venue_acr: EMNLP Findings
-  url: https://mimo-owl.github.io/POVBench/
+  url: https://arxiv.org/abs/2609.06880
+  extras:
+    Website: https://mimo-owl.github.io/POVBench/
 - year: "2026"
   field: WS3
   type: Conference
@@ -20,6 +23,7 @@
   - Yonatan Bisk
   - Graham Neubig 
   student: Leena Mathur
+  fig: reasoning-behaviors.jpg
   venue: Third Conference on Language Modeling
   venue_acr: CoLM
   url: https://arxiv.org/abs/2608.13760

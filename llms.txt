@@ -14,7 +14,7 @@
 
 ## Recent Publications
 
-- [Contextual Observer Grounding: Evaluating Situated Spatial Reasoning in Vision-Language Models](https://mimo-owl.github.io/POVBench/): Findings of The 2026 Conference on Empirical Methods in Natural Language Processing (2026)
+- [Contextual Observer Grounding: Evaluating Situated Spatial Reasoning in Vision-Language Models](https://arxiv.org/abs/2609.06880): Findings of The 2026 Conference on Empirical Methods in Natural Language Processing (2026)
 - [Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models](https://arxiv.org/abs/2608.13760): Third Conference on Language Modeling (2026)
 - [Inductive Generalization for Robotic Manipulation](https://arxiv.org/abs/2606.20999): ArXiv (2026)
 - [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484): ArXiv (2026)
