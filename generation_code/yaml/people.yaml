@@ -282,6 +282,16 @@
     dept: SCS
     topic: Collaboration
     pos: PhD @ USC
+- name: Mimo Shirasaka
+  pront: she/her
+  url: 
+  ws: 4
+  stints:
+  - program: other
+    status: alumni
+    year: 2026
+    role: Intern
+    topic: Embodied Perspective
 - name: Minyoung Hwang
   pron: she/her
   url: https://minyoung1005.github.io

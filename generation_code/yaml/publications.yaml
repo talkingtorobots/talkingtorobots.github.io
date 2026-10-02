@@ -1,4 +1,31 @@
 - year: "2026"
+  field: O
+  type: Conference
+  title: "Position: Anthropomorphic Language in AI Discourse Can Be Constructive"
+  authors:
+  - Yingshan Chang
+  - Yonatan Bisk
+  student: Yingshan Chang
+  venue: NeurIPS 2026 Position Paper Track
+  venue_acr: NeurIPS
+  fig: position_anthropomorphic.jpg
+- year: "2026"
+  field: O
+  type: Conference
+  title: "Data Augmentation for Improving Contextual Faithfulness Under Knowledge Conflict"
+  authors:
+  - Mohith Rajesh
+  - Raj Maheshwari
+  - Vashisth Tiwari
+  - Yonatan Bisk
+  - Emma Strubell
+  - Jeremiah Milbauer
+  - Jared Fernandez
+  student: Jared Fernandez
+  venue: Findings of The 5th Asia-Pacific Chapter of the Association for Computational Linguistics {\&} the 15th International Joint Conference on Natural Language Processing
+  venue_acr: Findings of AACL-IJCNLP
+  url: https://openreview.net/forum?id=61HAlyC5Iy
+- year: "2026"
   field: WS4
   type: Conference
   title: "Contextual Observer Grounding: Evaluating Situated Spatial Reasoning in Vision-Language Models"
