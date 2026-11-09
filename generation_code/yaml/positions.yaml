@@ -1,0 +1,43 @@
+---
+# Appointments. `where` prints inline after the title (slanted), `detail` prints
+# small on the following lines, and `with` right-aligns "w/ <collaborator>".
+current:
+  - when: 2026 --
+    title: Leonardo Associate Professor
+    where: Carnegie Mellon University
+    detail:
+      - Language Technologies Institute
+      - Robotics Institute (courtesy)
+      - Electrical and Computer Engineering (courtesy)
+  - when: 2026 --
+    title: Research Advisor
+    where: Origami Robotics
+    url: https://www.origami-robotics.com
+
+previous:
+  - when: 2022 --
+    title: Visiting Professor
+    where: Meta Fundamental AI Research (FAIR)
+    with: Dhruv Batra & Roozbeh Mottaghi
+  - when: 2021 --
+    title: Consulting Professor
+    where: Microsoft Research
+  - when: 2020 --
+    title: Assistant Professor
+    where: Carnegie Mellon University
+    detail:
+      - Language Technologies Institute
+  - when: 2019 --
+    title: Visiting Researcher
+    where: Microsoft Research
+    with: Jianfeng Gao
+  - when: 2017 --
+    title: Postdoctoral Scholar
+    detail:
+      - University of Washington & Allen Institute for Artificial Intelligence
+    with: Yejin Choi
+  - when: 2015 --
+    title: Postdoctoral Scholar
+    detail:
+      - Information Sciences Institute, University of Southern California
+    with: Daniel Marcu

@@ -1,0 +1,17 @@
+---
+- when: 2015
+  degree: PhD in Computer Science
+  where: The University of Illinois at Urbana-Champaign
+  thesis: Unsupervised Grammar Induction with Combinatory Categorial Grammars
+  thesisurl: http://yonatanbisk.com/Thesis.pdf
+  advisor: Julia Hockenmaier
+  committee: Jason Eisner, Dan Roth, ChengXiang Zhai
+
+- when: 2009
+  degree: BS in Computer Science
+  where: The University of Texas at Austin
+  honor: Turing Scholar
+  thesis: The Necessity of Separating Control and Logic When Grounding Language
+    using Neuroevolution
+  advisor: Risto Miikkulainen
+  reader: Raymond Mooney

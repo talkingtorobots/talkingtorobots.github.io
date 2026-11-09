@@ -65,3 +65,87 @@ class Affiliation(BaseModel):
     name: str
     affiliation: Optional[str] = None
     scholar_id: Optional[str] = None
+
+
+# The sections below used to live as literal \cventry calls inside
+# CV_template.jinja2. They forbid unknown keys, so a mistyped key in the yaml is
+# an error at generate time rather than a field that silently fails to print.
+
+class Position(BaseModel):
+    """One appointment, current or previous (yaml/positions.yaml)."""
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+    when: int | str
+    title: str
+    where: Optional[str] = None
+    url: Optional[str] = None
+    # `with` is a Python keyword, so the field is with_ and the yaml key is the alias.
+    with_: Optional[str] = Field(default=None, alias="with")
+    detail: list[str] = Field(default_factory=list)
+
+
+class Degree(BaseModel):
+    """A degree earned (yaml/education.yaml)."""
+    model_config = ConfigDict(extra="forbid")
+    when: int | str
+    degree: str
+    where: Optional[str] = None
+    honor: Optional[str] = None
+    thesis: Optional[str] = None
+    thesisurl: Optional[str] = None
+    advisor: Optional[str] = None
+    committee: Optional[str] = None
+    reader: Optional[str] = None
+
+
+class ReviewVenue(BaseModel):
+    """A venue reviewed for, grouped by area (yaml/reviewing.yaml)."""
+    model_config = ConfigDict(extra="forbid")
+    acronym: str
+    venue: str
+    years: int | str
+
+
+class OrgRole(BaseModel):
+    """A workshop or conference organizing role (yaml/organization.yaml)."""
+    model_config = ConfigDict(extra="forbid")
+    kind: str
+    what: str
+    url: Optional[str] = None
+    venue: Optional[str] = None
+
+
+class Talk(BaseModel):
+    """An invited talk or seminar visit (yaml/talks.yaml)."""
+    model_config = ConfigDict(extra="forbid")
+    title: Optional[str] = None
+    url: Optional[str] = None
+    venue: Optional[str] = None
+    venueurl: Optional[str] = None
+    host: Optional[str] = None
+
+
+class CapstoneMember(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    name: str
+    pron: Optional[str] = None
+    url: Optional[str] = None
+
+
+class Capstone(BaseModel):
+    """A masters capstone project and its team (yaml/capstones.yaml)."""
+    model_config = ConfigDict(extra="forbid")
+    program: str
+    project: str
+    when: int | str
+    columns: int = 2
+    url: Optional[str] = None
+    co: Optional[str] = None
+    courl: Optional[str] = None
+    members: list[CapstoneMember] = Field(default_factory=list)
+
+
+class ServiceItem(BaseModel):
+    """Department/university service, grouped by year (yaml/service.yaml)."""
+    model_config = ConfigDict(extra="forbid")
+    what: str
+    detail: Optional[str] = None

@@ -1,42 +1,45 @@
 \BLOCK{include 'cv_preamble.jinja2'}
+\BLOCK{import 'cv_entries.jinja2' as e with context}
+%% CV_template_1p.jinja2 -- the short CV (--onepager).
+%%
+%% Same macros and the same yaml as the full CV; it just shows fewer sections and
+%% only the publications flagged `onepager` in publications.yaml. It used to carry
+%% its own hardcoded Positions, Education and Area Chair blocks, which had gone
+%% stale (it still said Assistant Professor and listed a hand-written 2025 slate).
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
 
 \section{Positions}
-\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy)}
+\BLOCK{for p in positions['current']}
+\VAR{e.position(p)}
+\BLOCK{endfor}
 
 \section{Education}
-\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}
+\BLOCK{for d in education}
+\VAR{e.degree(d)}
+\BLOCK{endfor}
 
-%\section{Publications} %\hfill \href{https://scholar.google.com/citations?user=bWoGh8UAAAAJ&hl=en}{Google Scholar} h-index:38}
-\section{ Publications}
-  \BLOCK{for pub_type in pub_types}
-  \BLOCK{for entry in publications[pub_type]}
-  \pub{ \VAR{entry['idx']} }{\begin{minipage}[t]{5.2in}
-      \href{ \VAR{- entry['url'] if 'url' in entry else '' -} }
-            { \VAR{ entry['title'].replace('&', '\\&') }     }
-      \end{minipage}\hfill \textnormal{ \VAR{ entry['year'] } } }
-      {\begin{tabular}{ @{}p{5.2in} }
-          \VAR{ entry['authors_display']|join(', ')|replace("Yonatan Bisk", "\YB{}") }
-      \end{tabular} }
-      {\begin{tabular}{@{}p{5in} }
-          \VAR{ entry['venue'] }
-          \BLOCK{- if 'note' in entry -}
-          \\ -- \textbf{ \VAR{- entry['note'] -} }
-          \BLOCK{ endif }
-          \VAR{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}
-      \end{tabular} } { }{}
-  \BLOCK{- endfor -}
-\BLOCK{- endfor -}
+\section{Publications}
+\BLOCK{for pub_type in pub_types}
+\BLOCK{for entry in publications[pub_type]}
+\VAR{e.publication(entry)}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
+%% Only the two most recent years of area-chair service; the full CV lists all of
+%% it. The hand-written block this replaced showed a single year's slate.
 \section{(Senior) Area Chair / Action Editor}
-\cventry{2025}{Conference on Robot Learning (CoRL)}{\AC{Robo}}{}{}{}
-\cventry{--}{International Conference on Machine Learning (ICML)}{\AC{AI/ML}}{}{}{}
-\cventry{--}{Transactions on Machine Learning Research (TMLR)}{\AC{AI/ML}}{}{}{}
-\cventry{--}{Robotics: Science and Systems (RSS)}{\AC{Robo}}{}{}{}
-\cventry{--}{Conference on Language Modeling (COLM)}{\AC{NLP}}{}{}{}
+\BLOCK{for year, areas in (areachair.items()|list)[:2]}
+\BLOCK{for area, roles in areas.items()}
+\BLOCK{set area_loop = loop}
+\BLOCK{for role, conferences in roles.items()}
+\BLOCK{set role_loop = loop}
+\BLOCK{for conference in conferences}
+\VAR{e.areachair_row(year if area_loop.first and role_loop.first and loop.first else '--', role, conference, area)}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endfor}
+
 \end{document}

@@ -1,4 +1,11 @@
 \BLOCK{include 'cv_preamble.jinja2'}
+\BLOCK{import 'cv_entries.jinja2' as e with context}
+%% CV_template.jinja2 -- layout only.
+%%
+%% Every entry is a semantic macro from cvlayout.sty taking named keys; every
+%% value comes from yaml/. Nothing here hardcodes content, and nothing here
+%% hardcodes a width -- see cv_entries.jinja2 for the shared entry macros and
+%% cvlayout.sty for the column widths, which are derived from \maincolumnwidth.
 
 %----------------------------------------------------------------------------------
 %            content
@@ -7,352 +14,173 @@
 \maketitle
 
 \section{Positions}
-\cventry{2026 --}{Leonardo Associate Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute \newline Robotics Institute (courtesy) \newline Electrical and Computer Engineering (courtesy)}
-\cventry{2026 --}{Research Advisor}{\href{https://www.origami-robotics.com}{Origami Robotics}}{}{}{}
+\BLOCK{for p in positions['current']}
+\VAR{e.position(p)}
+\BLOCK{endfor}
 \subsection{Previous}
-\cventry{2022 --}{Visiting Professor}{Meta Fundamental AI Research (FAIR) \hfill w/ Dhruv Batra \& Roozbeh Mottaghi}{}{}{}
-\cventry{2021 --}{Consulting Professor}{Microsoft Research}{}{}{}
-\cventry{2020 --}{Assistant Professor}{Carnegie Mellon University}{}{}{Language Technologies Institute}
-\cventry{2019 --}{Visiting Researcher}{Microsoft Research\hfill w/ Jianfeng Gao}{}{}{}
-\cventry{2017 --}{Postdoctoral Scholar}{}{}{}{University of Washington \& Allen Institute for Artificial Intelligence \hfill w/ Yejin Choi}
-\cventry{2015 --}{Postdoctoral Scholar}{}{}{}{Information Sciences Institute, University of Southern California \hfill w/ Daniel Marcu}
+\BLOCK{for p in positions['previous']}
+\VAR{e.position(p)}
+\BLOCK{endfor}
 
 \section{Education}
-\cventry{2015}{PhD in Computer Science}{The University of Illinois at Urbana-Champaign}{}{\newline Thesis: \href{http://yonatanbisk.com/Thesis.pdf}{\textbf{Unsupervised Grammar Induction with Combinatory Categorial Grammars}}}{Advisor: Julia Hockenmaier\newline Committee:  Jason Eisner, Dan Roth, ChengXiang Zhai}
-\cventry{2009}{BS in Computer Science}{The University of Texas at Austin}{Turing Scholar}{\newline Thesis: The Necessity of Separating Control and Logic When Grounding Language using Neuroevolution}{Advisor: Risto Miikkulainen\ \ \ \ \ \ \ \ Second Reader: Raymond Mooney}
+\BLOCK{for d in education}
+\VAR{e.degree(d)}
+\BLOCK{endfor}
 
 \section{Postdocs \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
 \BLOCK{for entry in postdocs}
-  \stud{Post}{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }{ \VAR{- entry['pron'] -} }{ \VAR{- entry['capt'] -} }
-    \BLOCK{- if 'co' in entry}
-      {(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })}
-    \BLOCK{- else}
-      {}
-    \BLOCK{- endif}
-    { \VAR{- entry['dept'] -} }{ \VAR{- entry['start'] } -- }
-\BLOCK{- endfor}
+\VAR{e.person(entry, role='Post', when=entry['start'] ~ ' --')}
+\BLOCK{endfor}
 
-
-\section{PhD Students} % \hfill \href{https://talkingtorobots.com}{TalkingToRobots.com}}
+\section{PhD Students}
 \BLOCK{for entry in students}
-  \stud{PhD}{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }{ \VAR{- entry['pron'] -} }{ \VAR{- entry['capt'] -} }
-    \BLOCK{- if 'co' in entry}
-      {(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })}
-    \BLOCK{- else}
-      {}
-    \BLOCK{- endif}
-    { \VAR{- entry['dept'] -} }{ \VAR{- entry['start'] } -- }
-\BLOCK{- endfor}
-\BLOCK{ set role_tag = {'Intern': 'Intern', 'Undergrad': 'Ugrad', 'Undergraduate': 'Ugrad',
-                    '5th Year MS': '5th', '5th year MS': '5th',
-                    'MSR': 'MSR', 'MLT': 'MLT', 'MS': 'MS'} }
-\BLOCK{- set intern_roles = ['Intern', 'Undergrad', 'Undergraduate']}
-\BLOCK{ macro stud_entry(entry) -}
-\stud{ \VAR{- role_tag.get(entry['role'], entry['role']) -} }{ \VAR{- entry['url']|default('')|replace('https://','')|replace('http://','') -} }{ \VAR{- entry['name'] -} }{ \VAR{- entry['pron']|default('') -} }{ \VAR{- entry['topic'] -} }{ \BLOCK{- if 'co' in entry -}(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })\BLOCK{- endif -} }{ \VAR{- entry.get('dept','') -} }{ \VAR{- entry['start'] ~ ' -- ' ~ entry['year'] if 'start' in entry and entry['start'] != entry['year'] else entry['year'] -} }
-\BLOCK{- endmacro}
+\VAR{e.person(entry, role='PhD', when=entry['start'] ~ ' --')}
+\BLOCK{endfor}
 
 \section{Masters}
 \BLOCK{for entry in masters}
-\VAR{ stud_entry(entry) }
-\BLOCK{- endfor}
-
+\VAR{e.person(entry)}
+\BLOCK{endfor}
 
 \section{Alumni}
 \subsection{PhD}
 \BLOCK{for entry in alumni_phd}
-\cventry{ \VAR{- entry['dept'] -} }{\href{ \VAR{- entry['url'] -} }{ \VAR{- entry['name'] -} }}{ \BLOCK{- if 'co' in entry -}(co-\href{ \VAR{- entry['co_url'] -} }{ \VAR{- entry['co'] -} })\BLOCK{- endif -} }{\hfill \VAR{ entry['start'] }-\VAR{ entry['year'] }}{\newline \VAR{ entry['thesis'] | tex }}{}
-\BLOCK{- endfor}
-
+\cvalumnusphd{%
+  dept={\VAR{entry.get('dept') or ''}},
+  name={\VAR{entry['name']}},
+  url={\VAR{(entry.get('url') or '')|url}},
+  co={\VAR{entry.get('co') or ''}},
+  courl={\VAR{(entry.get('co_url') or '')|url}},
+  when={\VAR{entry['start']}-\VAR{entry['year']}},
+  thesis={\VAR{entry['thesis']|tex}}}
+\BLOCK{endfor}
 
 \subsection{MS}
-\BLOCK{for entry in alumni if entry['role'] not in intern_roles}
-\VAR{ stud_entry(entry) }
-\BLOCK{- endfor}
-
+\BLOCK{for entry in alumni if entry['role'] not in e.intern_roles}
+\VAR{e.person(entry)}
+\BLOCK{endfor}
 
 \subsection{Interns and Undergraduates}
-\BLOCK{for entry in alumni if entry['role'] in intern_roles}
-\VAR{ stud_entry(entry) }
-\BLOCK{- endfor}
-
+\BLOCK{for entry in alumni if entry['role'] in e.intern_roles}
+\VAR{e.person(entry)}
+\BLOCK{endfor}
 
 \subsection{Capstones}
-\cventry{MCDS}{VR Robot Teleop\hfill \textnormal{\hintfont{2024}}}{}{}{}{}{}\\
-        \begin{tabular}{@{\hspace{42pt}}l@{\hspace{4em}}l@{\hspace{4em}}l}
-          Sophia Huang &  Jensen (Yi-Che) Huang & Tianyi Cheng  \\
-        \end{tabular}
-\cventry{MSAII}{Seed emergence\hfill \textnormal{\hintfont{2024}}}{}{}{}{}{}\\
-        \begin{tabular}{@{\hspace{42pt}}l@{\hspace{4em}}l@{\hspace{4em}}l}
-          Harini Subramanyan &  Juanyun Mai & Ameya Morbale  \\
-          Karthik Natarajan  & Noel D Souza & Bohao Zhang  \\
-        \end{tabular}
-\cventry{MRSD}{\href{https://mrsdprojects.ri.cmu.edu/2023teamf/}{Assistive Robotics for Eldercare}
-        (*co-\href{https://zackory.com/}{Z Erickson}) \hfill \textnormal{\hintfont{2023}}}{}{}{}{}{}
-        \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          \href{}{Abhinav Gupta     } & \pron{he/him}  &
-          \href{}{Atharva Pusalkar  } & \pron{he/him} \\
-          \href{}{Praveen Venkatesh } & \pron{he/him}  &
-          \href{}{Shaolin Kataria   } & \pron{he/him}  \\
-          \href{}{Shivam Tripathy   } & \pron{he/him} &
-          \href{}{} & \pron{} \\
-        \end{tabular}
-\cventry{MRSD}{Modular Teleop with Autonomy
-        (*co-\href{https://zackory.com/}{Z Erickson}) \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
-        \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          \href{https://linkedin.com/in/jashdiyora/         }{Jashkumar Diyora   } & \pron{he/him}  &
-          \href{https://linkedin.com/in/shruti-gangopadhyay/}{Shruti Gangopadhyay} & \pron{she/her} \\
-          \href{https://linkedin.com/in/jigarkumar-patel/   }{Jigar Patel        } & \pron{he/him}  &
-          \href{https://linkedin.com/in/prakharpradeep/     }{Prakhar Pradeep    } & \pron{he/him}  \\
-          \href{https://allaboutrobotix.com/                }{Shivani Sivakumar  } & \pron{she/her} &
-          \href{}{} & \pron{} \\
-        \end{tabular}
-\cventry{MCDS}{Embodied Navigation and Interaction \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
-        \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          \href{https://linkedin.com/in/adhokshaja-madhwaraj/}{Adhokshaja Madhwaraj}  & \pron{he/him}  &
-          \href{https://kushagramahajan.me/                  }{Kushagra Mahajan}      & \pron{he/him } \\
-          \href{https://linkedin.com/in/saivishwasp          }{Sai Vishwas Padigi}    & \pron{he/him } &
-           Vineeth Reddy                                                              & \pron{he/him } \\
-           Malaika Vijay                                                              & \pron{she/her} &
-          \href{https://www.linkedin.com/in/jessicazz/       }{Zheng (Jessica) Zhong} & \pron {she/her}\\
-        \end{tabular}
-\cventry{MCDS}{Embodied Dialogue and ToM \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
-        \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          Xinyue Chen                                                & \pron{she/her} &
-          \href{https://linkedin.com/in/nikhilgupta23/}{Nikhil Gupta}& \pron{he/him } \\
-          \href{https://bennyoooo.github.io}{Benny Jiang}            & \pron{he/him } &
-          Shubham Phal                                               & \pron{he/him }  \\
-          Prasoon Varshney                                           & \pron{he/him } &
-          \href{}{} & \pron{} \\
-        \end{tabular}
-\cventry{MCDS}{Novel Concept Learning \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
-        \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          Bharani Ujjaini Kempaiah & \pron{she/her} &
-          Linyi Li                 & \pron{she/her}\\
-        \end{tabular}
-\cventry{MSAII}{Visual Patent Search \hfill \textnormal{\hintfont{2022}}}{}{}{}{}{}
-        \begin{tabular}{p{5cm} l @{\hspace{4em}} p{5cm} l}
-          Suchong Dong                                                         & \pron{she/her} &
-          Zhiyuan Guo                                                          & \pron{he/him } \\
-          \href{https://linkedin.com/in/goyal-mansi/}{Mansi Goyal}             & \pron{she/her} &
-          \href{https://linkedin.com/in/martamendezsimon/}{Marta Mendez Simon} & \pron{she/her} \\
-          Sreenidhi Sundaram                                                   & \pron{she/her} &
-          Leon Van Den Berghe                                                  & \pron{he/him}  \\
-        \end{tabular}
+\BLOCK{for c in capstones}
+\cvcapstone{%
+  program={\VAR{c['program']|prose}},
+  project={\VAR{c['project']|prose}},
+  url={\VAR{(c.get('url') or '')|url}},
+  co={\VAR{(c.get('co') or '')|prose}},
+  courl={\VAR{(c.get('courl') or '')|url}},
+  when={\VAR{c['when']}}}
+\BLOCK{if c['members']}
+\begin{cvroster}{\VAR{c['columns']}}
+\BLOCK{for row in c['members']|batch(c['columns'])}
+\BLOCK{for m in row}\cvmember{\VAR{(m.get('url') or '')|url}}{\VAR{m['name']|prose}}{\VAR{m.get('pron') or ''}}\BLOCK{if not loop.last} & \BLOCK{endif}\BLOCK{endfor}\BLOCK{if not loop.last} \\\BLOCK{endif}
+\BLOCK{endfor}
+\end{cvroster}
+\BLOCK{endif}
+\BLOCK{endfor}
 
-%\section{Publications} %\hfill \href{https://scholar.google.com/citations?user=bWoGh8UAAAAJ&hl=en}{Google Scholar} h-index:38}
-
-\BLOCK{ for pub_type in pub_types }
-\section{ \VAR{- pub_type } Publications}
-  \BLOCK{ for entry in publications[pub_type] }
-  \pub{ \VAR{entry['idx']} }{\begin{minipage}[t]{5.2in}
-      \href{ \VAR{- entry['url'] if 'url' in entry else '' -} }
-            { \VAR{ entry['title'].replace('&', '\\&') }     }
-      \end{minipage}\hfill \textnormal{ \VAR{ entry['year'] } } }
-      {\begin{tabular}{ @{}p{5.2in} }
-          \VAR{ entry['authors_display']|join(', ')|replace("Yonatan Bisk", "\YB{}") }
-      \end{tabular} }
-      {\begin{tabular}{@{}p{5in} }
-          \VAR{ entry['venue'] }
-          \BLOCK{- if 'note' in entry -}
-          \\ -- \textbf{ \VAR{- entry['note'] -} }
-          \BLOCK{ endif }
-          \VAR{- ' (' + entry['pres'] + ') ' if 'pres' in entry else '' -}
-      \end{tabular} } { }{}
-  \BLOCK{- endfor -}
-\BLOCK{- endfor }
-
+\BLOCK{for pub_type in pub_types}
+\section{\VAR{pub_type} Publications}
+\BLOCK{for entry in publications[pub_type]}
+\VAR{e.publication(entry)}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
 \section{Thesis Committees}
-\BLOCK{- for year, types in theses.items() }
-  \BLOCK{- for type, students in types.items() }
-    \BLOCK{- for student, properties in students.items() }
-      \cventry{ \VAR{- year -} }
-              { \VAR{- type -} }
-              {\href{ \VAR{- properties['url'] -} }
-              { \VAR{- student -} } }
-              {\hfill \VAR{properties['adv'] -} }
-              { \VAR{- properties['uni'] -} }
-              {}
-    \BLOCK{- endfor -}
-  \BLOCK{- endfor -}
-\BLOCK{- endfor }
-
+\BLOCK{for year, types in theses.items()}
+\BLOCK{for type, students in types.items()}
+\BLOCK{for student, properties in students.items()}
+\cvcommittee{%
+  when={\VAR{year}},
+  kind={\VAR{type}},
+  student={\VAR{student}},
+  url={\VAR{(properties.get('url') or '')|url}},
+  advisor={\VAR{properties.get('adv') or ''}},
+  uni={\VAR{properties.get('uni') or ''}}}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
 \section{Teaching}
-\BLOCK{- for year, semesters in teaching.items() }
-  \BLOCK{- for semester, entries in semesters.items() }
-    \BLOCK{- set year_loop = loop }
-    \BLOCK{- for entry in entries }
-      \BLOCK{- if year_loop.first and loop.first }
-          \cventry{ \VAR{- year  -} }
-                  { \VAR{- entry['class'] -} }
-                  { \VAR{- 'w/' + entry['co'] if 'co' in entry else '' -} }
-                  { \hfill \numS{ \VAR{- entry['size'] -} } }
-                  { \VAR{- semester -} }{}
-        \BLOCK{- else }
-          \cventry{ -- }
-                  { \VAR{- entry['class'] -} }
-                  { \VAR{- 'w/' + entry['co'] if 'co' in entry else '' -} }
-                  { \hfill \numS{ \VAR{- entry['size'] -} } }
-                  { \VAR{- semester -} }{}
-        \BLOCK{- endif }
-    \BLOCK{- endfor -}
-  \BLOCK{- endfor -}
-\BLOCK{- endfor }
+\BLOCK{for year, semesters in teaching.items()}
+\BLOCK{for semester, entries in semesters.items()}
+\BLOCK{set year_loop = loop}
+\BLOCK{for entry in entries}
+\cvteaching{%
+  when={\VAR{year if year_loop.first and loop.first else '--'}},
+  course={\VAR{entry['class']}},
+  co={\VAR{entry.get('CO') or entry.get('co') or ''}},
+  size={\VAR{entry.get('size') or ''}},
+  term={\VAR{semester}}}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
 \section{(Senior) Area Chair / Action Editor}
-\BLOCK{- for year, areas in areachair.items() }
-  \BLOCK{- for area, roles in areas.items() }
-    \BLOCK{- set year_loop = loop }
-    \BLOCK{- for role, conferences in roles.items() }
-      \BLOCK{- set area_loop = loop }
-      \BLOCK{- for conference in conferences }
-        \BLOCK{- if year_loop.first and area_loop.first and loop.first }
-          \cventry{ \VAR{ year } }
-                  { \VAR{ role -}: \VAR{ conference } }
-                  { \AC{ \VAR{- area -} } }{}{}{}
-        \BLOCK{- else }
-          \cventry{ -- }
-                  { \VAR{ role -}: \VAR{ conference } }
-                  { \AC{ \VAR{- area -} } }{}{}{}
-        \BLOCK{- endif }
-      \BLOCK{- endfor }
-    \BLOCK{- endfor }
-  \BLOCK{- endfor }
-\BLOCK{- endfor }
-
-
+\BLOCK{for year, areas in areachair.items()}
+\BLOCK{for area, roles in areas.items()}
+\BLOCK{set year_loop = loop}
+\BLOCK{for role, conferences in roles.items()}
+\BLOCK{set area_loop = loop}
+\BLOCK{for conference in conferences}
+\VAR{e.areachair_row(year if year_loop.first and area_loop.first and loop.first else '--', role, conference, area)}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
 \section{Reviewer}
-\cventry{NLP}{\acro{ARR}\normalfont Association for Computational Linguistics Rolling Review}{\hfill 2021}{}{}{}
-\cventry{}{\acro{ACL}\normalfont Association for Computational Linguistics}{\hfill 2017, 2018}{}{}{}
-\cventry{}{\acro{CL}\normalfont Computational Linguistics Journal}{\hfill 2017 -- 2022}{}{}{}
-\cventry{}{\acro{CoLing}\normalfont International Conference on Computational Linguistics}{\hfill 2016}{}{}{}
-\cventry{}{\acro{CoNLL}\normalfont Conference on Computational Natural Language Learning}{\hfill 2016 -- 2018}{}{}{}
-\cventry{}{\acro{EACL}\normalfont European Chapter of the Association for Computational Linguistics}{\hfill 2014, 17, 20}{}{}{}
-\cventry{}{\acro{EMNLP}\normalfont Empirical Methods in Natural Language Processing}{\hfill 2013 -- 2020}{}{}{}
-\cventry{}{\acro{-- }\normalfont Best Papers Awards Committee}{\hfill 2024}{}{}{}
-\cventry{}{\acro{IJCNLP}\normalfont International Joint Conference on Natural Language Processing}{\hfill 2017}{}{}{}
-\cventry{}{\acro{NAACL}\normalfont N. American Chapter of the Association for Computational Ling}{\hfill 2016 -- 2019}{}{}{}
-\cventry{}{\acro{-- }\normalfont Best Papers Awards Committee}{\hfill 2025}{}{}{}
-\cventry{}{\acro{NLE}\normalfont Natural Language Engineering Journal}{\hfill 2016}{}{}{}
-\cventry{}{\acro{*SEM}\normalfont Joint Conference on Lexical and Computational Semantics}{\hfill 2020}{}{}{}
-\cventry{}{\acro{TACL}\normalfont Transactions of the Assoc. for Computational Linguistics}{\hfill 2019 -- 2023}{}{}{}
-\cventry{Robo}{\acro{CoRL}\normalfont Conference on Robot Learning}{\hfill 2019 -- 2021,2023}{}{}{}
-\cventry{}{\acro{AURO}\normalfont Autonomous Robots}{\hfill 2022}{}{}{}
-\cventry{}{\acro{RSS}\normalfont Robotics: Science and Systems}{\hfill 2022, 2024}{}{}{}
-\cventry{}{\acro{HRI}\normalfont Human Robot Interaction}{\hfill 2020 -- 2025}{}{}{}
-\cventry{}{\acro{ICRA}\normalfont International Conference on Robotics and Automation}{\hfill 2019,2023 -- 25}{}{}{}
-\cventry{}{\acro{IJRR}\normalfont International Journal of Robotics Research}{\hfill 2017}{}{}{}
-\cventry{}{\acro{IROS}\normalfont IEEE/RSJ International Conference on Intelligent Robots and Systems}{\hfill 2019,23--24}{}{}{}
-\cventry{}{\acro{RA-L}\normalfont IEEE Robotics and Automation Letters}{\hfill 2019,2023,2026}{}{}{}
-\cventry{AI/ML}{\acro{AAAI}\normalfont Association for the Advancement of Artificial Intelligence}{\hfill 2018, 2021}{}{}{}
-\cventry{}{\acro{ICLR}\normalfont International Conference on Learning Representations}{\hfill '19 -- '20,'25,'27}{}{}{}
-\cventry{}{\acro{ICML}\normalfont International Conference on Machine Learning}{\hfill 2019}{}{}{}
-\cventry{}{\acro{IJCAI}\normalfont International Joint Conference on Artificial Intelligence}{\hfill 2019}{}{}{}
-\cventry{}{\acro{NeurIPS}\normalfont Neural Information Processing Systems}{\hfill 2018 -- 2019,2025}{}{}{}
-\cventry{}{\acro{T-PAMI}\normalfont Transactions on Pattern Analysis and Machine Intelligence}{\hfill 2023 -- }{}{}{}
-\cventry{}{\acro{TMLR}\normalfont Transactions on Machine Learning Research}{\hfill 2026 -- }{}{}{}
-\cventry{CV}{\acro{CVPR}\normalfont Computer Vision and Pattern Recognition}{\hfill 2020, 2023}{}{}{}
-\cventry{}{\acro{ICCV}\normalfont Internationsl Conference on Computer Vision }{\hfill 2025}{}{}{}
-\cventry{}{\acro{WACV}\normalfont IEEE/CVF Winter Conference on Applications of Computer Vision}{\hfill 2026}{}{}{}
+\BLOCK{for area, venues in reviewing.items()}
+\BLOCK{for v in venues}
+\cvreviewing{%
+  area={\VAR{area|prose if loop.first else ''}},
+  acronym={\VAR{v['acronym']|prose}},
+  venue={\VAR{v['venue']|prose}},
+  years={\VAR{v['years']|prose}}}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
 \section{Organization (Workshops and Conference)}
-\cventry{2022}{Workshop}{\href{https://embodied-ai.org/}{Embodied AI Workshop -- Challenge Organizer}}{\newline Computer Vision and Pattern Recognition}{}{}
-\cventry{2021}{Workshop}{\href{https://embodied-ai.org/}{Embodied AI Workshop -- Challenge Organizer}}{\newline Computer Vision and Pattern Recognition}{}{}
-\cventry{2020}{Workshop}{\href{http://askforalfred.com/EVAL}{Embodied Vision, Actions \& Language Workshop}}{\newline European Conference on Computer Vision}{}{}
-\cventry{--}{Workshop}{\href{http://securedata.lol/}{Workshop on Dataset Curation and Security}}{\newline NeurIPS}{}{}
-\cventry{2019}{Workshop}{\href{http://splu-robonlp.github.io}{Spatial Language Understanding and Grounded communication for Robotics}}{\newline North American Chapter of the Association for Computational Linguistics}{}{}
-\cventry{2018}{Conference}{Social Media Chair}{\newline North American Chapter of the Association for Computational Linguistics}{}{}
-\cventry{--}{Workshop}{\href{https://newgeneralization.github.io/}{Generalization in the Age of Deep Learning}}{\newline North American Chapter of the Association for Computational Linguistics}{}{}
-\cventry{--}{Workshop}{\href{https://www.wordplay2018.com/}{Wordplay: Reinformcent and Language Learning in Text-Based Games}}{NeurIPS}{}{}
-\cventry{2017}{Conference}{Student Scholarship Chair and Student Volunteer Coordinator}{\newline Conference on Empirical Methods in Natural Language Processing}{}{}
-\cventry{--}{Workshop}{\href{https://robo-nlp.github.io/2017_index.html}{Language Grounding for Robotics}}{\newline Conference of the Association for Computational Linguistics}{}{}
+\BLOCK{for year, roles in organization.items()}
+\BLOCK{for r in roles}
+\cvorganizing{%
+  when={\VAR{year if loop.first else '--'}},
+  kind={\VAR{r['kind']|prose}},
+  what={\VAR{r['what']|prose}},
+  url={\VAR{(r.get('url') or '')|url}},
+  venue={\VAR{(r.get('venue') or '')|prose}}}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
 \section{Invitations and Talks}
-\cventry{2026}{Language is Discrete, the World is Continuous}{Japanese-American-German Frontiers of Science}{Japan Society for the Promotion of Science, the US National Academy of Sciences and the Alexander von Humboldt Foundation}{}{}{}
-\cventry{}{Welcome to Symbols}{}{IROS Workshop on AI Meets Autonomy}{}{}{}
-\cventry{2025}{Embodied Language: Evaluating LLMs in the Real World}{}{75th Anniversary of the Turing Test}{Université du Québec à Montréal}{}{}
-\cventry{    }{Spatial and Semantic Awareness in Embodied LMs}{}{IVADO 1st Workshop: Assessing and Improving the Capabilities and Safety of Agents}{Montreal}{}{}
-\cventry{    }{Guiding and Calibrating LLMs}{}{Apple Workshop on Human-Centered Machine Learning}{}{}{}
-\cventry{    }{Semantic Spaces and VLM limitations}{}{Stanford Vision and Learning Lab (SVL)}{}{}{}
-\cventry{    }{Following Instructions and Asking Questions}{}{Army Research Lab}{}{}{}
-\cventry{    }{Why is language an embodied problem?}{}{UK Robotics Summer School Edinburgh}{}{}{}
-\cventry{    }{Planning, Reasoning, and Generalization: A title too bold for me to actually deliver on}{}{JP Morgan AI Agents Seminar}{}{}{}
-\cventry{    }{Semantics? Reasoning? Can we define either of those terms?}{}{RSS Workshop: 2nd Workshop on Semantic Reasoning and Goal Understanding in Robotics}{}{}{}
-\cventry{    }{Humans Know Things, Humans Get in the Way}{}{RSS Workshop: Continual Robot Learning from Humans}{}{}{}
-\cventry{    }{Simulating People with Language Models -- Good Idea? Bad Idea?}{}{RSS Workshop: GenAI-HRI }{}{}{}
-\cventry{    }{AI: Powerful and Limited}{}{Next Gen Philanthropy}{}{}{}
-\cventry{2024}{Talking to Robots}{}{University Pennsylvania}{}{}{}
-\cventry{    }{Everything Fails, Everything is Ambiguous}{}{RSS Social Intelligence Workshop}{}{}{}
-\cventry{    }{Do It Like This, and Don't Wake the Baby}{}{RSS Task Specification Workshop}{}{}{}
-\cventry{    }{                 }{}{University of Maryland, College Park}{}{}{}
-\cventry{2023}{Are We Really Talking to Robots?}{}{``Dialogue with Robots'' workshop}{UPitt NSF Workshop}{}{}
-\cventry{}{Words $\neq$ language}{}{Articulate Robots: Utilizing Language for Robot Learning}{}{}{RSS Workshop}
-\cventry{}{Following Instructions and Asking Questions}{Learning by Asking for Intelligent Robots and Agents}{}{}{}{RO-MAN Workshop}
-\cventry{}{Following Instructions and Asking Questions}{}{}{}{}{Goal Conditioned RL Workshop @ NeurIPS}
-\cventry{2022}{Can we \textit{really} connect language to robotics?}{\href{https://sites.google.com/view/langrob-corl22/}{CoRL Wksp on Language and Robot Learning}}{}{}{}
-\cventry{}{How machines learn language: Useful but wrong?}{\href{https://www.nozarilab.com/iwlp2022}{12th Inter. Wksp on Language Production}}{}{}{}
-\cventry{    }{Following Instructions and Asking Questions}{Univ of Potsdam}{}{}{}
-\cventry{    }{}{Univ California Santa Barbara NLP}{}{}{}
-\cventry{    }{}{Georgia Tech NLP}{}{}{}
-\cventry{    }{}{Microsoft Research NYC}{}{}{}
-\cventry{    }{}{Penn State University}{}{}{}
-\cventry{    }{}{Universitat Hamburg}{Crossmodal Learning (CML) summer school}{}{}
-\cventry{    }{}{University of Stuttgart}{Institute of Natural Language Processing}{}{}
-\cventry{    }{}{University of Pittsburgh NLP}{}{}{}
-\cventry{2021}{}{Univ of Illinois at Urbana-Champaign NLP}{}{}{}
-\cventry{    }{}{\href{https://human-interaction4robotic-navigation.github.io/}{Human Interaction for Robotic Navigation Workshop} @ Inter. Conference on Computer Vision}{}{}{}
-\cventry{    }{WebQA: Multihop and Multimodal QA}{PNNL Mega-AI Seminar}{}{}{}
-\cventry{    }{WebQA: Multihop and Multimodal}{Microsoft Research Summit}{}{}{}
-\cventry{    }{\href{https://alvr-workshop.github.io/}{2nd Workshop on Advances in Language and Vision Research (ALVR)}}{NAACL}{}{}{}
-\cventry{    }{Instructions, Abstraction, and Theory-of-Mind}{Ko\c c University AI center}{}{}{}
-\cventry{    }{Understanding the Potential of Scaling Artificial Intelligence for Science Applications Panel}{Pacific Northwest National Lab}{}{}{}
-\cventry{    }{Guest Lecture: Embodiment for NLP}{Univ of Pennsylvania}{}{}{}
-\cventry{    }{Guest Lecture: Multimodality in NLP}{UWashington Linguistics}{}{}{}
-\cventry{2020}{The 2nd Workshop Beyond Vision and Language: Integrating Real-world Knowledge}{CoLing}{}{}{}
-\cventry{    }{\href{https://apps.cs.utexas.edu/calendar/events/297218}{The University of Texas at Austin -- Forum for AI}}{}{}{}{}
-\cventry{    }{\href{https://tech.cornell.edu/?events=lmss-cornell-tech-yonatan-bisk-carnegie-mellon-university}{Cornell Learning Machines seminar}}{}{}{}{}
-\cventry{    }{\href{https://nlp.stanford.edu/seminar/}{Stanford NLP seminar}}{}{}{}{}
-\cventry{    }{SRI Center for Vision Technology Lab Panel}{Embodied AI}{}{}{}
-\cventry{2018}{Colloquium Talk}{Northwest NLP}{}{}{}
-\cventry{2017}{Invited Talk}{University of Notre Dame NLP Seminar}{}{}{}
-\cventry{    }{Invited Talk}{University of California, Irvine AI/ML Seminar}{}{}{}
-\cventry{    }{Invited Talk}{Pacific Northwest National Laboratory}{}{}{}
-\cventry{2016}{Invited Poster}{The Impact of Computing in Our Physical World session of the CRA's Computing Community Consortium (CCC) Symposium on Computing Research}{}{}{}
-\cventry{2015}{Colloquium Talk}{Toyota Tech. Inst. of Chicago's Midwest Speech \& Language Days}{}{}{}
-\cventry{2013}{Colloquium Talk}{Toyota Tech. Inst. of Chicago's Midwest Speech \& Language Days}{}{}{}
+\BLOCK{for year, entries in talks.items()}
+\BLOCK{for t in entries}
+\cvtalkentry{%
+  when={\VAR{year if loop.first else ''}},
+  title={\VAR{(t.get('title') or '')|prose}},
+  url={\VAR{(t.get('url') or '')|url}},
+  venue={\VAR{(t.get('venue') or '')|prose}},
+  venueurl={\VAR{(t.get('venueurl') or '')|url}},
+  host={\VAR{(t.get('host') or '')|prose}}}
+\BLOCK{endfor}
+\BLOCK{endfor}
 
-% \section{Department/University Service}
-% \cventry{2025}{House Select Committee on the CCP}{DC meetings and draft legislation/initiatives}{}{}{}
-% \cventry{    }{PhD/MLT Admissions}{Chair and Slate Transition}{}{}{}
-% \cventry{    }{Students in Admissions}{}{}{}{}
-% \cventry{    }{Space Committee}{}{}{}{}
-% \cventry{    }{Strategic Growth}{}{}{}{}
-% \cventry{    }{LTI Slack}{}{}{}{}
-% \cventry{2024}{PhD/MLT Admissions}{Slate conference}{}{}{}
-% \cventry{    }{Students in Admissions}{}{}{}{}
-% \cventry{    }{Space Committee}{}{}{}{}
-% \cventry{    }{Education Committee}{}{}{}{}
-% \cventry{    }{LTI Slack}{}{}{}{}
-% \cventry{2023}{PhD/MLT Admissions}{}{}{}{}
-% \cventry{    }{Students in Admissions}{}{}{}{}
-% \cventry{    }{Space Committee}{}{}{}{}
-% \cventry{    }{Education Committee}{}{}{}{}
-% \cventry{    }{Colloquium}{}{}{}{}
-% \cventry{    }{LTI Open House Spring 2023}{}{}{}{}
-% \cventry{2022}{PhD/MLT Admissions}{Score normalization, preselection, etc}{}{}{}
-% \cventry{    }{Colloquium}{}{}{}{}
-% \cventry{    }{Students in Admissions}{}{}{}{}
-% \cventry{    }{LTI Orientation for Fall 2022}{}{}{}{}
-% \cventry{    }{Curriculum Creation Committee}{}{}{}{}
-% \cventry{    }{LTI Slack}{}{}{}{}
-% \cventry{2021}{PhD/MLT Admissions}{Score normalization, preselection, etc}{}{}{}
-% \cventry{    }{DEI Committee}{Train and Include Students in Admissions}{}{}{}
-% \cventry{    }{Space Committee}{}{}{}{}
-% \cventry{2020}{PhD/MLT Admissions}{}{}{}{}
-% \cventry{    }{DEI Committee}{}{}{}{}
-% \cventry{    }{Social Media + YouTube}{}{}{}{}
-
+%% Department/University Service -- kept off the public CV. The record lives in
+%% yaml/service.yaml; change `false` to `true` below to print it.
+\BLOCK{if false}
+\section{Department/University Service}
+\BLOCK{for year, items in service.items()}
+\BLOCK{for s in items}
+\cvservice{%
+  when={\VAR{year if loop.first else '--'}},
+  what={\VAR{s['what']|prose}},
+  detail={\VAR{(s.get('detail') or '')|prose}}}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\BLOCK{endif}
 
 \end{document}

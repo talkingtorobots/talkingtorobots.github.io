@@ -1,0 +1,106 @@
+---
+# Reviewing, grouped by area. The area tag prints once, on its first venue.
+# An acronym of "--" marks a sub-role of the venue above it.
+NLP:
+  - acronym: ARR
+    venue: Association for Computational Linguistics Rolling Review
+    years: 2021
+  - acronym: ACL
+    venue: Association for Computational Linguistics
+    years: 2017, 2018
+  - acronym: CL
+    venue: Computational Linguistics Journal
+    years: 2017 -- 2022
+  - acronym: CoLing
+    venue: International Conference on Computational Linguistics
+    years: 2016
+  - acronym: CoNLL
+    venue: Conference on Computational Natural Language Learning
+    years: 2016 -- 2018
+  - acronym: EACL
+    venue: European Chapter of the Association for Computational Linguistics
+    years: 2014, 17, 20
+  - acronym: EMNLP
+    venue: Empirical Methods in Natural Language Processing
+    years: 2013 -- 2020
+  - acronym: "--"
+    venue: Best Papers Awards Committee
+    years: 2024
+  - acronym: IJCNLP
+    venue: International Joint Conference on Natural Language Processing
+    years: 2017
+  - acronym: NAACL
+    venue: N. American Chapter of the Association for Computational Ling
+    years: 2016 -- 2019
+  - acronym: "--"
+    venue: Best Papers Awards Committee
+    years: 2025
+  - acronym: NLE
+    venue: Natural Language Engineering Journal
+    years: 2016
+  - acronym: "*SEM"
+    venue: Joint Conference on Lexical and Computational Semantics
+    years: 2020
+  - acronym: TACL
+    venue: Transactions of the Assoc. for Computational Linguistics
+    years: 2019 -- 2023
+
+Robo:
+  - acronym: CoRL
+    venue: Conference on Robot Learning
+    years: 2019 -- 2021,2023
+  - acronym: AURO
+    venue: Autonomous Robots
+    years: 2022
+  - acronym: RSS
+    venue: "Robotics: Science and Systems"
+    years: 2022, 2024
+  - acronym: HRI
+    venue: Human Robot Interaction
+    years: 2020 -- 2025
+  - acronym: ICRA
+    venue: International Conference on Robotics and Automation
+    years: 2019,2023 -- 25
+  - acronym: IJRR
+    venue: International Journal of Robotics Research
+    years: 2017
+  - acronym: IROS
+    venue: IEEE/RSJ International Conference on Intelligent Robots and Systems
+    years: 2019,23--24
+  - acronym: RA-L
+    venue: IEEE Robotics and Automation Letters
+    years: 2019,2023,2026
+
+AI/ML:
+  - acronym: AAAI
+    venue: Association for the Advancement of Artificial Intelligence
+    years: 2018, 2021
+  - acronym: ICLR
+    venue: International Conference on Learning Representations
+    years: "'19 -- '20,'25,'27"
+  - acronym: ICML
+    venue: International Conference on Machine Learning
+    years: 2019
+  - acronym: IJCAI
+    venue: International Joint Conference on Artificial Intelligence
+    years: 2019
+  - acronym: NeurIPS
+    venue: Neural Information Processing Systems
+    years: 2018 -- 2019,2025
+  - acronym: T-PAMI
+    venue: Transactions on Pattern Analysis and Machine Intelligence
+    years: 2023 --
+  - acronym: TMLR
+    venue: Transactions on Machine Learning Research
+    years: 2026 --
+
+CV:
+  - acronym: CVPR
+    venue: Computer Vision and Pattern Recognition
+    years: 2020, 2023
+  - acronym: ICCV
+    venue: International Conference on Computer Vision
+    years: 2025
+  - acronym: WACV
+    venue: IEEE/CVF Winter Conference on Applications of Computer Vision
+    years: 2026

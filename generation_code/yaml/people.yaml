@@ -64,6 +64,8 @@
     dept: CSD
     capt: Language Modeling
     start: 2024
+    co: Zico Kolter
+    co_url: https://zicokolter.com
 - name: Rosa Vitiello
   pron: she/her
   native: Technically Rosanna
@@ -178,6 +180,8 @@
     dept: ECE
     start: 2025
     capt: 3D Manufacturing
+    co: Gary Fedder
+    co_url: http://users.ece.cmu.edu/~fedder/
 - name: Vidhi Jain
   pron: she/her
   native: विधि जैन

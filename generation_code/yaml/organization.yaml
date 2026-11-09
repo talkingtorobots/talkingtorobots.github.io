@@ -1,0 +1,51 @@
+---
+# Workshops and conference roles, grouped by year. The year prints once per group.
+2022:
+  - kind: Workshop
+    what: Embodied AI Workshop -- Challenge Organizer
+    url: https://embodied-ai.org/
+    venue: Computer Vision and Pattern Recognition
+
+2021:
+  - kind: Workshop
+    what: Embodied AI Workshop -- Challenge Organizer
+    url: https://embodied-ai.org/
+    venue: Computer Vision and Pattern Recognition
+
+2020:
+  - kind: Workshop
+    what: Embodied Vision, Actions & Language Workshop
+    url: http://askforalfred.com/EVAL
+    venue: European Conference on Computer Vision
+  - kind: Workshop
+    what: Workshop on Dataset Curation and Security
+    url: http://securedata.lol/
+    venue: NeurIPS
+
+2019:
+  - kind: Workshop
+    what: Spatial Language Understanding and Grounded communication for Robotics
+    url: http://splu-robonlp.github.io
+    venue: North American Chapter of the Association for Computational Linguistics
+
+2018:
+  - kind: Conference
+    what: Social Media Chair
+    venue: North American Chapter of the Association for Computational Linguistics
+  - kind: Workshop
+    what: Generalization in the Age of Deep Learning
+    url: https://newgeneralization.github.io/
+    venue: North American Chapter of the Association for Computational Linguistics
+  - kind: Workshop
+    what: "Wordplay: Reinforcement and Language Learning in Text-Based Games"
+    url: https://www.wordplay2018.com/
+    venue: NeurIPS
+
+2017:
+  - kind: Conference
+    what: Student Scholarship Chair and Student Volunteer Coordinator
+    venue: Conference on Empirical Methods in Natural Language Processing
+  - kind: Workshop
+    what: Language Grounding for Robotics
+    url: https://robo-nlp.github.io/2017_index.html
+    venue: Conference of the Association for Computational Linguistics

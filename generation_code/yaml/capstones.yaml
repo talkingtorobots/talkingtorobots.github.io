@@ -1,0 +1,136 @@
+---
+# Masters capstone projects and their teams. `columns` is how many names to set
+# across; the column width itself is derived from the page, so a long name wraps
+# in its cell instead of pushing the row out of the margin.
+- program: MCDS
+  project: VR Robot Teleop
+  when: 2024
+  columns: 3
+  members:
+    - name: Sophia Huang
+    - name: Jensen (Yi-Che) Huang
+    - name: Tianyi Cheng
+
+- program: MSAII
+  project: Seed emergence
+  when: 2024
+  columns: 3
+  members:
+    - name: Harini Subramanyan
+    - name: Juanyun Mai
+    - name: Ameya Morbale
+    - name: Karthik Natarajan
+    - name: Noel D Souza
+    - name: Bohao Zhang
+
+- program: MRSD
+  project: Assistive Robotics for Eldercare
+  url: https://mrsdprojects.ri.cmu.edu/2023teamf/
+  co: Z Erickson
+  courl: https://zackory.com/
+  when: 2023
+  columns: 2
+  members:
+    - name: Abhinav Gupta
+      pron: he/him
+    - name: Atharva Pusalkar
+      pron: he/him
+    - name: Praveen Venkatesh
+      pron: he/him
+    - name: Shaolin Kataria
+      pron: he/him
+    - name: Shivam Tripathy
+      pron: he/him
+
+- program: MRSD
+  project: Modular Teleop with Autonomy
+  co: Z Erickson
+  courl: https://zackory.com/
+  when: 2022
+  columns: 2
+  members:
+    - name: Jashkumar Diyora
+      pron: he/him
+      url: https://linkedin.com/in/jashdiyora/
+    - name: Shruti Gangopadhyay
+      pron: she/her
+      url: https://linkedin.com/in/shruti-gangopadhyay/
+    - name: Jigar Patel
+      pron: he/him
+      url: https://linkedin.com/in/jigarkumar-patel/
+    - name: Prakhar Pradeep
+      pron: he/him
+      url: https://linkedin.com/in/prakharpradeep/
+    - name: Shivani Sivakumar
+      pron: she/her
+      url: https://allaboutrobotix.com/
+
+- program: MCDS
+  project: Embodied Navigation and Interaction
+  when: 2022
+  columns: 2
+  members:
+    - name: Adhokshaja Madhwaraj
+      pron: he/him
+      url: https://linkedin.com/in/adhokshaja-madhwaraj/
+    - name: Kushagra Mahajan
+      pron: he/him
+      url: https://kushagramahajan.me/
+    - name: Sai Vishwas Padigi
+      pron: he/him
+      url: https://linkedin.com/in/saivishwasp
+    - name: Vineeth Reddy
+      pron: he/him
+    - name: Malaika Vijay
+      pron: she/her
+    - name: Zheng (Jessica) Zhong
+      pron: she/her
+      url: https://www.linkedin.com/in/jessicazz/
+
+- program: MCDS
+  project: Embodied Dialogue and ToM
+  when: 2022
+  columns: 2
+  members:
+    - name: Xinyue Chen
+      pron: she/her
+    - name: Nikhil Gupta
+      pron: he/him
+      url: https://linkedin.com/in/nikhilgupta23/
+    - name: Benny Jiang
+      pron: he/him
+      url: https://bennyoooo.github.io
+    - name: Shubham Phal
+      pron: he/him
+    - name: Prasoon Varshney
+      pron: he/him
+
+- program: MCDS
+  project: Novel Concept Learning
+  when: 2022
+  columns: 2
+  members:
+    - name: Bharani Ujjaini Kempaiah
+      pron: she/her
+    - name: Linyi Li
+      pron: she/her
+
+- program: MSAII
+  project: Visual Patent Search
+  when: 2022
+  columns: 2
+  members:
+    - name: Suchong Dong
+      pron: she/her
+    - name: Zhiyuan Guo
+      pron: he/him
+    - name: Mansi Goyal
+      pron: she/her
+      url: https://linkedin.com/in/goyal-mansi/
+    - name: Marta Mendez Simon
+      pron: she/her
+      url: https://linkedin.com/in/martamendezsimon/
+    - name: Sreenidhi Sundaram
+      pron: she/her
+    - name: Leon Van Den Berghe
+      pron: he/him

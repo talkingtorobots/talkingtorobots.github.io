@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import json
 import yaml
@@ -12,7 +13,8 @@ from openpyxl.utils import range_boundaries, get_column_letter
 from openpyxl.worksheet.table import Table
 from pydantic import ValidationError
 
-from schemas import Publication, PersonRecord, Affiliation
+from schemas import (Publication, PersonRecord, Affiliation, Position, Degree,
+                     ReviewVenue, OrgRole, Talk, Capstone, ServiceItem)
 from authors import render_authors
 
 parser = argparse.ArgumentParser(description='Generate Website, CV, COA')
@@ -33,6 +35,10 @@ latex_env = Environment(
     variable_end_string='}',
     comment_start_string=r'\#{',
     comment_end_string='}',
+    # A line holding only a \BLOCK{...} tag should contribute nothing to the
+    # output; without this it leaves a blank line, which is a \par inside the
+    # longtable a moderncv \section opens, and the entry macros then fail.
+    trim_blocks=True,
     loader=FileSystemLoader("templates"),
 )
 
@@ -46,19 +52,61 @@ def tex_escape(text):
 
 latex_env.filters["tex"] = tex_escape
 
+# The CV sections that used to be written as literal LaTeX (positions, talks,
+# reviewing, ...) are plain text in yaml now, so they need a bit more than
+# escaping to come out looking the way hand-written LaTeX did: "quoted" spans
+# become TeX quotes and *starred* spans become italics. Anything fancier than
+# that belongs in a macro in cvlayout.sty, not in the data.
+def tex_prose(text):
+    text = tex_escape(str(text))
+    text = re.sub(r'"([^"]*)"', r"``\1''", text)
+    text = re.sub(r"\*([^*]+)\*", r"\\textit{\1}", text)
+    return text
+
+latex_env.filters["prose"] = tex_prose
+
+# A URL has to survive two hostile readers before hyperref sees it: keyval, which
+# splits the key list of every \cvXxx{...} call, and the longtable a moderncv
+# \section opens, where a bare & is an alignment tab. Escaping these three makes
+# \href read the URL intact -- hyperref puts the literal characters back in the
+# link target.
+def tex_url(url):
+    for char in "&%#":
+        url = url.replace(char, "\\" + char)
+    return url
+
+latex_env.filters["url"] = tex_url
+
 def load_yaml(path):
     return yaml.load(open(path), Loader=yaml.CLoader)
 
-# Load Publications 
+# Load Publications
 def load_validated(path, model):
     entries = load_yaml(path)
     validated = []
     for i, entry in enumerate(entries):
         try:
-            validated.append(model(**entry).model_dump(exclude_unset=True))
+            validated.append(model(**entry).model_dump(exclude_unset=True, by_alias=True))
         except ValidationError as e:
             sys.exit(f"{path}: entry {i} ({entry.get('name', entry.get('title', '?'))}) failed validation:\n{e}")
     return validated
+
+# Several CV sections are a mapping of group -> [entry, ...]: year for talks,
+# organization and service, research area for reviewing, current/previous for
+# positions. The template prints the group label once and `--` (or nothing) on
+# the rows below it, the same way teaching and area_chair already work.
+def load_validated_groups(path, model):
+    groups = load_yaml(path)
+    out = {}
+    for group, entries in groups.items():
+        validated = []
+        for i, entry in enumerate(entries or []):
+            try:
+                validated.append(model(**entry).model_dump(exclude_unset=True, by_alias=True))
+            except ValidationError as e:
+                sys.exit(f"{path}: {group} entry {i} failed validation:\n{e}")
+        out[group] = validated
+    return out
 
 pubs = load_validated("yaml/publications.yaml", Publication)
 if args.onepager:
@@ -102,6 +150,32 @@ for entry in pubs:
 theses_yaml = load_yaml("yaml/theses.yaml")
 teach_yaml = load_yaml("yaml/teaching.yaml")
 areachair_yaml = load_yaml("yaml/area_chair.yaml")
+
+# CV-only sections. These were literal \cventry calls in CV_template.jinja2 until
+# the template became layout-only; `service` is loaded but not printed (its
+# section in the template is commented out).
+positions_yaml = load_validated_groups("yaml/positions.yaml", Position)
+education_yaml = load_validated("yaml/education.yaml", Degree)
+reviewing_yaml = load_validated_groups("yaml/reviewing.yaml", ReviewVenue)
+organization_yaml = load_validated_groups("yaml/organization.yaml", OrgRole)
+talks_yaml = load_validated_groups("yaml/talks.yaml", Talk)
+capstones_yaml = load_validated("yaml/capstones.yaml", Capstone)
+service_yaml = load_validated_groups("yaml/service.yaml", ServiceItem)
+
+# Everything the CV templates need that is not publications or people. Shared by
+# the full CV and the one-pager so the two cannot drift apart -- the one-pager
+# used to carry its own hardcoded copy of Positions, Education and Area Chair,
+# and was still claiming "Assistant Professor".
+def cv_sections():
+    return {
+        "positions": positions_yaml,
+        "education": education_yaml,
+        "reviewing": reviewing_yaml,
+        "organization": organization_yaml,
+        "talks": talks_yaml,
+        "capstones": capstones_yaml,
+        "service": service_yaml,
+    }
 
 # Load template
 types = {
@@ -201,13 +275,14 @@ def generate_CV():
     number_pub(latex_papers["Preprint"], pub_count)
 
     if args.onepager:
-      latex_render = latex_template.render(pub_types=["Journal", "Conference"], 
+      latex_render = latex_template.render(pub_types=["Journal", "Conference"],
                                            publications=latex_papers,
                                            students=student_yaml,
                                            postdocs=postdoc_yaml,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
-                                           theses=theses_yaml)
+                                           theses=theses_yaml,
+                                           **cv_sections())
     else:
       latex_render = latex_template.render(pub_types=["Journal", "Conference", "Workshop", "Preprint"],
                                            publications=latex_papers,
@@ -218,11 +293,17 @@ def generate_CV():
                                            alumni=alumni,
                                            teaching=teach_yaml,
                                            areachair=areachair_yaml,
-                                           theses=theses_yaml)
+                                           theses=theses_yaml,
+                                           **cv_sections())
     with open("CV.tex", 'wt') as output_file:
         output_file.write(latex_render)
-    if os.system("pdflatex -interaction=nonstopmode CV.tex") != 0 or not os.path.exists("CV.pdf"):
-        sys.exit("pdflatex failed to produce CV.pdf; see CV.log. Leaving the previous CV.pdf untouched.")
+    # Twice: moderncv builds every section as a longtable, and longtable needs a
+    # second run to settle its column widths from the .aux it just wrote. One pass
+    # happens to be enough for the full CV but leaves the one-pager's first row
+    # misaligned against the rest.
+    for _ in range(2):
+        if os.system("pdflatex -interaction=nonstopmode CV.tex") != 0 or not os.path.exists("CV.pdf"):
+            sys.exit("pdflatex failed to produce CV.pdf; see CV.log. Leaving the previous CV.pdf untouched.")
     os.system("rm CV.tex CV.log CV.aux CV.out")
     os.system("mv CV.pdf ../")
 

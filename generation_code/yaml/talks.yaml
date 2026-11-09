@@ -1,0 +1,143 @@
+---
+# Invited talks, grouped by year; the year prints once per group. Plain text, not
+# LaTeX: it goes through the `prose` filter, so &, %, #, _ are escaped for you,
+# "quoted" text becomes proper TeX quotes, and *starred* text becomes italic.
+# `venue` prints slanted next to the title, `host` plain after it. A seminar visit
+# with no talk title just omits `title`.
+2026:
+  - title: Language is Discrete, the World is Continuous
+    venue: Japanese-American-German Frontiers of Science
+    host: Japan Society for the Promotion of Science, the US National Academy of
+      Sciences and the Alexander von Humboldt Foundation
+  - title: Welcome to Symbols
+    venue: IROS Workshop on AI Meets Autonomy
+
+2025:
+  - title: "Embodied Language: Evaluating LLMs in the Real World"
+    venue: 75th Anniversary of the Turing Test
+    host: Université du Québec à Montréal
+  - title: Spatial and Semantic Awareness in Embodied LMs
+    venue: "IVADO 1st Workshop: Assessing and Improving the Capabilities and
+      Safety of Agents"
+    host: Montreal
+  - title: Guiding and Calibrating LLMs
+    venue: Apple Workshop on Human-Centered Machine Learning
+  - title: Semantic Spaces and VLM limitations
+    venue: Stanford Vision and Learning Lab (SVL)
+  - title: Following Instructions and Asking Questions
+    venue: Army Research Lab
+  - title: Why is language an embodied problem?
+    venue: UK Robotics Summer School Edinburgh
+  - title: "Planning, Reasoning, and Generalization: A title too bold for me to
+      actually deliver on"
+    venue: JP Morgan AI Agents Seminar
+  - title: Semantics? Reasoning? Can we define either of those terms?
+    venue: "RSS Workshop: 2nd Workshop on Semantic Reasoning and Goal
+      Understanding in Robotics"
+  - title: Humans Know Things, Humans Get in the Way
+    venue: "RSS Workshop: Continual Robot Learning from Humans"
+  - title: Simulating People with Language Models -- Good Idea? Bad Idea?
+    venue: "RSS Workshop: GenAI-HRI"
+  - title: "AI: Powerful and Limited"
+    venue: Next Gen Philanthropy
+
+2024:
+  - title: Talking to Robots
+    venue: University Pennsylvania
+  - title: Everything Fails, Everything is Ambiguous
+    venue: RSS Social Intelligence Workshop
+  - title: Do It Like This, and Don't Wake the Baby
+    venue: RSS Task Specification Workshop
+  - venue: University of Maryland, College Park
+
+2023:
+  - title: Are We Really Talking to Robots?
+    venue: '"Dialogue with Robots" workshop'
+    host: UPitt NSF Workshop
+  - title: Words ≠ language
+    venue: "Articulate Robots: Utilizing Language for Robot Learning"
+    host: RSS Workshop
+  - title: Following Instructions and Asking Questions
+    venue: Learning by Asking for Intelligent Robots and Agents
+    host: RO-MAN Workshop
+  - title: Following Instructions and Asking Questions
+    venue: Goal Conditioned RL Workshop @ NeurIPS
+
+2022:
+  - title: Can we *really* connect language to robotics?
+    venue: CoRL Wksp on Language and Robot Learning
+    venueurl: https://sites.google.com/view/langrob-corl22/
+  - title: "How machines learn language: Useful but wrong?"
+    venue: 12th Inter. Wksp on Language Production
+    venueurl: https://www.nozarilab.com/iwlp2022
+  - title: Following Instructions and Asking Questions
+    venue: Univ of Potsdam
+  - venue: Univ California Santa Barbara NLP
+  - venue: Georgia Tech NLP
+  - venue: Microsoft Research NYC
+  - venue: Penn State University
+  - venue: Universitat Hamburg
+    host: Crossmodal Learning (CML) summer school
+  - venue: University of Stuttgart
+    host: Institute of Natural Language Processing
+  - venue: University of Pittsburgh NLP
+
+2021:
+  - venue: Univ of Illinois at Urbana-Champaign NLP
+  - venue: Human Interaction for Robotic Navigation Workshop @ Inter. Conference
+      on Computer Vision
+    venueurl: https://human-interaction4robotic-navigation.github.io/
+  - title: "WebQA: Multihop and Multimodal QA"
+    venue: PNNL Mega-AI Seminar
+  - title: "WebQA: Multihop and Multimodal"
+    venue: Microsoft Research Summit
+  - title: 2nd Workshop on Advances in Language and Vision Research (ALVR)
+    url: https://alvr-workshop.github.io/
+    venue: NAACL
+  - title: Instructions, Abstraction, and Theory-of-Mind
+    venue: Koç University AI center
+  - title: Understanding the Potential of Scaling Artificial Intelligence for
+      Science Applications Panel
+    venue: Pacific Northwest National Lab
+  - title: "Guest Lecture: Embodiment for NLP"
+    venue: Univ of Pennsylvania
+  - title: "Guest Lecture: Multimodality in NLP"
+    venue: UWashington Linguistics
+
+2020:
+  - title: "The 2nd Workshop Beyond Vision and Language: Integrating Real-world
+      Knowledge"
+    venue: CoLing
+  - title: The University of Texas at Austin -- Forum for AI
+    url: https://apps.cs.utexas.edu/calendar/events/297218
+  - title: Cornell Learning Machines seminar
+    url: https://tech.cornell.edu/?events=lmss-cornell-tech-yonatan-bisk-carnegie-mellon-university
+  - title: Stanford NLP seminar
+    url: https://nlp.stanford.edu/seminar/
+  - title: SRI Center for Vision Technology Lab Panel
+    venue: Embodied AI
+
+2018:
+  - title: Colloquium Talk
+    venue: Northwest NLP
+
+2017:
+  - title: Invited Talk
+    venue: University of Notre Dame NLP Seminar
+  - title: Invited Talk
+    venue: University of California, Irvine AI/ML Seminar
+  - title: Invited Talk
+    venue: Pacific Northwest National Laboratory
+
+2016:
+  - title: Invited Poster
+    venue: The Impact of Computing in Our Physical World session of the CRA's
+      Computing Community Consortium (CCC) Symposium on Computing Research
+
+2015:
+  - title: Colloquium Talk
+    venue: Toyota Tech. Inst. of Chicago's Midwest Speech & Language Days
+
+2013:
+  - title: Colloquium Talk
+    venue: Toyota Tech. Inst. of Chicago's Midwest Speech & Language Days

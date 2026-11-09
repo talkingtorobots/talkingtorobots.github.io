@@ -1,0 +1,51 @@
+---
+# Department and university service, grouped by year. This section is not printed
+# on the public CV -- the template's "Department/University Service" block is
+# commented out -- but the record lives here rather than in commented-out LaTeX,
+# so uncommenting one block in CV_template.jinja2 is all it takes to include it.
+2025:
+  - what: House Select Committee on the CCP
+    detail: DC meetings and draft legislation/initiatives
+  - what: PhD/MLT Admissions
+    detail: Chair and Slate Transition
+  - what: Students in Admissions
+  - what: Space Committee
+  - what: Strategic Growth
+  - what: LTI Slack
+
+2024:
+  - what: PhD/MLT Admissions
+    detail: Slate conference
+  - what: Students in Admissions
+  - what: Space Committee
+  - what: Education Committee
+  - what: LTI Slack
+
+2023:
+  - what: PhD/MLT Admissions
+  - what: Students in Admissions
+  - what: Space Committee
+  - what: Education Committee
+  - what: Colloquium
+  - what: LTI Open House Spring 2023
+
+2022:
+  - what: PhD/MLT Admissions
+    detail: Score normalization, preselection, etc
+  - what: Colloquium
+  - what: Students in Admissions
+  - what: LTI Orientation for Fall 2022
+  - what: Curriculum Creation Committee
+  - what: LTI Slack
+
+2021:
+  - what: PhD/MLT Admissions
+    detail: Score normalization, preselection, etc
+  - what: DEI Committee
+    detail: Train and Include Students in Admissions
+  - what: Space Committee
+
+2020:
+  - what: PhD/MLT Admissions
+  - what: DEI Committee
+  - what: Social Media + YouTube

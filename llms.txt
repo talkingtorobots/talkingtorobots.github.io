@@ -15,6 +15,8 @@
 ## Recent Publications
 
 - [Position: Anthropomorphic Language in AI Discourse Can Be Constructive](https://talkingtorobots.com/publications.html): NeurIPS 2026 Position Paper Track (2026)
+- [ECHO: Embodied Camera Observations of Human Object Carrying](https://arxiv.org/abs/2610.10438): ArXiv (2026)
+- [EmbodiedMidtrain: Bridging the Gap between Vision-Language Models and Vision-Language-Action Models via Mid-training](https://arxiv.org/abs/2604.20012): ArXiv (2026)
 - [Data Augmentation for Improving Contextual Faithfulness Under Knowledge Conflict](https://openreview.net/forum?id=61HAlyC5Iy): Findings of The 5th Asia-Pacific Chapter of the Association for Computational Linguistics {\&} the 15th International Joint Conference on Natural Language Processing (2026)
 - [Contextual Observer Grounding: Evaluating Situated Spatial Reasoning in Vision-Language Models](https://arxiv.org/abs/2609.06880): Findings of The 2026 Conference on Empirical Methods in Natural Language Processing (2026)
 - [Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models](https://arxiv.org/abs/2608.13760): Third Conference on Language Modeling (2026)
@@ -22,5 +24,3 @@
 - [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484): ArXiv (2026)
 - [Flatness Preserves Instruction Following in Vision-Language-Action Models](https://arxiv.org/abs/2606.23641): ArXiv (2026)
 - [ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies](https://arxiv.org/abs/2606.31132): ArXiv (2026)
-- [IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning](https://arxiv.org/abs/2603.20182): IEEE/RSJ International Conference on Intelligent Robots and Systems (2026)
-- [When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents](https://arxiv.org/abs/2605.29938): ArXiv (2026)

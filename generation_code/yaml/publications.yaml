@@ -10,6 +10,38 @@
   venue_acr: NeurIPS
   fig: position_anthropomorphic.jpg
 - year: "2026"
+  field: WS4
+  type: Preprint
+  title: "ECHO: Embodied Camera Observations of Human Object Carrying"
+  authors:
+  - Xuefei Sun
+  - Lorin Achey
+  - Kali Hamilton
+  - Alberto Speranzon
+  - Gregory Grebe
+  - Yonatan Bisk
+  - Christoffer Heckman
+  venue: ArXiv
+  venue_acr: ArXiv
+  url: https://arxiv.org/abs/2610.10438
+- year: "2026"
+  field: WS4
+  type: Preprint
+  title: "EmbodiedMidtrain: Bridging the Gap between Vision-Language Models and Vision-Language-Action Models via Mid-training"
+  authors:
+  - Yiyang Du
+  - Zhanqiu Guo
+  - Haochen Zhang
+  - Annabella Macaluso
+  - Xin Ye
+  - Liu Ren
+  - Yonatan Bisk
+  - Chenyan Xiong
+  student: Haochen Zhang
+  venue: ArXiv
+  venue_acr: ArXiv
+  url: https://arxiv.org/abs/2604.20012
+- year: "2026"
   field: O
   type: Conference
   title: "Data Augmentation for Improving Contextual Faithfulness Under Knowledge Conflict"
@@ -298,6 +330,21 @@
   venue_acr: "IJRR"
   fig: ijrr_survey.jpg
   caption: "System diagram of a language-conditioned robot manipulation pipeline linking a control module, perception module, and language module that connect user instructions to robot actions."
+- year: '2026'
+  field: WS2
+  type: Journal
+  title: "Looking beyond the next token"
+  student: Abitha Thankaraj
+  authors:
+  - Abitha Thankaraj
+  - Yiding Jiang
+  - J. Zico Kolter
+  - Yonatan Bisk
+  venue: "Transactions on Machine Learning Research"
+  venue_acr: "TMLR"
+  url: "https://arxiv.org/abs/2504.11336"
+  fig: trelawney.jpg
+  caption: "Diagram contrasting standard next-token training with Trelawney's approach, which interleaves special tokens so the model also predicts future tokens out of order."
 - year: '2025'
   field: WS4
   type: Journal
@@ -359,21 +406,6 @@
   fig: manufacture.jpg
   caption: "Side-by-side comparison of a precise CAD model of a mechanical hook against a NeRF-style volumetric reconstruction of the same part, illustrating why NeRFs aren't manufacturable CAD replacements."
   url: "https://openreview.net/forum?id=kJzB6lQmcb"
-- year: '2025'
-  field: WS2
-  type: Preprint
-  title: "Looking beyond the next token"
-  student: Abitha Thankaraj
-  authors:
-  - Abitha Thankaraj
-  - Yiding Jiang
-  - J. Zico Kolter
-  - Yonatan Bisk
-  venue: "ArXiv"
-  venue_acr: "ArXiv"
-  url: "https://arxiv.org/abs/2504.11336"
-  fig: trelawney.jpg
-  caption: "Diagram contrasting standard next-token training with Trelawney's approach, which interleaves special tokens so the model also predicts future tokens out of order."
 - year: '2025'
   field: O
   type: Preprint
