@@ -14,6 +14,7 @@
 
 ## Recent Publications
 
+- [Why Is Dyck₁ Hard for Language Models? Learning and Generalizing a One-Counter Language](https://openreview.net/forum?id=V6X6OuDJ0f): Transactions on Machine Learning Research (2026)
 - [Position: Anthropomorphic Language in AI Discourse Can Be Constructive](https://talkingtorobots.com/publications.html): NeurIPS 2026 Position Paper Track (2026)
 - [ECHO: Embodied Camera Observations of Human Object Carrying](https://arxiv.org/abs/2610.10438): ArXiv (2026)
 - [EmbodiedMidtrain: Bridging the Gap between Vision-Language Models and Vision-Language-Action Models via Mid-training](https://arxiv.org/abs/2604.20012): ArXiv (2026)
@@ -23,4 +24,3 @@
 - [Inductive Generalization for Robotic Manipulation](https://arxiv.org/abs/2606.20999): ArXiv (2026)
 - [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484): ArXiv (2026)
 - [Flatness Preserves Instruction Following in Vision-Language-Action Models](https://arxiv.org/abs/2606.23641): ArXiv (2026)
-- [ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies](https://arxiv.org/abs/2606.31132): ArXiv (2026)

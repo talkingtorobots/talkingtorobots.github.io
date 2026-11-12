@@ -1,5 +1,16 @@
 - year: "2026"
   field: O
+  type: Journal
+  title: "Why Is Dyck₁ Hard for Language Models? Learning and Generalizing a One-Counter Language"
+  authors:
+  - Yingshan Chang
+  - Yonatan Bisk
+  venue: Transactions on Machine Learning Research
+  venue_acr: TMLR
+  url: https://openreview.net/forum?id=V6X6OuDJ0f
+  student: Yingshan Chang
+- year: "2026"
+  field: O
   type: Conference
   title: "Position: Anthropomorphic Language in AI Discourse Can Be Constructive"
   authors:
